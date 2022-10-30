@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: rgba(0, 0, 0, 1);
+  --dim-black: rgba(30, 32, 44, 1);
+  --light-black: rgba(35, 43, 59, 1);
+  --dim-white: rgba(248, 248, 255, 1);
+  --yellow: rgba(252, 211, 65, 1);
+  --pink: rgba(255, 0, 122, 1);
+  --white: rgba(255, 255, 255, 1);
+
+  --btn1-background: var(--dim-white);
+  --btn1-box-shadow: 0px 5px 5px rgba(253, 0, 211, 0.1);
+  --btn1-border-radius: 30px;
+
+  --btn2-background: var(--pink);
+  --btn2-box-shadow: 0px 10px 20px rgba(255, 0, 122, 0.1);
+  --btn2-border-radius: 30px;
+
+  --hero-text-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 10px 20px 5px var(--dim-black);
+
+  --container-width-lg: 90%;
+  --transition: all 400ms ease;
+  --font-family-poppins: "Poppins";
+  --font-family-roboto: "Roboto";
+
+  /* Font size (covert to rem later) */
+  --font-size-xs: 14.8px;
+  --font-size-s: 16px;
+  --font-size-m: 22px;
+  --font-size-l: 28px;
+  --font-size-xl: 36px;
+  --font-size-xxl: 40px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* GENERAL STYLES */
+
+body {
+  height: 100vh;
+  max-width: 1440px;
+  font-family: var(--font-family-poppins);
+}
+
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}

@@ -1,0 +1,126 @@
+/* ................ NAVBAR ........... */
+
+nav {
+  height: 6rem;
+}
+
+.nav__container {
+  background: var(--white);
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 1.5px;
+  margin-top: -1px;
+  line-height: 40px;
+}
+
+.logo span {
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+}
+.logo span:nth-of-type(1) {
+  color: var(--black);
+}
+
+.logo span:nth-of-type(2) {
+  color: var(--pink);
+}
+
+.nav__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 0 8.5px;
+}
+
+.nav__menu ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.nav__menu ul li a {
+  font-family: var(--font-family-poppins);
+  font-weight: 500;
+  font-size: var(--font-size-s);
+  color: var(--black);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: 0.3s linear;
+}
+
+.nav__menu li a:hover {
+  color: var(--pink);
+}
+
+.nav__menu li a.active-nav::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1.2rem;
+  width: 1.2rem;
+  background: var(--pink);
+  left: calc(50% - 0.6rem);
+  transform: rotate(45deg);
+  margin-top: 0.6rem;
+}
+
+.nav__menu li a.active-nav {
+  color: var(--pink);
+}
+
+.nav__left {
+  display: flex;
+  padding: 14px 0;
+  margin-left: 10px;
+}
+
+.btn1 {
+  padding: 17px 36px;
+  background: var(--btn1-background);
+  box-shadow: var(--btn1-box-shadow);
+  border-radius: var(--btn1-border-radius);
+  color: var(--light-black);
+  transition: all 400ms ease;
+}
+
+.btn2 {
+  padding: 17px 36px;
+  margin-left: 16px;
+  background: var(--pink);
+  box-shadow: var(--btn2-box-shadow);
+  border-radius: var(--btn2-border-radius);
+  color: var(--white);
+  transition: all 400ms;
+}
+
+.btn2:hover {
+  cursor: pointer;
+  background: var(--btn1-background);
+  color: rgba(255, 0, 122, 1);
+}
+
+.btn1:hover {
+  cursor: pointer;
+  background: var(--dim-black);
+  color: white;
+}
+
+.btn {
+  font-family: var(--font-family-poppins);
+  font-weight: 500;
+  font-size: var(--font-size-s);
+}
+
+.nav-line {
+  height: 48px;
+  background: var(--pink);
+}
