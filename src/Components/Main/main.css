@@ -1,0 +1,33 @@
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  margin-top: 6rem;
+}
+
+.signup-heading {
+  text-align: center;
+  color: var(--black);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-l);
+  font-weight: 600;
+}
+
+.signup-wrapper {
+  display: flex;
+  margin-top: 2rem;
+  gap: 27px;
+}
+
+.signup-wrapper img {
+  border: 1px solid #000000;
+  border-radius: 30px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.sign-img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
