@@ -1,0 +1,11 @@
+.community-header {
+  height: 44rem;
+}
+
+.community-main {
+  display: grid;
+  /* grid:
+    "community-left" 284px
+    "community-right" auto; */
+  grid-template-columns: 284px auto;
+}

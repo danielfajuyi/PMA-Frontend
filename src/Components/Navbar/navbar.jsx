@@ -35,7 +35,9 @@ const Navbar = () => {
           </div>
 
           <div className="nav__left">
-            <button className="btn btn1">Login</button>
+            <Link to="/" className="btn btn1">
+              Login
+            </Link>
             <button className="btn btn2">Signup</button>
             <button className="nav__toggle-btn">
               <GoThreeBars />

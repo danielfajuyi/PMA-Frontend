@@ -1,0 +1,6 @@
+.section-heading {
+  text-align: center;
+  color: var(--black);
+  font-size: var(--font-size-l);
+  font-weight: 600;
+}
