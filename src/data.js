@@ -16,7 +16,7 @@ import Profile1 from "./Images/community/top-profile/profile1.png";
 import Profile2 from "./Images/community/top-profile/profile2.png";
 import Profile3 from "./Images/community/top-profile/profile3.png";
 import Profile4 from "./Images/community/top-profile/profile4.png";
-import profile5 from "./Images/community/top-profile/profile5.png";
+import Profile5 from "./Images/community/top-profile/profile5.png";
 import Profile6 from "./Images/community/top-profile/profile6.png";
 
 export const links = [
