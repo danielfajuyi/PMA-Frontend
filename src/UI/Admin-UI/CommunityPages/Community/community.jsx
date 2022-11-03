@@ -6,13 +6,15 @@ import "./community.css";
 const Community = () => {
   return (
     <>
-      <header className="  community-header">
-        <Header />
-      </header>
-      <main className=" container community-main">
-        <Leftside />
-        <Rightside />
-      </main>
+      <section className="community-container">
+        <header className="  community-header">
+          <Header />
+        </header>
+        <main className=" container community-main">
+          <Leftside />
+          <Rightside />
+        </main>
+      </section>
     </>
   );
 };

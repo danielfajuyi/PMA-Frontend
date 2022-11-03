@@ -1,0 +1,39 @@
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  align-items: center;
+  gap: 30px;
+}
+
+.counter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+}
+
+.count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dim-black);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 40px 120px;
+}
+
+.count span {
+  color: var(--white);
+  font-weight: 700;
+  font-size: var(--font-size-l);
+  line-height: 44px;
+}
+.count span:nth-of-type(2) {
+  font-weight: 500;
+  font-size: var(--font-size-m);
+  line-height: 28px;
+  margin-top: 4px;
+  color: var(--dim-white);
+}

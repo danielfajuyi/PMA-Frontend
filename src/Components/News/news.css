@@ -1,0 +1,119 @@
+/* News Section - Coverted to slides later*/
+
+.news-main {
+  display: flex;
+}
+
+.news-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 4rem;
+}
+
+.news-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.news-heading h2 {
+  font-size: var(--font-size-l);
+  font-weight: 600;
+}
+
+.news-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+  flex-wrap: wrap;
+}
+
+.news-box {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  align-items: center;
+  margin: 16px;
+  box-shadow: 0 4px 14px hsl(355deg 25% 15% / 10%);
+}
+
+.news-box img {
+  width: 100%;
+  height: 300px;
+  aspect-ratio: 1/1;
+
+  border-radius: 0.5rem;
+}
+
+.news-text {
+  padding: 23px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.news-text .category {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: rgb(252, 211, 65);
+  padding-top: -10px;
+}
+
+.news-date {
+  color: var(--pink);
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.news-text .news-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--dim-black);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.news-text .news-title:hover {
+  color: var(--pink);
+}
+
+.news-text p {
+  color: #9b9b9b;
+  font-size: 0.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 10px 0 15px;
+}
+
+.news-text a {
+  color: #0f0f0f;
+}
+
+.news-text a:hover {
+  color: var(--pink);
+  transition: all ease 0.3s;
+}
+
+.news-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--yellow);
+  border-radius: 20px;
+  padding: 9px 12px;
+}
+
+.news-wrapper-container {
+  display: flex;
+}

@@ -7,6 +7,11 @@ import Checkmark from "../../Assets/main-assets/hero-checkmark.png";
 import FeaturedModel from "../FeaturedModel/featured-model";
 import SectionHead from "../SectionHead/sectionhead";
 import Client from "../Client-Testimonials/client";
+import Jobpost from "../JobPost/jobpost";
+import Counter from "../Counter/counter";
+import Partner from "../Partners/partner";
+import News from "../News/news";
+import Footer from "../Footer/footer";
 // import { SignupImg } from "../../Data/signup-img";
 
 const Main = () => {
@@ -65,6 +70,11 @@ const Main = () => {
 
       <FeaturedModel />
       <Client />
+      <Jobpost />
+      <Counter />
+      <Partner />
+      <News />
+      <Footer />
     </>
   );
 };

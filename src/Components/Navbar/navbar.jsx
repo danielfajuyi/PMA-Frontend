@@ -2,19 +2,14 @@ import { Link, NavLink } from "react-router-dom";
 import { links } from "../../data";
 import { GoThreeBars } from "react-icons/go";
 import "./navbar.css";
+import Logo from "../Logo/logo";
 
 const Navbar = () => {
   return (
     <>
       <nav>
         <div className="container nav__container">
-          <Link to="/">
-            <div className="logo">
-              <span>Premium</span>
-              <span>Models</span>
-            </div>
-          </Link>
-
+          <Logo />
           <div className="nav__menu">
             <ul>
               {links.map(({ name, path }, index) => {
