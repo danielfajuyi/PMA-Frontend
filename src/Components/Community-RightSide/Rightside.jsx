@@ -5,7 +5,7 @@ const Rightside = () => {
   return (
     <>
       <section className="community-right">
-        <h2>Hey i am the right side</h2>
+        <div></div>
       </section>
     </>
   );
