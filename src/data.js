@@ -45,8 +45,8 @@ import Post6dp from "./Images/community/PostAsset/dp6.png";
 //Post Images
 import PostImg1 from "./Images/community/PostAsset/postimgs/Post1.png";
 import PostImg2 from "./Images/community/PostAsset/postimgs/Post2.png";
-import PostImg3 from "./Images/community/PostAsset/postimgs/Post3.png";
-import PostImg4 from "./Images/community/PostAsset/postimgs/Post4.png";
+import PostImg3 from "./Images/community/PostAsset/postimgs/daf.jpg";
+import PostImg4 from "./Images/community/PostAsset/postimgs/frame.png";
 import PostImg5 from "./Images/community/PostAsset/postimgs/Post5.png";
 import PostImg6 from "./Images/community/PostAsset/postimgs/Post6.png";
 import PostImg7 from "./Images/community/PostAsset/postimgs/Post7.png";
@@ -59,7 +59,8 @@ import MessageBoxPng from "./Assets/main-assets/mail.png";
 import UserPng from "./Assets/main-assets/user-plus.png";
 import MoreSettingsPng from "./Assets/main-assets/more-vertical.png";
 import LikePng from "./Assets/main-assets/thumbs-up.png";
-import LovePng from "./Assets/main-assets/Union.png";
+import LikedPng from "./Assets/main-assets/liked.png";
+import LovePng from "./Assets/main-assets/heart.png";
 import CommentPng from "./Assets/main-assets/message-square.png";
 import ViewsPng from "./Assets/main-assets/eye.png";
 
@@ -329,18 +330,64 @@ export const TopProfiles = [
   },
 ];
 
-export const PostData = [
+export const RecentlyActive = [
   {
     id: 1,
-    img: Profile1,
+    avatar: Profile1,
+    name: "Princess",
+    title: "Model",
+  },
+
+  {
+    id: 2,
+    avatar: Profile2,
+    name: "Princess",
+    title: "Model",
+  },
+
+  {
+    id: 3,
+    avatar: Profile3,
+    name: "Princess",
+    title: "Model",
+  },
+
+  {
+    id: 4,
+    avatar: Profile4,
+    name: "Princess",
+    title: "Model",
+  },
+
+  {
+    id: 5,
+    avatar: Profile5,
+    name: "Princess",
+    title: "Model",
+  },
+
+  {
+    id: 6,
+    avatar: Profile6,
+    name: "Princess",
+    title: "Model",
+  },
+];
+
+export const PostData = [
+  {
+    img: Post1dp,
     name: "Moyo Brown",
     time: "2mins ago",
-    post: "I love when i capture the moments of expression",
-    postimg: {},
+    desc: "I love when i capture the moments of expression",
+    postimg: false,
     like: LikePng,
     numberOfLikes: 47,
+    liked: false,
+    likedpng: LikedPng,
     love: LovePng,
     numberOfLoves: 56,
+    loved: true,
     comment: CommentPng,
     numberOfComments: 18,
     view: ViewsPng,
@@ -352,20 +399,91 @@ export const PostData = [
   },
 
   {
-    id: 2,
-    img: Profile2,
+    img: Post2dp,
     name: "Emmanuel Abuzu",
     time: "45mins ago",
-    post: "I love when i capture the moments of expression",
-    postimg: {},
+    desc: "Premium model app is the best models app you can find on the internet today. It provides advance features and interaction between models, modelling agency and clients, sign up to premium model app today",
+    postimg: PostImg1,
     like: LikePng,
-    numberOfLikes: 47,
+    numberOfLikes: 147,
+    liked: true,
+    likedpng: LikedPng,
+    love: LovePng,
+    numberOfLoves: 556,
+    loved: false,
+    comment: CommentPng,
+    numberOfComments: 67,
+    view: ViewsPng,
+    numberOfViews: 654,
+    moresettings: MoreSettingsPng,
+    message: MessageBoxPng,
+    follow: UserPng,
+    timeicon: ClockPng,
+  },
+
+  {
+    img: Post3dp,
+    name: "Ayomide Daniel",
+    time: "3hrs ago",
+    desc: "Premium model app is the best models app you can find on the internet today. It provides advance features and interaction between models, modelling agency and clients, sign up to premium model app today",
+    postimg: PostImg2,
+    like: LikePng,
+    numberOfLikes: 247,
+    liked: true,
+    likedpng: LikedPng,
     love: LovePng,
     numberOfLoves: 56,
+    loved: false,
     comment: CommentPng,
-    numberOfComments: 18,
+    numberOfComments: 8,
     view: ViewsPng,
-    numberOfViews: 124,
+    numberOfViews: 54,
+    moresettings: MoreSettingsPng,
+    message: MessageBoxPng,
+    follow: UserPng,
+    timeicon: ClockPng,
+  },
+
+  {
+    img: Post4dp,
+    name: "Prince Chibuzo",
+    time: "1 day ago",
+    desc: "Premium model app is the best models app you can find on the internet today. It provides advance features and interaction between models, modelling agency and clients, sign up to premium model app today",
+    postimg: PostImg4,
+    like: LikePng,
+    numberOfLikes: 247,
+    liked: false,
+    likedpng: LikedPng,
+    love: LovePng,
+    numberOfLoves: 56,
+    loved: true,
+    comment: CommentPng,
+    numberOfComments: 8,
+    view: ViewsPng,
+    numberOfViews: 54,
+    moresettings: MoreSettingsPng,
+    message: MessageBoxPng,
+    follow: UserPng,
+    timeicon: ClockPng,
+  },
+
+  {
+    img: Post5dp,
+    name: "Prince Chibuzo",
+    time: "1 day ago",
+    desc: "Premium model app is the best models app you can find on the internet today. It provides advance features and interaction between models, modelling agency and clients, sign up to premium model app today",
+    postimg: PostImg3,
+    like: LikePng,
+    numberOfLikes: 247,
+    liked: false,
+    likedpng: LikedPng,
+    love: LovePng,
+    numberOfLoves: 56,
+    loved: true,
+    comment: CommentPng,
+    numberOfComments: 8,
+    view: ViewsPng,
+    numberOfViews: 54,
     moresettings: MoreSettingsPng,
     message: MessageBoxPng,
     follow: UserPng,

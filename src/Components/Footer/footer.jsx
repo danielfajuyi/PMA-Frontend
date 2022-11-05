@@ -2,8 +2,6 @@ import React from "react";
 import "./footer.css";
 import Logo from "../Logo/logo";
 import footericon from "../../Assets/main-assets/footer-icon.png";
-import ContactSocials from "../Contact-Component/Contact-Social/ContactSocials";
-import ContactInfo from "../Contact-Component/Contact-Info/ContactInfo";
 import Phone from "@iconscout/react-unicons/icons/uil-phone-times";
 import Whatsapp from "@iconscout/react-unicons/icons/uil-whatsapp";
 import Email from "@iconscout/react-unicons/icons/uil-envelope-edit";

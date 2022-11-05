@@ -7,9 +7,40 @@
 }
 
 .community-main {
+  position: relative;
   display: grid;
+  margin-top: 2.5rem;
+
   /* grid:
     "community-left" 284px
     "community-right" auto; */
-  grid-template-columns: 284px auto;
+  /* grid-template-columns: 284px auto 200px; */
+  grid-template-columns: 25% 65% 10%;
+}
+
+.blur {
+  position: absolute;
+  width: 22rem;
+  height: 14rem;
+  border-radius: 58%;
+  background: #a6ddf0;
+  filter: blur(72px);
+}
+
+.community-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--pink);
+  transition: all 100ms ease-out;
+}
+
+.community-btn:hover {
+  cursor: pointer;
+  color: var(--pink);
+  background: transparent;
+  border: 2px solid var(--pink);
 }
