@@ -7,7 +7,7 @@ import FindModel from "./Pages/FindModel/findmodel";
 import JobPost from "./UI/Job-UI/JobPost/jobpost";
 import Contact from "./Pages/Contact/contact";
 import Community from "./UI/Admin-UI/CommunityPages/Community/community";
-import Magazine from "./Pages/Magazine/magazine";
+import Magazine from "./UI/Admin-UI/Magazine/magazine";
 function App() {
   return (
     <>
@@ -19,7 +19,7 @@ function App() {
         <Route path="/jobpost" element={<JobPost />}></Route>
         <Route path="/findmodel" element={<FindModel />}></Route>
         <Route path="/community" element={<Community />}></Route>
-        <Route path="/blog" element={<Magazine />}></Route>
+        <Route path="/magazine" element={<Magazine />}></Route>
       </Routes>
     </>
   );

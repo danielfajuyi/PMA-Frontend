@@ -43,10 +43,10 @@ import Post4dp from "./Images/community/PostAsset/dp4.png";
 import Post5dp from "./Images/community/PostAsset/dp5.png";
 import Post6dp from "./Images/community/PostAsset/dp6.png";
 //Post Images
-import PostImg1 from "./Images/community/PostAsset/postimgs/Post1.png";
+import PostImg1 from "./Images/community/PostAsset/postimgs/Post1.jpeg";
 import PostImg2 from "./Images/community/PostAsset/postimgs/Post2.png";
 import PostImg3 from "./Images/community/PostAsset/postimgs/daf.jpg";
-import PostImg4 from "./Images/community/PostAsset/postimgs/frame.png";
+import PostImg4 from "./Images/community/PostAsset/postimgs/Post32.png";
 import PostImg5 from "./Images/community/PostAsset/postimgs/Post5.png";
 import PostImg6 from "./Images/community/PostAsset/postimgs/Post6.png";
 import PostImg7 from "./Images/community/PostAsset/postimgs/Post7.png";
@@ -380,7 +380,7 @@ export const PostData = [
     name: "Moyo Brown",
     time: "2mins ago",
     desc: "I love when i capture the moments of expression",
-    postimg: false,
+    postimg: "",
     like: LikePng,
     numberOfLikes: 47,
     liked: false,
@@ -426,7 +426,7 @@ export const PostData = [
     name: "Ayomide Daniel",
     time: "3hrs ago",
     desc: "Premium model app is the best models app you can find on the internet today. It provides advance features and interaction between models, modelling agency and clients, sign up to premium model app today",
-    postimg: PostImg2,
+    postimg: PostImg4,
     like: LikePng,
     numberOfLikes: 247,
     liked: true,
@@ -449,7 +449,7 @@ export const PostData = [
     name: "Prince Chibuzo",
     time: "1 day ago",
     desc: "Premium model app is the best models app you can find on the internet today. It provides advance features and interaction between models, modelling agency and clients, sign up to premium model app today",
-    postimg: PostImg4,
+    postimg: PostImg3,
     like: LikePng,
     numberOfLikes: 247,
     liked: false,
@@ -469,10 +469,10 @@ export const PostData = [
 
   {
     img: Post5dp,
-    name: "Prince Chibuzo",
+    name: "Stephenie Daniels",
     time: "1 day ago",
-    desc: "Premium model app is the best models app you can find on the internet today. It provides advance features and interaction between models, modelling agency and clients, sign up to premium model app today",
-    postimg: PostImg3,
+    desc: "your mind is a powerful place and what you feed in can affect you in some powerful way.",
+    postimg: PostImg6,
     like: LikePng,
     numberOfLikes: 247,
     liked: false,
