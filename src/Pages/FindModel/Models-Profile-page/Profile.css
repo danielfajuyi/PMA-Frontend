@@ -1,0 +1,589 @@
+.section {
+  width: 85%;
+  margin: 4rem auto;
+}
+
+.bold-text {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.semi-bold {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.model-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.model-Info__text-content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.model__img {
+  width: 100%;
+  border-radius: 10px;
+}
+.top-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.model__name {
+  text-transform: uppercase;
+}
+
+.interactive-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+.btn-container {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.interactive-icon {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem;
+  font-weight: 600;
+  border-radius: 25px;
+  border: none;
+  background: #eee;
+}
+.model__location {
+  margin: 0.5rem 0;
+}
+.model__location-icon {
+  font-size: 25px;
+  color: blue;
+  margin-right: 5px;
+}
+.agency__name {
+  text-transform: capitalize;
+}
+
+.model__activities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-size: 14px;
+  color: gray;
+}
+.Icon {
+  font-size: 25px;
+}
+.heart-icon {
+  color: var(--Colored-color);
+}
+.follow-icon {
+  color: blue;
+}
+.insta-icon {
+  color: rgb(211, 79, 228);
+}
+/* so sorry! i don't know what to name this class so i decided to name them like this */
+/* trying to make the instagram text responsive */
+/* insta-text is for short instagram text */
+/* insta-full-text is for instagram full text */
+.insta-text {
+  display: none;
+}
+.share-icon {
+  color: #bbbb;
+}
+
+.cta-btn {
+  width: 75%;
+  height: 55px;
+  margin: auto;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* sections */
+.bio-section,
+.photo-section,
+.polaroid-section,
+.video-section,
+.stat-section {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 2rem;
+}
+
+.bio__title,
+.photo__title,
+.polaroid__title,
+.video__title,
+.stat__title {
+  text-decoration: underline;
+}
+
+/*bio section  */
+
+.bio__text {
+  width: 90%;
+  line-height: 1.8;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: justify;
+}
+/* stat section */
+
+.stat__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.stat__item {
+  width: 45%;
+  font-size: 18px;
+  font-weight: 500;
+}
+.stat__comment {
+  width: 100%;
+  text-align: left;
+  line-height: 1.8;
+  font-weight: 500;
+  font-size: 22px;
+  margin-top: 2rem;
+}
+.jobInterestList {
+  display: flex;
+  flex-wrap: wrap;
+  text-transform: capitalize;
+}
+/* so sorry! i don't know what to name this class so i decided to name them like this */
+/* i only used them to indent the the list of job interest on the models stats section */
+.and {
+  margin: 0 8px;
+}
+.comer {
+  margin-right: 5px;
+}
+.download-btn {
+  width: 75%;
+  height: 55px;
+  margin: auto;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+/* photo section */
+
+.videoList,
+.imgList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+.videoList {
+  gap: 1.5rem;
+}
+
+.videoItem {
+  width: 45%;
+  height: 100px;
+  border: 2px solid #1e202c;
+}
+.imgItem {
+  width: 42%;
+  height: 190px;
+}
+.video {
+  width: 100%;
+  height: 100%;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: 2px solid #1e202c;
+}
+
+.view-more-btn {
+  width: 100px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  background: var(--Dark-color);
+  color: var(--Light-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  margin: 2rem 0;
+}
+/* links */
+.links {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.linkBtn {
+  width: 80px;
+  height: 40px;
+  font-size: 16px;
+  padding: 0 0.5rem;
+  border: 2px solid #1e202c;
+  border-radius: 25px;
+}
+.link-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.active-link {
+  background: var(--Colored-color);
+  color: var(--Light-color);
+}
+/* booking section */
+.booking-section {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 6rem 0;
+  overflow: auto;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-out;
+}
+form {
+  position: relative;
+  width: 85%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 4rem 2rem;
+  font-size: 20px;
+  font-weight: 600;
+  background: var(--Light-color);
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 2rem;
+}
+
+input[type="text"],
+input[type="date"] {
+  height: 45px;
+  font-size: 18px;
+  font-weight: 500;
+  text-indent: 10px;
+  border: 2px solid var(--Dark-color);
+  border-radius: 5px;
+}
+input:focus {
+  outline: none;
+}
+.form__top-input {
+  display: flex;
+  flex-direction: column;
+}
+.input__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 2rem;
+}
+.input-rapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+textarea {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  border: 2px solid var(--Dark-color);
+  border-radius: 5px;
+  text-indent: 10px;
+  resize: none;
+  outline: none;
+}
+.send-btn {
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+input[type="date"],
+.send-btn:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.close-icon {
+  font-size: 2rem;
+  position: absolute;
+  top: 25px;
+  right: 10%;
+}
+.close-icon:hover {
+  color: var(--Colored-color);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 320px) {
+  .imgItem {
+    height: 160px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .section {
+    margin: 4rem auto;
+    width: 95%;
+  }
+
+  .model__img-container {
+    width: 45%;
+  }
+  .model-Info__text-content {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .model-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 2rem;
+  }
+  .interactive-section {
+    justify-content: left;
+    gap: 1rem;
+  }
+
+  .btn-container {
+    width: auto;
+  }
+
+  .interactive-icon {
+    width: 100%;
+  }
+
+  /* trying to make the instagram text responsive */
+  /* insta-text is for short instagram text */
+  /* insta-full-text is for instagram full text */
+
+  .insta-text {
+    display: block;
+  }
+  .insta-full-text {
+    display: none;
+  }
+  .cta-btn {
+    width: 170px;
+    height: 50px;
+    position: absolute;
+    top: 25px;
+    right: -2%;
+    margin: 0;
+    gap: 0;
+    justify-content: space-around;
+  }
+
+  /* photo section */
+
+  .imgItem {
+    width: 20%;
+    height: 200px;
+  }
+  /* video section */
+  .videoList {
+    gap: 1.2rem;
+  }
+  .videoItem {
+    width: 23%;
+    height: 120px;
+  }
+  /* stats section */
+  .stat__item {
+    width: 30%;
+  }
+
+  .download-btn {
+    width: 250px;
+  }
+
+  /* links */
+  .links {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .link-container {
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+  .linkBtn {
+    width: 120px;
+    height: 50px;
+    padding: 0 1rem;
+    font-size: 20px;
+    font-weight: 600;
+    border: 2px solid #1e202c;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+
+  /* booking-section */
+  form {
+    width: 70%;
+    padding: 3rem;
+  }
+  .input__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  .input-rapper {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 920px) {
+  .section {
+    width: 85%;
+  }
+  .model-info {
+    width: 80%;
+  }
+  .model__img-container {
+    width: 40%;
+  }
+  .model-Info__text-content {
+    width: 55%;
+  }
+  .cta-btn {
+    width: 200px;
+    top: 25px;
+    right: -10%;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .imgItem {
+    width: 20%;
+    height: 240px;
+  }
+  /* video section */
+
+  .videoItem {
+    width: 23%;
+    height: 140px;
+  }
+
+  /* Link */
+  .links {
+    gap: 2rem;
+  }
+
+  .insta-text {
+    display: none;
+  }
+  .insta-full-text {
+    display: block;
+  }
+
+  /* booking-section */
+  form {
+    width: 55%;
+    margin-top: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .model__img-container {
+    width: 28%;
+  }
+  .model-Info__text-content {
+    width: 50%;
+  }
+
+  .imgList {
+    gap: 2rem;
+  }
+
+  /* photo section */
+  .imgItem {
+    width: 18%;
+    height: 270px;
+  }
+  /* video section */
+  .videoList {
+    gap: 1.5rem;
+  }
+
+  .videoItem {
+    width: 23%;
+    height: 175px;
+  }
+  .interactive-icon {
+    font-size: 18px;
+  }
+  .interactive-section {
+    justify-content: left;
+    gap: 1.5rem;
+  }
+  /* Link */
+  .links {
+    gap: 4rem;
+  }
+  .link-container {
+    gap: 3.5rem;
+  }
+
+  /* booking-section */
+  form {
+    width: 45%;
+  }
+}
