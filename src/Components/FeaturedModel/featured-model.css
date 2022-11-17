@@ -90,3 +90,15 @@
   background: var(--pink);
   color: var(--white);
 }
+
+@media screen and (max-width: 600px) {
+  .featured-model-slider {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 37px;
+    overflow: hidden;
+    gap: 24px;
+    position: relative;
+    padding: 0 38px;
+  }
+}

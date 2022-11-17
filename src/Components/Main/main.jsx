@@ -11,7 +11,7 @@ import Jobpost from "../JobPost/jobpost";
 import Counter from "../Counter/counter";
 import Partner from "../Partners/partner";
 import News from "../News/news";
-import Footer from "../Footer/footer";
+
 // import { SignupImg } from "../../Data/signup-img";
 
 const Main = () => {
@@ -74,7 +74,6 @@ const Main = () => {
       <Counter />
       <Partner />
       <News />
-      <Footer />
     </>
   );
 };

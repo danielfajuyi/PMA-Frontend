@@ -4,7 +4,7 @@ import "./ContactHeader.css";
 const ContactHeader = () => {
   return (
     <>
-      <div className="head">
+      <div className="contact-head">
         <h2>Contact Us</h2>
         <p>
           Any question or remarks? just write a message, fill up the form and

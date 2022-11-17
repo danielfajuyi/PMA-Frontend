@@ -53,7 +53,7 @@ import PostImg7 from "./Images/community/PostAsset/postimgs/Post7.png";
 import PostImg8 from "./Images/community/PostAsset/postimgs/Post8.png";
 import PostImg9 from "./Images/community/PostAsset/postimgs/Post9.png";
 //Post Assets - Cponvert To Icon Later
-import ClockPng from "./Assets/main-assets/Clock.png";
+import ClockPng from "./Assets/main-assets/clock.png";
 import CameraPng from "./Assets/main-assets/camera.png";
 import MessageBoxPng from "./Assets/main-assets/mail.png";
 import UserPng from "./Assets/main-assets/user-plus.png";
@@ -66,41 +66,36 @@ import ViewsPng from "./Assets/main-assets/eye.png";
 
 export const links = [
   {
-    id: 1,
     name: "Home",
-    path: "/",
+    path: "/home",
   },
 
   {
-    id: 2,
     name: "About",
     path: "/about",
   },
 
   {
-    id: 3,
     name: "Find Model",
     path: "/find-model",
   },
 
   {
-    id: 3,
     name: "Job Post",
     path: "/jobpost",
   },
 
   {
-    id: 4,
     name: "Magazine",
     path: "/magazine",
   },
 
   {
-    id: 5,
     name: "Contact",
     path: "/contact",
   },
 ];
+
 export const featuredmodel1 = [
   {
     id: 1,

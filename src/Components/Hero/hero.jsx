@@ -9,7 +9,7 @@ const Hero = () => {
     <>
       <Line />
       <div className="hero-container">
-        <section className="hero-section">
+        <section className="hero-section container">
           <img src={HeroImg} className="hero-img" alt="hero-img"></img>
           <div className="hero-text">
             <div className="heading">

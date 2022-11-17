@@ -9,6 +9,8 @@ const Magazine = () => {
         <header className="magazine-header">
           <MagazineHeader />
         </header>
+
+        <main></main>
       </section>
     </>
   );

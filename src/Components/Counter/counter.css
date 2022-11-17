@@ -11,6 +11,7 @@
   justify-content: space-between;
   gap: 24px;
   align-items: center;
+  width: 100%;
 }
 
 .count {
@@ -36,4 +37,11 @@
   line-height: 28px;
   margin-top: 4px;
   color: var(--dim-white);
+}
+
+@media screen and (max-width: 767px) {
+  .counter-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 }

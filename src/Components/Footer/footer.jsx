@@ -87,10 +87,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="container contact-info">
+        <div className="container footercontact-info">
           <h2>Contact Info</h2>
 
-          <div className="contact-text">
+          <div className="footercontact-text">
             <div className="box">
               <div className="icon">
                 <Phone />

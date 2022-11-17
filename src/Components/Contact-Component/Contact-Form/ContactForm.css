@@ -49,21 +49,66 @@
 }
 
 .submit-button {
-  padding: 12px 24px;
-  border-radius: 20px;
+  padding: 18px 25px;
+  border-radius: 6px;
   font-size: 16px;
   font-weight: 700;
   outline: none;
   cursor: pointer;
   border: none;
-  color: #fff;
-  background: #f44770;
-  box-shadow: var(--submitBoxShadow);
-  transition: 0.5s;
+  color: var(--pink);
+  background: linear-gradient(145deg, #e2e8ec, #ffffff);
+  box-shadow: 4px 4px 8px #cbcbcb, 4px -4px 8px #ffffff;
+  transition: 0.3s all ease;
+  height: fit-content;
 }
 
 .submit-button:hover {
-  background: var(--bgColor);
+  background: #ff014f;
+  color: #fff;
+  transform: translateY(-10px);
 }
 
 /* Responsive Css */
+
+@media screen and (max-width: 940px) {
+}
+
+@media screen and (max-width: 767px) {
+  .contact-form {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact-form {
+    width: 98%;
+  }
+
+  .form-fields {
+    display: table;
+    width: 100%;
+    padding: 15px 1px 5px 1px;
+  }
+
+  .form-group {
+    width: 43%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contact-form {
+    width: 98%;
+  }
+
+  .form-fields {
+    display: table;
+    width: 100%;
+    padding: 15px 1px 5px 1px;
+  }
+
+  .form-group {
+    width: 90%;
+    padding: 2px 22px;
+  }
+}
