@@ -30,7 +30,7 @@ const Navbar = () => {
       <nav className="nav">
         <div className="container nav__container">
           <Link to="/" className="logo">
-            <img src="./images/logo.png" alt="" />
+            <img src="/images/logo.png" alt="" />
           </Link>
 
           <div className="desktop-nav">

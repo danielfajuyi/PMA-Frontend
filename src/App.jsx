@@ -19,7 +19,7 @@ function App() {
         <Route path="/about" element={<About />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/jobpost" element={<JobPost />}></Route>
-        <Route path="/find-model" element={<FindModel />}></Route>
+        <Route path="/find-model/*" element={<FindModel />}></Route>
         <Route path="/community" element={<Community />}></Route>
         <Route path="/magazine" element={<Magazine />}></Route>
 
