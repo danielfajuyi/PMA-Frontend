@@ -48,64 +48,7 @@ h3 {
   color: var(--dim-black);
 }
 
-.faqs h2 {
-  width: 100%;
-  padding: 0 39px;
-
-  margin-top: 3rem;
-  color: var(--dim-black);
-  text-align: center;
-  font-size: var(--font-size-l);
-}
-
-.faqs {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.faqs h2 {
-  padding-top: 1rem;
-  color: black;
-}
-
-.faqs__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-.faq {
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 1.4rem;
-  height: fit-content;
-  box-shadow: 0px 10px 20px 5px rgba(212, 127, 169, 0.1),
-    0px 6px 4px rgba(127, 151, 165, 0.25);
-
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.faq h4 {
-  font-size: 1rem;
-  line-height: 2.2;
-}
-
-.faq__icon {
-  align-self: flex-start;
-  font-size: 1.2rem;
-}
-
-.faq p {
-  margin-top: 0.8rem;
-  display: none;
-}
-
-.faq.open p {
-  display: block;
-}
+/* Blur */
 
 .blur {
   background: rgb(238, 210, 255);
