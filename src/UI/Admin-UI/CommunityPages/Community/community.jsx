@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../../../../Components/Header/CommunityHeader/header";
 import Leftside from "../../../../Components/Community-LeftSide/Leftside";
 import Middleside from "../../../../Components/Community-Middle/Middleside";
-import Rightside from "../../../../Components/Community-Rightside/Rightside";
+import Rightside from "../../../../Components/Community-RightSide/Rightside";
 import "./community.css";
 const Community = () => {
   return (
