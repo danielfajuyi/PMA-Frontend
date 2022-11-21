@@ -6,78 +6,79 @@ import Phone from "@iconscout/react-unicons/icons/uil-phone-times";
 import Whatsapp from "@iconscout/react-unicons/icons/uil-whatsapp";
 import Email from "@iconscout/react-unicons/icons/uil-envelope-edit";
 import Location from "@iconscout/react-unicons/icons/uil-location-point";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <>
-      <footer className="container footer-container">
+      <footer className="footer-container">
         <div className="footer-section container ">
           <Logo id="footer-logo" />
 
           <div className="footer">
             <div className="footer-heading">
-              <img src={footericon} alt="" height="42px" />
+              <img src={footericon} alt="footericon" height="42px" />
               <h2>Company</h2>
             </div>
             <ul>
               <li>
-                <a href="">About us</a>
+                <Link to="/about">About us</Link>
               </li>
               <li>
-                <a href="">Testimonials</a>
+                <Link to="/testimonials">Testimonials</Link>
               </li>
               <li>
-                <a href="">Community</a>
+                <Link to="/community">Community</Link>
               </li>
             </ul>
           </div>
 
           <div className="footer">
             <div className="footer-heading">
-              <img src={footericon} height="42px" />
+              <img src={footericon} alt="footericon" height="42px" />
               <h2>Privacy</h2>
             </div>
             <ul>
               <li>
-                <a href="">Privacy</a>
+                <Link to="/privacy">Privacy</Link>
               </li>
               <li>
-                <a href="">Terms of Use</a>
+                <Link to="/terms-of-service">Terms of Use</Link>
               </li>
             </ul>
           </div>
           <div className="footer">
             <div className="footer-heading">
-              <img src={footericon} height="42px" />
+              <img src={footericon} alt="footericon" height="42px" />
               <h2>Help</h2>
             </div>
             <ul>
               <li>
-                <a href="">Contact Us</a>
+                <Link to="/contact">Contact Us</Link>
               </li>
               <li>
-                <a href="">How it Works</a>
+                <Link to="/howitworks/model">How it Works</Link>
               </li>
               <li>
-                <a href="">FAQ</a>
+                <Link to="/faqs">FAQ</Link>
               </li>
               <li>
-                <a href="">Pricing</a>
+                <Link to="/pricing">Pricing</Link>
               </li>
             </ul>
           </div>
 
           <div className="footer">
             <div className="footer-heading">
-              <img src={footericon} height="42px" />
+              <img src={footericon} alt="footericon" />
               <h2>Download app</h2>
             </div>
             <ul>
               <li>
-                <a href="">Andriod</a>
+                <Link to="/about">Andriod</Link>
               </li>
               <li>
-                <a href="">Ios</a>
+                <Link to="/comingsoon">Ios</Link>
               </li>
             </ul>
 
@@ -117,7 +118,11 @@ const Footer = () => {
               </div>
               <div className="text">
                 <h3>Email</h3>
-                <p>premiummodelsng@gmail.com</p>
+                <p>
+                  premiummodelsng
+                  <br />
+                  @gmail.com
+                </p>
               </div>
             </div>
 

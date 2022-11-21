@@ -97,13 +97,9 @@ const Navbar = () => {
         >
           <FaTimes onClick={handleMenu} className="close-menu" />
           <ul className="mobile-nav__list">
-            {links.map(({ name, path }, index) => {
+            {links.map(({ name, path, id }) => {
               return (
-                <li
-                  onClick={handleMenu}
-                  key={index}
-                  className="mobile-nav__item"
-                >
+                <li onClick={handleMenu} key={id} className="mobile-nav__item">
                   <NavLink
                     to={path}
                     className={({ isActive }) => (isActive ? "active-nav" : "")}

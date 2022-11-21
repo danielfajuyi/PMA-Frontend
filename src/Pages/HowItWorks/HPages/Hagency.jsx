@@ -1,14 +1,9 @@
 import React from "react";
-import Counter from "../../Components/Counter/counter";
-import SectionHead from "../../Components/SectionHead/sectionhead";
-import ImageSlider from "../../Components/Slider/Slider";
-import Footer from "../../Components/Footer/footer";
-import "./about.css";
-
-const About = () => {
+import Counter from "../../../Components/Counter/counter";
+const Hagency = () => {
   return (
     <>
-      <div className="header-container">
+      <div className="HIWheader-container ">
         <div className="header-section container">
           <h1>About Us</h1>
           <span> We have reimagined the modeling industry</span>
@@ -17,6 +12,20 @@ const About = () => {
             booking platform, which helps clients around the world to source for
             models for their projects.
           </span>
+
+          <ul class="header-navigation">
+            <li>
+              <a href="./model.html" class="HIW-active">
+                Models
+              </a>
+            </li>
+            <li>
+              <a href="./agency.html">Agency</a>
+            </li>
+            <li>
+              <a href="./client.html">Clients</a>
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -69,16 +78,7 @@ const About = () => {
         </div>
       </div>
 
-      <section className="team-container mt-5 carousel ">
-        <SectionHead title="Meet The Team " />
-        <section className="container slider-container">
-          <ImageSlider />
-        </section>
-      </section>
-
-      <section className="counter-main-section">
-        <Counter />
-      </section>
+      <Counter />
 
       <div className="container booking-container">
         <div className="booking-wrapper">
@@ -100,10 +100,8 @@ const About = () => {
           </div>
         </div>
       </div>
-
-      <Footer />
     </>
   );
 };
 
-export default About;
+export default Hagency;

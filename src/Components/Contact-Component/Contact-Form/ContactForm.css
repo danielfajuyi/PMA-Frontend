@@ -56,16 +56,17 @@
   outline: none;
   cursor: pointer;
   border: none;
-  color: var(--pink);
-  background: linear-gradient(145deg, #e2e8ec, #ffffff);
+  color: var(--white);
+   background: #ff014f;
   box-shadow: 4px 4px 8px #cbcbcb, 4px -4px 8px #ffffff;
   transition: 0.3s all ease;
   height: fit-content;
 }
 
 .submit-button:hover {
-  background: #ff014f;
-  color: #fff;
+   background: linear-gradient(145deg, #e2e8ec, #ffffff);
+
+  color: var(--dim-black);
   transform: translateY(-10px);
 }
 

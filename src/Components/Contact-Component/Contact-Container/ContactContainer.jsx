@@ -5,7 +5,7 @@ import Phone from "@iconscout/react-unicons/icons/uil-phone-times";
 import Whatsapp from "@iconscout/react-unicons/icons/uil-whatsapp";
 import Email from "@iconscout/react-unicons/icons/uil-envelope-edit";
 import Location from "@iconscout/react-unicons/icons/uil-location-point";
-import { FaWhatsapp } from "react-icons/fa";
+
 
 const ContactContainer = () => {
   return (
@@ -61,6 +61,7 @@ const ContactContainer = () => {
               <div className="icon facebook">
                 <div className="tooltip">Facebook</div>
                 <span>
+                  
                   <i className="fab fa-facebook"></i>
                 </span>
               </div>
@@ -82,7 +83,7 @@ const ContactContainer = () => {
               <div className="icon whatsapp">
                 <div className="tooltip">Whatsapp</div>
                 <span>
-                  <Whatsapp />
+                    <i className="fab fa-whatsapp"></i>
                 </span>
               </div>
             </div>

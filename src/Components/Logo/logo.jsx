@@ -5,7 +5,7 @@ import "./logo.css";
 const Logo = ({ id }) => {
   return (
     <Link to="/">
-      <div className="logo " id={id}>
+      <div className="logo-2 " id={id}>
         <span>Premium</span>
         <span>Models</span>
       </div>

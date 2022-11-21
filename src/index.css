@@ -37,6 +37,8 @@
   --location: #ef5757;
   --shedule: #e1ae4a;
   --container-width-lg: 90%;
+  --container-width-md: 92%;
+  --container-width-sm: 94%;
   --transition: all 400ms ease;
   --font-family-poppins: "Poppins";
   --font-family-roboto: "Roboto";

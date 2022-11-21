@@ -4,20 +4,16 @@
   gap: 30px;
   align-items: center;
   margin-top: 6rem;
-}
-
-.main-heading {
-  text-align: center;
-  color: var(--black);
-  font-size: var(--font-size-l);
-  font-weight: 600;
+  padding: 3rem;
+  box-shadow: 0px 10px 20px 5px rgb(40 40 46 / 10%),
+    0px 6px 4px rgb(92 78 78 / 25%);
+  border-radius: 10px;
 }
 
 .signup-wrapper {
   display: flex;
   margin-top: 2rem;
   gap: 27px;
-  border-radius: 0.5rem;
 }
 
 .signup-wrapper img {
@@ -30,7 +26,9 @@
 }
 
 .sign-img {
-  box-shadow: 0 4px 14px hsl(355deg 25% 15% / 10%);
+  box-shadow: 0px 10px 20px 5px rgb(40 40 46 / 10%),
+    0px 6px 4px rgb(92 78 78 / 25%);
+  border-radius: 10px;
 }
 
 /* Join Model Begins */

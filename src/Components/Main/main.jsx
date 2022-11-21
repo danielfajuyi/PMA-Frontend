@@ -6,7 +6,7 @@ import SignupImg3 from "../../Images/model/model3.jpg";
 import Checkmark from "../../Assets/main-assets/hero-checkmark.png";
 import FeaturedModel from "../FeaturedModel/featured-model";
 import SectionHead from "../SectionHead/sectionhead";
-import Client from "../Client-Testimonials/client";
+import Testimonial from "../cgfcgfc/Testimonial";
 import Jobpost from "../JobPost/jobpost";
 import Counter from "../Counter/counter";
 import Partner from "../Partners/partner";
@@ -69,7 +69,7 @@ const Main = () => {
       </article>
 
       <FeaturedModel />
-      <Client />
+      <Testimonial />
       <Jobpost />
       <Counter />
       <Partner />

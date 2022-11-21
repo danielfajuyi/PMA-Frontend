@@ -1,11 +1,16 @@
-import React from "react";
-import Faqsdata from "../Faqdata/faqsdata";
-import "./faqs.css";
+import React from 'react'
+import { faqs } from '../../data'
+import FaqComponent from './FaqComponent'
 
-const FAQS = () => {
+import "./Faq.css";
+import Footer from "../../Components/Footer/footer"
+
+
+
+const FAQs = () => {
   return (
     <>
-      <div className="blur-2"></div>
+     <div className="blur-2"></div>
       <div className="blur-2-right"></div>
 
       <div
@@ -70,9 +75,28 @@ const FAQS = () => {
         ></div>
       </div>
 
-      <Faqsdata />
-    </>
-  );
-};
+        <section className="faqs">
+            <h2>Frequently Asked Questions</h2>
 
-export default FAQS;
+            <div className="container faqs__container">
+             <article className="faqsquestion__wrapper">
+                {
+                    faqs.map(({id, question, answer}) => {
+                        return <FaqComponent key={id} question={question} answer={answer} />
+                    })
+                }
+             </article>
+             </div>
+      </section>
+
+
+      <Footer />
+
+    </>
+
+    
+
+   )
+}
+
+export default FAQs
