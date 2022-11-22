@@ -6,13 +6,11 @@ import SignupImg3 from "../../Images/model/model3.jpg";
 import Checkmark from "../../Assets/main-assets/hero-checkmark.png";
 import FeaturedModel from "../FeaturedModel/featured-model";
 import SectionHead from "../SectionHead/sectionhead";
-import Testimonial from "../cgfcgfc/Testimonial";
 import Jobpost from "../JobPost/jobpost";
 import Counter from "../Counter/counter";
 import Partner from "../Partners/partner";
 import News from "../News/news";
-
-// import { SignupImg } from "../../Data/signup-img";
+//import Testimonial from "../Testimonials/Testimonial";
 
 const Main = () => {
   return (
@@ -69,10 +67,10 @@ const Main = () => {
       </article>
 
       <FeaturedModel />
-      <Testimonial />
       <Jobpost />
       <Counter />
       <Partner />
+      {/* <Testimonial /> */}
       <News />
     </>
   );

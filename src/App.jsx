@@ -13,6 +13,7 @@ import Hmodel from "./Pages/HowItWorks/HPages/Hmodel";
 import Hclient from "./Pages/HowItWorks/HPages/Hclient";
 import Hagency from "./Pages/HowItWorks/HPages/Hagency";
 import LandingPage from "./Pages/LandingPage/LandingPage";
+import NotFound from "./Pages/NotFound/notfound";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
 
         {/* Other pages */}
         <Route path="/faqs" element={<FAQS />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
 
         <Route path="/howitworks/model" element={<Hmodel />}></Route>
         <Route path="/howitworks/client" element={<Hclient />}></Route>
