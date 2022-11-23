@@ -7,14 +7,10 @@ const Partner = () => {
   return (
     <>
       <section className="container partner-container">
-        <SectionHead title=" Our Partners" />
+        <SectionHead title="Partners" description="our special" />
         <div className="partner-wrapper">
-          {Partners.map(({ id, img }, index) => {
-            return (
-              <>
-                <img src={img} alt="partner-img"></img>
-              </>
-            );
+          {Partners.map(({ id, img }) => {
+            return <img src={img} key={id} alt="partner-img"></img>;
           })}
         </div>
       </section>

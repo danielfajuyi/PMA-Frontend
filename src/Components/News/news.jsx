@@ -7,7 +7,7 @@ const News = () => {
   return (
     <>
       <section className="container mainNews-container">
-        <SectionHead title="Lastest News" />
+        <SectionHead title=" News" description="Lastest" />
         <div className="mainNews-wrapper-container">
           {LatestNews.map(
             ({ id, img, featured, title, date, desc, button }) => {

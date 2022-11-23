@@ -7,20 +7,18 @@ const Jobpost = () => {
   return (
     <>
       <section className="container jobpost-container">
-        <SectionHead title="Recent Job Post" />
+        <SectionHead title="Job Post" description="Recent " />
 
         <div className="jobpost-wrapper">
-          {Jobpostcard.map(({ img, button, text }, index) => {
+          {Jobpostcard.map(({ id, img, button, text }) => {
             return (
-              <>
-                <article className="jobpost-card">
-                  <img src={img} alt="jobimg" />
-                  <div className="jobtext">
-                    <button className="jobcard-btn">{button}</button>
-                    <h3>{text}</h3>
-                  </div>
-                </article>
-              </>
+              <article className="jobpost-card" key={id}>
+                <img src={img} alt="jobimg" />
+                <div className="jobtext">
+                  <button className="jobcard-btn">{button}</button>
+                  <h3>{text}</h3>
+                </div>
+              </article>
             );
           })}
         </div>

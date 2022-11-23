@@ -7,7 +7,7 @@ const FeaturedModel = () => {
   return (
     <>
       <div className="container featured-container">
-        <SectionHead title="Featured Models" />
+        <SectionHead title="Models" description="Featured" />
 
         <div className="featured-desc">
           <ul>
@@ -20,17 +20,15 @@ const FeaturedModel = () => {
         </div>
 
         <div className="featured-model-slider">
-          {featuredmodel1.map(({ name, desc, image, alt }, index) => {
+          {featuredmodel1.map(({ name, desc, image, alt, id }) => {
             return (
-              <>
-                <div>
-                  <img src={image} alt={alt} />
-                  <div className="featured-text">
-                    <span>{name}</span>
-                    <span>{desc}</span>
-                  </div>
+              <div key={id}>
+                <img src={image} alt={alt} />
+                <div className="featured-text">
+                  <span>{name}</span>
+                  <span>{desc}</span>
                 </div>
-              </>
+              </div>
             );
           })}
         </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SectionHead from "../SectionHead/sectionhead";
 import "./Testimonial.css";
 import Slide from "../Slider/Slide";
@@ -7,28 +7,64 @@ import Uilarrowright from "@iconscout/react-unicons/icons/uil-arrow-right";
 import TestimonialApi from "./TestimonialApi";
 
 const Testimonial = () => {
+  const [data, setdata] = useState(TestimonialApi);
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const lastIndex = data.length - 1;
+    if (index < 0) {
+      setIndex(lastIndex);
+    }
+    // console.log(lastIndex);
+    if (index > lastIndex) {
+      setIndex(0);
+    }
+  }, [index, data]);
+
+  //console.log(index);
+  useEffect(() => {
+    let slider = setInterval(() => {
+      setIndex(index + 1);
+    }, 5000);
+
+    return () => clearInterval(slider);
+  }, [index]);
+
   return (
     <>
-      <section className="container client-testimonial-container">
-        <div className="section">
-          <div className="client-heading text-center">
-            <h4>WHAT CLIENTS SAY</h4>
-            <h1>Testimonial</h1>
+      <section className="Testimonial-container">
+        <div className="container">
+          <div>
+            <SectionHead
+              title="Testimonial"
+              description="WHAT OUR CLIENT SAY"
+            />
           </div>
 
-          <div className="client-slide">
-            {TestimonialApi.map((value, valueIndex) => {
+          <div className="Testimonial-wrapper ">
+            {data.map((value, valueIndex) => {
               return (
-                <Slide key={value.id} {...value} valueIndex={valueIndex} />
+                <Slide
+                  key={value.id}
+                  {...value}
+                  valueIndex={valueIndex}
+                  index={index}
+                />
               );
             })}
 
-            <div className="slide_button">
-              <button className="btn-shadow prev_btn">
+            <div className="Testimonialslide_btn  ">
+              <button
+                className="btn_shadow prev_btn"
+                onClick={() => setIndex(index - 1)}
+              >
                 <Uilarrow />
               </button>
 
-              <button className="btn-shadow next_btn">
+              <button
+                className="btn_shadow next_btn"
+                onClick={() => setIndex(index + 1)}
+              >
                 <Uilarrowright />
               </button>
             </div>

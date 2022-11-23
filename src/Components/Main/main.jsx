@@ -10,14 +10,14 @@ import Jobpost from "../JobPost/jobpost";
 import Counter from "../Counter/counter";
 import Partner from "../Partners/partner";
 import News from "../News/news";
-//import Testimonial from "../Testimonials/Testimonial";
+import Testimonial from "../Testimonials/Testimonial";
+import Newnews from "../New-News/newNews";
 
 const Main = () => {
   return (
     <>
       <div className="container signup-container">
-        <SectionHead title="Sign up on premium Model App and Explore" />
-
+        <SectionHead title="Sign Up" description="MODEL AGENCY CLIENT " />
         <div className="signup-wrapper">
           <div className="sign-img">
             <img src={SignupImg1}></img>
@@ -38,7 +38,7 @@ const Main = () => {
       </div>
 
       <article className="join-model-container">
-        <SectionHead title="Join Model Community Today" />
+        <SectionHead title="Community " description="Join Model " />
         <div className="model-img">
           <div className="overlap-group container">
             <div className="model-text">
@@ -70,8 +70,9 @@ const Main = () => {
       <Jobpost />
       <Counter />
       <Partner />
-      {/* <Testimonial /> */}
+      <Testimonial />
       <News />
+      <Newnews />
     </>
   );
 };

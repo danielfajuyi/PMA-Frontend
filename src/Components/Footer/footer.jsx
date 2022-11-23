@@ -12,79 +12,154 @@ const Footer = () => {
   return (
     <>
       <footer className="footer-container">
-        <div className="footer-section container ">
-          <Logo id="footer-logo" />
-
-          <div className="footer">
-            <div className="footer-heading">
-              <img src={footericon} alt="footericon" height="42px" />
-              <h2>Company</h2>
+        <div class="container show-logo">
+          <Logo id="footer-logo " className="show-on-mobile" />
+        </div>
+        <div className="container footer-section">
+          <Logo id="footer-logo " className="hide-on-mobile" />
+          <div id="footer">
+            <div className="footer">
+              <div className="footer-heading">
+                <img src={footericon} alt="footericon" height="42px" />
+                <h2>Company</h2>
+              </div>
+              <ul>
+                <li>
+                  <Link to="/about" as="li">
+                    About us
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/testimonials" as="li">
+                    Testimonials
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/community" as="li">
+                    Community
+                  </Link>
+                </li>
+              </ul>
             </div>
-            <ul>
-              <li>
-                <Link to="/about">About us</Link>
-              </li>
-              <li>
-                <Link to="/testimonials">Testimonials</Link>
-              </li>
-              <li>
-                <Link to="/community">Community</Link>
-              </li>
-            </ul>
-          </div>
 
-          <div className="footer">
-            <div className="footer-heading">
-              <img src={footericon} alt="footericon" height="42px" />
-              <h2>Privacy</h2>
+            <div className="footer">
+              <div className="footer-heading">
+                <img src={footericon} alt="footericon" height="42px" />
+                <h2>Privacy</h2>
+              </div>
+              <ul>
+                <li>
+                  <Link to="/privacy" as="li">
+                    Privacy
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/terms-of-service" as="li">
+                    Terms of Use
+                  </Link>
+                </li>
+              </ul>
             </div>
-            <ul>
-              <li>
-                <Link to="/privacy">Privacy</Link>
-              </li>
-              <li>
-                <Link to="/terms-of-service">Terms of Use</Link>
-              </li>
-            </ul>
+            <div className="footer replaced-footer">
+              <div className="footer-heading">
+                <img src={footericon} alt="footericon" height="42px" />
+                <h2>Help</h2>
+              </div>
+              <ul>
+                <li>
+                  <Link to="/contact" as="li">
+                    Contact Us
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/howitworks/model" as="li">
+                    How it Works
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/faqs" as="li">
+                    FAQ
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/pricing" as="li">
+                    Pricing
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div className="footer replaced-footer">
+              <div className="footer-heading">
+                <img src={footericon} alt="footericon" />
+                <h2>Download app</h2>
+              </div>
+              <ul>
+                <li>
+                  <Link to="/about" as="li">
+                    Andriod
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/comingsoon" as="li">
+                    Ios
+                  </Link>
+                </li>
+              </ul>
+
+              <span class="coming-soon">
+                <b>Coming Soon!</b>
+              </span>
+            </div>
           </div>
-          <div className="footer">
+        </div>
+
+        {/* Mobile Footer */}
+
+        <div className="mobilefooter_container">
+          <div className="footer mobile-footer">
             <div className="footer-heading">
               <img src={footericon} alt="footericon" height="42px" />
               <h2>Help</h2>
             </div>
             <ul>
+              <li>Contact</li>
               <li>
-                <Link to="/contact">Contact Us</Link>
+                <Link to="/howitworks/model" as="li">
+                  How it Works
+                </Link>
               </li>
               <li>
-                <Link to="/howitworks/model">How it Works</Link>
-              </li>
-              <li>
-                <Link to="/faqs">FAQ</Link>
-              </li>
-              <li>
-                <Link to="/pricing">Pricing</Link>
+                <Link to="/faqs" as="li">
+                  FAQ
+                </Link>
               </li>
             </ul>
           </div>
 
-          <div className="footer">
+          <div className="footer mobile-footer">
             <div className="footer-heading">
-              <img src={footericon} alt="footericon" />
-              <h2>Download app</h2>
+              <img src={footericon} alt="footericon" height="42px" />
+              <h2>Download</h2>
             </div>
             <ul>
               <li>
-                <Link to="/about">Andriod</Link>
+                <Link to="/contact" as="li">
+                  Andriod
+                </Link>
               </li>
               <li>
-                <Link to="/comingsoon">Ios</Link>
+                <Link to="/howitworks/model" as="li">
+                  IOS
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/faqs" as="li">
+                  Coming Soon
+                </Link>
               </li>
             </ul>
-
-            <span>
-              <b>Coming Soon!</b>
-            </span>
           </div>
         </div>
 

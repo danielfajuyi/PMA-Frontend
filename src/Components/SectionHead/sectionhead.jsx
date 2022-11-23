@@ -1,9 +1,12 @@
 import React from "react";
 import "./sectionhead.css";
-const SectionHead = ({ title }) => {
+const SectionHead = ({ title, description }) => {
   return (
     <>
-      <h2 className="section-heading">{title}</h2>
+      <div className=" Section-heading">
+        <h4>{description}</h4>
+        <h1>{title}</h1>
+      </div>
     </>
   );
 };
