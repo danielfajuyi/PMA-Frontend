@@ -14,7 +14,7 @@ html {
 
 :root {
   --black: rgba(0, 0, 0, 1);
-  --dim-black: rgba(30, 32, 44, 1);
+  --dim-black: rgb(29, 31, 43);
   --light-black: rgba(35, 43, 59, 1);
   --dim-white: hsl(240, 100%, 99%);
   --yellow: rgba(252, 211, 65, 1);
@@ -98,15 +98,12 @@ body {
   transition: 0.5s all ease;
   cursor: pointer;
   color: var(--pink);
-}
-
-.btn_shadow {
   background: linear-gradient(145deg, #e2e8ec, #ffffff);
   box-shadow: 4px 4px 8px #cbcbcb, 4px -4px 8px #ffffff;
 }
 
 .btn_shadow:hover {
-  background: #ff014f;
+  background: var(--dimpink);
   color: white;
   transform: translateY(-10px);
 }
@@ -129,6 +126,3 @@ body {
 .text-center {
   text-align: center;
 }
-/* .top {
-  margin-top: 80px;
-} */

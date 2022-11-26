@@ -1,17 +1,18 @@
 import React from "react";
 import "./main.css";
-import SignupImg1 from "../../Images/model/model1.jpg";
-import SignupImg2 from "../../Images/model/model2.jpg";
-import SignupImg3 from "../../Images/model/model3.jpg";
-import Checkmark from "../../Assets/main-assets/hero-checkmark.png";
 import FeaturedModel from "../FeaturedModel/featured-model";
 import SectionHead from "../SectionHead/sectionhead";
 import Jobpost from "../JobPost/jobpost";
+import ComingSoon from "../ComingSoon/ComingSoon";
 import Counter from "../Counter/counter";
 import Partner from "../Partners/partner";
-import News from "../News/news";
+
 import Testimonial from "../Testimonials/Testimonial";
-import Newnews from "../New-News/newNews";
+import HomeSignup from "../SignUpCards/HomeSignup";
+import News from "../News/NewsArtlce/news";
+
+import { FaCheckCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Main = () => {
   return (
@@ -19,60 +20,46 @@ const Main = () => {
       <div className="container signup-container">
         <SectionHead title="Sign Up" description="MODEL AGENCY CLIENT " />
         <div className="signup-wrapper">
-          <div className="sign-img">
-            <img src={SignupImg1}></img>
-            <span> I am a Model</span>
-          </div>
-
-          <div className="sign-img">
-            <img src={SignupImg2}></img>
-            <span> I am a Client</span>
-          </div>
-
-          <div className="sign-img">
-            <img src={SignupImg3}></img>
-            <span> I am a Agency</span>
-          </div>
+          <HomeSignup />
         </div>
-        <button className="btn btn2">Signup</button>
       </div>
 
-      <article className="join-model-container">
+      <article className="join-model-container mtop">
         <SectionHead title="Community " description="Join Model " />
-        <div className="model-img">
-          <div className="overlap-group container">
-            <div className="model-text">
-              Become part of a growing community and connect with other models
-              around the world
-            </div>
-            <div className="model-icon">
-              <div className="model-item">
-                <img src={Checkmark} alt="" />
-                <span>Connect</span>
-              </div>
-
-              <div className="model-item">
-                <img src={Checkmark} alt="" />
-                <span>Interact</span>
-              </div>
-
-              <div className="model-item">
-                <img src={Checkmark} alt="" />
-                <span>Engage</span>
-              </div>
-            </div>
-            <div className="model-btn btn btn2">Join community</div>
+        <div className="join-model-wrapper">
+          <div className="join-model-text">
+            Become part of a growing community and connect with other models
+            around the world
           </div>
+
+          <div className="join-model-icon">
+            <div className="join-model-item" id="item1">
+              <FaCheckCircle />
+              <span>Connect</span>
+            </div>
+
+            <div className="join-model-item" id="item2">
+              <FaCheckCircle />
+              <span>Interact</span>
+            </div>
+
+            <div className="join-model-item" id="item3">
+              <FaCheckCircle />
+              <span>Engage</span>
+            </div>
+          </div>
+
+          <Link class="btn_shadow join-model-btn">Join community</Link>
         </div>
       </article>
 
       <FeaturedModel />
       <Jobpost />
       <Counter />
+      <ComingSoon />
       <Partner />
       <Testimonial />
       <News />
-      <Newnews />
     </>
   );
 };

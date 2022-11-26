@@ -1,0 +1,11 @@
+.LastestNews-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 4rem;
+
+  box-shadow: 0px 10px 20px 5px rgb(40 40 46 / 10%),
+    0px 6px 4px rgb(92 78 78 / 25%);
+  border-radius: 10px;
+}
