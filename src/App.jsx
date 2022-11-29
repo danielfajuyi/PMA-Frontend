@@ -14,6 +14,7 @@ import Hclient from "./Pages/HowItWorks/HPages/Hclient";
 import Hagency from "./Pages/HowItWorks/HPages/Hagency";
 import LandingPage from "./Pages/LandingPage/LandingPage";
 import NotFound from "./Pages/NotFound/notfound";
+import News from "./Components/News/NewsArtlce/news";
 
 function App() {
   return (
@@ -27,15 +28,18 @@ function App() {
         <Route path="/jobpost" element={<JobPost />}></Route>
         <Route path="/find-model/*" element={<FindModel />}></Route>
         <Route path="/community" element={<Community />}></Route>
-        <Route path="/magazine" element={<Magazine />}></Route>
+        <Route path="/magazine/" element={<Magazine />}></Route>
 
         {/* Other pages */}
         <Route path="/faqs" element={<FAQS />}></Route>
-        <Route path="*" element={<NotFound />}></Route>
 
         <Route path="/howitworks/model" element={<Hmodel />}></Route>
         <Route path="/howitworks/client" element={<Hclient />}></Route>
         <Route path="/howitworks/agency" element={<Hagency />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
+
+        {/* Component */}
+        <Route path="/news/:id" element={<News />}></Route>
       </Routes>
     </>
   );
