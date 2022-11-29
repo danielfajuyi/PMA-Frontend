@@ -1,4 +1,4 @@
-import CountUp from "countup";
+import { CountUp } from "countup.js";
 import React, { useState } from "react";
 import SectionHead from "../SectionHead/sectionhead";
 import ReactVisibilitySensor from "react-visibility-sensor";
@@ -27,8 +27,7 @@ const Counter = () => {
                           setViewPortEntered(true);
                         }
                       }}
-                      delayedCall
-                    >
+                      delayedCall>
                       <span className="number" ref={countUpRef} />
                     </ReactVisibilitySensor>
                   );
@@ -50,8 +49,7 @@ const Counter = () => {
                           setViewPortEntered(true);
                         }
                       }}
-                      delayedCall
-                    >
+                      delayedCall>
                       <span className="number" ref={countUpRef} />
                     </ReactVisibilitySensor>
                   );
@@ -73,8 +71,7 @@ const Counter = () => {
                           setViewPortEntered(true);
                         }
                       }}
-                      delayedCall
-                    >
+                      delayedCall>
                       <span className="number" ref={countUpRef} />
                     </ReactVisibilitySensor>
                   );
@@ -96,8 +93,7 @@ const Counter = () => {
                           setViewPortEntered(true);
                         }
                       }}
-                      delayedCall
-                    >
+                      delayedCall>
                       <span className="numbers" ref={countUpRef} />
                     </ReactVisibilitySensor>
                   );
