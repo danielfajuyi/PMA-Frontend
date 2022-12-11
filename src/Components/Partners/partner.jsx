@@ -1,11 +1,10 @@
 import React from "react";
 import "./partner.css";
-import { Partners } from "../../data";
+import { Partners } from "./partnersData";
 import SectionHead from "../SectionHead/sectionhead";
 import Slider from "react-slick";
 import "../Slider/Slider.scss";
-
-// import "./Slider.scss";
+import "slick-carousel/slick/slick.css";
 
 import Uilarrow from "@iconscout/react-unicons/icons/uil-arrow-left";
 import Uilarrowright from "@iconscout/react-unicons/icons/uil-arrow-right";

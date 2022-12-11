@@ -5,6 +5,7 @@
   height: 43rem;
   width: 100%;
   background: var(--dim-black);
+  background-attachment: fixed;
 }
 
 .hero-section {
@@ -298,6 +299,10 @@
   }
 
 
+
+
+
+
   .hero-text div {
   
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -305,9 +310,6 @@
       padding: 15px;
   }
 
-  .hero-text article .paragraph {
-    
-  }
 
 .hero-text  article {
 .heading {

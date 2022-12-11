@@ -13,11 +13,11 @@ const Models = ({ modelItems }) => {
               <div className="featured-model-item">
                 <div className="featured-img">
                   <img src={image} alt={alt}></img>
-                </div>
 
-                <div>
-                  <h2>{name}</h2>
-                  <h4>{desc}</h4>
+                  <div className="featured-model-text">
+                    <h2>{name}</h2>
+                    <h4>{desc}</h4>
+                  </div>
                 </div>
               </div>
             )

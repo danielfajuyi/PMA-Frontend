@@ -41,10 +41,19 @@
 .partnerprev_btn,
 .partnernext_btn {
   position: absolute;
-  top: -5rem;
-  right: 20px;
+  z-index: 10;
+  padding: 14px 21px;
+  background: linear-gradient(145deg, #e2e8ec, #ffffff);
+}
+
+.partnerprev_btn {
+  left: 0;
+  top: 40%;
+  margin-left: -3rem;
 }
 
 .partnernext_btn {
-  margin-right: 90px;
+  margin-right: -3rem;
+  right: 0;
+  top: 40%;
 }

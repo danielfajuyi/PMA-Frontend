@@ -8,18 +8,34 @@
     0px 6px 4px rgb(92 78 78 / 25%);
   border-radius: 10px;
   background: #f4f5f7;
+  background-position: 50% 50%;
+  background-size: cover;
+ 
+
+
 
   .signup-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(20, 16, 29, 0.2);
+      background-blend-mode: overlay;
+      background-position: 50% 70%;
+      background-size: cover;
+      background-image: url(../../../public/images/home/post.jpg);
    
     max-width: 1200px;
+ 
+    
+   
+ 
+     
   }
 }
 
 
 .SignUpCard {
+
   position: relative;
   min-width: 320px;
   height: 440px;
@@ -27,9 +43,10 @@
     inset -5px -5px 5px rgba(225, 225, 225, 0.5),
     5px 5px 5px rgba(0, 0, 0, 0.05), -5px -5px 5px rgba(255, 255, 255, 0.5);
   border-radius: 15px;
-  margin: 30px;
+  margin: 24px;
 
     .SignUpBox {
+       
       position: absolute;
       top: 20px;
       left: 20px;
@@ -53,7 +70,7 @@
       top: -10px;
       right: 30px;
       font-size: 8rem;
-      color: rgba(0, 0, 0, 0.02);
+      color: rgba(0, 0, 0, 0.07);
       transition: 0.5s;
       pointer-events: none;
       
@@ -66,8 +83,8 @@
 .SignUpCard {
   .SignUpBox > .SignUpContent h3{
 
-    font-size: 1.9rem;
-      color: #777;
+    font-size: 2rem;
+      color: rgb(34, 32, 32);
       z-index: 1;
       transition: 0.5s
   }
@@ -75,7 +92,7 @@
     p {
       font-size: 1rem;
       font-weight: 300;
-      color: #777;
+      color: rgb(109, 108, 108);
       z-index: 1;
       transition: 0.5s;
     }
@@ -176,7 +193,14 @@
     position: relative;
     top: -2.5rem;
   }
+}
 
+@media screen and (max-width: 392px) {
+  .SignUpCard {
+    margin: 22px;
+    min-width: 300px;
+  }
+ 
 }
 
 

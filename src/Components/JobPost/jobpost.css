@@ -1,40 +1,70 @@
 .jobpost-container {
-  margin-top: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
 }
 
-.jobpost-wrapper {
-  display: flex;
-
-  gap: 24px;
+.job-container > .slick-slider > .slick-dots {
+  bottom: -3.5rem;
 }
+
+/* .jobpost-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  padding: 2.5rem;
+  gap: 24px;
+  position: relative;
+}
+
 .jobpost-card {
   display: flex;
   flex-direction: column;
-  background-color: var(--white);
-  box-shadow: 0px 11px 20px rgb(5 16 55 / 10%);
+  align-items: center;
+  background: white;
+  box-shadow: 0px 5px 15px 0px rgb(0 0 0 / 11%);
+
+  width: 100%;
 }
 
-.jobpost-card img {
-  width: 100%;
-  height: 328px;
+.jobimg-wrapper {
+  background-position: 50% 50%;
+  background-size: cover;
 
-  object-fit: cover;
-  object-position: 50% 50%;
-  aspect-ratio: 1/1;
-  border-radius: 20px;
-  border: 1px solid var(--black);
+  height: 328px;
+  width: 100%;
+  position: relative;
+}
+
+.jobimg-wrapper img {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  position: relative;
+}
+
+.jobimg-wrapper {
+  width: 100%;
 }
 
 .jobtext {
   display: flex;
   flex-direction: column;
 
-  margin-top: 19px;
-  padding: 0.5rem 0 1rem 0;
+  padding: 4px;
+}
+
+.job-curve {
+  background: white;
+  width: 100%;
+  height: 30px;
+  position: relative;
+  z-index: 3;
+
+  bottom: 1rem;
+
+  border-radius: 70px 0px 0 0px;
+  left: 0;
+  position: relative;
 }
 
 .jobtext .jobcard-btn {
@@ -58,19 +88,170 @@
   color: var(--black);
 }
 
-.jobpost-btn {
-  margin-top: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--btn1-background);
-  box-shadow: 0px 10px 20px rgba(255, 7, 127, 0.1);
-  border-radius: 20px;
-  padding: 17px 30.5px;
-  cursor: pointer;
+@media screen and (max-width: 1024px) {
+  .jobpost-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    padding: 2.5rem;
+    gap: 24px;
+    position: relative;
+  }
 }
 
-.jobpost-btn:hover {
-  background: var(--btn2-background);
+@media screen and (max-width: 600px) {
+  .jobpost-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    padding: 2.5rem;
+    gap: 24px;
+    position: relative;
+  }
+} */
+
+.job-container {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  gap: 2rem;
+  align-self: center;
+  width: 100%;
+  margin: 0 auto;
+
+  box-shadow: 0px 10px 20px 5px rgb(40 40 46 / 10%),
+    0px 6px 4px rgb(92 78 78 / 25%);
+  border-radius: 10px;
+}
+
+.job-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 0 0;
+  box-sizing: border-box;
+  cursor: grab;
+  margin: auto;
+}
+
+.job-container .job-card {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: auto;
+  cursor: pointer;
+  transition: 0.5s;
+
+  box-shadow: 0px 5px 15px 0px rgb(0 0 0 / 11%);
+}
+
+.job-card:hover .job-btn {
+  transform: scale(1.1);
+}
+
+.job-content1-img-wrapper img {
+  width: 100%;
+  height: 350px;
+}
+
+.job-content1 {
+  position: relative;
+  height: 320px;
+  background-image: linear-gradient(to bottom right, #fd8f22, #feb11f, #ffc519);
+}
+.job-content {
+  position: relative;
+  z-index: 300;
+}
+
+#featured-lable {
+  z-index: 400;
+  left: 13.4rem;
+  height: fit-content;
+  position: relative;
+  bottom: 4.9rem;
+  right: 0;
+}
+
+.job-content2 {
+  position: relative;
+
+  padding: 17px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.jobratings span {
+  display: inline-block;
+  text-align: center;
+  line-height: 26px;
+  font-size: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+  color: #949493;
+}
+
+.jobratings span:hover {
+  color: #0a0d0f;
+}
+
+.jobratings span svg {
+  fill: #e78b35;
+}
+
+.job-content-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.job-content-title span {
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  font-size: var(--font-size-m);
+  color: var(--black);
+}
+
+.jobprice span {
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.job-btn {
+  background: var(--pink);
   color: white;
+  display: inline-block;
+  font-weight: 500;
+  left: 45%;
+  position: relative;
+  border-radius: 30px;
+  margin-top: 7.5rem;
+  bottom: 2rem;
+}
+
+.job-btn:hover {
+  color: var(--pink);
+  background: linear-gradient(145deg, #e2e8ec, #ffffff);
+}
+
+@media screen and (max-width: 768px) {
+  .job-btn {
+    left: 43%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .job-card {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .job-btn {
+    left: 36%;
+  }
 }

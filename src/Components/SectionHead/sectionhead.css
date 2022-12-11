@@ -1,10 +1,10 @@
 .Section-heading {
-  margin: 50px 0 50px 0;
+  margin: 40px 0 40px 0;
   text-align: center;
 }
 
 .Section-heading h4 {
-  color: #ff014f;
+  color: var(--pink);
   letter-spacing: 2px;
   font-weight: 2px;
   text-transform: uppercase;
@@ -13,4 +13,10 @@
 .Section-heading h1 {
   font-size: 50px;
   color: var(--dim-black);
+}
+
+@media screen and (max-width: 414px) {
+  .Section-heading h1 {
+    font-size: 40px;
+  }
 }

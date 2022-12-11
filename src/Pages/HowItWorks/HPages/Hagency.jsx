@@ -1,37 +1,28 @@
 import React from "react";
-import Counter from "../../../Components/Counter/counter";
+
 const Hagency = () => {
   return (
     <>
-      <div className="HIWheader-container ">
+      <div className="header-container">
         <div className="header-section container">
-          <h1>About Us</h1>
-          <span> We have reimagined the modeling industry</span>
+          <h1>How It Works</h1>
+          <h2>For Models</h2>
+          <span> We connect you with models near you or internationally</span>
           <span>
             Premium model App is a digital portfolio hub for models and a
             booking platform, which helps clients around the world to source for
             models for their projects.
           </span>
-
-          <ul class="header-navigation">
-            <li>
-              <a href="./model.html" class="HIW-active">
-                Models
-              </a>
-            </li>
-            <li>
-              <a href="./agency.html">Agency</a>
-            </li>
-            <li>
-              <a href="./client.html">Clients</a>
-            </li>
-          </ul>
         </div>
       </div>
 
       <div className="container about-container">
         <div className="about-section">
-          <img src="./images/team/about-img1.png" className="about-img" />
+          <img
+            src="./images/team/about-img1.png"
+            alt="img1"
+            className="about-img"
+          />
           <div className="about-text">
             <h2>For people who want to model</h2>
             <span>
@@ -59,11 +50,19 @@ const Hagency = () => {
               and get started with your creative project.
             </span>
           </div>
-          <img src="./images/team/about-img2.png" className="about-img" />
+          <img
+            src="./images/team/about-img2.png"
+            alt="img2"
+            className="about-img"
+          />
         </div>
 
         <div className="about-section section-3">
-          <img src="./images/team/about-img3.png" className="about-img" />
+          <img
+            src="./images/team/about-img3.png"
+            alt="img3"
+            className="about-img"
+          />
           <div className="about-text">
             <h2>For Agencies who want to market models</h2>
             <span>
@@ -74,29 +73,6 @@ const Hagency = () => {
               You can manage your models on our portal and receive all booking
               request directly.
             </span>
-          </div>
-        </div>
-      </div>
-
-      <Counter />
-
-      <div className="container booking-container">
-        <div className="booking-wrapper">
-          <div className="booking-desc">
-            <h2>
-              Everybody has a talent! <br />
-              Everybody is a talent!
-            </h2>
-            <p>
-              Premium Model App is a booking platform open to all aspiring and
-              professional models. Models also have the opportunity to gain
-              access to international exposure and casting opportunities
-              regardless of their age, style, location, background or
-              measurements. we combine the professionalism of the flexibility of
-              self-representation to create a platform tailored for you.
-            </p>
-
-            <button className="btn btn2">Signup</button>
           </div>
         </div>
       </div>

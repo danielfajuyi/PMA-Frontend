@@ -7,7 +7,7 @@ const Categories = ({ categories, filterItems }) => {
         return (
           <button
             type="button"
-            className="btn_shadow"
+            className="btn_shadow  featured-model-category"
             key={index}
             onClick={() => filterItems(category)}
           >

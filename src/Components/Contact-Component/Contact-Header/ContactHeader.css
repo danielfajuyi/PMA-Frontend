@@ -3,9 +3,7 @@
   text-align: center;
 }
 
-.contact-head h2 {
-  font-size: 36px;
-  font-weight: 500;
+.contact-head h1 {
   color: var(--pink);
 }
 

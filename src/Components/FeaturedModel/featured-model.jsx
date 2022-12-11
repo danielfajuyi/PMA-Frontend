@@ -1,10 +1,10 @@
 import React from "react";
-import "./model.css";
 import { featuredmodel } from "./featuredmodelAPI";
 import Categories from "./categories";
 import Models from "./model";
 import SectionHead from "../SectionHead/sectionhead";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const items = featuredmodel;
 
@@ -12,7 +12,11 @@ const allCategories = ["All", ...new Set(items.map((item) => item.category))];
 
 const FeaturedModel = () => {
   const [modelItems, setModelsItems] = useState(items);
-  const [categories, setCategories] = useState(allCategories);
+  const [
+    categories,
+
+    /*setCategories */
+  ] = useState(allCategories);
 
   const filterItems = (category) => {
     if (category === "All") {
@@ -28,11 +32,11 @@ const FeaturedModel = () => {
     <>
       <div className="container featured-container mtop">
         <SectionHead title="Models" description="Featured" />
-
         <Categories categories={categories} filterItems={filterItems} />
-        <Models modelItems={modelItems} />
-
-        <button className="featured-model-btn">Find models</button>
+        <div className="featured-model-wrapper">
+          <Models modelItems={modelItems} />
+          <Link className="featured-model-btn btn_shadow">Find models</Link>
+        </div>
       </div>
     </>
   );

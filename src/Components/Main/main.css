@@ -23,11 +23,11 @@
 }
 
 .join-model-wrapper {
-  background-image: url(../../../public/images/home/join-model2.jpg);
+  background-image: url(../../../public/images/home/modela.jpg);
 
   height: 480px;
   width: 100%;
-  background-position: 50% 72%;
+  background-position: 50% 35%;
   background-blend-mode: overlay;
   background-size: cover;
   display: flex;
@@ -85,10 +85,10 @@
 
 @media screen and (max-width: 768px) {
   .join-model-icon {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 80%;
-    gap: 28px;
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 5px;
   }
 
   .join-model-text {
@@ -96,8 +96,61 @@
     margin-top: 30px;
     text-align: center;
     font-size: var(--font-size-l);
-    padding: 7px;
+    padding: 5px;
     font-weight: 600;
     color: var(--white);
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .join-model-icon {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 0;
+  }
+
+  .join-model-text {
+    line-height: 44px;
+    margin-top: 30px;
+    text-align: center;
+    font-size: var(--font-size-l);
+    padding: 5px;
+    font-weight: 600;
+    color: var(--white);
+  }
+
+  .join-model-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .join-model-icon {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 0;
+  }
+
+  .join-model-text {
+    line-height: 44px;
+    margin-top: 30px;
+    text-align: center;
+    font-size: var(--font-size-l);
+    padding: 5px;
+    font-weight: 600;
+    color: var(--white);
+  }
+
+  .join-model-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px;
   }
 }

@@ -1,8 +1,13 @@
 import React from "react";
 import "./CategoryLable.css";
 
-const CategoryLabel = ({ lable }) => {
-  return <p className="categoryLable"> {lable}</p>;
+const CategoryLabel = ({ lable, id }) => {
+  return (
+    <p className="categoryLable" id={id}>
+      {" "}
+      {lable}
+    </p>
+  );
 };
 
 export default CategoryLabel;

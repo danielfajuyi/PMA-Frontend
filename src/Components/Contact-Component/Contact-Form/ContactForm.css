@@ -57,14 +57,14 @@
   cursor: pointer;
   border: none;
   color: var(--white);
-   background: #ff014f;
+  background: #ff014f;
   box-shadow: 4px 4px 8px #cbcbcb, 4px -4px 8px #ffffff;
   transition: 0.3s all ease;
   height: fit-content;
 }
 
 .submit-button:hover {
-   background: linear-gradient(145deg, #e2e8ec, #ffffff);
+  background: linear-gradient(145deg, #e2e8ec, #ffffff);
 
   color: var(--dim-black);
   transform: translateY(-10px);
@@ -77,13 +77,13 @@
 
 @media screen and (max-width: 767px) {
   .contact-form {
-    width: 90%;
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 600px) {
   .contact-form {
-    width: 98%;
+    width: 100%;
   }
 
   .form-fields {
@@ -99,7 +99,6 @@
 
 @media screen and (max-width: 500px) {
   .contact-form {
-    width: 98%;
   }
 
   .form-fields {

@@ -33,7 +33,6 @@
   align-items: center;
   display: flex;
   border-radius: 50%;
-  font-size: 22px;
 }
 
 .contact-text .box .icon:hover {
@@ -68,10 +67,6 @@
   margin-bottom: 1.5rem;
 }
 
-.contact-wrapper h2:hover {
-  opacity: 0;
-}
-
 .contact-social {
   display: inline-flex;
 }
@@ -94,6 +89,7 @@
   width: 60px;
   display: block;
   background: #fff;
+  line-height: 72px;
 
   border-radius: 50%;
   text-align: center;
@@ -101,9 +97,8 @@
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
-.contact-social .icon span i {
+.contact-social .icon span svg {
   font-size: 25px;
-  line-height: 60px;
 }
 
 .contact-social .icon:hover span {
@@ -182,12 +177,37 @@
   }
 
   .contact-info {
-    width: 90%;
+    width: 100%;
+  }
+
+  .contact-text .box .icon {
+    min-width: 40px;
+    height: 40px;
   }
 }
 
 @media screen and (max-width: 600px) {
   .contact-info {
-    width: 98%;
+    width: 100%;
+  }
+
+  .contact-social {
+    padding-left: 13px;
+  }
+
+  .contact-social .icon {
+    margin: 0 13px;
+  }
+
+  .contact-social .icon .tooltip {
+    font-size: 20px;
+    padding: 6px 14px;
+  }
+
+  .contact-social .icon span {
+    height: 50px;
+    width: 50px;
+
+    line-height: 64px;
   }
 }

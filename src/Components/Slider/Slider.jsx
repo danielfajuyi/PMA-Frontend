@@ -39,26 +39,30 @@ const ImageSlider = () => {
       <div className="slidercard-wrapper">
         <div className="slidercard">
           <div className="slidercard-image">
-            <img src="./images/team/team5.jpg" className="slider-img" />
+            <img
+              src="./images/team/team5.jpg"
+              alt="team1"
+              className="slider-img"
+            />
           </div>
           <ul className="slidersocial-icons">
             <li>
-              <a href="#">
+              <a href="/about">
                 <UilFacebook />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/about">
                 <UilWhatsapp />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/about">
                 <UilInstagram />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/about">
                 <UilTwitter />
               </a>
             </li>
@@ -75,26 +79,26 @@ const ImageSlider = () => {
       <div className="slidercard-wrapper">
         <div className="slidercard">
           <div className="slidercard-image">
-            <img src="./images/team/team9.jpg" />
+            <img src="./images/team/team9.jpg" alt="team2" />
           </div>
           <ul className="slidersocial-icons">
             <li>
-              <a href="#">
+              <a href="/about">
                 <UilFacebook />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/about">
                 <UilWhatsapp />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/about">
                 <UilInstagram />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/about">
                 <UilTwitter />
               </a>
             </li>
@@ -111,26 +115,26 @@ const ImageSlider = () => {
       <div className="slidercard-wrapper">
         <div className="slidercard">
           <div className="slidercard-image">
-            <img src="./images/team/team3.png" />
+            <img src="./images/team/team3.png" alt="team3" />
           </div>
           <ul class="slidersocial-icons">
             <li>
-              <a href="#">
+              <a href="/about">
                 <UilFacebook className="svg" />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/about">
                 <UilWhatsapp className="svg" />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/about">
                 <UilInstagram className="svg" />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/about">
                 <UilTwitter className="svg" />
               </a>
             </li>
@@ -147,26 +151,26 @@ const ImageSlider = () => {
       <div className="slidercard-wrapper">
         <div className="slidercard">
           <div className="slidercard-image">
-            <img src="./images/team/team4.png" />
+            <img src="./images/team/team4.png" alt="team4" />
           </div>
           <ul class="slidersocial-icons">
             <li>
-              <a href="#">
+              <a href="/about">
                 <UilFacebook className="svg" />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/about">
                 <UilWhatsapp className="svg" />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/about">
                 <UilInstagram className="svg" />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/about">
                 <UilTwitter />
               </a>
             </li>
@@ -183,26 +187,26 @@ const ImageSlider = () => {
       <div className="slidercard-wrapper">
         <div className="slidercard">
           <div className="slidercard-image">
-            <img src="./images/team/team9.jpg" />
+            <img src="./images/team/team9.jpg" alt="team5" />
           </div>
           <ul className="slidersocial-icons">
             <li>
-              <a href="#">
+              <a href="/about">
                 <UilFacebook />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/about">
                 <UilWhatsapp />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/about">
                 <UilInstagram />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/about">
                 <UilTwitter />
               </a>
             </li>
@@ -219,26 +223,26 @@ const ImageSlider = () => {
       <div className="slidercard-wrapper">
         <div className="slidercard">
           <div className="slidercard-image">
-            <img src="./images/team/team9.jpg" />
+            <img src="./images/team/team9.jpg" alt="team6" />
           </div>
           <ul className="slidersocial-icons">
             <li>
-              <a href="#">
+              <a href="/about">
                 <UilFacebook />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/about">
                 <UilWhatsapp />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/about">
                 <UilInstagram />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/about">
                 <UilTwitter />
               </a>
             </li>

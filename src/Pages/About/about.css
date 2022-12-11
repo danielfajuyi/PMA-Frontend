@@ -93,6 +93,11 @@
   box-shadow: 0px 10px 20px 5px rgb(40 40 46 / 10%),
     0px 6px 4px rgb(92 78 78 / 25%);
   border-radius: 10px;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+
+  background-image: url(../../../public/images/home/modela.jpg);
 }
 
 .about-section {
@@ -100,6 +105,11 @@
   align-items: center;
   gap: 3.5rem;
   position: relative;
+
+  background: white;
+  box-shadow: 0px 5px 15px 0px rgb(0 0 0 / 11%);
+  border-radius: 10px;
+  padding: 2rem;
 }
 
 .about-section img {
@@ -134,15 +144,6 @@
 /* Team Section ends */
 
 /* Commuinty Section Begins */
-
-.counter-main-section {
-  overflow: hidden;
-
-  padding: 3rem;
-  box-shadow: 0px 10px 20px 5px rgb(40 40 46 / 10%),
-    0px 6px 4px rgb(92 78 78 / 25%);
-  border-radius: 10px;
-}
 
 /* Booking Begins */
 
@@ -184,15 +185,6 @@
 /* Footer Sections */
 
 @media screen and (max-width: 767px) {
-  body {
-    background: var(--dim-white);
-  }
-
-  .container {
-    width: var(--container-width-sm);
-    margin: 0 auto;
-  }
-
   .header-section {
     padding: 0 7px;
   }

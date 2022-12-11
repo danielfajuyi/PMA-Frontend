@@ -42,4 +42,26 @@ export const LatestNews = [
     authorAvatar: "./assets/author1.png",
     createdAt: "June 03, 2021",
   },
+
+  {
+    id: 5,
+    img: "./images/news/news3.jpg",
+    title: "The International Models Brands",
+    category: "Brands ",
+    desc: "the premium model agency webapplication has been named the best models agency app in the world, this awards was presented",
+    authorName: "David Mark",
+    authorAvatar: "./assets/author1.png",
+    createdAt: "June 03, 2021",
+  },
+
+  {
+    id: 6,
+    img: "./images/news/news3.jpg",
+    title: "The International Models Brands",
+    category: "Brands ",
+    desc: "the premium model agency webapplication has been named the best models agency app in the world, this awards was presented",
+    authorName: "David Mark",
+    authorAvatar: "./assets/author1.png",
+    createdAt: "June 03, 2021",
+  },
 ];
