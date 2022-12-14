@@ -48,8 +48,6 @@ h3 {
   color: var(--dim-black);
 }
 
-
-
 /* FAQ COMPONENT */
 
 .faqs {
@@ -109,8 +107,6 @@ h3 {
   margin-top: 1.5rem;
 }
 
-
-
 /* Blur */
 
 .blur {
@@ -168,4 +164,42 @@ h3 {
 .br3 {
   left: 70%;
   background: rgb(238, 210, 255);
+}
+
+@media screen and (max-width: 1024px) {
+  .blur,
+  .blur-2,
+  .blur-2-right,
+  .blur-22,
+  .blr-11,
+  .blr-1 {
+    display: none;
+  }
+
+  .faqsquestion__wrapper {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 2.5rem;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .blur,
+  .blur-2,
+  .blur-2-right,
+  .blur-22,
+  .blr-11,
+  .blr-1 {
+    display: none;
+  }
+
+  .faqsquestion__wrapper {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem 2.5rem;
+    align-items: flex-start;
+  }
 }

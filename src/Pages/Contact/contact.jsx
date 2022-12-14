@@ -1,6 +1,6 @@
 import React from "react";
-import ContactContainer from "../../Components/Contact-Component/Contact-Container/ContactContainer";
-import ContactHeader from "../../Components/Contact-Component/Contact-Header/ContactHeader";
+import ContactContainer from "./Contact-Component/Contact-Container/ContactContainer";
+import ContactHeader from "./Contact-Component/Contact-Header/ContactHeader";
 
 import "./contact.css";
 

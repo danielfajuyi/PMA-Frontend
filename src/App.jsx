@@ -11,7 +11,7 @@ import Magazine from "./UI/Admin-UI/Magazine/magazine";
 import FAQS from "./Pages/Faqs/Faq";
 import LandingPage from "./Pages/LandingPage/LandingPage";
 import NotFound from "./Pages/NotFound/notfound";
-import News from "./Components/News/NewsArtlce/news";
+
 import HowItWorks from "./Pages/HowItWorks/HowItWorks";
 
 import { useState } from "react";
@@ -43,7 +43,6 @@ function App() {
         <Route path="/howitworks" element={<HowItWorks />}></Route>
 
         {/* Component */}
-        <Route path="/news/:id" element={<News />}></Route>
 
         <Route path="*" element={<NotFound />}></Route>
       </Routes>

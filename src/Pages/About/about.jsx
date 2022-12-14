@@ -1,8 +1,10 @@
 import React from "react";
+
 import Counter from "../../Components/Counter/counter";
 import SectionHead from "../../Components/SectionHead/sectionhead";
-import ImageSlider from "../../Components/Slider/Slider";
-import Footer from "../../Components/Footer/footer";
+import ImageSlider from "../../Components/Slider/TeamSlider/Slider";
+import Footer from "../../Pages/Home/Layout/FooterSection/Footer/footer";
+
 import "./about.css";
 
 const About = () => {
@@ -22,7 +24,11 @@ const About = () => {
 
       <div className="container about-container">
         <div className="about-section">
-          <img src="./images/team/about-img1.png" className="about-img" />
+          <img
+            src="./images/team/about-img1.png"
+            alt="about-img1"
+            className="about-img"
+          />
           <div className="about-text">
             <h2>For people who want to model</h2>
             <span>
@@ -50,11 +56,19 @@ const About = () => {
               and get started with your creative project.
             </span>
           </div>
-          <img src="./images/team/about-img2.png" className="about-img" />
+          <img
+            src="./images/team/about-img2.png"
+            alt="about-img1"
+            className="about-img"
+          />
         </div>
 
         <div className="about-section section-3">
-          <img src="./images/team/about-img3.png" className="about-img" />
+          <img
+            src="./images/team/about-img3.png"
+            alt="about-img1"
+            className="about-img"
+          />
           <div className="about-text">
             <h2>For Agencies who want to market models</h2>
             <span>

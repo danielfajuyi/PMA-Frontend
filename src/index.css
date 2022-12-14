@@ -24,7 +24,7 @@
   border-radius: 30px;
 }
 :root {
-  --black: rgba(0, 0, 0, );
+  --black: rgba(0, 0, 0);
   --dim-black: rgb(29, 30, 43);
   --light-black: rgb(35, 43, 59);
   --dim-white: hsl(240, 100%, 99%);
@@ -138,4 +138,21 @@ body {
 
 .text-center {
   text-align: center;
+}
+
+.overlay::before {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 18%,
+    rgba(0, 0, 0, 0.8) 99%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
 }

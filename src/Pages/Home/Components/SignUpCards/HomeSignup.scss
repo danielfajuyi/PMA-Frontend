@@ -1,0 +1,212 @@
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0px 10px 20px 5px rgb(40 40 46 / 10%),
+    0px 6px 4px rgb(92 78 78 / 25%);
+  border-radius: 10px;
+  background: #f4f5f7;
+  background-position: 50% 50%;
+  background-size: cover;
+ 
+
+
+
+  .signup-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(20, 16, 29, 0.2);
+      background-blend-mode: overlay;
+      background-position: 50% 70%;
+      background-size: cover;
+      background-image: url(../../../../../public/images/home/post.jpg);
+   
+    max-width: 1200px;
+ 
+    
+   
+ 
+     
+  }
+}
+
+
+.SignUpCard {
+
+  position: relative;
+  min-width: 320px;
+  height: 440px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+    inset -5px -5px 5px rgba(225, 225, 225, 0.5),
+    5px 5px 5px rgba(0, 0, 0, 0.05), -5px -5px 5px rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  margin: 24px;
+
+    .SignUpBox {
+       
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      background: #f4f4f4;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s;
+    }
+
+    .SignUpContent {
+      padding: 20px;
+      text-align: center;
+    } 
+    h2 {
+      position: absolute;
+      top: -10px;
+      right: 30px;
+      font-size: 8rem;
+      color: rgba(0, 0, 0, 0.07);
+      transition: 0.5s;
+      pointer-events: none;
+      
+    }
+}
+
+
+
+
+.SignUpCard {
+  .SignUpBox > .SignUpContent h3{
+
+    font-size: 2rem;
+      color: rgb(34, 32, 32);
+      z-index: 1;
+      transition: 0.5s
+  }
+
+    p {
+      font-size: 1rem;
+      font-weight: 300;
+      color: rgb(109, 108, 108);
+      z-index: 1;
+      transition: 0.5s;
+    }
+
+    a {
+      position: relative;
+      display: inline-block;
+      padding: 8px 20px;
+      background: var(--pink);
+      margin-top: 15px;
+      border-radius: 20px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 400;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      
+    }
+}
+
+.SignUpCard:hover {
+  .SignUpBox>.SignUpContent h2 {
+
+    color: rgba(0, 0, 0, 0.05);
+
+  }
+
+  a {
+    background: var(--pink);
+  }
+
+  h2 {
+    color: var(--dim-black);
+  }
+
+  h3 {
+    color: var(--pink);
+
+    font-size: 2rem;
+    transition: 0.5s
+  }
+
+}
+
+
+
+.SignUpCard:hover .SignUpBox {
+  transform: translateY(-50px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  background:  #fff;
+ 
+}
+
+
+.SignUpCard:hover .SignUpBox .SignUpContent h2 
+.SignUpCard:hover .SignUpBox .SignUpContent p{
+  color: white;
+ 
+}
+
+.SignUpCard:hover .SignUpBox .SignUpContent  {
+/*
+  #modelhover {
+
+    color: var(--shedule);
+  }
+
+    #clienthover {
+  
+      color: var(--photo);
+    }
+
+        #agencyhover {
+    
+          color: var(--location);
+        } */
+        
+        h3{
+          color: var(--pink);
+        }
+
+
+
+
+}
+
+
+
+@media screen and (max-width: 1024px ) {
+  .signup-wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+
+@media screen and (max-width: 415px) {
+  .signup-container {
+    padding-top: 3rem;
+    position: relative;
+    top: -2.5rem;
+  }
+}
+
+@media screen and (max-width: 392px) {
+  .SignUpCard {
+    margin: 22px;
+    min-width: 300px;
+  }
+ 
+}
+
+
+
+
+
+
+
+

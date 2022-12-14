@@ -2,10 +2,12 @@ import React from "react";
 
 import "../About/about.css";
 import "./HowItWorks.css";
+import Line from "../../Components/Line/line";
 
 const HowItWorks = () => {
   return (
     <>
+      <Line />
       <div className="  HIWheader-container">
         <div className="HIWsection header-section container">
           <h2>How It Works</h2>
@@ -13,8 +15,8 @@ const HowItWorks = () => {
           <span> For Models Client and Agencies</span>
           <span>
             Premium model App is a digital portfolio hub for models and a
-            booking platform, <br></br>which helps clients around the world to source for
-            models for their projects.
+            booking platform, <br></br>which helps clients around the world to
+            source for models for their projects.
           </span>
         </div>
       </div>
@@ -26,7 +28,7 @@ const HowItWorks = () => {
             <span>3 of your benefits</span>
           </div>
 
-          <div className="howitwords-carditems container">
+          <div className="howitworks-carditems container">
             <div>
               <h2>01</h2>
               <h3>Get Exciting Jobs</h3>
@@ -59,7 +61,7 @@ const HowItWorks = () => {
       <div className="container howitworks-container ">
         <div className="about-section">
           <img
-            src="./images/team/about-img1.png"
+            src="./images/how-it-works/model2.png"
             alt="img1"
             className="about-img"
           />
@@ -91,7 +93,7 @@ const HowItWorks = () => {
             </span>
           </div>
           <img
-            src="./images/team/about-img2.png"
+            src="./images/how-it-works/model3.png"
             alt="img2"
             className="about-img"
           />
@@ -99,7 +101,7 @@ const HowItWorks = () => {
 
         <div className="about-section section-3">
           <img
-            src="./images/team/about-img3.png"
+            src="./images/how-it-works/model8.png"
             alt="img3"
             className="about-img"
           />

@@ -5,20 +5,22 @@
   align-items: center;
   justify-content: center;
   height: 30rem;
-  color: var(--white);
+  color: rgba(0, 0, 0, 0.5);
 
   background-image: url(../../../public/images/team/img3-cut.png);
 
-  background-position: 50% 40%;
+  background-position: 50% 35%;
   background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
 
   transition: 5s;
 }
 
 .HIWsection {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
 .HIWsection span {
@@ -28,8 +30,9 @@
 }
 
 .HIWsection span:nth-of-type(1) {
-  border-bottom: 2px solid white;
   padding-bottom: 7px;
+  color: #ebebeb;
+  letter-spacing: 1px;
 }
 
 .HIWsection span:nth-of-type(2) {
@@ -38,6 +41,7 @@
   margin-top: 8px;
   display: flex;
   flex-wrap: wrap;
+  color: #ebebeb;
 }
 .HIWsection h2 {
   color: white;
@@ -69,8 +73,10 @@
   flex-direction: column;
   gap: 1rem;
   align-items: center;
-  padding: 10rem;
+  padding: 5rem;
   background: #f4f4f4;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .howitworks-card-heading {
@@ -78,10 +84,81 @@
   text-align: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  gap: 1rem;
 }
 
-.howitwords-carditems {
+.howitworks-card-heading h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #252525;
+  line-height: 1;
+}
+
+.howitworks-card-heading span {
+  font-size: 16px;
+  font-weight: 200;
+  color: #7b7b7b;
+}
+
+.howitworks-carditems {
+  place-items: center;
   margin-top: 2rem;
   display: grid;
+  gap: 2rem;
   grid-template-columns: repeat(3, 1fr);
+
+  flex-wrap: wrap;
+
+}
+
+.howitworks-carditems div h2 {
+  color: var(--pink);
+  font-size: 67px;
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-bottom: -7px;
+}
+
+.howitworks-carditems div h3 {
+  color: #252525;
+  font-size: 21px;
+  font-weight: 600;
+  margin-top: 5;
+  margin-top: 0px;
+  margin-bottom: 28px;
+}
+
+.howitwords-carditems div p {
+  color: #484848;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .howitworks-carditems {
+    place-items: center;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .howitworks-carditems {
+    place-items: center;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    flex-wrap: wrap;
+  }
 }

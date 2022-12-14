@@ -1,16 +1,14 @@
-import React from 'react'
-import { faqs } from '../../data'
-import FaqComponent from './FaqComponent'
+import React from "react";
+import { faqs } from "../../data";
+import FaqComponent from "./FaqComponent";
 
 import "./Faq.css";
-import Footer from "../../Components/Footer/footer"
-
-
+import Footer from "../Home/Layout/FooterSection/Footer/footer";
 
 const FAQs = () => {
   return (
     <>
-     <div className="blur-2"></div>
+      <div className="blur-2"></div>
       <div className="blur-2-right"></div>
 
       <div
@@ -75,28 +73,23 @@ const FAQs = () => {
         ></div>
       </div>
 
-        <section className="faqs">
-            <h2>Frequently Asked Questions</h2>
+      <section className="faqs">
+        <h2>Frequently Asked Questions</h2>
 
-            <div className="container faqs__container">
-             <article className="faqsquestion__wrapper">
-                {
-                    faqs.map(({id, question, answer}) => {
-                        return <FaqComponent key={id} question={question} answer={answer} />
-                    })
-                }
-             </article>
-             </div>
+        <div className="container faqs__container">
+          <article className="faqsquestion__wrapper">
+            {faqs.map(({ id, question, answer }) => {
+              return (
+                <FaqComponent key={id} question={question} answer={answer} />
+              );
+            })}
+          </article>
+        </div>
       </section>
 
-
       <Footer />
-
     </>
+  );
+};
 
-    
-
-   )
-}
-
-export default FAQs
+export default FAQs;
