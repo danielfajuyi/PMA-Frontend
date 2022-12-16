@@ -14,7 +14,9 @@ import NotFound from "./Pages/NotFound/notfound";
 
 import HowItWorks from "./Pages/HowItWorks/HowItWorks";
 
+
 import { useState } from "react";
+import Blog from "./UI/Admin-UI/Blog/Blog";
 
 function App() {
   const [showNav, setShowNav] = useState(true);
@@ -36,6 +38,7 @@ function App() {
         ></Route>
 
         <Route path="/magazine/" element={<Magazine />}></Route>
+        <Route path="/blog/" element={<Blog />}></Route>
 
         {/* Other pages */}
         <Route path="/faqs" element={<FAQS />}></Route>

@@ -18,9 +18,7 @@ const Main = () => {
     <>
       <div className="container signup-container">
         <SectionHead title="Sign Up" description="MODEL AGENCY CLIENT " />
-        <div className="signup-wrapper">
-          <HomeSignup />
-        </div>
+        <div className="signup-wrapper">{<HomeSignup />}</div>
       </div>
 
       <article className="join-model-container mtop">
