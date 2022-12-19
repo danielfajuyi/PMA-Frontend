@@ -104,7 +104,7 @@ export const BlogItem2 = () => {
             } = blogitem;
             return (
               <div className="left-wrapper " key={id}>
-                <img src={img} alt={title} />
+                <img src={img} alt={title} className="left-wrapper-img" />
                 <div>
                   <div>
                     <CategoryLabel lable={category} />

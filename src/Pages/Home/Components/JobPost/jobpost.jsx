@@ -93,7 +93,9 @@ const Jobpost2 = () => {
           );
         })}
       </Slider>
-      <Link className=" job-btn btn_shadow">Find jobs</Link>
+      <Link to="/jobpost" className=" job-btn btn_shadow">
+        Find jobs
+      </Link>
     </article>
   );
 };

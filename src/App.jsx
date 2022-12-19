@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 import Navbar from "./Components/Navbar/navbar";
 import Home from "./Pages/Home/home";
@@ -14,7 +14,6 @@ import NotFound from "./Pages/NotFound/notfound";
 
 import HowItWorks from "./Pages/HowItWorks/HowItWorks";
 
-
 import { useState } from "react";
 import Blog from "./UI/Admin-UI/Blog/Blog";
 
@@ -24,31 +23,32 @@ function App() {
   return (
     <>
       {showNav && <Navbar />}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />}></Route>
+          <Route path="/home" element={<Home />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/jobpost" element={<JobPost />}></Route>
+          <Route path="/find-model/*" element={<FindModel />}></Route>
+          <Route
+            path="/community"
+            element={<Community displayNav={setShowNav} />}
+          ></Route>
 
-      <Routes>
-        <Route path="/" element={<LandingPage />}></Route>
-        <Route path="/home" element={<Home />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/jobpost" element={<JobPost />}></Route>
-        <Route path="/find-model/*" element={<FindModel />}></Route>
-        <Route
-          path="/community"
-          element={<Community displayNav={setShowNav} />}
-        ></Route>
+          <Route path="/magazine/" element={<Magazine />}></Route>
+          <Route path="/blog/" element={<Blog />}></Route>
 
-        <Route path="/magazine/" element={<Magazine />}></Route>
-        <Route path="/blog/" element={<Blog />}></Route>
+          {/* Other pages */}
+          <Route path="/faqs" element={<FAQS />}></Route>
 
-        {/* Other pages */}
-        <Route path="/faqs" element={<FAQS />}></Route>
+          <Route path="/howitworks" element={<HowItWorks />}></Route>
 
-        <Route path="/howitworks" element={<HowItWorks />}></Route>
+          {/* Component */}
 
-        {/* Component */}
-
-        <Route path="*" element={<NotFound />}></Route>
-      </Routes>
+          <Route path="*" element={<NotFound />}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
