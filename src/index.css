@@ -1,4 +1,7 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@charset "utf-8";
+
 
 * {
   margin: 0;
@@ -67,6 +70,61 @@
   --font-size-xxl: 40px;
 }
 
+/* fonts */
+@font-face {
+  font-family: "Roboto";
+  src: url(./Assets/fonts/roboto/Roboto-Light.woff2) format(woff2);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(./Assets//fonts//roboto/Roboto-Regular.woff2) format(woff2);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(./Assets/fonts/roboto/Roboto-Medium.woff2) format(woff2);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(./Assets/fonts/roboto/Roboto-Bold.woff2);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(./Assets/fonts/roboto/Roboto-Black.woff2) format(woff2);
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(./Assets/fonts/poppins/Poppins-Light.woff2) format(woff2);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(./Assets/fonts/poppins/Poppins-Regular.woff2) format(woff2);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(./Assets/fonts/poppins/Poppins-Medium.woff2);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(./Assets/fonts/poppins/Poppins-Bold.woff2);
+  font-weight: 700;
+}
+
 a {
   text-decoration: none;
 }
@@ -89,6 +147,7 @@ body {
   width: var(--container-width-lg);
   margin: 0 auto;
 }
+
 
 .box_shadow {
   padding: 3rem;
@@ -155,4 +214,44 @@ body {
     rgba(0, 0, 0, 0.8) 99%,
     rgba(0, 0, 0, 0.8) 100%
   );
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.fx-gr-2 {
+  flex-grow: 2;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.mt-48 {
+  margin-top: 48px;
+}
+
+.mt-12 {
+  margin-top: 12px;
+}
+
+.mt-24 {
+  margin-top: 24px;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+
 }

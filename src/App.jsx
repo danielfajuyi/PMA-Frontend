@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-
+import { useState } from "react";
 import Navbar from "./Components/Navbar/navbar";
 import Home from "./Pages/Home/home";
 import About from "./Pages/About/about";
@@ -11,12 +11,14 @@ import Magazine from "./UI/Admin-UI/Magazine/magazine";
 import FAQS from "./Pages/Faqs/Faq";
 import LandingPage from "./Pages/LandingPage/LandingPage";
 import NotFound from "./Pages/NotFound/notfound";
-
 import HowItWorks from "./Pages/HowItWorks/HowItWorks";
-
-
-import { useState } from "react";
+import { AgencySignupOne } from "./Pages/LoginSignup/AgencySignup/AgencySignupOne";
+import { AgencySignupTwo } from "./Pages/LoginSignup/AgencySignup/AgencySignupTwo";
+import { AgencySignupThree } from "./Pages/LoginSignup/AgencySignup/AgencySignupThree";
 import Blog from "./UI/Admin-UI/Blog/Blog";
+
+
+const location = window.location.pathname;
 
 function App() {
   const [showNav, setShowNav] = useState(true);
@@ -24,7 +26,13 @@ function App() {
   return (
     <>
       {showNav && <Navbar />}
-
+      <BrowserRouter />
+       {location === "/agency/signup" ||
+      location === "/agency/signup/two" ||
+      location === "/agency/signup/three" ? null : (
+        <Navbar />
+      )}
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<LandingPage />}></Route>
         <Route path="/home" element={<Home />}></Route>
@@ -39,18 +47,17 @@ function App() {
 
         <Route path="/magazine/" element={<Magazine />}></Route>
         <Route path="/blog/" element={<Blog />}></Route>
-
         {/* Other pages */}
         <Route path="/faqs" element={<FAQS />}></Route>
-
         <Route path="/howitworks" element={<HowItWorks />}></Route>
 
         {/* Component */}
-
         <Route path="*" element={<NotFound />}></Route>
-      </Routes>
-    </>
-  );
-}
+          <Route path="agency/signup" element={<AgencySignupOne />} />
+        <Route path="agency/signup/two" element={<AgencySignupTwo />} />
+        <Route path="agency/signup/three" element={<AgencySignupThree />} />
+         <BrowserRouter />
+        
+=======
 
 export default App;
