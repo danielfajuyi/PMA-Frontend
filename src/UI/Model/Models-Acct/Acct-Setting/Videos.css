@@ -1,0 +1,254 @@
+.set_video-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 0.8rem;
+}
+.set_video-item {
+  position: relative;
+  background: #333;
+  width: 48%;
+  height: 175px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.set_video-item video {
+  width: 100%;
+  height: 100%;
+}
+
+.add-video_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.add-video {
+  width: 160px;
+  height: 50px;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.add-icon {
+  font-size: 30px;
+}
+.video-icons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: var(--Light-color);
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 2rem;
+}
+.view-icon {
+  color: var(--Colored-color);
+}
+.view-icon:hover {
+  cursor: pointer;
+  color: var(--Light-color);
+}
+.trash-icon:hover {
+  cursor: pointer;
+  color: var(--Colored-color);
+}
+
+/* modal section */
+
+.modal-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+}
+.modal-img-rapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-section video {
+  width: 100%;
+  height: 100vh;
+}
+
+.alert-box {
+  position: relative;
+  width: 90%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #f5f5f5;
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+.alert-title {
+  padding: 0 1rem;
+}
+.alert-text {
+  font-size: 18px;
+  line-height: 1.6;
+}
+.alert-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.del-alert-btn {
+  width: 85px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+.yes-btn {
+  background: var(--Colored-color);
+  color: var(--Light-color);
+}
+.yes-btn:hover {
+  background: var(--Light-color);
+  color: var(--Colored-color);
+  border: 3px solid var(--Colored-color);
+}
+.cancel-btn {
+  background: var(--Dark-color);
+  color: var(--Light-color);
+}
+.cancel-btn:hover {
+  color: var(--Dark-color);
+  background: var(--Light-color);
+  border: 3px solid var(--Dark-color);
+}
+.close-alert2 {
+  color: var(--Colored-color);
+  font-size: 2rem;
+  position: absolute;
+  top: 20px;
+  right: 5%;
+}
+.close-alert2:hover {
+  color: var(--Light-color);
+  cursor: pointer;
+}
+.close-alert {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 20px;
+  right: 5%;
+}
+
+@media screen and (max-width: 340px) {
+  .set_video-item {
+    height: 170px;
+  }
+
+  .add-video {
+    width: 140px;
+    height: 45px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .set_video-list {
+    gap: 1.5rem;
+    justify-content: left;
+  }
+  .set_video-item {
+    width: 30%;
+    height: 175px;
+  }
+  .modal-section img {
+    width: 80%;
+    height: 80vh;
+  }
+  .alert-box {
+    width: 70%;
+    padding: 1rem 3rem;
+  }
+  .alert-text {
+    font-size: 20px;
+    line-height: 1.6;
+    padding: 0 2rem;
+  }
+  .alert-title {
+    padding: 0 3rem;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .set_video-item {
+    width: 30%;
+    height: 250px;
+  }
+  .set_video-list {
+    gap: 2rem;
+  }
+  .modal-section img {
+    width: 50%;
+  }
+  .alert-box {
+    width: 50%;
+  }
+  .alert-text {
+    padding: 0 1.2rem;
+  }
+  .alert-title {
+    padding: 0 2rem;
+  }
+}
+@media screen and (min-width: 920px) and (min-height: 850px) {
+  .modal-section img {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .set_video-item {
+    width: 30%;
+    height: 300px;
+  }
+  .set_video-list {
+    gap: 1rem;
+    gap: 2.5rem;
+  }
+
+  .modal-section img {
+    width: 35%;
+  }
+
+  .alert-box {
+    width: 40%;
+  }
+  .alert-text {
+    padding: 0rem;
+  }
+  .alert-title {
+    padding: 0 1rem;
+  }
+}

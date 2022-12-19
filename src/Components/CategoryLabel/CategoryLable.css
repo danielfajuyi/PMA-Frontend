@@ -1,0 +1,10 @@
+.categoryLable {
+  font-size: 1rem;
+  background: linear-gradient(39deg, var(--dimpink), var(--yellow));
+  color: #fff;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  font-weight: 500;
+  width: fit-content;
+  text-transform: capitalize;
+}

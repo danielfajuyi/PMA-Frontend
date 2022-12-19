@@ -1,42 +1,63 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import Navbar from "./Components/Navbar/navbar";
 import Home from "./Pages/Home/home";
 import About from "./Pages/About/about";
-import FindModel from "./Pages/FindModel/findmodel";
+import FindModel from "./Pages/FindModel/find-model";
 import JobPost from "./UI/Job-UI/JobPost/jobpost";
 import Contact from "./Pages/Contact/contact";
-import Community from "./UI/Admin-UI/CommunityPages/Community/community";
-import Magazine from "./Pages/Magazine/magazine";
+import Community from "./UI/Admin-UI/Community/Community";
+import Magazine from "./UI/Admin-UI/Magazine/magazine";
+import FAQS from "./Pages/Faqs/Faq";
+import LandingPage from "./Pages/LandingPage/LandingPage";
+import NotFound from "./Pages/NotFound/notfound";
+import HowItWorks from "./Pages/HowItWorks/HowItWorks";
 import { AgencySignupOne } from "./Pages/LoginSignup/AgencySignup/AgencySignupOne";
 import { AgencySignupTwo } from "./Pages/LoginSignup/AgencySignup/AgencySignupTwo";
 import { AgencySignupThree } from "./Pages/LoginSignup/AgencySignup/AgencySignupThree";
+import Blog from "./UI/Admin-UI/Blog/Blog";
+
 
 const location = window.location.pathname;
 
-const App = () => {
+function App() {
+  const [showNav, setShowNav] = useState(true);
+
   return (
-    <BrowserRouter>
-      {location === "/agency/signup" ||
+    <>
+      {showNav && <Navbar />}
+      <BrowserRouter />
+       {location === "/agency/signup" ||
       location === "/agency/signup/two" ||
       location === "/agency/signup/three" ? null : (
         <Navbar />
       )}
       {/* <Navbar /> */}
       <Routes>
-        <Route index element={<Home />}></Route>
-        <Route path="about" element={<About />}></Route>
-        <Route path="contact" element={<Contact />}></Route>
-        <Route path="jobpost" element={<JobPost />}></Route>
-        <Route path="findmodel" element={<FindModel />}></Route>
-        <Route path="community" element={<Community />}></Route>
-        <Route path="blog" element={<Magazine />}></Route>
-        <Route path="agency/signup" element={<AgencySignupOne />} />
+        <Route path="/" element={<LandingPage />}></Route>
+        <Route path="/home" element={<Home />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/jobpost" element={<JobPost />}></Route>
+        <Route path="/find-model/*" element={<FindModel />}></Route>
+        <Route
+          path="/community"
+          element={<Community displayNav={setShowNav} />}
+        ></Route>
+
+        <Route path="/magazine/" element={<Magazine />}></Route>
+        <Route path="/blog/" element={<Blog />}></Route>
+        {/* Other pages */}
+        <Route path="/faqs" element={<FAQS />}></Route>
+        <Route path="/howitworks" element={<HowItWorks />}></Route>
+
+        {/* Component */}
+        <Route path="*" element={<NotFound />}></Route>
+          <Route path="agency/signup" element={<AgencySignupOne />} />
         <Route path="agency/signup/two" element={<AgencySignupTwo />} />
         <Route path="agency/signup/three" element={<AgencySignupThree />} />
-      </Routes>
-    </BrowserRouter>
-  );
-};
+         <BrowserRouter />
+        
+=======
 
 export default App;
