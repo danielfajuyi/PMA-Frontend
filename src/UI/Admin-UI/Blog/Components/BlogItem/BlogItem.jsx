@@ -50,8 +50,8 @@ export const BlogItem = ({ blogItems }) => {
             authorName,
           } = blogitem;
           return (
-            <div className="BlogItem-Slide">
-              <article className="item1" key={id}>
+            <div className="BlogItem-Slide" key={id}>
+              <article className="item1">
                 <div className="blogimg-wrapper">
                   <img src={img} alt={title} />
                 </div>
