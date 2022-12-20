@@ -36,7 +36,9 @@ const FeaturedModel = () => {
         <Categories categories={categories} filterItems={filterItems} />
         <div className="featured-model-wrapper">
           <Models modelItems={modelItems} />
-          <Link className="featured-model-btn btn_shadow">Find models</Link>
+          <Link to="/find-model" className="featured-model-btn btn_shadow">
+            Find models
+          </Link>
         </div>
       </div>
     </>

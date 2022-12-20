@@ -10,7 +10,7 @@ const Models = ({ modelItems }) => {
 
           return (
             id <= 8 && (
-              <div className="featured-model-item">
+              <div className="featured-model-item" key={id}>
                 <div className="featured-img">
                   <img src={image} alt={alt}></img>
 

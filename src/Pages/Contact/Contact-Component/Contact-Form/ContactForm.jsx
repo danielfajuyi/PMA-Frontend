@@ -5,7 +5,7 @@ const ContactForm = () => {
   return (
     <>
       <section className="contact-form">
-        <form class="main-contactform-input" action="#" method="POST">
+        <form className="main-contactform-input" action="#" method="POST">
           <h2 className="form-title">Send us a message</h2>
           <div className="form-fields">
             <div className="form-group">

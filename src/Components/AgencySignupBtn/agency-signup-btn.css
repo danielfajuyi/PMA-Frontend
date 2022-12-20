@@ -1,0 +1,11 @@
+.next-btn {
+  margin-left: auto;
+  display: flex;
+  margin-right: 80px;
+  background: #1e202c;
+  border-radius: 10px;
+  color: #ffffff;
+  text-align: center;
+  padding: 12px 36px;
+  font-size: 16px;
+}

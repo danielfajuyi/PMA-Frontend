@@ -10,27 +10,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SectionHead from "../../../../Components/SectionHead/sectionhead";
 
-// const ImageSlider = () => {
-//   return (
-//     <div className="jobpost-wrapper">
-//       {Jobpostcard.map(({ id, img, button, text }) => {
-//         return (
-//           <article className="jobpost-card " key={id}>
-//             <div className="jobimg-wrapper">
-//               <img src={img} alt="jobimg" />
-//             </div>
-//             <div className="job-curve"></div>
-//             <div className="jobtext">
-//               <button className="jobcard-btn">{button}</button>
-//               <h3>{text}</h3>
-//             </div>
-//           </article>
-//         );
-//       })}
-//     </div>
-//   );
-// };
-
 const Jobpost2 = () => {
   let settings = {
     dots: true,
@@ -62,8 +41,8 @@ const Jobpost2 = () => {
       <Slider {...settings}>
         {Jobpostcard2.map(({ id, img, category, title, price, Star }) => {
           return (
-            <div className="job-wrapper">
-              <div className="job-card" key={id}>
+            <div className="job-wrapper" key={id}>
+              <div className="job-card">
                 <div className="job-content1">
                   <div className="job-content1-img-wrapper">
                     <img src={img} alt="job1"></img>
@@ -93,7 +72,9 @@ const Jobpost2 = () => {
           );
         })}
       </Slider>
-      <Link className=" job-btn btn_shadow">Find jobs</Link>
+      <Link to="/jobpost" className=" job-btn btn_shadow">
+        Find jobs
+      </Link>
     </article>
   );
 };

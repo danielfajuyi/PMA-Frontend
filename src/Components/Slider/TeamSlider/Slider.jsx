@@ -117,7 +117,7 @@ const ImageSlider = () => {
           <div className="slidercard-image">
             <img src="./images/team/team3.png" alt="team3" />
           </div>
-          <ul class="slidersocial-icons">
+          <ul className="slidersocial-icons">
             <li>
               <a href="/about">
                 <UilFacebook className="svg" />
@@ -153,7 +153,7 @@ const ImageSlider = () => {
           <div className="slidercard-image">
             <img src="./images/team/team4.png" alt="team4" />
           </div>
-          <ul class="slidersocial-icons">
+          <ul className="slidersocial-icons">
             <li>
               <a href="/about">
                 <UilFacebook className="svg" />
