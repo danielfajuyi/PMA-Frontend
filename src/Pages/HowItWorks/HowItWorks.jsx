@@ -3,6 +3,9 @@ import React from "react";
 import "../About/about.css";
 import "./HowItWorks.css";
 import Line from "../../Components/Line/line";
+import Footer from "../Home/Layout/FooterSection/Footer/footer";
+import FaqComponent from "../Faqs/FaqComponent";
+import { faqs } from "../../data";
 
 const HowItWorks = () => {
   return (
@@ -118,6 +121,22 @@ const HowItWorks = () => {
           </div>
         </div>
       </div>
+
+      <section className="faqs">
+        <h2>Frequently Asked Questions</h2>
+
+        <div className="container faqs__container">
+          <article className="faqsquestion__wrapper">
+            {faqs.map(({ id, question, answer }) => {
+              return (
+                <FaqComponent key={id} question={question} answer={answer} />
+              );
+            })}
+          </article>
+        </div>
+      </section>
+
+      <Footer />
     </>
   );
 };

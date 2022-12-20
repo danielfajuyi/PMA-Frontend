@@ -56,14 +56,14 @@ const Testimonial = () => {
 
             <div className="Testimonialslide_btn  ">
               <button
-                className="btn_shadow prev_btn"
+                className="btn_shadow prev_btn testimonial-btn "
                 onClick={() => setIndex(index - 1)}
               >
                 <Uilarrow />
               </button>
 
               <button
-                className="btn_shadow next_btn"
+                className="btn_shadow next_btn testimonial-btn"
                 onClick={() => setIndex(index + 1)}
               >
                 <Uilarrowright />
