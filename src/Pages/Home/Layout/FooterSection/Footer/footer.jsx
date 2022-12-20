@@ -2,7 +2,6 @@ import React from "react";
 import "./footer.css";
 
 import Logo from "../../../../../Components/Logo/logo";
-import footericon from "../../../../../Images/Assets/main-assets/footer-icon.png";
 import Phone from "@iconscout/react-unicons/icons/uil-phone-times";
 import Whatsapp from "@iconscout/react-unicons/icons/uil-whatsapp";
 import Email from "@iconscout/react-unicons/icons/uil-envelope-edit";
@@ -22,7 +21,11 @@ const Footer = () => {
             <div id="footer">
               <div className="footer">
                 <div className="footer-heading">
-                  <img src={footericon} alt="footericon" height="42px" />
+                  <img
+                    src="./assets/main-assets/footer-icon.png"
+                    alt="footericon"
+                    height="42px"
+                  />
                   <h2>Company</h2>
                 </div>
                 <ul>
@@ -46,7 +49,11 @@ const Footer = () => {
 
               <div className="footer">
                 <div className="footer-heading">
-                  <img src={footericon} alt="footericon" height="42px" />
+                  <img
+                    src="./assets/main-assets/footer-icon.png"
+                    alt="footericon"
+                    height="42px"
+                  />
                   <h2>Privacy</h2>
                 </div>
                 <ul>
@@ -64,7 +71,11 @@ const Footer = () => {
               </div>
               <div className="footer replaced-footer">
                 <div className="footer-heading">
-                  <img src={footericon} alt="footericon" height="42px" />
+                  <img
+                    src="./assets/main-assets/footer-icon.png"
+                    alt="footericon"
+                    height="42px"
+                  />
                   <h2>Help</h2>
                 </div>
                 <ul>
@@ -93,7 +104,10 @@ const Footer = () => {
 
               <div className="footer replaced-footer">
                 <div className="footer-heading">
-                  <img src={footericon} alt="footericon" />
+                  <img
+                    src="./assets/main-assets/footer-icon.png"
+                    alt="footericon"
+                  />
                   <h2>Download app</h2>
                 </div>
                 <ul>
@@ -109,7 +123,7 @@ const Footer = () => {
                   </li>
                 </ul>
 
-                <span class="coming-soon">
+                <span className="coming-soon">
                   <b>Coming Soon!</b>
                 </span>
               </div>
@@ -122,7 +136,11 @@ const Footer = () => {
             <div id="footer">
               <div className="footer mobile-footer">
                 <div className="footer-heading">
-                  <img src={footericon} alt="footericon" height="42px" />
+                  <img
+                    src="./assets/main-assets/footer-icon.png"
+                    alt="footericon"
+                    height="42px"
+                  />
                   <h2>Help</h2>
                 </div>
                 <ul>
@@ -142,7 +160,11 @@ const Footer = () => {
 
               <div className="footer mobile-footer">
                 <div className="footer-heading">
-                  <img src={footericon} alt="footericon" height="42px" />
+                  <img
+                    src="./assets/main-assets/footer-icon.png"
+                    alt="footericon"
+                    height="42px"
+                  />
                   <h2>Download</h2>
                 </div>
                 <ul>

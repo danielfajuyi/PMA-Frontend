@@ -73,6 +73,7 @@ const PartnerSlide = () => {
                 className={
                   partner.id === ImageIndex ? "pSlide pActiveSlide" : "pSlide"
                 }
+                key={partner.id}
               >
                 <img src={partner.img} alt="partner-img"></img>
               </div>
