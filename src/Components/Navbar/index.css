@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.signUp-btn {
+  width: 90px;
+  height: 40px;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.25);
+}
+ul {
+  list-style: none;
+}
+
+/* header section */
+header {
+  position: relative;
+  box-shadow: 0 0 0 1px rgb(0, 0, 0);
+  padding-top: 1rem;
+  padding-bottom: 0.6rem;
+}
+.header__content {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 40%;
+}
+/* nav section */
+
+@media screen and (min-width: 768px) {
+  /* header sections and nav */
+  .header__content {
+    width: 90%;
+  }
+  .open-menu {
+    display: none;
+  }
+  .logo {
+    width: 20%;
+  }
+  .desktop-nav {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .desktop-nav__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 1rem;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .other-item {
+    display: none;
+  }
+
+  .desktop-nav__btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+  }
+  .mobile-nav {
+    display: none;
+  }
+}
+@media screen and (min-width: 920px) {
+  .other-item {
+    display: block;
+  }
+  .desktop-nav__list {
+    margin-left: 0rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .logo {
+    width: 15%;
+  }
+  .desktop-nav__list {
+    gap: 2rem;
+    margin-left: 2rem;
+  }
+}

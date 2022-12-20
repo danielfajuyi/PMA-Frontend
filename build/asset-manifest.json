@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dfaf07aa.css",
+    "main.js": "/static/js/main.cd8cff12.js",
+    "static/media/header.png": "/static/media/header.41683fb33c5fed5cb2d2.png",
+    "static/media/team4.png": "/static/media/team4.6023223d35c5670854af.png",
+    "static/media/post.jpg": "/static/media/post.077dfb734b18952342f9.jpg",
+    "static/media/blog-hero.png": "/static/media/blog-hero.843ab7a09947a2c217fc.png",
+    "static/media/agent-signup2.png": "/static/media/agent-signup2.115803bd7fb8d10e7c41.png",
+    "static/media/agent-signup3.png": "/static/media/agent-signup3.d52ddd6244b6e1d6c308.png",
+    "static/media/img3-cut.png": "/static/media/img3-cut.ccd228bfaa2502a8fe8b.png",
+    "static/media/slider9.jpg": "/static/media/slider9.f5af935a40c49f4827e5.jpg",
+    "static/media/agent-signup1.png": "/static/media/agent-signup1.06107141a69d0bcd6ea2.png",
+    "static/media/model2.png": "/static/media/model2.8433e7beac4d1589e627.png",
+    "static/media/slider10.jpg": "/static/media/slider10.bdfd26e58ec948362b38.jpg",
+    "static/media/slider12.jpg": "/static/media/slider12.5534cd7355bcc690099a.jpg",
+    "static/media/slider18.jpg": "/static/media/slider18.a83ea15d4edea7c8a09e.jpg",
+    "static/media/slider2.jpg": "/static/media/slider2.566431a265c1fff6e495.jpg",
+    "static/media/modela.jpg": "/static/media/modela.b2b64ad6d8d98e41a71f.jpg",
+    "static/media/Roboto-Medium.woff2": "/static/media/Roboto-Medium.70ace3870f471997ceb7.woff2",
+    "static/media/Roboto-Black.woff2": "/static/media/Roboto-Black.a04aceecdab55c0e2ea1.woff2",
+    "static/media/Roboto-Bold.woff2": "/static/media/Roboto-Bold.002079d85a6f27587d17.woff2",
+    "static/media/Roboto-Regular.woff2": "/static/media/Roboto-Regular.9429985be4f46ec8fcfc.woff2",
+    "static/media/Roboto-Light.woff2": "/static/media/Roboto-Light.81c7589f0813d50a673e.woff2",
+    "static/media/Poppins-Regular.woff2": "/static/media/Poppins-Regular.d24565ba90b75abd350b.woff2",
+    "static/media/Poppins-Light.woff2": "/static/media/Poppins-Light.37501d33c74586bc89f6.woff2",
+    "static/media/Poppins-Bold.woff2": "/static/media/Poppins-Bold.127c8e27e5634968c7e9.woff2",
+    "static/media/Poppins-Medium.woff2": "/static/media/Poppins-Medium.598cb3a598e8e85e0fa9.woff2",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.dfaf07aa.css.map": "/static/css/main.dfaf07aa.css.map",
+    "main.cd8cff12.js.map": "/static/js/main.cd8cff12.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dfaf07aa.css",
+    "static/js/main.cd8cff12.js"
+  ]
+}

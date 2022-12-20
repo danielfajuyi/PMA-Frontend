@@ -1,0 +1,30 @@
+.Magazine-head {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  grid-template-columns: 1fr;
+  background-image: url(../../../Images/Magazine/Magazine-header.png);
+}
+
+.Magazineheader-text {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 0 0 4rem 0;
+}
+
+.Magazineheader-text h1 {
+  font-size: 64px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--white);
+}
+
+.Magazineheader-text span {
+  font-weight: 400;
+  font-size: 20px;
+  color: #f8f8f8;
+
+  letter-spacing: 0.5px;
+}

@@ -1,0 +1,17 @@
+.community-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--pink);
+  transition: all 150ms ease-out;
+}
+
+.community-btn:hover {
+  cursor: pointer;
+  color: var(--pink);
+  background: transparent;
+  border: 2px solid var(--pink);
+}
