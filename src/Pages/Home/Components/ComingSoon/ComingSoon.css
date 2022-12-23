@@ -42,9 +42,8 @@
   font-weight: 600;
   text-align: center;
   color: var(--pink);
-  box-shadow: 2px 2px;
-  padding: 0.3rem;
-  border-radius: 3px;
+
+  padding: 0.3rem 0.3rem;
 }
 
 @media screen and (max-width: 768px) {

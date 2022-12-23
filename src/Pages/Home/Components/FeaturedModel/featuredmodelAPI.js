@@ -1,7 +1,7 @@
 export const featuredmodel = [
   {
     id: 1,
-    image: "./images/featured/featured1.png",
+    image: "./images/featured/old-featured/featured1.png",
     name: "keziah Chacha",
     desc: "Kaduna, Nigeria",
     category: "Unique",
@@ -10,8 +10,8 @@ export const featuredmodel = [
 
   {
     id: 2,
-    image: "./images/featured/featured2.png",
-    name: "Anna Roseline",
+    image: "./images/featured/old-featured/featured2.png",
+    name: "James Harrison",
     desc: "Lagos, Nigeria",
     category: "Fashion",
     alt: "featuredimg2",
@@ -19,7 +19,7 @@ export const featuredmodel = [
 
   {
     id: 3,
-    image: "./images/featured/featured3.png",
+    image: "./images/featured/old-featured/featured3.png",
     name: "Stephenie Davies",
     category: "Unique",
     desc: "Abuja, Nigeria",
@@ -28,7 +28,7 @@ export const featuredmodel = [
 
   {
     id: 4,
-    image: "./images/featured/featured4.png",
+    image: "./images/featured/old-featured/featured4.png",
     name: "Lora Charles",
     category: "Talents",
     desc: "Enugu, Nigeria",
@@ -37,7 +37,7 @@ export const featuredmodel = [
 
   {
     id: 5,
-    image: "./images/featured/featured5.png",
+    image: "./images/featured/old-featured/featured5.png",
     name: "Grace Stephens",
     category: "Real People",
     desc: "Calabar, Nigeria",
@@ -46,7 +46,7 @@ export const featuredmodel = [
 
   {
     id: 6,
-    image: "./images/featured/featured6.png",
+    image: "./images/featured/old-featured/featured6.png",
     name: "keziah Chacha",
     desc: "Kaduna, Nigeria",
     category: "Talents",
@@ -55,7 +55,7 @@ export const featuredmodel = [
 
   {
     id: 7,
-    image: "./images/featured/featured7.png",
+    image: "./images/featured/old-featured/featured7.png",
     name: "Moyo Brown",
     desc: "Ekiti, Nigeria",
     category: "Unique",
@@ -64,7 +64,7 @@ export const featuredmodel = [
 
   {
     id: 8,
-    image: "./images/featured/featured8.png",
+    image: "./images/featured/old-featured/featured8.png",
     name: "keziah Chacha",
     desc: "Kaduna, Nigeria",
     category: "Fitness",

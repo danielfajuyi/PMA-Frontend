@@ -5,6 +5,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import NewsList from "../NewsList/NewsList";
 import { LatestNews } from "../NewsApI";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const News = () => {
   const [news, setNews] = useState(LatestNews);
@@ -48,6 +49,10 @@ const News = () => {
 
         {/* NewsList & Empty Search*/}
         <NewsList news={news} />
+
+        <Link to="/magazine" className="featured-model-btn news-btn btn_shadow">
+          Visit Blog
+        </Link>
       </section>
     </>
   );

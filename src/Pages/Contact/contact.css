@@ -12,7 +12,7 @@
   background-blend-mode: overlay;
   background: rgba(0, 0, 0, 0.1);
   /* background: var(--contactbg-color); */
-  background-image: url(../../../public/images/team/img3-cut.png);
+  background-image: url(../../../public/images/contact/contactus.png);
 }
 
 @media screen and (max-width: 940px) {

@@ -1,0 +1,53 @@
+export const Jobs = [
+  {
+    id: 1,
+    img: "./images/jobs/jobpostview.png",
+    title: "Female Model Needed For a magazine",
+    category: ["Offline", "Featured"],
+    country: "Nigeria",
+    city: "Lagos",
+    duedate: "June 25, 2023",
+    postdate: new Date(),
+    status: "paid",
+    price: 45000,
+  },
+
+  {
+    id: 2,
+    img: "./images/jobs/jobpostview.png",
+    title: "Female Model Needed For a magazine",
+    category: ["Offline", "Featured"],
+    country: "Nigeria",
+    city: "Lagos",
+    duedate: "June 25, 2023",
+    postdate: new Date(),
+    status: "free",
+    price: 45000,
+  },
+
+  {
+    id: 3,
+    img: "./images/jobs/jobpostview.png",
+    title: "Female Model Needed For a magazine",
+    category: ["Offline", "Featured"],
+    country: "Nigeria",
+    city: "Lagos",
+    duedate: "June 25, 2023",
+    postdate: new Date(),
+    status: "paid",
+    price: 45000,
+  },
+
+  {
+    id: 4,
+    img: "./images/jobs/jobpostview.png",
+    title: "Female Model Needed For a magazine",
+    category: ["Offline", "Featured"],
+    country: "Nigeria",
+    city: "Lagos",
+    duedate: "June 25, 2023",
+    postdate: new Date(),
+    status: "paid",
+    price: 45000,
+  },
+];

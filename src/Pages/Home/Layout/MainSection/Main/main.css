@@ -23,11 +23,11 @@
 }
 
 .join-model-wrapper {
-  background-image: url(../../../../../../public/images/home/modela.jpg);
+  background-image: url(../../../../../../public/images/home/join-community.jpg);
   position: relative;
   height: 490px;
   width: 100%;
-  background-position: 50% 35%;
+  background-position: 50% 70%;
   background-blend-mode: overlay;
   background-size: cover;
   display: flex;
@@ -45,6 +45,8 @@
   padding: 7px;
   font-weight: 600;
   color: var(--white);
+  position: relative;
+  z-index: 1;
 }
 
 .join-model-icon {
@@ -54,6 +56,8 @@
   gap: 38px;
   padding-top: 1rem;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .join-model-item {

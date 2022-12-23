@@ -13,7 +13,7 @@ const ComingSoon = () => {
         <section className="comingsoon-wrapper ">
           <div className="c-left">
             <img
-              src="./images/home/app.png"
+              src="./images/home/appnew.png"
               alt="comingsoon"
               className="box_shadow-2"
             ></img>
@@ -26,7 +26,7 @@ const ComingSoon = () => {
               platform
             </p>
 
-            <h3>Stay Tuned!</h3>
+            <h3 className="b-effect">Stay Tuned!</h3>
           </div>
         </section>
       </div>

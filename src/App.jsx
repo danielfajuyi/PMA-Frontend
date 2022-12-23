@@ -4,7 +4,7 @@ import Navbar from "./Components/Navbar/navbar";
 import Home from "./Pages/Home/home";
 import About from "./Pages/About/about";
 import FindModel from "./Pages/FindModel/find-model";
-import JobPost from "./UI/Job-UI/JobPost/jobpost";
+import JobPost from "./Pages/JobPost/JobPost";
 import Contact from "./Pages/Contact/contact";
 import Community from "./UI/Admin-UI/Community/Community";
 import FAQS from "./Pages/Faqs/Faq";
@@ -12,9 +12,9 @@ import LandingPage from "./Pages/LandingPage/LandingPage";
 import NotFound from "./Pages/NotFound/notfound";
 import HowItWorks from "./Pages/HowItWorks/HowItWorks";
 import Blog from "./UI/Admin-UI/Blog/Blog";
-import { AgencySignupOne } from "./Pages/LoginSignup/AgencySignup/AgencySignupOne";
-import { AgencySignupTwo } from "./Pages/LoginSignup/AgencySignup/AgencySignupTwo";
-import { AgencySignupThree } from "./Pages/LoginSignup/AgencySignup/AgencySignupThree";
+// import { AgencySignupOne } from "./Pages/LoginSignup/AgencySignup/AgencySignupOne";
+// import { AgencySignupTwo } from "./Pages/LoginSignup/AgencySignup/AgencySignupTwo";
+// import { AgencySignupThree } from "./Pages/LoginSignup/AgencySignup/AgencySignupThree";
 
 // const location = window.location.pathname;
 // {
@@ -50,7 +50,7 @@ function App() {
         <Route path="/howitworks" element={<HowItWorks />}></Route>
         {/* Component */}
         <Route path="*" element={<NotFound />}></Route>
-        <Route
+        {/* <Route
           path="agency/signup"
           element={<AgencySignupOne displayNav={setShowNav} />}
         ></Route>
@@ -61,7 +61,7 @@ function App() {
         <Route
           path="agency/signup/three"
           element={<AgencySignupThree displayNav={setShowNav} />}
-        ></Route>
+        ></Route> */}
       </Routes>
     </>
   );

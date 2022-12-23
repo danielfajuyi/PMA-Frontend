@@ -1,11 +1,9 @@
 import React from "react";
 import "./partner.css";
 import { Partners } from "./partnersData";
-
 import Slider from "react-slick";
 import "../../../../Components/Slider/TeamSlider/Slider.scss";
 import "slick-carousel/slick/slick.css";
-
 import Uilarrow from "@iconscout/react-unicons/icons/uil-arrow-left";
 import Uilarrowright from "@iconscout/react-unicons/icons/uil-arrow-right";
 import { useState } from "react";

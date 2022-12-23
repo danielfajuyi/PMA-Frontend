@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Counter from "../../Components/Counter/counter";
 import SectionHead from "../../Components/SectionHead/sectionhead";
@@ -111,6 +112,19 @@ const About = () => {
             </p>
 
             <button className="btn btn2">Signup</button>
+          </div>
+        </div>
+      </div>
+
+      <div className=" thankyoupage-container mtop">
+        <div className="thankyou-wrapper  ">
+          <div className="thankyou-text">
+            <h2>Thank you for visting us!</h2>
+            <Link className="btn btn2">Signup</Link>
+          </div>
+
+          <div className="thankyou-image">
+            <img src="./images/about/thankyou.jpg" alt="thankyou" />
           </div>
         </div>
       </div>
