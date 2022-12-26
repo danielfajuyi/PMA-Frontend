@@ -1,6 +1,6 @@
 [
   {
-    "navList1": ["basic info", "stats", "photos", "videos"],
+    "navList1": ["about", "stats", "photos", "videos"],
     "navList2": ["email/pass", "payment", "dash board"],
     "info": [
       {

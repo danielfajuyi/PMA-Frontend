@@ -46,12 +46,36 @@ function ModelsForms({ DomItems, userData, accountId, handleModal }) {
     },
   });
 
+  const [form3Data, setForm3Data] = useState({
+    photos: {
+      photo1: "",
+      photo2: "",
+      photo3: "",
+      photo4: "",
+      photo5: "",
+      photo6: "",
+    },
+    polaroids: {
+      pola1: "",
+      pola2: "",
+      pola3: "",
+      pola4: "",
+      pola5: "",
+      pola6: "",
+    },
+    compCard: "",
+  });
+
   function handleNavigation(text) {
-    text === "Next"
-      ? setActiveForm((prevForm) => prevForm + 1)
-      : text === "Back"
-      ? setActiveForm((prevForm) => prevForm - 1)
-      : setActiveForm(1);
+    if (text === "Next") {
+      setActiveForm((prevForm) => prevForm + 1);
+    } else if (text === "Back") {
+      setActiveForm((prevForm) => prevForm - 1);
+    } else {
+      setTimeout(() => {
+        setActiveForm(1);
+      }, 1500);
+    }
   }
 
   function collectData(formId, data) {
@@ -60,11 +84,40 @@ function ModelsForms({ DomItems, userData, accountId, handleModal }) {
     } else if (formId === 2) {
       setForm2Data(data);
     } else if (formId === 3) {
+      setForm3Data(data);
       SubmitData(data);
+
+      setTimeout(() => {
+        handleModal("kyc");
+      }, 1500);
     }
   }
 
+  //  //getting models data
+  //  useEffect(() => {
+  //   axios
+  //     .get("http://localhost:3500/models")
+  //     .then((res) => console.log(res))
+  //     .catch((err) => console.log(err));
+  // }, []);
+
   function SubmitData(form3Data) {
+    //converting the photo object in the form2Data into an array
+    //destructure photo object from form2Data
+    const { photo1, photo2, photo3, photo4, photo5, photo6 } = form3Data.photos;
+    const { pola1, pola2, pola3, pola4, pola5, pola6 } = form3Data.polaroids;
+
+    //creating a new array of photo
+    const newPhoto = [photo1, photo2, photo3, photo4, photo5, photo6];
+    const newPolaroid = [pola1, pola2, pola3, pola4, pola5, pola6];
+
+    //updating photo object in the form2Data
+    const newForm3 = {
+      ...form3Data,
+      photos: newPhoto,
+      polaroids: newPolaroid,
+    };
+
     let data = userData[0];
     let update = {
       ...data,
@@ -72,7 +125,7 @@ function ModelsForms({ DomItems, userData, accountId, handleModal }) {
         ...data.profile,
         ...form1Data,
         ...form2Data,
-        ...form3Data,
+        ...newForm3,
       },
     };
 
@@ -108,6 +161,7 @@ function ModelsForms({ DomItems, userData, accountId, handleModal }) {
           collectData={collectData}
           handleNavigation={handleNavigation}
           handleModal={handleModal}
+          form3Data={form3Data}
         />
       )}
     </>

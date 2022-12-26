@@ -37,7 +37,7 @@ function ModelsKycForm2({
     ethnicity: "",
     skinColor: "",
     language: "",
-    travel: "",
+    availableForTravel: "",
     facebook: "",
     twitter: "",
     instagram: "",
@@ -103,7 +103,8 @@ function ModelsKycForm2({
   //setting Error messages
   useEffect(() => {
     function handleError() {
-      let errorText = "Please Fill out this field";
+      let errorText = "This detail is required.!";
+      let socialErr = "You social-media link is required.!";
 
       stats.height === ""
         ? setError((prev) => ({ ...prev, height: errorText }))
@@ -154,19 +155,19 @@ function ModelsKycForm2({
         : setError((prev) => ({ ...prev, language: "" }));
 
       stats.availableForTravel === ""
-        ? setError((prev) => ({ ...prev, travel: errorText }))
-        : setError((prev) => ({ ...prev, travel: "" }));
+        ? setError((prev) => ({ ...prev, availableForTravel: errorText }))
+        : setError((prev) => ({ ...prev, availableForTravel: "" }));
 
       social.facebook === ""
-        ? setError((prev) => ({ ...prev, facebook: errorText }))
+        ? setError((prev) => ({ ...prev, facebook: socialErr }))
         : setError((prev) => ({ ...prev, facebook: "" }));
 
       social.twitter === ""
-        ? setError((prev) => ({ ...prev, twitter: errorText }))
+        ? setError((prev) => ({ ...prev, twitter: socialErr }))
         : setError((prev) => ({ ...prev, twitter: "" }));
 
       social.instagram === ""
-        ? setError((prev) => ({ ...prev, instagram: errorText }))
+        ? setError((prev) => ({ ...prev, instagram: socialErr }))
         : setError((prev) => ({ ...prev, instagram: "" }));
 
       if (gender === "female") {
@@ -208,7 +209,7 @@ function ModelsKycForm2({
       error.ethnicity ||
       error.skinColor ||
       error.language ||
-      error.travel ||
+      error.availableForTravel ||
       error.facebook ||
       error.twitter ||
       error.instagram ||
@@ -262,10 +263,18 @@ function ModelsKycForm2({
           <h2 className="sections-title">Models statistic</h2>
           <ul className="model-statistic">
             {newStats.map((item) => {
+              let name = item.id;
               return (
                 <li className="kyc-input-container" key={item.id}>
                   <label className="input-label" htmlFor={item.id}>
-                    {item.label}
+                    <span className="required-icon_rapper">
+                      {item.label}
+                      {error[name] === "" ? (
+                        <i className="fa-solid fa-circle-check valid-icon"></i>
+                      ) : (
+                        <i className="fa-solid fa-star required-icon"></i>
+                      )}
+                    </span>
                     <input
                       onChange={handleChange}
                       className="kyc-input-field"
@@ -273,82 +282,13 @@ function ModelsKycForm2({
                       id={item.id}
                       name={item.id}
                       placeholder={item.placeholder}
-                      value={
-                        item.id === "height"
-                          ? stats.height
-                          : item.id === "waist"
-                          ? stats.waist
-                          : item.id === "bust"
-                          ? stats.bust
-                          : item.id === "chest"
-                          ? stats.chest
-                          : item.id === "hip"
-                          ? stats.hip
-                          : item.id === "shoulder"
-                          ? stats.shoulder
-                          : item.id === "eyes"
-                          ? stats.eyes
-                          : item.id === "size"
-                          ? stats.size
-                          : item.id === "shoe"
-                          ? stats.shoe
-                          : item.id === "tattoos"
-                          ? stats.tattoos
-                          : item.id === "agency"
-                          ? stats.agency
-                          : item.id === "hairColor"
-                          ? stats.hairColor
-                          : item.id === "hairLength"
-                          ? stats.hairLength
-                          : item.id === "ethnicity"
-                          ? stats.ethnicity
-                          : item.id === "skinColor"
-                          ? stats.skinColor
-                          : item.id === "language"
-                          ? stats.language
-                          : item.id === "availableForTravel"
-                          ? stats.availableForTravel
-                          : null
-                      }
+                      value={item.id === name ? stats[name] : null}
                       required
+                      spellCheck={false}
                     />
                     {showError && (
-                      <p className="sign-up-error-text">
-                        {item.id === "height"
-                          ? error.height
-                          : item.id === "waist"
-                          ? error.waist
-                          : item.id === "bust"
-                          ? error.bust
-                          : item.id === "chest"
-                          ? error.chest
-                          : item.id === "hip"
-                          ? error.hip
-                          : item.id === "shoulder"
-                          ? error.shoulder
-                          : item.id === "eyes"
-                          ? error.eyes
-                          : item.id === "size"
-                          ? error.size
-                          : item.id === "shoe"
-                          ? error.shoe
-                          : item.id === "tattoos"
-                          ? error.tattoos
-                          : item.id === "agency"
-                          ? error.agency
-                          : item.id === "hairColor"
-                          ? error.hairColor
-                          : item.id === "hairLength"
-                          ? error.hairLength
-                          : item.id === "ethnicity"
-                          ? error.ethnicity
-                          : item.id === "skinColor"
-                          ? error.skinColor
-                          : item.id === "language"
-                          ? error.language
-                          : item.id === "availableForTravel"
-                          ? error.travel
-                          : null}
+                      <p className="error-text">
+                        {item.id === name ? error[name] : null}
                       </p>
                     )}
                   </label>
@@ -426,10 +366,18 @@ function ModelsKycForm2({
           <h2 className="sections-title">Social Media Handles</h2>
           <ul className="social-media-link">
             {SocialMedia.map((item) => {
+              let name = [item.id];
               return (
                 <li className="kyc-input-container" key={item.id}>
                   <label className="input-label" htmlFor={item.id}>
-                    {item.label}
+                    <span className="required-icon_rapper">
+                      {item.label}
+                      {error[name] === "" ? (
+                        <i className="fa-solid fa-circle-check valid-icon"></i>
+                      ) : (
+                        <i className="fa-solid fa-star required-icon"></i>
+                      )}
+                    </span>
                     <input
                       onChange={handleChange}
                       className="kyc-input-field"
@@ -437,27 +385,12 @@ function ModelsKycForm2({
                       id={item.id}
                       name={item.id}
                       placeholder={item.placeholder}
-                      value={
-                        item.id === "facebook"
-                          ? social.facebook
-                          : item.id === "twitter"
-                          ? social.twitter
-                          : item.id === "instagram"
-                          ? social.instagram
-                          : null
-                      }
+                      value={social[item.id]}
                       required
+                      spellCheck={false}
                     />
                     {showError && (
-                      <p className="sign-up-error-text">
-                        {item.id === "facebook"
-                          ? error.facebook
-                          : item.id === "twitter"
-                          ? error.twitter
-                          : item.id === "instagram"
-                          ? error.instagram
-                          : null}
-                      </p>
+                      <p className="error-text">{error[item.id]}</p>
                     )}
                   </label>
                 </li>
