@@ -10,11 +10,7 @@ const Counter = () => {
 
   const Count = ({ start, end, duration, delay }) => {
     return (
-      <h2>
-        {counter && (
-          <CountUp start={start} end={end} duration={duration} delay={delay} />
-        )}
-      </h2>
+      <h2>{counter && <CountUp start={start} end={end} duration={duration} delay={delay} />}</h2>
     );
   };
 
@@ -25,8 +21,7 @@ const Counter = () => {
 
         <ScrollTrigger
           onEnter={() => setCounter(true)}
-          onExit={() => setCounter(false)}
-        ></ScrollTrigger>
+          onExit={() => setCounter(false)}></ScrollTrigger>
         <div className="counter-wrapper  b-effect">
           <div className="count box_shadow">
             <Count start={0} end={345} duration={2} delay={0} />
