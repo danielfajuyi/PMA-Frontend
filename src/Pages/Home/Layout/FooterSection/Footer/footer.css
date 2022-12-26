@@ -178,6 +178,12 @@
   }
 }
 
+@media screen and (max-width: 870px) {
+  .footercontact-text .box:nth-child(2) {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .footer-section {
     display: flex;

@@ -1,7 +1,7 @@
 const TestimonialApi = [
   {
     id: 1,
-    image: "./images/img-1.png",
+    image: "./images/client/client2.jpg",
     design: "Mevine Design",
     name: "Joy Chidinma",
     offcer: "Graphic Designer",
@@ -12,7 +12,7 @@ const TestimonialApi = [
 
   {
     id: 2,
-    image: "./images/img-4.png",
+    image: "./images/client/client3.png",
     design: "Mevine Design",
     name: "Adenike Grace",
     offcer: "Model",
@@ -23,7 +23,7 @@ const TestimonialApi = [
 
   {
     id: 3,
-    image: "./images/img-20.png",
+    image: "./images/client/client2.jpg",
     design: "Mevine Design",
     name: "Stephenie Daniels",
     offcer: "Web Developer",
@@ -34,7 +34,7 @@ const TestimonialApi = [
 
   {
     id: 4,
-    image: "./images/img-1.png",
+    image: "./images/client/client2.jpg",
     design: "Mevine Design",
     name: "Daniel Fajuyi",
     offcer: "Web Developer",
@@ -45,7 +45,7 @@ const TestimonialApi = [
 
   {
     id: 5,
-    image: "./images/img-1.png",
+    image: "./images/client/client2.jpg",
     design: "Mevine Design",
     name: "Daniel Fajuyi",
     offcer: "Web Developer",
@@ -56,7 +56,7 @@ const TestimonialApi = [
 
   {
     id: 6,
-    image: "./images/img-1.png",
+    image: "./images/client/client3.png",
     design: "Mevine Design",
     name: "Daniel Fajuyi",
     offcer: "Web Developer",

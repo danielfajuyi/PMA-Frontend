@@ -13,6 +13,7 @@
 .Section-heading h1 {
   font-size: 50px;
   color: var(--dim-black);
+  padding-top: 0.5rem;
 }
 
 @media screen and (max-width: 414px) {

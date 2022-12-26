@@ -28,26 +28,26 @@ const Slide = ({
   }
   return (
     <article id="Main_slide" className={`d_flex  ${position}`} key={id}>
-      <div className="--Testimonial-left-- everyleft box_shadow-2 ">
+      <div className="Testimonial-left box_shadow-2 ">
         <div>
           <img src={image} alt="" />
         </div>
 
-        <div className="slide_details --details-- mtop">
+        <div className="slide_details  mtop">
           <span>{design}</span>
           <h2>{name}</h2>
           <label>{offcer}</label>
         </div>
       </div>
 
-      <div className="--Testimonial-right-- everyright ">
+      <div className="Testimonial-right  ">
         <div className="slide_icon">
           <div className="slide_quota">
             <FaQuoteRight />
           </div>
         </div>
 
-        <div className="slide_content --content-- box_shadow-2 mtop">
+        <div className="slide_content box_shadow-2 mtop">
           <h1>{post}</h1>
           <h3>{date}</h3>
           <p>{desc}</p>

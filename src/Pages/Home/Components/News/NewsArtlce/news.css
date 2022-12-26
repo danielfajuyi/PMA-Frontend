@@ -9,3 +9,11 @@
     0px 6px 4px rgb(92 78 78 / 25%);
   border-radius: 10px;
 }
+
+.news-btn {
+  background: var(--pink);
+  color: white;
+  font-weight: 500;
+  border-radius: 30px;
+  margin: 40px 0 25px 0;
+}
