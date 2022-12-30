@@ -23,6 +23,7 @@ function List({ data, handleProfile, currentPage }) {
             firstCategory={item.category[0]}
             secondCategory={item.category[1]}
             state={item.state}
+            agency={item.agency}
             country={item.country}
             handleProfile={() => handleProfile(item.id)}
           />

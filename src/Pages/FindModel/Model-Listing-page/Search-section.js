@@ -14,6 +14,23 @@ function AllSearch({
   const [toggleGender, setToggleGender] = useState(false);
   const [toggleCategory, setToggleCategory] = useState(false);
 
+  const categoryList = [
+    "all category",
+    "child",
+    "petite",
+    "fashion",
+    "pageant",
+    "fitness",
+    "glamour",
+    "runway",
+    "editorial",
+    "swimsuit",
+    "plus size",
+    "body part",
+    "commercial",
+    "promotional",
+  ];
+
   function handleGender() {
     setToggleGender((prevGender) => !prevGender);
   }
@@ -26,7 +43,7 @@ function AllSearch({
       <section className="search-container">
         <div className="input-section">
           <p className="search__text">
-            <i className="fa-solid fa-magnifying-glass fa-2x"></i>
+            <i className="fa-solid fa-magnifying-glass fa-2x "></i>
             Search by Country & State
           </p>
 
@@ -40,6 +57,7 @@ function AllSearch({
                 value={search}
                 spellCheck="false"
                 autoFocus
+                autoComplete="NO"
               />
             </label>
 
@@ -78,20 +96,9 @@ function AllSearch({
               </button>
               {toggleCategory && (
                 <ul className="filter-list dark--btn">
-                  <FilterItem itemText="all category" handleFilter={filterCategory} />
-                  <FilterItem itemText="child" handleFilter={filterCategory} />
-                  <FilterItem itemText="petite" handleFilter={filterCategory} />
-                  <FilterItem itemText="fashion" handleFilter={filterCategory} />
-                  <FilterItem itemText="pageant" handleFilter={filterCategory} />
-                  <FilterItem itemText="fitness" handleFilter={filterCategory} />
-                  <FilterItem itemText="glamour" handleFilter={filterCategory} />
-                  <FilterItem itemText="runway" handleFilter={filterCategory} />
-                  <FilterItem itemText="editorial" handleFilter={filterCategory} />
-                  <FilterItem itemText="swimsuit" handleFilter={filterCategory} />
-                  <FilterItem itemText="plus size" handleFilter={filterCategory} />
-                  <FilterItem itemText="body part" handleFilter={filterCategory} />
-                  <FilterItem itemText="commercial" handleFilter={filterCategory} />
-                  <FilterItem itemText="promotional" handleFilter={filterCategory} />
+                  {categoryList.map((item, index) => (
+                    <FilterItem key={index} itemText={item} handleFilter={filterCategory} />
+                  ))}
                 </ul>
               )}
             </div>
