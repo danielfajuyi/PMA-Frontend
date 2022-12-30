@@ -3,6 +3,7 @@ import Categories from "./Category-Section";
 import AllSearch from "./Search-section";
 import List from "./List-section";
 import PageNation from "./PageNation";
+import Footer from "../../Home/Layout/FooterSection/Footer/footer";
 import { useState, useEffect } from "react";
 
 function ListingPage({ handleProfile, Data }) {
@@ -35,9 +36,7 @@ function ListingPage({ handleProfile, Data }) {
     //searching base on gender
     if (gender && !category && !search) {
       if (gender !== "all gender") {
-        newData = Data.filter(
-          (item) => item.stats.gender.toLowerCase() === gender && item
-        );
+        newData = Data.filter((item) => item.stats.gender.toLowerCase() === gender && item);
       } else {
         newData = Data.map((item) => item);
       }
@@ -46,8 +45,7 @@ function ListingPage({ handleProfile, Data }) {
     } else if (!gender && category && !search) {
       if (category !== "all category") {
         newData = Data.filter(
-          (item) =>
-            item.category.find((str) => str.toLowerCase() === category) && item
+          (item) => item.category.find((str) => str.toLowerCase() === category) && item
         );
       } else {
         newData = Data.map((item) => item);
@@ -66,13 +64,10 @@ function ListingPage({ handleProfile, Data }) {
     } else if (gender && category && !search) {
       if (gender === "all gender" && category !== "all category") {
         newData = Data.filter(
-          (item) =>
-            item.category.find((str) => str.toLowerCase() === category) && item
+          (item) => item.category.find((str) => str.toLowerCase() === category) && item
         );
       } else if (gender !== "all gender" && category === "all category") {
-        newData = Data.filter(
-          (item) => item.stats.gender.toLowerCase() === gender && item
-        );
+        newData = Data.filter((item) => item.stats.gender.toLowerCase() === gender && item);
       } else if (gender !== "all gender" && category !== "all category") {
         newData = Data.filter((item) =>
           item.stats.gender.toLowerCase() === gender &&
@@ -212,11 +207,7 @@ function ListingPage({ handleProfile, Data }) {
         search={search}
         searchResult={data.length}
       />
-      <List
-        data={data}
-        handleProfile={handleProfile}
-        currentPage={currentPage}
-      />
+      <List data={data} handleProfile={handleProfile} currentPage={currentPage} />
       {data.length !== 0 && (
         <PageNation
           pageNumber={pageNumber}
@@ -225,6 +216,8 @@ function ListingPage({ handleProfile, Data }) {
           currentPage={currentPage}
         />
       )}
+
+      <Footer />
     </>
   );
 }

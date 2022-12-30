@@ -10,15 +10,7 @@ function BookingForm({ toggleForm, handleForm, profileId, postMsg }) {
   const [description, setDescription] = useState("");
 
   function sendForm() {
-    if (
-      description &&
-      price &&
-      dateTo &&
-      dateFrom &&
-      countryName &&
-      stateName &&
-      name
-    ) {
+    if (description && price && dateTo && dateFrom && countryName && stateName && name) {
       let jobMsg = {
         id: profileId,
         clientName: name,
@@ -58,8 +50,7 @@ function BookingForm({ toggleForm, handleForm, profileId, postMsg }) {
   return (
     <section
       style={{ transform: !toggleForm && `translateX(${100}%)` }}
-      className="booking-section"
-    >
+      className="booking-section">
       <form className="book-form" onSubmit={(e) => e.preventDefault()}>
         <i onClick={handleForm} className="fa-solid fa-xmark close-icon"></i>
         <h3>Book Model</h3>
@@ -68,7 +59,7 @@ function BookingForm({ toggleForm, handleForm, profileId, postMsg }) {
           <label htmlFor="name"> Name</label>
           <input
             onChange={handleChange}
-            class="bookform-text"
+            className="bookform-text"
             type="text"
             id="name"
             name="name"
@@ -84,7 +75,7 @@ function BookingForm({ toggleForm, handleForm, profileId, postMsg }) {
             <input
               onChange={handleChange}
               type="text"
-              class="bookform-text"
+              className="bookform-text"
               id="state"
               name="state"
               placeholder="State name..."
@@ -99,7 +90,7 @@ function BookingForm({ toggleForm, handleForm, profileId, postMsg }) {
             <input
               onChange={handleChange}
               type="text"
-              class="bookform-text"
+              className="bookform-text"
               id="country"
               name="country"
               placeholder="Country name..."
@@ -114,7 +105,7 @@ function BookingForm({ toggleForm, handleForm, profileId, postMsg }) {
             <input
               onChange={handleChange}
               type="date"
-              class="bookform-text"
+              className="bookform-text"
               id="date-from"
               name="date-from"
               value={dateFrom}
@@ -127,7 +118,7 @@ function BookingForm({ toggleForm, handleForm, profileId, postMsg }) {
             <input
               onChange={handleChange}
               type="date"
-              class="bookform-text"
+              className="bookform-text"
               id="date-to"
               name="date-to"
               value={dateTo}
@@ -141,7 +132,7 @@ function BookingForm({ toggleForm, handleForm, profileId, postMsg }) {
               onChange={handleChange}
               type="text"
               id="price"
-              class="bookform-text"
+              className="bookform-text"
               name="price"
               placeholder="Amount..."
               value={price}
@@ -157,14 +148,13 @@ function BookingForm({ toggleForm, handleForm, profileId, postMsg }) {
             onChange={handleChange}
             name="description"
             id="description"
-            class="bookform-textarea"
+            className="bookform-textarea"
             cols="30"
             rows="5"
             placeholder="Job description"
             value={description}
             spellCheck="false"
-            required
-          ></textarea>
+            required></textarea>
         </div>
         <button onClick={sendForm} type="submit" className="dark--btn send-btn">
           Send

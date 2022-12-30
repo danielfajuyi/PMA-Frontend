@@ -7,13 +7,32 @@ import ModelBio from "./Model-Bio";
 import ModelVideo from "./Model-Video";
 import ModelPolaroid from "./Model-Polaroid";
 import BookingForm from "./BookingForm";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function ProfilePage({ item, postMsg }) {
   const [activeSection, setActiveSection] = useState("Photos");
   const [toggleForm, setToggleForm] = useState(false);
-  const [displayLimit, setDisplayLimit] = useState(4);
+  const [displayLimit, setDisplayLimit] = useState("");
+  const [deviceSize, setDeviceSize] = useState(window.innerWidth);
   const [activeDisplay, setActiveDisplay] = useState("");
+  const [viewAll, setViewAll] = useState(false);
+
+  // setting device size
+  function handleResize() {
+    setDeviceSize(window.innerWidth);
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [deviceSize]);
+
+  useEffect(() => {
+    deviceSize > 1279 ? setDisplayLimit(8) : setDisplayLimit(6);
+  }, [deviceSize]);
 
   function handleSection(e) {
     let section = e.target.textContent;
@@ -24,17 +43,9 @@ function ProfilePage({ item, postMsg }) {
     setToggleForm((prevForm) => !prevForm);
   }
 
-  function handleDisplay(e) {
-    const display = e.target.textContent;
-    const displayId = e.target.id;
-
-    setActiveDisplay(displayId);
-
-    if (display === "view All") {
-      setDisplayLimit(item.photos.length);
-    } else if (display === "view Less") {
-      setDisplayLimit(4);
-    }
+  function handleDisplay(id, text) {
+    setActiveDisplay(id);
+    text === "view All" ? setViewAll(true) : setViewAll(false);
   }
 
   return (
@@ -43,28 +54,31 @@ function ProfilePage({ item, postMsg }) {
       <Links handleSection={handleSection} activeSection={activeSection} />
       {activeSection === "Photos" && (
         <ModelPhoto
-          item={item}
+          photos={item.photos}
           activeDisplay={activeDisplay}
           displayLimit={displayLimit}
           handleDisplay={handleDisplay}
+          viewAll={viewAll}
         />
       )}
       {activeSection === "Stats" && <ModelStats item={item} />}
       {activeSection === "Bio" && <ModelBio item={item} />}
       {activeSection === "Videos" && (
         <ModelVideo
-          item={item}
+          videos={item.videos}
           activeDisplay={activeDisplay}
           displayLimit={displayLimit}
           handleDisplay={handleDisplay}
+          viewAll={viewAll}
         />
       )}
       {activeSection === "Polaroids" && (
         <ModelPolaroid
-          item={item}
+          polaroids={item.polaroids}
           activeDisplay={activeDisplay}
           displayLimit={displayLimit}
           handleDisplay={handleDisplay}
+          viewAll={viewAll}
         />
       )}
       <BookingForm
@@ -73,6 +87,9 @@ function ProfilePage({ item, postMsg }) {
         profileId={item.id}
         postMsg={postMsg}
       />
+      <div className="profile-footer">
+        <small>Copyright &copy; 2022 PREMIUM MODEL</small>
+      </div>
     </>
   );
 }

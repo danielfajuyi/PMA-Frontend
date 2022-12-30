@@ -1,43 +1,34 @@
 import VideItem from "./VideoItem";
+import { ViewBtn } from "./Buttons";
 
-// "./videos/video (1).mp4",
-// "./videos/video (2).mp4",
-// "./videos/video (3).mp4",
-// "./videos/video (4).mp4",
-// "./videos/video (1).mp4",
-// "./videos/video (2).mp4",
-// "./videos/video (3).mp4",
-// "./videos/video (4).mp4"
-
-function ModelVideo({ item, activeDisplay, displayLimit, handleDisplay }) {
+function ModelVideo({ videos, activeDisplay, displayLimit, handleDisplay, viewAll }) {
   return (
     <section className="section video-section">
-      <h2 className="video__title">Model's Videos</h2>
       <ul className="videoList">
-        {item.videos.map((video, index) =>
-          activeDisplay !== "videos"
-            ? index <= 3 && <VideItem key={index} video={video} />
-            : index <= displayLimit - 1 && (
-                <VideItem key={index} video={video} />
-              )
+        {videos.map((video, index) =>
+          activeDisplay !== "videos" ? (
+            index <= displayLimit - 1 && <VideItem key={index} video={video} />
+          ) : activeDisplay === "videos" && !viewAll ? (
+            index <= displayLimit - 1 && <VideItem key={index} video={video} />
+          ) : (
+            <VideItem key={index} video={video} />
+          )
         )}
       </ul>
-      <p
-        style={{ display: item.videos.length > 1 && "none" }}
-        className="empty-content-text"
-      >
+
+      {/* No video posted yet */}
+      <p style={{ display: videos.length > 1 && "none" }} className="empty-content-text">
         Sorry, Model is yet to post a Video.
       </p>
-      <button
-        id="videos"
-        onClick={handleDisplay}
-        style={{ display: item.videos.length <= 4 && "none" }}
-        className="view-more-btn on-hover"
-      >
-        {activeDisplay === "videos" && displayLimit > 4
-          ? "view Less"
-          : "view All"}
-      </button>
+
+      {/* video display btn section */}
+      {videos.length > displayLimit && (
+        <ViewBtn
+          id="videos"
+          handleDisplay={handleDisplay}
+          btnText={activeDisplay === "videos" && viewAll ? "view Less" : "view All"}
+        />
+      )}
     </section>
   );
 }

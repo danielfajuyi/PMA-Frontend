@@ -6,8 +6,10 @@
     "secondName": "ChaCha",
     "state": "kano",
     "country": "nigeria",
+    "gender": "male",
     "category": ["Fashion", "pageant"],
-    "agency": "free lancers",
+    "agency": "freelance",
+    "compCard": "/images/model (4).jpg",
     "stats": {
       "height": 5.9,
       "waist": 28,
@@ -21,7 +23,7 @@
       "hairColor": "black",
       "hairLength": "Long",
       "ethnicity": "africa",
-      "skinColor": "light skinned",
+      "skinColor": "dark",
       "language": "english",
       "availableForTravel": "yes"
     },
@@ -33,10 +35,14 @@
       "/images/img-18.png",
       "/images/img-18.png",
       "/images/img-18.png",
+      "/images/img-18.png",
+      "/images/img-18.png",
       "/images/img-18.png"
     ],
     "bio": "my name is eke ginika, i am a commercial and fashion model my name is eke ginika, i have been modeling for some years, i have experience in fashion, runway and commercial modeling. Modeling is so much fun for me, i give my best to be as professional as possible. I am open and available for gigs and collaborations",
     "polaroids": [
+      "/images/img-18.png",
+      "/images/img-18.png",
       "/images/img-18.png",
       "/images/img-18.png",
       "/images/img-18.png",
@@ -61,12 +67,13 @@
       "billboard",
       "tv advert",
       "runway",
-      "facial glamour",
+      "facial ",
+      " glamour",
       "photo shoot",
       "fashion",
       "print",
       "editorial",
-      "body part modeling"
+      "body part"
     ],
     "contractMessage": []
   },
@@ -75,10 +82,12 @@
     "image": "/images/model (1).jpg",
     "firstName": "Keziah ",
     "secondName": "ChaCha",
+    "gender": "male",
     "state": "abuja",
     "country": "Ghana",
     "category": ["fitness", "Glamour"],
-    "agency": "free lancers",
+    "agency": "freelance",
+    "compCard": "/images/model (4).jpg",
     "stats": {
       "height": 5.9,
       "waist": 28,
@@ -92,11 +101,13 @@
       "hairColor": "black",
       "hairLength": "Long",
       "ethnicity": "africa",
-      "skinColor": "light skinned",
+      "skinColor": "dark",
       "language": "english",
       "availableForTravel": "yes"
     },
     "photos": [
+      "/images/model (1).jpg",
+      "/images/model (1).jpg",
       "/images/model (1).jpg",
       "/images/model (1).jpg",
       "/images/model (1).jpg",
@@ -129,9 +140,11 @@
     "firstName": "Keziah ",
     "secondName": "ChaCha",
     "state": "lagos",
+    "gender": "male",
     "country": "cameroon",
     "category": ["RunWay", "editorial"],
-    "agency": "free lancers",
+    "agency": "freelance",
+    "compCard": "/images/model (4).jpg",
     "stats": {
       "height": 5.9,
       "waist": 28,
@@ -145,11 +158,13 @@
       "hairColor": "black",
       "hairLength": "Long",
       "ethnicity": "africa",
-      "skinColor": "light skinned",
+      "skinColor": "light",
       "language": "english",
       "availableForTravel": "yes"
     },
     "photos": [
+      "/images/model (2).jpg",
+      "/images/model (2).jpg",
       "/images/model (2).jpg",
       "/images/model (2).jpg",
       "/images/model (2).jpg",
@@ -188,12 +203,14 @@
   {
     "id": 4,
     "image": "/images/child (7).jpg",
-    "firstName": "Keziah ",
-    "secondName": "ChaCha",
+    "firstName": "chimezie",
+    "secondName": "Chinedu",
+    "gender": "female",
     "state": "ogun",
     "country": "canada",
     "category": ["child", "petite"],
-    "agency": "super adorable kids",
+    "agency": "super kids",
+    "compCard": "/images/model (4).jpg",
     "stats": {
       "height": 5.9,
       "waist": 28,
@@ -203,11 +220,10 @@
       "size": 8,
       "shoe": 40,
       "tattoos": "none",
-      "gender": "female",
       "hairColor": "black",
       "hairLength": "Long",
       "ethnicity": "africa",
-      "skinColor": "light skinned",
+      "skinColor": "light",
       "language": "english",
       "availableForTravel": "yes"
     },
@@ -219,6 +235,8 @@
       "/images/child (5).jpg",
       "/images/child (6).jpg",
       "/images/child (7).jpg",
+      "/images/child (8).jpg",
+      "/images/child (8).jpg",
       "/images/child (8).jpg"
     ],
     "bio": "my name is eke ginika, i am a commercial and fashion model my name is eke ginika, i have been modeling for some years, i have experience in fashion, runway and commercial modeling. Modeling is so much fun for me, i give my best to be as professional as possible. I am open and available for gigs and collaborations",
@@ -230,6 +248,8 @@
       "/images/child (5).jpg",
       "/images/child (6).jpg",
       "/images/child (7).jpg",
+      "/images/child (8).jpg",
+      "/images/child (8).jpg",
       "/images/child (8).jpg"
     ],
     "videos": [],
@@ -255,7 +275,8 @@
     "state": "imo",
     "country": "china",
     "category": ["swimsuit", "Plus size"],
-    "agency": "free lancers",
+    "agency": "freelance",
+    "compCard": "/images/model (4).jpg",
     "stats": {
       "height": 5.9,
       "waist": 28,
@@ -318,6 +339,7 @@
     "country": "italy",
     "category": ["body part", "commercial"],
     "agency": "free lancers",
+    "compCard": "/images/model (4).jpg",
     "stats": {
       "height": 5.9,
       "waist": 28,
@@ -380,6 +402,7 @@
     "country": "nigeria",
     "category": ["body part", "commercial"],
     "agency": "free lancers",
+    "compCard": "/images/model (4).jpg",
     "stats": {
       "height": 5.9,
       "waist": 28,
@@ -442,6 +465,7 @@
     "country": "ukraine",
     "category": ["swimsuit", "Plus size"],
     "agency": "free lancers",
+    "compCard": "/images/model (4).jpg",
     "stats": {
       "height": 5.9,
       "waist": 28,
@@ -504,6 +528,7 @@
     "country": "russia",
     "category": ["child", "petite"],
     "agency": "super adorable kids",
+    "compCard": "/images/model (4).jpg",
     "stats": {
       "height": 5.9,
       "waist": 28,
@@ -566,6 +591,7 @@
     "country": "india",
     "category": ["RunWay", "editorial"],
     "agency": "free lancers",
+    "compCard": "/images/model (4).jpg",
     "stats": {
       "height": 5.9,
       "waist": 28,
@@ -628,6 +654,7 @@
     "country": "japan",
     "category": ["Fashion", "pageant"],
     "agency": "free lancers",
+    "compCard": "/images/model (4).jpg",
     "stats": {
       "height": 5.9,
       "waist": 28,
@@ -690,6 +717,7 @@
     "country": "Germany",
     "category": ["fitness", "Glamour"],
     "agency": "free lancers",
+    "compCard": "/images/model (4).jpg",
     "stats": {
       "height": 5.9,
       "waist": 28,

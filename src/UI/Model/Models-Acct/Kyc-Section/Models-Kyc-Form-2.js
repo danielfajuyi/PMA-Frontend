@@ -360,18 +360,13 @@ function ModelsKycForm2({
           {/* category section  */}
           <div className="list-title-rapper">
             <h2 className="sections-title">Models categories</h2>
-            <p className="category-des-text">
-              choose which type of model you suited (2max)
-            </p>
+            <p className="category-des-text">choose which type of model you suited (2max)</p>
           </div>
           <ul className="model-categories">
             {categoryInput.map((item) => {
               return (
                 <li className="kyc-input-container" key={item.id}>
-                  <label
-                    className="check-box-label colored-hover"
-                    htmlFor={item.id}
-                  >
+                  <label className="check-box-label colored-hover" htmlFor={item.id}>
                     {item.label}
                     <input
                       onChange={handleCheck}
@@ -380,11 +375,7 @@ function ModelsKycForm2({
                       id={item.id}
                       name="category"
                       value={item.value}
-                      checked={
-                        category.find((value) => value === item.value)
-                          ? true
-                          : false
-                      }
+                      checked={category.find((value) => value === item.value) ? true : false}
                     />
                   </label>
                 </li>
@@ -398,10 +389,7 @@ function ModelsKycForm2({
             {jobsInput.map((item) => {
               return (
                 <li className="kyc-input-container" key={item.id}>
-                  <label
-                    className="check-box-label colored-hover"
-                    htmlFor={item.id}
-                  >
+                  <label className="check-box-label colored-hover" htmlFor={item.id}>
                     {item.label}
                     <input
                       onChange={handleCheck}
@@ -410,11 +398,7 @@ function ModelsKycForm2({
                       id={item.id}
                       name="job-interest"
                       value={item.value}
-                      checked={
-                        jobInterest.find((value) => value === item.value)
-                          ? true
-                          : false
-                      }
+                      checked={jobInterest.find((value) => value === item.value) ? true : false}
                     />
                   </label>
                 </li>
@@ -467,18 +451,8 @@ function ModelsKycForm2({
 
           {/* nav section */}
           <div className="kyc-btn-container">
-            <FormNavBtn
-              btnText="Back"
-              name="form2"
-              handleClick={handleNavigation}
-              type="button"
-            />
-            <FormNavBtn
-              btnText="Next"
-              name="form2"
-              handleClick={handleSubmit}
-              type="button"
-            />
+            <FormNavBtn btnText="Back" name="form2" handleClick={handleNavigation} type="button" />
+            <FormNavBtn btnText="Next" name="form2" handleClick={handleSubmit} type="button" />
           </div>
         </div>
       </section>

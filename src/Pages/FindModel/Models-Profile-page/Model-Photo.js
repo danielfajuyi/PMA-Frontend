@@ -1,32 +1,35 @@
 import ImgItem from "./ImgItem";
+import { ViewBtn } from "./Buttons";
 
-function ModelPhoto({ item, activeDisplay, displayLimit, handleDisplay }) {
+function ModelPhoto({ photos, activeDisplay, displayLimit, handleDisplay, viewAll }) {
   return (
     <section className="section photo-section">
-      <h2 className="photo__title">Model's Photos</h2>
+      {/* photo display section */}
       <ul className="imgList">
-        {item.photos.map((photo, index) =>
-          activeDisplay !== "photos"
-            ? index <= 3 && <ImgItem key={index} img={photo} />
-            : index <= displayLimit - 1 && <ImgItem key={index} img={photo} />
+        {photos.map((photo, index) =>
+          activeDisplay !== "photos" ? (
+            index <= displayLimit - 1 && <ImgItem key={index} img={photo} />
+          ) : activeDisplay === "photos" && !viewAll ? (
+            index <= displayLimit - 1 && <ImgItem key={index} img={photo} />
+          ) : (
+            <ImgItem key={index} img={photo} />
+          )
         )}
       </ul>
-      <div
-        style={{ display: item.photos.length > 1 && "none" }}
-        className="empty-content-text"
-      >
+
+      {/* No photo posted yet */}
+      <div style={{ display: photos.length > 1 && "none" }} className="empty-content-text">
         Sorry, Model is yet to post a Photo.
       </div>
-      <button
-        id="photos"
-        onClick={handleDisplay}
-        style={{ display: item.photos.length <= 4 && "none" }}
-        className="view-more-btn on-hover"
-      >
-        {activeDisplay === "photos" && displayLimit > 4
-          ? "view Less"
-          : "view All"}
-      </button>
+
+      {/* photo display btn section */}
+      {photos.length > displayLimit && (
+        <ViewBtn
+          id="photos"
+          handleDisplay={handleDisplay}
+          btnText={activeDisplay === "photos" && viewAll ? "view Less" : "view All"}
+        />
+      )}
     </section>
   );
 }

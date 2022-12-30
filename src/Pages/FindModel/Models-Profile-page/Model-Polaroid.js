@@ -1,34 +1,37 @@
 import ImgItem from "./ImgItem";
+import { ViewBtn } from "./Buttons";
 
-function ModelPolaroid({ item, activeDisplay, displayLimit, handleDisplay }) {
+function ModelPolaroid({ polaroids, activeDisplay, displayLimit, handleDisplay, viewAll }) {
   return (
     <section className="section polaroid-section">
-      <h2 className="polaroid__title">Model's Polaroids</h2>
+      {/* image display section  */}
       <ul className="imgList">
-        {item.polaroids.map((polaroid, index) =>
-          activeDisplay !== "polaroids"
-            ? index <= 3 && <ImgItem key={index} img={polaroid} />
-            : index <= displayLimit - 1 && (
-                <ImgItem key={index} img={polaroid} />
-              )
+        {polaroids.map((polaroid, index) =>
+          activeDisplay !== "polaroids" ? (
+            index <= displayLimit - 1 && <ImgItem key={index} img={polaroid} />
+          ) : activeDisplay === "polaroids" && !viewAll ? (
+            index <= displayLimit - 1 && <ImgItem key={index} img={polaroid} />
+          ) : (
+            <ImgItem key={index} img={polaroid} />
+          )
         )}
       </ul>
-      <div
-        style={{ display: item.polaroids.length > 1 && "none" }}
-        className="empty-content-text"
-      >
+
+      {/* No image posted yet */}
+
+      <div style={{ display: polaroids.length > 1 && "none" }} className="empty-content-text">
         Sorry, Model is yet to post a Polaroid.
       </div>
-      <button
-        id="polaroids"
-        onClick={handleDisplay}
-        style={{ display: item.polaroids.length <= 4 && "none" }}
-        className="view-more-btn on-hover"
-      >
-        {activeDisplay === "polaroids" && displayLimit > 4
-          ? "view Less"
-          : "view All"}
-      </button>
+
+      {/* display  Btn section */}
+
+      {polaroids.length > displayLimit && (
+        <ViewBtn
+          id="polaroids"
+          handleDisplay={handleDisplay}
+          btnText={activeDisplay === "polaroids" && viewAll ? "view Less" : "view All"}
+        />
+      )}
     </section>
   );
 }

@@ -40,13 +40,10 @@ const Navbar = () => {
                 if (deviceSize < 920) {
                   return (
                     index <= 3 && (
-                      <li>
+                      <li key={index}>
                         <NavLink
                           to={path}
-                          className={({ isActive }) =>
-                            isActive ? "active-nav" : ""
-                          }
-                        >
+                          className={({ isActive }) => (isActive ? "active-nav" : "")}>
                           {name}
                         </NavLink>
                       </li>
@@ -57,10 +54,7 @@ const Navbar = () => {
                     <li key={index}>
                       <NavLink
                         to={path}
-                        className={({ isActive }) =>
-                          isActive ? "active-nav" : ""
-                        }
-                      >
+                        className={({ isActive }) => (isActive ? "active-nav" : "")}>
                         {name}
                       </NavLink>
                     </li>
@@ -87,23 +81,16 @@ const Navbar = () => {
 
       {/* mobile nav */}
 
-      <nav
-        style={{ transform: toggleMenu && `translateX(${0}%)` }}
-        className="mobile-nav"
-      >
+      <nav style={{ transform: toggleMenu && `translateX(${0}%)` }} className="mobile-nav">
         <div
           style={{ transform: toggleMenu && `translateX(${0}%)` }}
-          className="mobile-nav__container"
-        >
+          className="mobile-nav__container">
           <FaTimes onClick={handleMenu} className="close-menu" />
           <ul className="mobile-nav__list">
             {links.map(({ name, path, id }) => {
               return (
                 <li onClick={handleMenu} key={id} className="mobile-nav__item">
-                  <NavLink
-                    to={path}
-                    className={({ isActive }) => (isActive ? "active-nav" : "")}
-                  >
+                  <NavLink to={path} className={({ isActive }) => (isActive ? "active-nav" : "")}>
                     {name}
                   </NavLink>
                 </li>
