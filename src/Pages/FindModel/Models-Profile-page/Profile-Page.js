@@ -89,6 +89,7 @@ function ProfilePage({ item, postMsg }) {
       />
       <div className="profile-footer">
         <small>Copyright &copy; 2022 PREMIUM MODEL</small>
+        <span>{`(${deviceSize})`}</span>
       </div>
     </>
   );

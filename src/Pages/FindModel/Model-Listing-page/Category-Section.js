@@ -8,8 +8,8 @@ function Categories() {
         <CategoryItem img="./images/model (1).jpg" text="Run way" />
         <CategoryItem img="./images/model (20).jpg" text="Child" />
         <CategoryItem img="./images/model (2).jpg" text="Fashion" />
-        <CategoryItem img="./images/model (14).jpg" text="Commercial" />
-        <CategoryItem img="./images/model (4).jpg" text="Plus size" />
+        <CategoryItem img="./images/model (14).jpg" text="Plus size" />
+        <CategoryItem img="./images/model (4).jpg" text="Fitness" />
       </ul>
     </section>
   );

@@ -13,7 +13,7 @@ function ListItem({
 }) {
   return (
     <li className="main__item shadow-fit">
-      <img className="item__img" src={img} alt="" width="250" height="280" />
+      <img className="item__img" src={img} alt="" width="250" height="300" />
 
       <div className="item__text-content">
         <span className="test-text">{agency}</span>

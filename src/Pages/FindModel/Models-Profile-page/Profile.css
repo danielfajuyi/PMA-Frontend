@@ -52,6 +52,7 @@
 .model__name {
   text-transform: uppercase;
   font-size: 1rem;
+  font-weight: bold;
 }
 .model__category {
   display: inline-block;
@@ -316,7 +317,7 @@
 }
 .book-form {
   position: relative;
-  width: 85%;
+  width: 90%;
   margin: auto;
   border-radius: 10px;
   padding: 4rem 2rem;
