@@ -1,0 +1,183 @@
+{
+  "agency": [
+    {
+      "id": 1,
+      "account": {
+        "firstName": "daniel",
+        "lastName": "mega",
+        "email": "example@gmail.com",
+        "password": "12345Aa",
+        "mobileNo": "12345678",
+        "referral": "0002",
+        "terms": false,
+        "deactivateAccount": false
+      },
+
+      "profile": {
+        "profilePic": "./images/model (2).jpg",
+        "coverPic": "",
+        "name": "freelancer",
+        "url": "https://Example.com",
+        "address": "No 24 office road lagos",
+        "state": "lagos",
+        "country": "ghana",
+        "bio": "my name is eke ginika, i am a commercial and fashion model my name is eke ginika, i have been modeling for some years, i have experience in fashion, runway and commercial modeling. Modeling is so much fun for me, i give my best to be as professional as possible. I am open and available for gigs and collaborations",
+        "socialMedia": {
+          "facebook": "user@faceBook.com",
+          "twitter": "user@faceBook.com",
+          "instagram": "user@faceBook.com"
+        },
+        "photos": [
+          "./images/model (1).jpg",
+          "./images/model (2).jpg",
+          "./images/model (4).jpg",
+          "./images/model (5).jpg",
+          "./images/model (7).jpg",
+          "./images/model (10).jpg",
+          "./images/model (12).jpg",
+          "./images/model (14).jpg",
+          "./images/model (20).jpg"
+        ]
+      }
+    }
+  ],
+  "client": [
+    {
+      "id": 1,
+      "account": {
+        "firstName": "daniel",
+        "lastName": "mega",
+        "email": "example@gmail.com",
+        "password": "12345Aa",
+        "mobileNo": "12345678",
+        "referral": "0002",
+        "terms": false,
+        "deactivateAccount": false
+      },
+
+      "profile": {
+        "profilePic": "./images/model (2).jpg",
+        "coverPic": "",
+        "name": "freelancer",
+        "url": "https://Example.com",
+        "address": "No 24 office road lagos",
+        "state": "lagos",
+        "country": "ghana",
+        "industry": "photographer",
+        "bio": "my name is eke ginika, i am a commercial and fashion model my name is eke ginika, i have been modeling for some years, i have experience in fashion, runway and commercial modeling. Modeling is so much fun for me, i give my best to be as professional as possible. I am open and available for gigs and collaborations",
+        "socialMedia": {
+          "facebook": "user@faceBook.com",
+          "twitter": "user@faceBook.com",
+          "instagram": "user@faceBook.com"
+        },
+        "photos": [
+          "./images/model (1).jpg",
+          "./images/model (2).jpg",
+          "./images/model (4).jpg",
+          "./images/model (5).jpg",
+          "./images/model (7).jpg",
+          "./images/model (10).jpg",
+          "./images/model (12).jpg",
+          "./images/model (14).jpg",
+          "./images/model (20).jpg"
+        ]
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": 1,
+      "account": {
+        "firstName": "daniel",
+        "lastName": "mega",
+        "email": "example@gmail.com",
+        "password": "12345Aa",
+        "mobileNo": "12345678",
+        "referral": "0002",
+        "terms": false,
+        "deactivateAccount": false,
+        "displayProfile": true,
+        "marketPhotos": false
+      },
+
+      "profile": {
+        "profilePic": "./images/model (2).jpg",
+        "firstName": "daniel",
+        "lastName": "mega",
+        "userName": "mega-Dan",
+        "gender": "male",
+        "state": "lagos",
+        "country": "ghana",
+        "bio": "my name is eke ginika, i am a commercial and fashion model my name is eke ginika, i have been modeling for some years, i have experience in fashion, runway and commercial modeling. Modeling is so much fun for me, i give my best to be as professional as possible. I am open and available for gigs and collaborations",
+        "stats": {
+          "height": "3.5",
+          "waist": "32",
+          "bust": "15",
+          "chest": "18",
+          "hip": "21",
+          "shoulder": "32",
+          "eyes": "black",
+          "size": "34",
+          "shoe": "34",
+          "tattoos": "yes",
+          "agency": "freelance",
+          "hairColor": "green",
+          "hairLength": "long",
+          "ethnicity": "yoruba",
+          "skinColor": "dark",
+          "language": "English",
+          "availableForTravel": "no"
+        },
+        "category": ["Fashion", "Editorial"],
+        "jobInterest": [
+          "Billboard",
+          "Tv advert",
+          "Runway",
+          "Photo shoot",
+          "Print",
+          "Editorial",
+          "Body parts"
+        ],
+        "socialMedia": {
+          "facebook": "user@faceBook.com",
+          "twitter": "user@faceBook.com",
+          "instagram": "user@faceBook.com"
+        },
+        "photos": [
+          "./images/model (1).jpg",
+          "./images/model (2).jpg",
+          "./images/model (4).jpg",
+          "./images/model (5).jpg",
+          "./images/model (7).jpg",
+          "./images/model (10).jpg",
+          "./images/model (12).jpg",
+          "./images/model (14).jpg",
+          "./images/model (20).jpg"
+        ],
+        "polaroids": [
+          "./images/model (1).jpg",
+          "./images/model (2).jpg",
+          "./images/model (4).jpg",
+          "./images/model (5).jpg",
+          "./images/model (7).jpg",
+          "./images/model (10).jpg",
+          "./images/model (12).jpg",
+          "./images/model (14).jpg",
+          "./images/model (20).jpg"
+        ],
+        "videos": [
+          "./videos/video (1).mp4",
+          "./videos/video (2).mp4",
+          "./videos/video (3).mp4",
+          "./videos/video (4).mp4",
+          "./videos/video (1).mp4",
+          "./videos/video (2).mp4",
+          "./videos/video (3).mp4",
+          "./videos/video (4).mp4"
+        ],
+        "compCard": "./images/model (4).jpg",
+        "contractMessage": []
+      }
+    }
+  ]
+}

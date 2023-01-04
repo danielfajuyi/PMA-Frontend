@@ -1,0 +1,136 @@
+/* content section */
+
+.list-title {
+  font-size: 1.8rem;
+  text-decoration: underline;
+  color: var(--Colored-color);
+}
+
+.model-statistic,
+.model-categories,
+.work-interest,
+.social-media-link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+.kyc-input-container {
+  width: 45%;
+}
+
+.input-label {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  font-size: 20px;
+}
+.kyc-input-field {
+  height: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  text-indent: 8px;
+  border: 1px solid gray;
+  border-radius: 2px;
+}
+
+.check-box-label {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 20px;
+  gap: 0.6rem;
+}
+.kyc-check-box {
+  width: 16px;
+  height: 16px;
+}
+.kyc-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.kyc-back-btn,
+.kyc-next-btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-top: 1rem;
+}
+.category-des-text {
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 375px) {
+  .input-label,
+  .check-box-label {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* content section */
+
+  .list-title {
+    font-size: 2.2rem;
+    padding: 0.5rem;
+  }
+  .kyc-input-container {
+    width: 30%;
+  }
+  .work-interest {
+    justify-content: left;
+  }
+  .kyc-next-btn {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 920px) {
+  .list-title {
+    font-size: 2.5rem;
+    padding: 0rem;
+  }
+  .kyc-input-field {
+    height: 45px;
+  }
+  .kyc-check-box {
+    width: 20px;
+    height: 20px;
+  }
+  .check-box-label,
+  .input-label {
+    font-size: 1.4rem;
+  }
+  .kyc-btn-container {
+    margin-top: 2rem;
+  }
+  .list-title-rapper {
+    position: relative;
+  }
+  .category-des-text {
+    position: absolute;
+    margin-top: 0;
+    top: 10px;
+    right: 15%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .list-title-rapper {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    gap: 2rem;
+  }
+  .kyc-input-container {
+    width: 22%;
+  }
+  .model-statistic {
+    justify-content: left;
+    gap: 1.5rem;
+  }
+}
