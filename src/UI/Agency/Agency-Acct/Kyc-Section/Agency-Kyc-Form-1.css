@@ -1,0 +1,138 @@
+.kyc--hero__dark-title {
+  font-size: 2rem;
+  text-decoration: underline;
+  color: var(--Colored-color);
+}
+.kyc--hero__dark-text {
+  font-size: 1.6rem;
+  line-height: 1.8;
+}
+
+.info--section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 2.5rem;
+}
+
+/* inputs  */
+.details--input-1 {
+  width: 100%;
+}
+.details--input-2 {
+  width: 100%;
+}
+.details--input-3 {
+  width: 45%;
+}
+.details--section-2 {
+  width: 45%;
+}
+.kyc--input-container {
+  width: 45%;
+}
+.kyc--input-label {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  font-size: 20px;
+}
+.kyc--input-field {
+  height: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  text-indent: 8px;
+  border: 1px solid gray;
+  border-radius: 2px;
+}
+
+/* bio section */
+.bio--rapper {
+  border: 1px solid var(--Dark-color);
+  border-radius: 5px;
+  padding: 8px;
+  background: var(--Light-color);
+}
+.bio--text-area {
+  border: none;
+}
+
+.bio-error {
+  position: absolute;
+  bottom: 18px;
+}
+
+/*social media section  */
+
+.social--media-link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 340px) {
+  .kyc--input-container {
+    width: 46%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .kyc--hero__dark-title {
+    font-size: 2.5rem;
+    color: var(--Dark-color);
+  }
+  .kyc--hero__dark-text {
+    font-size: 2rem;
+    line-height: 1.5;
+    color: var(--Dark-color);
+  }
+  .kyc--input-container {
+    width: 30%;
+  }
+
+  .kyc--input-label {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    font-size: 25px;
+  }
+  .details--input-1 {
+    width: 45%;
+  }
+  .info--section {
+    border: 1px solid var(--Dark-color);
+    padding: 1.5rem;
+  }
+}
+@media screen and (min-width: 920px) {
+  .kyc--hero__dark-title {
+    font-size: 3rem;
+  }
+  .kyc--hero__dark-text {
+    font-size: 2.5rem;
+  }
+  .kyc--input-label {
+    font-size: 1.4rem;
+  }
+  .kyc--input-container {
+    width: 30%;
+  }
+  .info--section {
+    border: 1px solid var(--Dark-color);
+    padding: 3rem;
+  }
+}
+@media screen and (min-width: 920px) and (min-height: 850px) {
+  .kyc--input-label {
+    font-size: 1.8rem;
+  }
+  .kyc--input-field {
+    height: 50px;
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1280px) {
+}
