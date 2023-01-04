@@ -1,0 +1,63 @@
+@import "../../../scss/mixins";
+@import "../../../scss/color";
+@import "../../../scss/utils";
+
+#dashboard_sidebar {
+  position: fixed;
+  left: 0;
+  width: 13em;
+  height: 100vh;
+  background-color: $black;
+  color: $white;
+  z-index: 2;
+
+  @include mq($width: 1050px) {
+    position: relative;
+    width: 17%;
+  }
+
+  #logo_holder {
+    @include d_flex;
+    padding-block: 0.8em;
+    border-bottom: 1px solid;
+    img {
+      width: 60px;
+    }
+  }
+
+  #nav_list {
+    font-weight: 600;
+    padding-block: 0.8em;
+    height: calc(100vh - 81px);
+    overflow: auto scroll;
+  }
+
+  #nav_list li {
+    @include d_flex($justify: flex-start);
+    height: 57px;
+    width: 86%;
+    margin-inline: auto;
+    padding-left: 7%;
+    font-size: 1.2rem;
+
+    &:last-child {
+      color: $deep_pink;
+    }
+  }
+
+  #nav_list span {
+    margin-left: 0.7em;
+    font-size: 0.92rem;
+  }
+
+  #active_li {
+    background-color: $white;
+    color: $black;
+    box-shadow: inset 3px 0px 0px $deep_pink;
+    border-radius: $small_padding;
+  }
+
+  #bottom {
+    margin-top: 4em;
+  }
+}

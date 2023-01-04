@@ -1,0 +1,60 @@
+@import "../../scss/mixins";
+@import "../../scss/color";
+@import "../../scss/utils";
+
+#prev_jobs::-webkit-scrollbar {
+  width: 0.9em;
+}
+#prev_jobs::-webkit-scrollbar-track {
+  background-color: $white;
+}
+#prev_jobs::-webkit-scrollbar-thumb {
+  background-color: $dim_black;
+}
+
+#prev_jobs {
+  padding: $big_padding;
+  animation: reveal_anim 0.6s ease-out;
+  overflow: hidden;
+
+  @include mq($width: 1050px) {
+    height: calc(100vh - 12em);
+    background-color: $light_gray;
+    overflow: hidden scroll;
+    width: 80%;
+  }
+
+  *::-webkit-scrollbar {
+    width: 0.9em;
+    height: 0.8em;
+  }
+  *::-webkit-scrollbar-track {
+    background-color: $white;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: $dim_black;
+    border-radius: 1em;
+    border: 2px solid $white;
+  }
+}
+
+#prev_jobs > div {
+  padding: $small_padding;
+  gap: $small_padding;
+  display: grid;
+  grid-auto-flow: column;
+  overflow: scroll hidden;
+  border: 6px solid $dim_black;
+  border-radius: 0.3em;
+
+  @include mq($width: 1050px) {
+    background-color: $white;
+    grid-auto-flow: unset;
+    grid-template-columns: repeat(4, 1fr);
+    padding: $big_padding;
+    border: none;
+    border-radius: 0;
+    overflow: hidden;
+    gap: $md_padding;
+  }
+}

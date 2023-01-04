@@ -1,0 +1,386 @@
+@import "../../../scss/mixins";
+@import "../../../scss/color";
+@import "../../../scss/utils";
+
+#model_dashboard {
+  background-color: $dark_gray;
+  width: 100%;
+
+  @include mq($width: 1050px) {
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  #nav_button {
+    font-family: "Poppins";
+    background-color: $white;
+    color: $red;
+    border-radius: 0.3em;
+    font-weight: 600;
+    cursor: pointer;
+
+    @include mq($width: 280px) {
+      font-size: 0.7rem;
+      padding: 0.8em 0.4em;
+    }
+
+    @include mq($width: 320px) {
+      font-size: 0.8rem;
+      padding: $md_padding;
+    }
+  }
+
+  main {
+    width: 100%;
+
+    @include mq($width: 1050px) {
+      width: 85%;
+      overflow-y: scroll;
+    }
+  }
+
+  #pane {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: $md_padding;
+
+    @include mq($width: 540px) {
+      padding: $small_padding;
+      width: 100%;
+      grid-template-columns: 40% 60%;
+    }
+
+    @include mq($width: 1050px) {
+      padding: $md_padding;
+      width: 100%;
+      grid-template-columns: 25% 50% 25%;
+    }
+  }
+
+  #area_one {
+    & > * {
+      margin-bottom: $md_padding;
+    }
+
+    @include mq($width: 540px) {
+      margin-right: $small_padding;
+      & > * {
+        margin-bottom: $small_padding;
+      }
+    }
+
+    @include mq($width: 1050px) {
+      width: 100%;
+      grid-column: 1/2;
+      & > * {
+        margin-bottom: $md_padding;
+      }
+    }
+  }
+  .profile {
+    background-color: $white;
+    border-radius: $box_radius;
+
+    .head {
+      @include d_flex;
+      padding-block: 0.5em;
+      position: relative;
+
+      .edit {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        top: 1em;
+        transform: translateX(calc(50% + 2.5em));
+      }
+    }
+    .profile_img {
+      @include img_holder(10em, 10em);
+    }
+    .edit_holder {
+      position: absolute;
+      @include d_flex($justify: flex-start);
+      font-size: 0.74rem;
+      text-align: right;
+      right: 1.5em;
+    }
+    .edit {
+      cursor: pointer;
+      font-size: 0.8rem;
+      background-color: $yellow;
+      border-radius: 4px;
+      @include d_flex;
+      padding: 0.1em;
+      margin-left: 0.2em;
+    }
+
+    .name {
+      text-align: center;
+      margin-bottom: 0.1em;
+    }
+    .model {
+      width: 80px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 0.7rem;
+      background-color: $yellow;
+      padding: 0.4em 1em;
+      border-radius: 2em;
+    }
+
+    .body {
+      position: relative;
+      padding: 0 1em 1em;
+      font-weight: 500;
+    }
+
+    label {
+      font-size: 0.8rem;
+      color: lighten($black, 35%);
+    }
+
+    label + div {
+      border: 1px solid lighten($black, 60%);
+      padding: 0.4em;
+      border-radius: 0.3em;
+      color: lighten($black, 15%);
+      font-size: 0.86rem;
+    }
+  }
+  #latest_post {
+    background-color: $white;
+    border-radius: $box_radius;
+    @include box_header($x: 0.5em);
+
+    #body {
+      padding: $small_padding;
+    }
+  }
+
+  #area_two {
+    & > * {
+      margin-bottom: $md_padding;
+    }
+
+    @include mq($width: 540px) {
+      & > * {
+        margin-bottom: $small_padding;
+      }
+    }
+
+    @include mq($width: 1050px) {
+      grid-column: 2/3;
+      margin-left: $md_padding;
+      margin-right: $md_padding;
+      & > * {
+        margin-bottom: $md_padding;
+      }
+    }
+  }
+
+  #bookings {
+    & > div {
+      width: 31.5%;
+    }
+    @include d_flex($align: flex-start, $justify: space-between);
+
+    @include mq($width: 540px) {
+      & > div {
+        width: 32.5%;
+      }
+    }
+
+    @include mq($width: 1050px) {
+      & > div {
+        width: 31.5%;
+      }
+    }
+  }
+
+  .earnings {
+    background-color: $white;
+    border-radius: $box_radius;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    align-items: center;
+
+    @include mq($width: 1050px) {
+      padding: 1em;
+    }
+  }
+
+  .visitor_stats {
+    @include visitor_stats;
+    width: 100%;
+  }
+
+  #area_three {
+    & > * {
+      margin-bottom: $md_padding;
+    }
+
+    & > *:last-child {
+      margin-bottom: 0;
+    }
+
+    @include mq($width: 540px) {
+      grid-column: 1/3;
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+
+      & > * {
+        margin-bottom: 0;
+      }
+    }
+
+    @include mq($width: 1050px) {
+      & > * {
+        margin-bottom: $md_padding;
+      }
+      display: block;
+      grid-column: 3/4;
+    }
+  }
+
+  #job_posted {
+    background-color: $white;
+    border-radius: $box_radius;
+    padding: $small_padding;
+    @include box_header($x: 0.5em);
+
+    #body {
+      padding-top: 0.5em;
+    }
+    @include mq($width: 540px) {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      margin-right: $small_padding/2;
+    }
+
+    @include mq($width: 1050px) {
+      margin-right: 0;
+    }
+  }
+
+  #inbox {
+    background-color: $white;
+    border-radius: $box_radius;
+    padding-block: 0.5em;
+
+    header {
+      padding: $small_padding;
+      @include d_flex($justify: space-between);
+      border-bottom: 1px solid $light_gray;
+    }
+
+    header span {
+      @include d_flex($justify: flex-start);
+      font-size: 0.8rem;
+      margin-left: 0.3em;
+    }
+
+    .msg {
+      position: relative;
+    }
+
+    .msg .notification {
+      position: absolute;
+      font-size: 10px;
+      font-weight: 700;
+      color: $white;
+      background-color: $red;
+      top: -7px;
+      left: 0;
+      min-width: 20px;
+      height: 20px;
+      border-radius: 8px;
+      text-align: center;
+      padding-top: 1px;
+      padding-inline: 5px;
+      border: 2px solid;
+      transform: translateX(-50%);
+    }
+
+    @include mq($width: 540px) {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      margin-left: $small_padding/2;
+    }
+    @include mq($width: 1050px) {
+      margin-left: 0;
+    }
+  }
+
+  .top_rated {
+    background-color: $white;
+    border-radius: $box_radius;
+    overflow: hidden;
+    @include box_header(0.5em, 0.1em);
+
+    .body {
+      padding: 0.3em 0.5em;
+      display: flex;
+      overflow-x: scroll;
+
+      &::-webkit-scrollbar {
+        height: 0.8em;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: $white;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $hot_pink;
+        border-radius: 1em;
+        border: 2px solid $white;
+        transition: background-color 0.5s ease;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: $deep_pink;
+        cursor: pointer;
+      }
+    }
+    .body > div {
+      margin-right: 0.6em;
+      min-width: 60px;
+      @include d_flex($dir: column);
+      overflow: hidden;
+    }
+    .img_holder {
+      @include img_holder;
+    }
+    .name {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    &.one {
+      display: none;
+    }
+
+    @include mq($width: 540px) {
+      grid-column: 1/3;
+
+      &.one {
+        display: block;
+      }
+      &.two {
+        display: none;
+      }
+    }
+
+    @include mq($width: 1050px) {
+      grid-column: 1/4;
+
+      &.one {
+        display: none;
+      }
+      &.two {
+        display: block;
+      }
+    }
+  }
+}

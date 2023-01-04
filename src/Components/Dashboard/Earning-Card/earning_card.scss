@@ -1,0 +1,40 @@
+@import "../../../scss/mixins";
+
+.earning {
+  @include d_flex($justify: flex-start);
+  padding: 0.5em;
+  font-size: 0.8rem;
+
+  @include mq($width: 1024px) {
+    padding: 1em;
+    font-size: 0.9rem;
+  }
+
+  .frame,
+  .base {
+    width: 24px;
+    height: 24px;
+    border: 1px solid;
+    border-radius: 0.5em;
+    @include d_flex;
+  }
+  .base {
+    width: 46px;
+    height: 46px;
+    border: none;
+    margin-right: 0.4em;
+    @include mq($width: 1024px) {
+      margin-right: 0.8em;
+    }
+  }
+  img {
+    width: 14px;
+    height: 14px;
+  }
+  .type {
+    font-size: 0.8rem;
+  }
+  .amount {
+    font-weight: 700;
+  }
+}
