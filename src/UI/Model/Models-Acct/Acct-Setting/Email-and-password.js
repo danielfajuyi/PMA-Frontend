@@ -3,7 +3,13 @@ import EditBtn from "./Edit-btn";
 import SwitchBtn from "./Switch-Btn";
 import { useState, useEffect } from "react";
 
-function EmailAndPassword({ handleActiveEdit, activeEdit, userData }) {
+function EmailAndPassword({
+  handleActiveEdit,
+  activeEdit,
+  userData,
+  resetDiscard,
+  handleModal,
+}) {
   const [pwdDescription, setPwdDescription] = useState("");
   const [emailDescription, setEmailDescription] = useState("");
 
@@ -173,6 +179,7 @@ function EmailAndPassword({ handleActiveEdit, activeEdit, userData }) {
 
     if (btn === "save") {
       console.log((userData[0].account = x));
+      handleModal("save");
     } else {
       setNewEmail("");
       setNewPassword("");
@@ -180,6 +187,8 @@ function EmailAndPassword({ handleActiveEdit, activeEdit, userData }) {
       setDisplayProfile(displayProfile);
       setMarketPhoto(marketPhotos);
       handleActiveEdit(activeEdit, "Done");
+      setVerifyEmail(false);
+      setVerifyPwd(false);
       console.log(userData[0].account);
     }
   }
@@ -232,7 +241,7 @@ function EmailAndPassword({ handleActiveEdit, activeEdit, userData }) {
               placeholder="Enter password"
               value={newPassword}
             />
-            <p className="sign-up-error-text">{error.passErr}</p>
+            <p className="error-text">{error.passErr}</p>
           </label>
         ) : null}
       </section>
@@ -283,7 +292,7 @@ function EmailAndPassword({ handleActiveEdit, activeEdit, userData }) {
               placeholder="Enter email"
               value={newEmail}
             />
-            <p className="sign-up-error-text">{error.emailErr}</p>
+            <p className="error-text">{error.emailErr}</p>
           </label>
         ) : null}
       </section>
@@ -360,19 +369,18 @@ function EmailAndPassword({ handleActiveEdit, activeEdit, userData }) {
 
       <section className="setting_btn-container">
         <button
-          onClick={() => handleSave("discard")}
-          className="discard-btn dark--btn bold-text on-hover"
+          onClick={() => resetDiscard(() => handleSave)}
+          className="discard-btn bold-text cancel-btn"
         >
           Discard
         </button>
         <button
           style={{
-            backgroundColor: activateSave && "#ff007a",
-            color: "#fff",
+            backgroundColor: !activateSave && "#bbbb",
           }}
           disabled={!activateSave && true}
           onClick={() => handleSave("save")}
-          className="save-btn  bold-text on-hover"
+          className="save-btn  bold-text yes-btn"
         >
           Save
         </button>

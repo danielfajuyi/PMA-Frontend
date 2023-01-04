@@ -49,20 +49,7 @@
   width: 16px;
   height: 16px;
 }
-.kyc-btn-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.kyc-back-btn,
-.kyc-next-btn {
-  width: 100px;
-  height: 40px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  margin-top: 1rem;
-}
+
 .category-des-text {
   margin-top: 1rem;
 }
@@ -117,6 +104,11 @@
     margin-top: 0;
     top: 10px;
     right: 15%;
+  }
+}
+@media screen and (min-width: 920px) and (min-height: 850px) {
+  .category-des-text {
+    right: 0;
   }
 }
 @media screen and (min-width: 1280px) {

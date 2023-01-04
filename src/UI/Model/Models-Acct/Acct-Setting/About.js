@@ -1,33 +1,19 @@
 import { useEffect, useState } from "react";
-import "./Basic-info.css";
+import "./About.css";
 import EditBtn from "./Edit-btn";
 
-function BasicInfo({ DomItems, handleActiveEdit, activeEdit, userData }) {
+function BasicInfo({
+  DomItems,
+  handleActiveEdit,
+  activeEdit,
+  userData,
+  resetDiscard,
+  handleModal,
+}) {
   const { info } = DomItems[0];
 
-  //destructured data
-  const {
-    profilePic,
-    firstName,
-    lastName,
-    userName,
-    gender,
-    state,
-    country,
-    bio,
-  } = userData[0].profile;
-
   //data state
-  const [data, setData] = useState({
-    profilePic: profilePic,
-    firstName: firstName,
-    lastName: lastName,
-    userName: userName,
-    gender: gender,
-    state: state,
-    country: country,
-    bio: bio,
-  });
+  const [data, setData] = useState(userData[0].profile);
 
   //State Error
   const [error, setError] = useState({
@@ -127,17 +113,9 @@ function BasicInfo({ DomItems, handleActiveEdit, activeEdit, userData }) {
 
     if (btn === "save") {
       console.log((userData[0].profile = x));
+      handleModal("save");
     } else {
-      setData({
-        profilePic: profilePic,
-        firstName: firstName,
-        lastName: lastName,
-        userName: userName,
-        gender: gender,
-        state: state,
-        country: country,
-        bio: bio,
-      });
+      setData(userData[0].profile);
       handleActiveEdit(activeEdit, "Done");
       console.log(userData[0].profile);
     }
@@ -239,38 +217,10 @@ function BasicInfo({ DomItems, handleActiveEdit, activeEdit, userData }) {
                           id={item.id}
                           name={item.id}
                           placeholder={item.placeholder}
-                          value={
-                            item.id === "firstName"
-                              ? data.firstName
-                              : item.id === "lastName"
-                              ? data.lastName
-                              : item.id === "userName"
-                              ? data.userName
-                              : item.id === "gender"
-                              ? data.gender
-                              : item.id === "country"
-                              ? data.country
-                              : item.id === "state"
-                              ? data.state
-                              : null
-                          }
+                          value={data[item.id]}
                           required
                         />
-                        <p className="sign-up-error-text">
-                          {item.id === "firstName"
-                            ? error.firstName
-                            : item.id === "lastName"
-                            ? error.lastName
-                            : item.id === "userName"
-                            ? error.userName
-                            : item.id === "gender"
-                            ? error.gender
-                            : item.id === "country"
-                            ? error.country
-                            : item.id === "state"
-                            ? error.state
-                            : null}
-                        </p>
+                        <p className="error-text"> {error[item.id]}</p>
                       </label>
                     </li>
                   );
@@ -315,7 +265,7 @@ function BasicInfo({ DomItems, handleActiveEdit, activeEdit, userData }) {
 
       <div className="set_sections-container">
         <div className="set_sections-title-rapper">
-          <h2 className="set_sections-title">Model Bio</h2>
+          <h2 className="set_sections-title">Model's Bio</h2>
           <EditBtn
             btnText={activeEdit === "model-bio" ? "Done" : "Edit"}
             section="model-bio"
@@ -355,7 +305,7 @@ function BasicInfo({ DomItems, handleActiveEdit, activeEdit, userData }) {
                 required
               ></textarea>
             </div>
-            <p className="sign-up-error-text">{error.bio}</p>
+            <p className="error-text">{error.bio}</p>
           </div>
         )}
 
@@ -368,19 +318,18 @@ function BasicInfo({ DomItems, handleActiveEdit, activeEdit, userData }) {
 
       <section className="setting_btn-container">
         <button
-          onClick={() => handleSave("discard")}
-          className="discard-btn dark--btn bold-text on-hover"
+          onClick={() => resetDiscard(() => handleSave)}
+          className="discard-btn  bold-text cancel-btn"
         >
           Discard
         </button>
         <button
           style={{
-            backgroundColor: activeEdit === "Done" && "#ff007a",
-            color: "#fff",
+            backgroundColor: activeEdit !== "Done" && "#bbbb",
           }}
           disabled={activeEdit !== "Done" && true}
           onClick={() => handleSave("save")}
-          className="save-btn  bold-text on-hover"
+          className="save-btn  bold-text yes-btn"
         >
           Save
         </button>

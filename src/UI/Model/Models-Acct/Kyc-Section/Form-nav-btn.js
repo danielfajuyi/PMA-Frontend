@@ -1,11 +1,18 @@
-function FormNavBtn({ btnText, name, handleClick, type }) {
+function FormNavBtn({ btnText, name, handleClick, type, submit }) {
   return (
     <button
-      style={{ backgroundColor: btnText !== "Back" && "#ff007a" }}
+      style={{
+        opacity: submit && 0.4,
+      }}
       onClick={() => handleClick(btnText)}
       type={type}
       name={name}
-      className="kyc-back-btn dark--btn bold-text on-hover"
+      className={
+        btnText === "Back"
+          ? "kyc-nav-btn bold-text cancel-btn "
+          : "kyc-nav-btn bold-text yes-btn "
+      }
+      disabled={submit && true}
     >
       {btnText}
     </button>

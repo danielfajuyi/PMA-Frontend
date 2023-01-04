@@ -83,9 +83,6 @@
     color: var(--Dark-color);
   }
 
-  .kyc1-input-container {
-    width: 30%;
-  }
   .img-rapper {
     height: 400px;
   }
@@ -140,7 +137,7 @@
 }
 @media screen and (min-width: 920px) and (min-height: 850px) {
   .mobile-text {
-    display: block;
+    display: flex;
   }
   .desktop-text {
     display: none;
@@ -160,9 +157,7 @@
   .info-section__rapper {
     width: 100%;
   }
-  .kyc1-input-container {
-    width: 30%;
-  }
+
   .kyc1-input-label {
     font-size: 1.8rem;
   }

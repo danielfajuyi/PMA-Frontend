@@ -75,6 +75,20 @@
   background: gray;
   color: var(--Colored-color);
 }
+.kyc-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.kyc-nav-btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-top: 1rem;
+}
 
 @media screen and (min-width: 768px) {
   .kyc-form {

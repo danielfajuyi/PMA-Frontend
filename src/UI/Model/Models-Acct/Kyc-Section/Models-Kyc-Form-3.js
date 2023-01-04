@@ -1,42 +1,72 @@
 import "./Models-Kyc-Form-3.css";
 import FormNavBtn from "./Form-nav-btn";
 import { useState } from "react";
+import { useEffect } from "react";
 
 function ModelsKycForm3({
   DomItems,
   collectData,
   handleNavigation,
   handleModal,
+  form3Data,
 }) {
   const { Photo, polaroid } = DomItems[0];
 
-  const [photo, setPhoto] = useState([]);
-  const [Polaroid, setPolaroid] = useState([]);
-  const [compCard, setCompCard] = useState("");
+  const [photo, setPhoto] = useState(form3Data.photos);
+  const [Polaroid, setPolaroid] = useState(form3Data.polaroids);
+  const [compCard, setCompCard] = useState(form3Data.compCard);
+
+  const [submit, setSubmit] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   function handleChange(e) {
-    const { name, files } = e.target;
+    const { id, name, files } = e.target;
     const img = URL.createObjectURL(files[0]);
 
     if (name === "photo") {
-      setPhoto((prevData) => [...prevData, img]);
+      setPhoto((prevData) => ({ ...prevData, [id]: img }));
     } else if (name === "polaroid") {
-      setPolaroid((prevData) => [...prevData, img]);
+      setPolaroid((prevData) => ({ ...prevData, [id]: img }));
     } else if (name === "compCard") {
       setCompCard((prevData) => img);
     }
   }
 
-  function handleSubmit(text) {
-    if (photo.length < 6) {
-      handleModal("photo");
+  //setting error
+  useEffect(() => {
+    let err = false;
+    if (
+      photo.photo1 === "" ||
+      photo.photo2 === "" ||
+      photo.photo3 === "" ||
+      photo.photo4 === "" ||
+      photo.photo5 === "" ||
+      photo.photo6 === ""
+    ) {
+      err = true;
     } else {
+      err = false;
+    }
+
+    setIsError(err);
+  }, [photo]);
+
+  //handling submit
+  function handleSubmit(text) {
+    if (isError) {
+      handleModal("add-photo");
+    } else {
+      setSubmit((prev) => !prev);
       collectData(3, {
-        photos: [...photo],
-        polaroids: [...Polaroid],
+        photos: photo,
+        polaroids: Polaroid,
         compCard: compCard,
       });
       handleNavigation(text);
+
+      setTimeout(() => {
+        setSubmit((prev) => !prev);
+      }, 1000);
     }
   }
 
@@ -61,6 +91,11 @@ function ModelsKycForm3({
               We recommend using a variety of high resolution photos that best
               show off your work!
             </p>
+            <p className="description">
+              <i className="fa-solid fa-angles-right point"></i>
+              Try to include a headShot, a side/profile shot,and a full body
+              shot.
+            </p>
 
             <ul className="photo-list">
               {Photo.map((item) => {
@@ -77,24 +112,7 @@ function ModelsKycForm3({
                       className="file-input"
                     />
 
-                    <img
-                      src={
-                        item.id === "photo1"
-                          ? photo[0]
-                          : item.id === "photo2"
-                          ? photo[1]
-                          : item.id === "photo3"
-                          ? photo[2]
-                          : item.id === "photo4"
-                          ? photo[3]
-                          : item.id === "photo5"
-                          ? photo[4]
-                          : item.id === "photo6"
-                          ? photo[5]
-                          : null
-                      }
-                      alt=""
-                    />
+                    {photo[item.id] && <img src={photo[item.id]} alt="" />}
                   </li>
                 );
               })}
@@ -131,24 +149,9 @@ function ModelsKycForm3({
                       className="file-input"
                     />
 
-                    <img
-                      src={
-                        item.id === "pola1"
-                          ? Polaroid[0]
-                          : item.id === "pola2"
-                          ? Polaroid[1]
-                          : item.id === "pola3"
-                          ? Polaroid[2]
-                          : item.id === "pola4"
-                          ? Polaroid[3]
-                          : item.id === "pola5"
-                          ? Polaroid[4]
-                          : item.id === "pola6"
-                          ? Polaroid[5]
-                          : null
-                      }
-                      alt=""
-                    />
+                    {Polaroid[item.id] && (
+                      <img src={Polaroid[item.id]} alt="" />
+                    )}
                   </li>
                 );
               })}
@@ -175,6 +178,7 @@ function ModelsKycForm3({
               type="button"
             />
             <FormNavBtn
+              submit={submit}
               btnText="Submit"
               name="form3"
               handleClick={handleSubmit}

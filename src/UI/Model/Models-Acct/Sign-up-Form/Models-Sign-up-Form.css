@@ -101,12 +101,6 @@
   justify-content: center;
   gap: 2rem;
 }
-.sign-up-error-text {
-  color: var(--Colored-color);
-  font-size: 12px;
-  margin: 0.5rem 0;
-  font-style: italic;
-}
 
 .radio-btn {
   width: 24px;
@@ -119,19 +113,6 @@
   height: 14px;
   border-radius: 50%;
   margin: auto;
-}
-.required-icon_rapper {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-.required-icon {
-  color: var(--Colored-color);
-  font-size: 8px;
-}
-.valid-icon {
-  color: rgb(7, 238, 7);
-  font-size: x-small;
 }
 
 @media screen and (max-width: 370px) {

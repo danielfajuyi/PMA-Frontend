@@ -1,8 +1,10 @@
+import { useEffect } from "react";
 import { useState } from "react";
 import SignUpInput from "./FormInputs";
 import "./Models-Sign-up-Form.css";
+import HandlePayment from "./Payment";
 
-function ModelSignUpForm({ createAccount }) {
+function ModelSignUpForm({ createAccount, handleModal }) {
   // user data state
   const [userData, setUserData] = useState({
     firstName: "",
@@ -19,7 +21,7 @@ function ModelSignUpForm({ createAccount }) {
     userData;
 
   //confirm password state
-  const [confirmPass, setConfirmPass] = useState("");
+  const [confirm, setConfirm] = useState("");
 
   //input error state
   const [error, setError] = useState({
@@ -45,11 +47,13 @@ function ModelSignUpForm({ createAccount }) {
     termsErr,
   } = error;
 
+  const [isError, setIsError] = useState(false);
+
   function handleChange(e) {
     const { name, value } = e.target;
 
-    name === "confirm-Password"
-      ? setConfirmPass(value)
+    name === "confirm"
+      ? setConfirm(value)
       : setUserData((prevData) => ({ ...prevData, [name]: value }));
 
     validateForm(name, value);
@@ -61,135 +65,121 @@ function ModelSignUpForm({ createAccount }) {
     validateForm(name, !terms);
   }
 
-  function validateForm(name, value) {
+  //paystack payment config
+
+  const config = {
+    email: userData.email,
+
+    amount: 1500 * 100,
+
+    metadata: {
+      name: userData.firstName,
+      phone: userData.mobileNo,
+    },
+
+    publicKey: "pk_test_2738ea7b83386afd8897e7092bbe084d785adc92",
+
+    channels: ["card", "bank", "ussd", "qr", "mobile_money", "bank_transfer"],
+  };
+
+  //validating first name input
+  useEffect(() => {
     const nameRegex = /^[A-Z]+$/i;
-    const numRegex = /^[0-9]+$/;
+
+    function validateFName() {
+      firstName.length < 3 ||
+      firstName.length > 15 ||
+      !nameRegex.test(firstName)
+        ? setError((prevErr) => ({
+            ...prevErr,
+            fNameErr:
+              "First should have a min of (3), max of (15) characters and must contain only letter A-Z!",
+          }))
+        : setError((prevErr) => ({ ...prevErr, fNameErr: null }));
+    }
+
+    firstName && validateFName();
+  }, [firstName]);
+
+  // validating last name inputs
+  useEffect(() => {
+    const nameRegex = /^[A-Z]+$/i;
+
+    function validateLName() {
+      lastName.length < 3 || lastName.length > 12 || !nameRegex.test(lastName)
+        ? setError((prevErr) => ({
+            ...prevErr,
+            lNameErr:
+              "First should have a min of (3), max of (15) characters and must contain only letter A-Z!",
+          }))
+        : setError((prevErr) => ({ ...prevErr, lNameErr: null }));
+    }
+    lastName && validateLName();
+  }, [lastName]);
+
+  // validating email inputs
+  useEffect(() => {
     const emailRegex =
       /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    const passRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/;
-
-    if (name === "firstName") {
-      //validating first name input
-
-      value === ""
+    function validateEmail() {
+      !emailRegex.test(email)
         ? setError((prevErr) => ({
             ...prevErr,
-            fNameErr: "First name can not be empty!",
-          }))
-        : value.length < 3
-        ? setError((prevErr) => ({
-            ...prevErr,
-            fNameErr: "First name is too short!",
-          }))
-        : value.length > 12
-        ? setError((prevErr) => ({
-            ...prevErr,
-            fNameErr: "First name is too long!",
-          }))
-        : !nameRegex.test(value)
-        ? setError((prevErr) => ({
-            ...prevErr,
-            fNameErr: "First name must contain only letter A-Z!",
-          }))
-        : setError((prevErr) => ({ ...prevErr, fNameErr: null }));
-    } else if (name === "lastName") {
-      // validating last name inputs
-
-      value === ""
-        ? setError((prevErr) => ({
-            ...prevErr,
-            lNameErr: "Last name can not be empty!",
-          }))
-        : value.length < 3
-        ? setError((prevErr) => ({
-            ...prevErr,
-            lNameErr: "Last name is too short!",
-          }))
-        : value.length > 12
-        ? setError((prevErr) => ({
-            ...prevErr,
-            lNameErr: "Last name is too long!",
-          }))
-        : !nameRegex.test(value)
-        ? setError((prevErr) => ({
-            ...prevErr,
-            lNameErr: "Last name must contain only letter A-Z!",
-          }))
-        : setError((prevErr) => ({ ...prevErr, lNameErr: null }));
-    } else if (name === "email") {
-      // validating email inputs
-
-      value === ""
-        ? setError((prevErr) => ({
-            ...prevErr,
-            emailErr: "Email can not be empty",
-          }))
-        : !emailRegex.test(value)
-        ? setError((prevErr) => ({
-            ...prevErr,
-            emailErr: "Please enter a valid email",
+            emailErr: "Please ensure you enter a valid email",
           }))
         : setError((prevErr) => ({ ...prevErr, emailErr: null }));
-    } else if (name === "password") {
-      // validating password inputs
+    }
+    email && validateEmail();
+  }, [email]);
 
-      value === ""
-        ? setError((prevErr) => ({
-            ...prevErr,
-            passErr: "Password can not be empty",
-          }))
-        : value.length < 6
-        ? setError((prevErr) => ({
-            ...prevErr,
-            passErr: "Password is too short",
-          }))
-        : value.length > 15
-        ? setError((prevErr) => ({
-            ...prevErr,
-            passErr: "Password is too long",
-          }))
-        : !passRegex.test(value)
+  // validating password inputs
+  useEffect(() => {
+    function validatePassword() {
+      const passRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/;
+
+      password.length < 6 || password.length > 15 || !passRegex.test(password)
         ? setError((prevErr) => ({
             ...prevErr,
             passErr:
-              "Password must have at least 1 Uppercase and Lowercase letter",
+              "Password should have a min of (6), max of (15) characters must contain at least 1 Uppercase and Lowercase letter",
           }))
         : setError((prevErr) => ({ ...prevErr, passErr: null }));
-    } else if (name === "confirm-Password") {
-      // validating confirm-password inputs
+    }
 
-      value === ""
+    // validating confirm-password inputs
+    function confirmPassword() {
+      confirm !== password
         ? setError((prevErr) => ({
             ...prevErr,
-            confirmErr: "Please confirm your password",
-          }))
-        : value !== password
-        ? setError((prevErr) => ({
-            ...prevErr,
-            confirmErr: "Password dose not match",
+            confirmErr:
+              "Ensure password corresponds to previous  password entered ",
           }))
         : setError((prevErr) => ({ ...prevErr, confirmErr: null }));
-    } else if (name === "mobileNo") {
-      // validating mobile-No inputs
+    }
 
-      value === ""
+    password && validatePassword();
+    confirm && confirmPassword();
+  }, [password, confirm]);
+
+  // validating mobile-No inputs
+  useEffect(() => {
+    const numRegex = /^[0-9]+$/;
+    function validateMobileNum() {
+      !numRegex.test(mobileNo) || mobileNo.length < 6
         ? setError((prevErr) => ({
             ...prevErr,
-            mobileErr: "Mobile-No can not be empty",
-          }))
-        : !numRegex.test(value)
-        ? setError((prevErr) => ({
-            ...prevErr,
-            mobileErr: "Mobile-No must contain only numbers 0-9",
-          }))
-        : value.length < 6
-        ? setError((prevErr) => ({
-            ...prevErr,
-            mobileErr: "Ensure that you enter a valid number",
+            mobileErr:
+              "Mobile-No should have at least six(6) digits and must contains only numbers 0-9",
           }))
         : setError((prevErr) => ({ ...prevErr, mobileErr: null }));
-    } else if (name === "referral") {
+    }
+    mobileNo && validateMobileNum();
+  }, [mobileNo]);
+
+  //validating other elements
+  function validateForm(name, value) {
+    if (name === "referral") {
       // validating referral  inputs
 
       value === ""
@@ -214,52 +204,53 @@ function ModelSignUpForm({ createAccount }) {
     }
   }
 
-  function sendForm() {
-    let errorState = "";
+  //Checking for error
+  useEffect(() => {
+    let err = false;
 
-    fNameErr !== null
-      ? (errorState = true)
-      : lNameErr !== null
-      ? (errorState = true)
-      : emailErr !== null
-      ? (errorState = true)
-      : passErr !== null
-      ? (errorState = true)
-      : confirmErr !== null
-      ? (errorState = true)
-      : mobileErr !== null
-      ? (errorState = true)
-      : referralErr !== null
-      ? (errorState = true)
-      : termsErr !== null
-      ? (errorState = true)
-      : (errorState = "");
-
-    if (!errorState) {
-      createAccount({ ...userData });
-
-      setUserData((prevData) => ({
-        firstName: "",
-        lastName: "",
-        email: "",
-        password: "",
-        mobileNo: "",
-        referral: "",
-        terms: false,
-      }));
-      setError((prevErr) => ({
-        fNameErr: "",
-        lNameErr: "",
-        emailErr: "",
-        passErr: "",
-        confirmErr: "",
-        mobileErr: "",
-        referralErr: "",
-        termsErr: "",
-      }));
-
-      setConfirmPass("");
+    if (
+      error.fNameErr !== null ||
+      error.lNameErr !== null ||
+      error.emailErr !== null ||
+      error.passErr !== null ||
+      error.confirmErr !== null ||
+      error.mobileErr !== null ||
+      error.referralErr !== null ||
+      error.termsErr !== null
+    ) {
+      err = true;
+    } else {
+      err = false;
     }
+
+    setIsError(err);
+  }, [error]);
+
+  //submit form
+  function sendForm() {
+    createAccount({ ...userData });
+
+    setUserData((prevData) => ({
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+      mobileNo: "",
+      referral: "",
+      terms: false,
+    }));
+    setError((prevErr) => ({
+      fNameErr: "",
+      lNameErr: "",
+      emailErr: "",
+      passErr: "",
+      confirmErr: "",
+      mobileErr: "",
+      referralErr: "",
+      termsErr: "",
+    }));
+
+    setConfirm("");
   }
 
   return (
@@ -330,10 +321,10 @@ function ModelSignUpForm({ createAccount }) {
               <div className="input-container">
                 <SignUpInput
                   type="password"
-                  id="confirm-Password"
+                  id="confirm"
                   placeholder="Confirm password..."
-                  label="Confirm password"
-                  value={confirmPass}
+                  label="Confirm"
+                  value={confirm}
                   handleChange={handleChange}
                   error={confirmErr}
                 />
@@ -354,7 +345,7 @@ function ModelSignUpForm({ createAccount }) {
                   type="tel"
                   id="referral"
                   placeholder="Enter referral..."
-                  label="Referral Code"
+                  label="Referral"
                   value={referral}
                   handleChange={handleChange}
                   error={referralErr}
@@ -385,14 +376,14 @@ function ModelSignUpForm({ createAccount }) {
                 </span>
               </div>
 
-              <p className="sign-up-error-text">{termsErr}</p>
-              <button
-                onClick={sendForm}
-                className="sign-up-btn bold-text dark--btn on-hover"
-                type="submit"
-              >
-                Sign-up
-              </button>
+              <p className="error-text">{termsErr}</p>
+
+              <HandlePayment
+                config={config}
+                isError={isError}
+                sendForm={sendForm}
+                handleModal={handleModal}
+              />
             </div>
           </div>
         </section>
