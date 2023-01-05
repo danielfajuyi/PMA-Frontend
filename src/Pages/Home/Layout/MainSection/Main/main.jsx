@@ -12,6 +12,7 @@ import HomeSignup from "../../../Components/SignUpCards/HomeSignup";
 import News from "../../../Components/News/NewsArtlce/news";
 import { FaCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Adverts from "../../../Components/Adverts/Adverts";
 
 const Main = () => {
   return (

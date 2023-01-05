@@ -139,9 +139,7 @@
 } */
 
 .Testimonial-btn {
-  
   padding: 14px 21px;
-
 }
 
 @media screen and (max-width: 780px) {
@@ -186,3 +184,5 @@
     width: 80%;
   }
 }
+
+

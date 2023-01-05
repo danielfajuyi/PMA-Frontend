@@ -1,0 +1,29 @@
+.advert-container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.advert-heading {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.advert-wrapper {
+  display: flex;
+
+  gap: 2rem;
+}
+
+.advert {
+  width: 100%;
+  height: 200px;
+  background-color: var(--pink);
+}
+
+@media screen and (max-width: 768px) {
+  .advert-wrapper {
+    flex-direction: column;
+  }
+}
