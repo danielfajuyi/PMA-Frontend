@@ -12,18 +12,18 @@
 
 .advert-wrapper {
   display: flex;
-
   gap: 2rem;
 }
 
 .advert {
   width: 100%;
   height: 200px;
-  background-color: var(--pink);
+  background-color: transparent;
 }
 
 @media screen and (max-width: 768px) {
   .advert-wrapper {
     flex-direction: column;
+    width: 100%;
   }
 }
