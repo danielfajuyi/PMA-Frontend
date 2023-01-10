@@ -14,15 +14,11 @@ import { HiOutlineUserGroup } from "react-icons/hi";
 import { RiMessage2Fill } from "react-icons/ri";
 import { BiLogOut, BiWallet } from "react-icons/bi";
 import { CgUserList } from "react-icons/cg";
-
 import DashboardSidebar from "../../../Components/Dashboard/Sidebar/sidebar";
 import DashboardTopbar from "../../../Components/Dashboard/Topbar/topbar";
 import BookingsCard from "../../../Components/Dashboard/Bookings-Card/bookings_card";
 import MessagePreviewCard from "../../../Components/Dashboard/Message-Preview-Card/message_preview_card";
 import JobCard from "../../../Components/Dashboard/Job-Card/job_card";
-
-import profileImg from "../../../Images/jobs/job2.jpg";
-
 import _ from "lodash";
 import ClientCard from "../../../Components/Dashboard/Client-Card/client_card";
 import EarningCard from "../../../Components/Dashboard/Earning-Card/earning_card";
@@ -33,7 +29,8 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import Background from "../../../Components/Dashboard/Background/background";
 
-const ModelDashboard = (props) => {
+const ModelDashboard = ({ displayNav }) => {
+  displayNav(false);
   const topList = [
     { name: "Dashboard", icon: <MdOutlineDashboard /> },
     { name: "Profile", icon: <CgUserList /> },
@@ -166,7 +163,7 @@ const ModelDashboard = (props) => {
             <div className="profile">
               <div className="head">
                 <div className="profile_img">
-                  <img src={profileImg} alt="model image" />
+                  <img src="./images/jobs/job2.jpg" alt="model-img" />
                 </div>
                 <span className="edit">
                   <MdEdit size={16} />
@@ -192,13 +189,25 @@ const ModelDashboard = (props) => {
             <div id="latest_post">
               <header>
                 <h4>Latest Blog Post</h4>
-                <a href="#"> See all</a>
+                <a href="./seeall"> See all</a>
               </header>
               <div id="body">
-                <ClientCard img={profileImg} post="How to become a model" />
-                <ClientCard img={profileImg} post="How to become a model" />
-                <ClientCard img={profileImg} post="How to become a model" />
-                <ClientCard img={profileImg} post="How to become a model" />
+                <ClientCard
+                  img="./images/jobs/job2.jpg"
+                  post="How to become a model"
+                />
+                <ClientCard
+                  img="./images/jobs/job2.jpg"
+                  post="How to become a model"
+                />
+                <ClientCard
+                  img="./images/jobs/job2.jpg"
+                  post="How to become a model"
+                />
+                <ClientCard
+                  img="./images/jobs/job2.jpg"
+                  post="How to become a model"
+                />
               </div>
             </div>
           </div>
@@ -236,78 +245,78 @@ const ModelDashboard = (props) => {
             <div className="top_rated one">
               <header>
                 <h4>Top Rated</h4>
-                <a href="#">See all</a>
+                <a href="./seeall">See all</a>
               </header>
               <div className="body">
                 <div>
                   <div className="img_holder">
-                    <img src={profileImg} alt="" />
+                    <img src="./images/jobs/job2.jpg" alt="model-img" />
                   </div>
                   <div className="name">Eke Kara</div>
                 </div>
                 <div>
                   <div className="img_holder">
-                    <img src={profileImg} alt="" />
+                    <img src="./images/jobs/job2.jpg" alt="model-img" />
                   </div>
                   <div className="name">Eke Kara</div>
                 </div>
                 <div>
                   <div className="img_holder">
-                    <img src={profileImg} alt="" />
+                    <img src="./images/jobs/job2.jpg" alt="model-img" />
                   </div>
                   <div className="name">Eke Kara</div>
                 </div>
                 <div>
                   <div className="img_holder">
-                    <img src={profileImg} alt="" />
+                    <img src="./images/jobs/job2.jpg" alt="model-img" />
                   </div>
                   <div className="name">Eke Kara</div>
                 </div>
                 <div>
                   <div className="img_holder">
-                    <img src={profileImg} alt="" />
+                    <img src="./images/jobs/job2.jpg" alt="model-img" />
                   </div>
                   <div className="name">Eke Kara</div>
                 </div>
                 <div>
                   <div className="img_holder">
-                    <img src={profileImg} alt="" />
+                    <img src="./images/jobs/job2.jpg" alt="model-img" />
                   </div>
                   <div className="name">Eke Kara</div>
                 </div>
                 <div>
                   <div className="img_holder">
-                    <img src={profileImg} alt="" />
+                    <img src="./images/jobs/job2.jpg" alt="model-img" />
                   </div>
                   <div className="name">Eke Kara</div>
                 </div>
                 <div>
                   <div className="img_holder">
-                    <img src={profileImg} alt="" />
+                    <img src="./images/jobs/job2.jpg" alt="model-img" />
                   </div>
                   <div className="name">Eke Kara</div>
                 </div>
                 <div>
                   <div className="img_holder">
-                    <img src={profileImg} alt="" />
+                    <img src="./images/jobs/job2.jpg" alt="model-img" />
                   </div>
                   <div className="name">Eke Kara</div>
                 </div>
                 <div>
                   <div className="img_holder">
-                    <img src={profileImg} alt="" />
+                    <img src="./images/jobs/job2.jpg" alt="model-img" />
                   </div>
                   <div className="name">Eke Kara</div>
                 </div>
                 <div>
                   <div className="img_holder">
-                    <img src={profileImg} alt="" />
+                    <img src="./images/jobs/job2.jpg" alt="model-img" />
                   </div>
                   <div className="name">Eke Kara</div>
                 </div>
                 <div>
                   <div className="img_holder">
-                    <img src={profileImg} alt="" />
+                    <img src="./images/jobs/job2.jpg" alt="model-img" />
                   </div>
                   <div className="name">Eke Kara</div>
                 </div>
@@ -318,78 +327,78 @@ const ModelDashboard = (props) => {
             <div className="top_rated two">
               <header>
                 <h4>Top Rated</h4>
-                <a href="#">See all</a>
+                <a href="./seeall">See all</a>
               </header>
               <div className="body">
                 <div>
                   <div className="img_holder">
-                    <img src={profileImg} alt="" />
+                    <img src="./images/jobs/job2.jpg" alt="model-img" />
                   </div>
                   <div className="name">Eke Kara</div>
                 </div>
                 <div>
                   <div className="img_holder">
-                    <img src={profileImg} alt="" />
+                    <img src="./images/jobs/job2.jpg" alt="model-img" />
                   </div>
                   <div className="name">Eke Kara</div>
                 </div>
                 <div>
                   <div className="img_holder">
-                    <img src={profileImg} alt="" />
+                    <img src="./images/jobs/job2.jpg" alt="model-img" />
                   </div>
                   <div className="name">Eke Kara</div>
                 </div>
                 <div>
                   <div className="img_holder">
-                    <img src={profileImg} alt="" />
+                    <img src="./images/jobs/job2.jpg" alt="model-img" />
                   </div>
                   <div className="name">Eke Kara</div>
                 </div>
                 <div>
                   <div className="img_holder">
-                    <img src={profileImg} alt="" />
+                    <img src="./images/jobs/job2.jpg" alt="model-img" />
                   </div>
                   <div className="name">Eke Kara</div>
                 </div>
                 <div>
                   <div className="img_holder">
-                    <img src={profileImg} alt="" />
+                    <img src="./images/jobs/job2.jpg" alt="model-img" />
                   </div>
                   <div className="name">Eke Kara</div>
                 </div>
                 <div>
                   <div className="img_holder">
-                    <img src={profileImg} alt="" />
+                    <img src="./images/jobs/job2.jpg" alt="model-img" />
                   </div>
                   <div className="name">Eke Kara</div>
                 </div>
                 <div>
                   <div className="img_holder">
-                    <img src={profileImg} alt="" />
+                    <img src="./images/jobs/job2.jpg" alt="model-img" />
                   </div>
                   <div className="name">Eke Kara</div>
                 </div>
                 <div>
                   <div className="img_holder">
-                    <img src={profileImg} alt="" />
+                    <img src="./images/jobs/job2.jpg" alt="model-img" />
                   </div>
                   <div className="name">Eke Kara</div>
                 </div>
                 <div>
                   <div className="img_holder">
-                    <img src={profileImg} alt="" />
+                    <img src="./images/jobs/job2.jpg" alt="model-img" />
                   </div>
                   <div className="name">Eke Kara</div>
                 </div>
                 <div>
                   <div className="img_holder">
-                    <img src={profileImg} alt="" />
+                    <img src="./images/jobs/job2.jpg" alt="model-img" />
                   </div>
                   <div className="name">Eke Kara</div>
                 </div>
                 <div>
                   <div className="img_holder">
-                    <img src={profileImg} alt="" />
+                    <img src="./images/jobs/job2.jpg" alt="model-img" />
                   </div>
                   <div className="name">Eke Kara</div>
                 </div>
@@ -398,7 +407,7 @@ const ModelDashboard = (props) => {
             <div id="job_posted">
               <header>
                 <h4>Latest Job Posts</h4>
-                <a href="#">See all</a>
+                <a href="./seeall">See all</a>
               </header>
               <div id="body">
                 <JobCard
@@ -429,7 +438,7 @@ const ModelDashboard = (props) => {
                 </span>
               </header>
               <MessagePreviewCard
-                img={profileImg}
+                img="./images/jobs/job2.jpg"
                 online={true}
                 sender="Micheal B"
                 title="Project manager"
@@ -437,7 +446,7 @@ const ModelDashboard = (props) => {
                 count="5"
               />
               <MessagePreviewCard
-                img={profileImg}
+                img="./images/jobs/job2.jpg"
                 online={true}
                 sender="Micheal B"
                 title="Project manager"
@@ -445,7 +454,7 @@ const ModelDashboard = (props) => {
                 count="10"
               />
               <MessagePreviewCard
-                img={profileImg}
+                img="./images/jobs/job2.jpg"
                 online={false}
                 sender="Sarah Jay"
                 title="Model"

@@ -6,7 +6,7 @@ const TopModelHighlight = (props) => {
     <div className="models_highlight">
       <span>
         <div className="model_img_holder">
-          <img src={props.img} alt="model image" />
+          <img src={props.img} alt="model-img" />
         </div>
         <span className="model_name">{props.name}</span>
       </span>

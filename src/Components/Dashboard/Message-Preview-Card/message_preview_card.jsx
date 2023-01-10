@@ -1,4 +1,3 @@
-import { filterProps } from "framer-motion";
 import "./message_preview_card.scss";
 
 const MessagePreviewCard = (props) => {
@@ -12,7 +11,7 @@ const MessagePreviewCard = (props) => {
       </div>
       <span className="sender_profile_img">
         <span className="sender_img">
-          <img src={props.img} alt="sender image" />
+          <img src={props.img} alt="sender-img" />
         </span>
         <div
           className="status"

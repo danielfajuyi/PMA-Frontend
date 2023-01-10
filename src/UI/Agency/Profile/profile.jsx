@@ -47,26 +47,26 @@ const AgencyProfile = () => {
       <div id="agency_profile">
         <div id="hero">
           <div id="image_holder">
-            <img src={profileImg} alt="profile image" />
+            <img src={profileImg} alt="profile-img" />
           </div>
           <nav id="navbar">
             <span id="left">
               <span
-                className={page == "about" ? "active" : ""}
+                className={page === "about" ? "active" : ""}
                 onClick={() => setPage("about")}
               >
                 <RiErrorWarningLine />
                 <span>About</span>
               </span>
               <span
-                className={page == "see_models" ? "active" : ""}
+                className={page === "see_models" ? "active" : ""}
                 onClick={() => setPage("see_models")}
               >
                 <RiBriefcase5Line />
                 <span>See Models</span>
               </span>
               <span
-                className={page == "prev_jobs" ? "active" : ""}
+                className={page === "prev_jobs" ? "active" : ""}
                 onClick={() => setPage("prev_jobs")}
               >
                 <RiStackLine />
@@ -113,40 +113,40 @@ const AgencyProfile = () => {
               </div>
             </div>
             <div id="socials">
-              <a href="#">
+              <a href="/social">
                 <FaInstagram />
               </a>
-              <a href="#">
+              <a href="/social">
                 <FaFacebook />
               </a>
-              <a href="#">
+              <a href="/social">
                 <FaTwitter size={19} />
               </a>
             </div>
           </div>
           <ul id="navbar_body">
             <li
-              className={page == "about" ? "active_two" : ""}
+              className={page === "about" ? "active_two" : ""}
               onClick={() => setPage("about")}
             >
               About
             </li>
             <li
-              className={page == "see_models" ? "active_two" : ""}
+              className={page === "see_models" ? "active_two" : ""}
               onClick={() => setPage("see_models")}
             >
               See Models
             </li>
             <li
-              className={page == "prev_jobs" ? "active_two" : ""}
+              className={page === "prev_jobs" ? "active_two" : ""}
               onClick={() => setPage("prev_jobs")}
             >
               Previous Jobs
             </li>
           </ul>
-          {page == "about" ? ABOUT : null}
-          {page == "see_models" ? <SeeModels /> : null}
-          {page == "prev_jobs" ? <PreviousJobs /> : null}
+          {page === "about" ? ABOUT : null}
+          {page === "see_models" ? <SeeModels /> : null}
+          {page === "prev_jobs" ? <PreviousJobs /> : null}
         </main>
       </div>
     </IconContext.Provider>

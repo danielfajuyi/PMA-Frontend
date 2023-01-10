@@ -771,5 +771,266 @@
       "body part modeling"
     ],
     "contractMessage": []
+  },
+
+   {
+    "id": 13,
+    "image": "/images/img-18.png",
+    "firstName": "Keziah ",
+    "secondName": "ChaCha",
+    "state": "river",
+    "country": "Cameroon",
+    "category": ["fitness", "Glamour"],
+    "agency": "free lancers",
+    "compCard": "/images/model (4).jpg",
+    "stats": {
+      "height": 5.9,
+      "waist": 28,
+      "bust": 39,
+      "hip": 45,
+      "eyes": "black",
+      "size": 8,
+      "shoe": 40,
+      "tattoos": "none",
+      "gender": "male",
+      "hairColor": "black",
+      "hairLength": "Long",
+      "ethnicity": "africa",
+      "skinColor": "light skinned",
+      "language": "english",
+      "availableForTravel": "yes"
+    },
+    "photos": [
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg"
+    ],
+    "bio": "my name is eke ginika, i am a commercial and fashion model my name is eke ginika, i have been modeling for some years, i have experience in fashion, runway and commercial modeling. Modeling is so much fun for me, i give my best to be as professional as possible. I am open and available for gigs and collaborations",
+    "polaroids": [
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg"
+    ],
+    "videos": [],
+
+    "jobInterest": [
+      "commercial",
+      "billboard",
+      "tv advert",
+      "runway",
+      "facial glamour",
+      "photo shoot",
+      "fashion",
+      "print",
+      "editorial",
+      "body part modeling"
+    ],
+    "contractMessage": []
+  },
+
+   {
+    "id": 14,
+    "image": "/images/img-18.png",
+    "firstName": "Keziah ",
+    "secondName": "ChaCha",
+    "state": "river",
+    "country": "Germany",
+    "category": ["fitness", "Glamour"],
+    "agency": "free lancers",
+    "compCard": "/images/model (4).jpg",
+    "stats": {
+      "height": 5.9,
+      "waist": 28,
+      "bust": 39,
+      "hip": 45,
+      "eyes": "black",
+      "size": 8,
+      "shoe": 40,
+      "tattoos": "none",
+      "gender": "male",
+      "hairColor": "black",
+      "hairLength": "Long",
+      "ethnicity": "africa",
+      "skinColor": "light skinned",
+      "language": "english",
+      "availableForTravel": "yes"
+    },
+    "photos": [
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg"
+    ],
+    "bio": "my name is eke ginika, i am a commercial and fashion model my name is eke ginika, i have been modeling for some years, i have experience in fashion, runway and commercial modeling. Modeling is so much fun for me, i give my best to be as professional as possible. I am open and available for gigs and collaborations",
+    "polaroids": [
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg"
+    ],
+    "videos": [],
+
+    "jobInterest": [
+      "commercial",
+      "billboard",
+      "tv advert",
+      "runway",
+      "facial glamour",
+      "photo shoot",
+      "fashion",
+      "print",
+      "editorial",
+      "body part modeling"
+    ],
+    "contractMessage": []
+  },
+
+   {
+    "id": 15,
+    "image": "/images/img-18.png",
+    "firstName": "Keziah ",
+    "secondName": "ChaCha",
+    "state": "river",
+    "country": "Germany",
+    "category": ["fitness", "Glamour"],
+    "agency": "free lancers",
+    "compCard": "/images/model (4).jpg",
+    "stats": {
+      "height": 5.9,
+      "waist": 28,
+      "bust": 39,
+      "hip": 45,
+      "eyes": "black",
+      "size": 8,
+      "shoe": 40,
+      "tattoos": "none",
+      "gender": "male",
+      "hairColor": "black",
+      "hairLength": "Long",
+      "ethnicity": "africa",
+      "skinColor": "light skinned",
+      "language": "english",
+      "availableForTravel": "yes"
+    },
+    "photos": [
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg"
+    ],
+    "bio": "my name is eke ginika, i am a commercial and fashion model my name is eke ginika, i have been modeling for some years, i have experience in fashion, runway and commercial modeling. Modeling is so much fun for me, i give my best to be as professional as possible. I am open and available for gigs and collaborations",
+    "polaroids": [
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg"
+    ],
+    "videos": [],
+
+    "jobInterest": [
+      "commercial",
+      "billboard",
+      "tv advert",
+      "runway",
+      "facial glamour",
+      "photo shoot",
+      "fashion",
+      "print",
+      "editorial",
+      "body part modeling"
+    ],
+    "contractMessage": []
+  },
+
+   {
+    "id": 16,
+    "image": "/images/img-18.png",
+    "firstName": "Keziah ",
+    "secondName": "ChaCha",
+    "state": "river",
+    "country": "Germany",
+    "category": ["fitness", "Glamour"],
+    "agency": "free lancers",
+    "compCard": "/images/model (4).jpg",
+    "stats": {
+      "height": 5.9,
+      "waist": 28,
+      "bust": 39,
+      "hip": 45,
+      "eyes": "black",
+      "size": 8,
+      "shoe": 40,
+      "tattoos": "none",
+      "gender": "male",
+      "hairColor": "black",
+      "hairLength": "Long",
+      "ethnicity": "africa",
+      "skinColor": "light skinned",
+      "language": "english",
+      "availableForTravel": "yes"
+    },
+    "photos": [
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg"
+    ],
+    "bio": "my name is eke ginika, i am a commercial and fashion model my name is eke ginika, i have been modeling for some years, i have experience in fashion, runway and commercial modeling. Modeling is so much fun for me, i give my best to be as professional as possible. I am open and available for gigs and collaborations",
+    "polaroids": [
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg",
+      "/images/model (20).jpg"
+    ],
+    "videos": [],
+
+    "jobInterest": [
+      "commercial",
+      "billboard",
+      "tv advert",
+      "runway",
+      "facial glamour",
+      "photo shoot",
+      "fashion",
+      "print",
+      "editorial",
+      "body part modeling"
+    ],
+    "contractMessage": []
   }
+
 ]

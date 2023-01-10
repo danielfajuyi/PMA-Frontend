@@ -12,7 +12,6 @@ import HomeSignup from "../../../Components/SignUpCards/HomeSignup";
 import News from "../../../Components/News/NewsArtlce/news";
 import { FaCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Adverts from "../../../Components/Adverts/Adverts";
 
 const Main = () => {
   return (
@@ -48,7 +47,7 @@ const Main = () => {
           </div>
 
           <Link
-            to="/community"
+            to="/login"
             className="featured-model-btn join-model-btn btn_shadow"
           >
             Join community

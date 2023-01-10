@@ -4,7 +4,7 @@ const ClientCard = (props) => {
   return (
     <div className="client_card">
       <div className="profile_img">
-        <img src={props.img} alt="client image" />
+        <img src={props.img} alt="client-img" />
       </div>
       <div className="details">
         <div className="post">{props.post}</div>

@@ -1,7 +1,7 @@
 import profileImg from "../../Images/model/model3.jpg";
 import "./model_card.scss";
 
-import { FaMapMarkerAlt, FaStar } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
 import { GoVerified, GoStar } from "react-icons/go";
 import { IconContext } from "react-icons";
 import { motion } from "framer-motion";
@@ -10,7 +10,7 @@ const ModelCard = (props) => {
   return (
     <div id="model_card" style={{ height: props.ch }}>
       <div id="img_holder">
-        <img src={profileImg} alt="profile image" />
+        <img src={profileImg} alt="proilepic" />
       </div>
 
       <motion.div id="card_body">

@@ -70,10 +70,6 @@
   }
 }
 
-.hero-img:nth-child(2) {
-  left: -4px;
-}
-
 .hero-text {
   position: absolute;
   display: flex;
@@ -147,13 +143,6 @@
   .hero-container {
     height: 38rem;
   }
-
-  // .hero-section {
-  //   position: relative;
-  // align-items: center;
-  // display: grid;
-  // grid-template-columns: 40% 50%;
-  // }
 
   .hero-img-container {
     left: 21rem;
@@ -293,6 +282,7 @@
 
   .hero-img-container {
     top: -3rem;
+    left: 0.5rem;
   }
 
   .hero-text div {

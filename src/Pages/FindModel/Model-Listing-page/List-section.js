@@ -3,17 +3,21 @@ import ListItem from "./ListItem";
 function List({ data, handleProfile, currentPage }) {
   // setting page range
   function pageRange() {
-    const pageLimit = 4;
+    const pageLimit = 6;
     const rangeStart = (currentPage - 1) * pageLimit;
     const rangeEnd = currentPage * pageLimit;
 
-    return data.filter((item, index) => index >= rangeStart && index < rangeEnd && item);
+    return data.filter(
+      (item, index) => index >= rangeStart && index < rangeEnd && item
+    );
   }
 
   return (
-    <section className="list-section">
-      {data.length < 1 && <div className="empty-search-text">Sorry No Result Found!</div>}
-      <ul className="main__list">
+    <section className="list-section container mtop ">
+      {data.length < 1 && (
+        <div className="empty-search-text">Sorry No Result Found!</div>
+      )}
+      <ul className="main__list modelportfolio__container">
         {pageRange().map((item) => (
           <ListItem
             key={item.id}

@@ -181,10 +181,15 @@
 #navbar .btn {
   margin-top: 1.2em;
   margin-inline: 1em;
+  cursor: pointer;
 }
 
 #navbar > div {
   display: flex;
+}
+
+#navbar_body li {
+  cursor: pointer;
 }
 
 #agency_profile .btn:hover {

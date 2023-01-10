@@ -1,9 +1,9 @@
 import "./bookings_card.scss";
 import { Line } from "react-chartjs-2";
 import { GoLinkExternal } from "react-icons/go";
-import { Chart } from "chart.js/auto";
 
 const BookingsCard = (props) => {
+  console.log(props);
   return (
     <div className="booking_card">
       <header>

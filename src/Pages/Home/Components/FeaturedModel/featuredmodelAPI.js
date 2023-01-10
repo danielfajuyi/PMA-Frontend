@@ -58,7 +58,7 @@ export const featuredmodel = [
     image: "./images/featured/old-featured/featured7.png",
     name: "Moyo Brown",
     desc: "Ekiti, Nigeria",
-    category: "Commercial ",
+    category: "Commercial",
     alt: "featuredimg7",
   },
 
