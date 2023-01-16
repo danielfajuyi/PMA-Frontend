@@ -1,0 +1,182 @@
+.set_photo-list,
+.set_polaroid-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 0.8rem;
+}
+.set_photo-item,
+.set_polaroid-item {
+  position: relative;
+  background: #333;
+  width: 48%;
+  height: 175px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.set_polaroid-item img,
+.set_photo-item img {
+  width: 100%;
+  height: 100%;
+}
+.add-polaroid_container,
+.add-photo_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.add-polaroid,
+.add-photo {
+  width: 160px;
+  height: 50px;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.add-polaroid {
+  font-size: 17px;
+}
+.add-icon {
+  font-size: 30px;
+}
+.photo-icons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: var(--Light-color);
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 2rem;
+}
+.view-icon {
+  color: var(--Colored-color);
+}
+.view-icon:hover {
+  cursor: pointer;
+  color: var(--Light-color);
+}
+.trash-icon:hover {
+  cursor: pointer;
+  color: var(--Colored-color);
+}
+
+/* modal section */
+
+.modal-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+}
+.modal-img-rapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-section img {
+  width: 100%;
+  height: 100vh;
+}
+
+.card-img {
+  max-width: 100%;
+  max-height: 200px;
+}
+@media screen and (max-width: 340px) {
+  .set_photo-item,
+  .set_polaroid-item {
+    height: 170px;
+  }
+  .add-polaroid {
+    width: 160px;
+    height: 45px;
+    font-size: 16px;
+  }
+  .add-photo {
+    width: 140px;
+    height: 45px;
+    font-size: 16px;
+  }
+  .card-img {
+    max-width: 100%;
+    max-height: 180px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .set_photo-list,
+  .set_polaroid-list {
+    gap: 1.5rem;
+    justify-content: left;
+  }
+  .set_photo-item,
+  .set_polaroid-item {
+    width: 30%;
+    height: 175px;
+  }
+  .modal-section img {
+    width: 80%;
+    height: 80vh;
+  }
+
+  .card-img {
+    max-width: 500px;
+    max-height: 300px;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .set_photo-item,
+  .set_polaroid-item {
+    width: 30%;
+    height: 250px;
+  }
+  .set_photo-list,
+  .set_polaroid-list {
+    gap: 2rem;
+  }
+  .modal-section img {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 920px) and (min-height: 850px) {
+  .modal-section img {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .set_photo-item,
+  .set_polaroid-item {
+    width: 30%;
+    height: 300px;
+  }
+  .set_photo-list,
+  .set_polaroid-list {
+    gap: 1rem;
+    gap: 2.5rem;
+  }
+
+  .modal-section img {
+    width: 35%;
+  }
+}

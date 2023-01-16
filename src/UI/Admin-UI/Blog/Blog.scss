@@ -1,0 +1,38 @@
+.blog-header {
+  height: 44rem;
+}
+
+.item-mtop {
+  margin-top: 3rem;
+  margin-bottom: -8.5rem;
+}
+
+.blog-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    padding: 15px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    color: var(--pink);
+    letter-spacing: 0.5px;
+
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  .b-effect {
+    flex-direction: row;
+    display: flex;
+  }
+}

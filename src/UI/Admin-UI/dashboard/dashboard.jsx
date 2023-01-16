@@ -18,6 +18,7 @@ import {
   MdOutlineReviews,
   MdOutlineStyle,
 } from "react-icons/md";
+import { Chart } from "chart.js/auto"; //The useless bug!!!
 import { HiOutlineUserGroup } from "react-icons/hi";
 import { BsFiles } from "react-icons/bs";
 import { FiUsers } from "react-icons/fi";
@@ -25,14 +26,13 @@ import { CgUserList } from "react-icons/cg";
 import profileImage from "../../../Images/img/slider3.jpg";
 import { Bar, Doughnut } from "react-chartjs-2";
 import DashboardSidebar from "../../../Components/Dashboard/Sidebar/sidebar";
-import { Chart } from "chart.js/auto";
 import DashboardTopbar from "../../../Components/Dashboard/Topbar/topbar";
 import useMediaQuery from "../../../custom_hooks/useMediaQuery";
 import { useState } from "react";
-import { motion } from "framer-motion";
 import Background from "../../../Components/Dashboard/Background/background";
 
-const AdminDashboard = () => {
+const AdminDashboard = ({ displayNav }) => {
+  displayNav(false);
   const data = {
     labels: ["1 Aug", "2 Aug", "3 Aug", "4 Aug", "5 Aug", "6 Aug"],
     datasets: [
@@ -149,7 +149,7 @@ const AdminDashboard = () => {
 
   const image = (
     <div className="profile_image">
-      <img src={profileImage} alt="profile image" />
+      <img src={profileImage} alt="profile-pic" />
     </div>
   );
 
@@ -257,7 +257,7 @@ const AdminDashboard = () => {
                     <td>
                       <div className="profile">
                         <div className="profile_image">
-                          <img src={profileImage} alt="" />
+                          <img src={profileImage} alt="profilepic" />
                         </div>
                         <div className="profile_name">
                           <div>Micheal </div>
@@ -273,7 +273,7 @@ const AdminDashboard = () => {
                     <td>
                       <div className="profile">
                         <div className="profile_image">
-                          <img src={profileImage} alt="" />
+                          <img src={profileImage} alt="profilepic" />
                         </div>
                         <div className="profile_name">
                           <div>Micheal </div>
@@ -289,7 +289,7 @@ const AdminDashboard = () => {
                     <td>
                       <div className="profile">
                         <div className="profile_image">
-                          <img src={profileImage} alt="" />
+                          <img src={profileImage} alt="profilepic" />
                         </div>
                         <div className="profile_name">
                           <div>Micheal </div>

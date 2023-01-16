@@ -1,0 +1,30 @@
+:root {
+  --Dark-color: var(--dim-black);
+  --Light-color: #ffff;
+  --Colored-color: var(--pink);
+}
+.on-hover:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+.dark--btn {
+  color: var(--Light-color);
+  background: var(--Dark-color);
+}
+.colored--btn {
+  color: var(--Light-color);
+  background: var(--Colored-color);
+}
+.transparent--btn {
+  color: var(--Dark-color);
+  background: var(--Light-color);
+}
+.empty-search-text,
+.empty-content-text {
+  font-size: 24px;
+  font-weight: 600;
+  min-height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

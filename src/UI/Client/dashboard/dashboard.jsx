@@ -18,10 +18,7 @@ import DashboardTopbar from "../../../Components/Dashboard/Topbar/topbar";
 import BookingsCard from "../../../Components/Dashboard/Bookings-Card/bookings_card";
 import MessagePreviewCard from "../../../Components/Dashboard/Message-Preview-Card/message_preview_card";
 import JobCard from "../../../Components/Dashboard/Job-Card/job_card";
-
 import coverImg from "../../../Images/model/model-large.jpg";
-import profileImg from "../../../Images/jobs/job2.jpg";
-
 import _ from "lodash";
 import ClientCard from "../../../Components/Dashboard/Client-Card/client_card";
 import VisitorStats from "../../../Components/Dashboard/Visitor-Stats/visitor_stats";
@@ -30,7 +27,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Background from "../../../Components/Dashboard/Background/background";
 
-const ClientDashboard = (props) => {
+const ClientDashboard = ({ displayNav }) => {
+  displayNav(false);
   const topList = [
     { name: "Dashboard", icon: <MdOutlineDashboard /> },
     { name: "Profile", icon: <CgUserList /> },
@@ -187,11 +185,11 @@ const ClientDashboard = (props) => {
 
           <div id="profile_panel">
             <div id="cover">
-              <img src={coverImg} alt="cover photo" />
+              <img src={coverImg} alt="cover-pic" />
             </div>
             <div id="profile">
               <div id="img_holder">
-                <img src={profileImg} alt="" />
+                <img src="./images/jobs/job2.jpg" alt="profile-pic" />
               </div>
               <div>
                 <div id="name">Hello, {"Fourwall"}</div>
@@ -221,26 +219,26 @@ const ClientDashboard = (props) => {
               <header>
                 <h4>Top Rated</h4>
 
-                <a href="#"> See all</a>
+                <a href="./seeall"> See all</a>
               </header>
               <div id="body">
                 <ClientCard
-                  img={profileImg}
+                  img="./images/jobs/job2.jpg"
                   name="Eke Kara"
                   location="Lagos, Nigeria"
                 />
                 <ClientCard
-                  img={profileImg}
+                  img="./images/jobs/job2.jpg"
                   name="Eke Kara"
                   location="Lagos, Nigeria"
                 />
                 <ClientCard
-                  img={profileImg}
+                  img="./images/jobs/job2.jpg"
                   name="Eke Kara"
                   location="Lagos, Nigeria"
                 />
                 <ClientCard
-                  img={profileImg}
+                  img="./images/jobs/job2.jpg"
                   name="Eke Kara"
                   location="Lagos, Nigeria"
                 />
@@ -250,26 +248,26 @@ const ClientDashboard = (props) => {
             <div id="newly_posted">
               <header>
                 <h4>Newly Posted</h4>
-                <a href="#"> See all</a>
+                <a href="./seeall"> See all</a>
               </header>
               <div id="body">
                 <ClientCard
-                  img={profileImg}
+                  img="./images/jobs/job2.jpg"
                   name="Eke Kara"
                   location="Lagos, Nigeria"
                 />
                 <ClientCard
-                  img={profileImg}
+                  img="./images/jobs/job2.jpg"
                   name="Eke Kara"
                   location="Lagos, Nigeria"
                 />
                 <ClientCard
-                  img={profileImg}
+                  img="./images/jobs/job2.jpg"
                   name="Eke Kara"
                   location="Lagos, Nigeria"
                 />
                 <ClientCard
-                  img={profileImg}
+                  img="./images/jobs/job2.jpg"
                   name="Eke Kara"
                   location="Lagos, Nigeria"
                 />
@@ -279,7 +277,7 @@ const ClientDashboard = (props) => {
             <div id="job_posted">
               <header>
                 <h4>Job Posted</h4>
-                <a href="#">See all</a>
+                <a href="./seeall">See all</a>
               </header>
               <div id="body">
                 <JobCard
@@ -316,7 +314,7 @@ const ClientDashboard = (props) => {
               </span>
             </header>
             <MessagePreviewCard
-              img={profileImg}
+              img="./images/jobs/job2.jpg"
               online={true}
               sender="Micheal B"
               title="Project manager"
@@ -324,7 +322,7 @@ const ClientDashboard = (props) => {
               count="5"
             />
             <MessagePreviewCard
-              img={profileImg}
+              img="./images/jobs/job2.jpg"
               online={true}
               sender="Micheal B"
               title="Project manager"
@@ -332,7 +330,7 @@ const ClientDashboard = (props) => {
               count="10"
             />
             <MessagePreviewCard
-              img={profileImg}
+              img="./images/jobs/job2.jpg"
               online={false}
               sender="Sarah Jay"
               title="Model"

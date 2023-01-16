@@ -1,0 +1,87 @@
+.post-header {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 36px;
+  background: rgba(255, 255, 255, 0.64);
+  box-shadow: 0px 19px 200px rgba(0, 0, 0, 0.14);
+  border-radius: 1rem;
+}
+
+.post-profile {
+  height: 63px;
+  width: 63px;
+  margin-top: -5px;
+  border-radius: 10px;
+}
+
+.post-input {
+  display: flex;
+  gap: 1rem;
+}
+
+.post-input > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 90%;
+}
+
+.post-input > div > input {
+  background-color: var(--inputColor);
+  border-radius: 10px;
+  padding: 15px;
+  outline: none;
+  font-size: 18px;
+}
+
+.post-options {
+  display: flex;
+  justify-content: space-around;
+}
+
+.post-options > .option {
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+.option:hover {
+  cursor: pointer;
+}
+
+.postshare-btn {
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 12px;
+}
+
+.previewImage {
+  position: relative;
+}
+
+.previewImage > svg {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  cursor: pointer;
+  color: white;
+  border: 1px solid var(--pink);
+  border-radius: 1px;
+}
+
+.previewImage > svg:hover {
+  color: palevioletred;
+}
+
+.previewImage > img {
+  width: 100%;
+  max-height: 20rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}

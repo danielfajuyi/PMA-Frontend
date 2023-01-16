@@ -1,0 +1,77 @@
+.communityLeftbar {
+  .communityContainer {
+    .sectionleft {
+      display: flex;
+      flex-direction: column;
+
+      gap: 2rem;
+
+      .items {
+        background: #ffffff;
+        box-shadow: 0px 26px 84px rgb(0 0 0 / 7%);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px;
+        gap: 1rem;
+      }
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+
+    .top {
+      h2 {
+        letter-spacing: 0.5px;
+        font-size: 1.3rem;
+        color: var(--dim-black);
+        text-align: center;
+      }
+    }
+
+    button {
+      display: flex;
+      align-self: center;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      background: var(--pink);
+      transition: all 100ms ease-out;
+      font-size: 15px;
+      padding: 6px 9px;
+    }
+
+    button:hover {
+      cursor: pointer;
+      color: var(--pink);
+      background: transparent;
+      border: 2px solid var(--pink);
+    }
+  }
+
+  .user {
+    display: flex;
+
+    align-items: center;
+    gap: 10px;
+
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+
+      // span, h3 {
+      //  font-size: 14px;
+      // }
+    }
+  }
+}

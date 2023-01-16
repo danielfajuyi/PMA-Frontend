@@ -1,0 +1,22 @@
+.communityLayout {
+  background: hsl(240, 100%, 99%);
+}
+
+$theme: (
+  light: (
+    textColor: #000,
+    bg: #f8f8ff,
+    logo: black,
+    logospan: var(--pink),
+    bgsoft: #f6f3f3,
+    textColorsoft: #555,
+  ),
+  dark: (
+    textColor: #000,
+    bg: #f8f8ff,
+    logo: black,
+    logospan: var(--pink),
+    bgsoft: #f6f3f3,
+    textColorsoft: #555,
+  ),
+);

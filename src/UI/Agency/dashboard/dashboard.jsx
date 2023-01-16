@@ -19,7 +19,6 @@ import TopModelHighlight from "../../../Components/Dashboard/Top-Model-Highlight
 import MessagePreviewCard from "../../../Components/Dashboard/Message-Preview-Card/message_preview_card";
 // Images
 import coverImg from "../../../Images/model/model-large.jpg";
-import profileImg from "../../../Images/jobs/job2.jpg";
 
 import JobCard from "../../../Components/Dashboard/Job-Card/job_card";
 import ModelCard from "../../../Components/ModelCard/model_card.jsx";
@@ -53,7 +52,10 @@ const button = (
   </motion.div>
 );
 
-const AgencyDashboard = () => {
+const AgencyDashboard = ({ displayNav }) => {
+  //
+  displayNav(false);
+
   const data = {
     labels: ["Aug", "Sept", "Oct", "Nov", "Dec", "Jan", "Feb"],
     datasets: [
@@ -189,11 +191,11 @@ const AgencyDashboard = () => {
 
           <div id="profile_panel">
             <div id="cover">
-              <img src={coverImg} alt="cover photo" />
+              <img src={coverImg} alt="cover-pic" />
             </div>
             <div id="profile">
               <div id="img_holder">
-                <img src={profileImg} alt="" />
+                <img src="./images/jobs/job2.jpg" alt="profile-pic" />
               </div>
               <div>
                 <div id="name">Hello, {"XMY Agency"}</div>
@@ -210,12 +212,12 @@ const AgencyDashboard = () => {
             </div>
             <div id="top_models">
               <TopModelHighlight
-                img={profileImg}
+                img="./images/jobs/job2.jpg"
                 name="Emilly Okoro"
                 views="13.6k"
               />
               <TopModelHighlight
-                img={profileImg}
+                img="./images/jobs/job2.jpg"
                 name="Ikegwuru Ndiuwa"
                 views="12.4k"
               />
@@ -225,7 +227,7 @@ const AgencyDashboard = () => {
             <div id="latest_offers">
               <header>
                 <h4>Latest Job Offer</h4>
-                <a href="#">See all</a>
+                <a href="./seeall">See all</a>
               </header>
               <div id="body">
                 <JobCard
@@ -254,41 +256,41 @@ const AgencyDashboard = () => {
             <div id="latest_blogs">
               <header>
                 <h4>Latest Blog News</h4>
-                <a href="#">See all</a>
+                <a href="./seeall">See all</a>
               </header>
               <div id="body">
                 <BlogPreviewCard
-                  img={profileImg}
+                  img="./images/jobs/job2.jpg"
                   title="Intro to zero waste lifestyle"
                   model="Premium Models"
                   date="26/08/2022"
                 />
                 <BlogPreviewCard
-                  img={profileImg}
+                  img="./images/jobs/job2.jpg"
                   title="Intro to zero waste lifestyle"
                   model="Premium Models"
                   date="26/08/2022"
                 />
                 <BlogPreviewCard
-                  img={profileImg}
+                  img="./images/jobs/job2.jpg"
                   title="Intro to zero waste lifestyle"
                   model="Premium Models"
                   date="26/08/2022"
                 />
                 <BlogPreviewCard
-                  img={profileImg}
+                  img="./images/jobs/job2.jpg"
                   title="Intro to zero waste lifestyle"
                   model="Premium Models"
                   date="26/08/2022"
                 />
                 <BlogPreviewCard
-                  img={profileImg}
+                  img="./images/jobs/job2.jpg"
                   title="Intro to zero waste lifestyle"
                   model="Premium Models"
                   date="26/08/2022"
                 />
                 <BlogPreviewCard
-                  img={profileImg}
+                  img="./images/jobs/job2.jpg"
                   title="Intro to zero waste lifestyle"
                   model="Premium Models"
                   date="26/08/2022"
@@ -306,7 +308,7 @@ const AgencyDashboard = () => {
               </span>
             </header>
             <MessagePreviewCard
-              img={profileImg}
+              img="./images/jobs/job2.jpg"
               online={true}
               sender="Micheal B"
               title="Project manager"
@@ -314,7 +316,7 @@ const AgencyDashboard = () => {
               count="5"
             />
             <MessagePreviewCard
-              img={profileImg}
+              img="./images/jobs/job2.jpg"
               online={false}
               sender="Sarah Jay"
               title="Model"
@@ -322,14 +324,14 @@ const AgencyDashboard = () => {
               count="2"
             />
             <MessagePreviewCard
-              img={profileImg}
+              img="./images/jobs/job2.jpg"
               online={true}
               sender="Micheal B"
               title="Project manager"
               msg="see you tomorrow"
             />
             <MessagePreviewCard
-              img={profileImg}
+              img="./images/jobs/job2.jpg"
               online={false}
               sender="Sarah Jay"
               title="Model"
@@ -341,7 +343,7 @@ const AgencyDashboard = () => {
           <div id="our_models">
             <header>
               <h4>Our Models</h4>
-              <a href="#">See all</a>
+              <a href="./seeall">See all</a>
             </header>
             <div id="body">
               <ModelCard />

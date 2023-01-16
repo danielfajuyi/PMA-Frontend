@@ -1,4 +1,4 @@
-.logo {
+.logo-2 {
   display: flex;
   flex-direction: column;
   letter-spacing: 1.5px;
@@ -6,15 +6,27 @@
   line-height: 40px;
 }
 
-.logo span {
+.logo-2 span {
   font-family: var(--font-family-poppins);
   font-size: var(--font-size-xl);
   font-weight: 700;
 }
-.logo span:nth-of-type(1) {
-  color: var(--black);
+.logo-2 span:nth-of-type(1) {
+  color: var(--white);
 }
 
-.logo span:nth-of-type(2) {
+.logo-2 span:nth-of-type(2) {
   color: var(--pink);
+}
+
+@media screen and (max-width: 984px) {
+  .logo-2 span {
+    font-size: 31px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .logo-2 span {
+    font-size: 28px;
+  }
 }

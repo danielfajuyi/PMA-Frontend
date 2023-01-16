@@ -1,0 +1,360 @@
+@import "../../../scss/color";
+@import "../../../scss/mixins";
+@import "../../../scss/utils";
+
+#agency_profile {
+  min-height: 100%;
+  width: 100%;
+  background-color: $white;
+
+  @include mq($width: 1050px) {
+    background-color: $light_gray;
+  }
+}
+
+#hero {
+  height: max(12em, 20vh);
+  position: relative;
+  background: $yellow;
+}
+
+#image_holder {
+  position: absolute;
+  width: min(14em, 35vw);
+  height: min(14em, 35vw);
+  border-radius: 50%;
+  overflow: hidden;
+  left: 2%;
+  top: calc(max(12em, 20vh) - 0.5 * 35vw);
+  z-index: 1;
+  @include mq($width: 1050px) {
+    left: 1em;
+    top: 1.5em;
+  }
+}
+#image_holder img {
+  max-width: 100%;
+}
+
+#navbar {
+  display: none;
+
+  @include mq($width: 1050px) {
+    position: absolute;
+    display: flex;
+    color: $white;
+    background-color: $dim_black;
+    height: 5em;
+    width: calc(100% - 14em);
+    left: calc(min(14em, 35vw));
+    bottom: 1em;
+    justify-content: space-between;
+    padding-inline: 2em;
+    padding-top: 0.8em;
+  }
+}
+
+#navbar #left {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#navbar #left > span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#navbar #left > span:hover:not(.active) {
+  color: var(--yellow);
+}
+
+.active {
+  position: relative;
+  color: var(--pink);
+  display: block;
+}
+
+.active:after {
+  position: absolute;
+  content: "";
+  bottom: 0.6em;
+  width: 1em;
+  height: 0.4em;
+  border-radius: 0.5em;
+  background-color: var(--pink);
+  animation: active_page_anim 0.4s ease-in-out;
+}
+
+#agency_profile main {
+  display: grid;
+  grid-template-columns: 100%;
+
+  @include mq($width: 1050px) {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+#sidebar {
+  background-color: $white;
+
+  @include mq($width: 1050px) {
+    padding-top: 4em;
+    margin-left: 1em;
+    text-align: center;
+    border-radius: 0 0 2px 2px;
+    width: 20%;
+  }
+}
+
+#sidebar header {
+  padding-left: calc(min(14em, 35vw) + 5vw);
+  margin-top: 0.5em;
+  @include mq($width: 1050px) {
+    padding-left: 0;
+  }
+}
+
+#sidebar h1 {
+  font-size: calc(0.5rem + 4vw);
+
+  @include mq($width: 1050px) {
+    margin-bottom: 0.5em;
+    font-size: calc(0.5rem + 1.4vw);
+  }
+}
+
+#location,
+#link {
+  @include d_flex($justify: flex-start);
+  padding-left: 3vw;
+  font-weight: 500;
+  font-size: calc(0.5rem + 1.1vw);
+  margin-top: 0.5em;
+
+  @include mq($width: 1050px) {
+    font-size: calc(0.5rem + 0.4vw);
+    margin-top: 0;
+  }
+}
+
+#location span,
+#link span,
+.btn span {
+  margin-left: 0.5em;
+}
+
+#follow_container {
+  position: relative;
+}
+
+#agency_profile .btn {
+  position: absolute;
+  bottom: -1.5em;
+  left: calc(50% - 4em);
+  width: 8em;
+  //   height: 3em;
+  background-color: $deep_pink;
+  @include d_flex;
+  border-radius: 0.25em;
+  padding-block: 0.5em;
+  align-self: center;
+  cursor: pointer;
+  color: $white;
+  font-weight: 600;
+  transition: all 0.5s linear;
+
+  @include mq($width: 1050px) {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin: 2em auto;
+  }
+}
+
+#navbar .btn {
+  margin-top: 1.2em;
+  margin-inline: 1em;
+  cursor: pointer;
+}
+
+#navbar > div {
+  display: flex;
+}
+
+#navbar_body li {
+  cursor: pointer;
+}
+
+#agency_profile .btn:hover {
+  @include mq($width: 1050px) {
+    outline: 1px solid var(--pink);
+    background-color: transparent;
+    color: var(--pink);
+  }
+}
+
+#agency_profile #follow {
+  @include d_flex($align: flex-start);
+  padding-top: 1em;
+  padding-inline: 0.2em;
+  font-weight: 600;
+  font-size: 1.2rem;
+  min-height: 110px;
+  width: min(86%, 400px);
+  text-align: center;
+  margin: 1em auto 0;
+  background-color: $dim_black;
+  color: $white;
+  letter-spacing: 1.4px;
+  border-radius: 5px;
+
+  @include mq($width: 340px) {
+    width: min(80%, 400px);
+  }
+
+  @include mq($width: 1050px) {
+    background-color: $white;
+    color: $black;
+    letter-spacing: 0px;
+    padding-top: 0;
+    font-weight: 600;
+    border-radius: 2px;
+    @include d_flex($justify: space-between);
+    font-size: 1rem;
+    margin: 0 auto;
+    padding-top: 0;
+    min-height: max-content;
+  }
+}
+
+#socials {
+  display: flex;
+  justify-content: space-around;
+  width: 54%;
+  margin: 3em auto 1em;
+
+  @include mq($width: 1050px) {
+    margin: 2em auto 4em;
+  }
+}
+#line {
+  width: 4px;
+  border-radius: 2px;
+  background-color: $white;
+  height: 60px;
+  margin-inline: 2vw;
+
+  @include mq($width: 1050px) {
+    display: none;
+  }
+}
+
+#socials a {
+  color: $black;
+  border: 1px solid $dim-black;
+  @include d_flex;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  transition: var(--transition);
+}
+#socials a:hover {
+  color: var(--pink);
+  border: 1px solid;
+}
+
+#navbar_body {
+  background-color: $white;
+  @include d_flex($justify: space-between);
+  font-weight: 500;
+  padding: 0.5em 5vw;
+  font-size: calc(0.5rem + 1.2vw);
+
+  @include mq($width: 340px) {
+    padding: 0.5em 10vw;
+  }
+
+  li {
+    padding: 0.5em 1em;
+  }
+
+  @include mq($width: 1050px) {
+    display: none;
+  }
+}
+
+.active_two {
+  font-weight: 600;
+  background-color: $deep_pink;
+  border-radius: 1em;
+  color: $white;
+}
+
+#agency_profile #about {
+  margin-top: $big_padding;
+  padding: 0 5vw 1.5em;
+  background-color: $white;
+  animation: reveal_anim 0.6s ease-out;
+
+  @include mq($width: 1050px) {
+    font-size: 1.2rem;
+    margin-top: 0;
+    padding: 1em;
+    width: 80%;
+    background-color: transparent;
+    animation: reveal_anim 0.6s ease-out;
+  }
+}
+
+#agency_profile #about > div {
+  background-color: $dim_black;
+  padding: $big_padding;
+  border-radius: 1em;
+  color: $white;
+
+  @include mq($width: 1050px) {
+    color: $black;
+    background-color: var(--white);
+    max-width: 40em;
+    padding: 1em;
+    border-radius: 0.14em;
+  }
+}
+
+#agency_profile #about h2,
+#agency_profile #about p {
+  margin-bottom: 1em;
+}
+
+#agency_profile #about h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+@keyframes active_page_anim {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+
+  100% {
+    width: 1em;
+    opacity: 1;
+  }
+}
+
+@keyframes reveal_anim {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}

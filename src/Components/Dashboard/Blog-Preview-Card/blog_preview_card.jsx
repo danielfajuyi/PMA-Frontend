@@ -4,7 +4,7 @@ const BlogPreviewCard = (props) => {
   return (
     <div className="blog_preview_card">
       <div className="author_img">
-        <img src={props.img} alt="author image" />
+        <img src={props.img} alt="author-img" />
       </div>
       <div className="body">
         <div className="blog_title">{props.title}</div>

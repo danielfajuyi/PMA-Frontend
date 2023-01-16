@@ -1,7 +1,7 @@
 import React from "react";
-
-import Hero from "../../Components/Hero/hero";
-import Main from "../../Components/Main/main";
+import Hero from "./Layout/HeroSection/Hero/hero";
+import Main from "./Layout/MainSection/Main/main";
+import Footer from "./Layout/FooterSection/Footer/footer";
 import "./home.css";
 
 const Home = () => {
@@ -9,6 +9,7 @@ const Home = () => {
     <>
       <Hero />
       <Main />
+      <Footer />
     </>
   );
 };
