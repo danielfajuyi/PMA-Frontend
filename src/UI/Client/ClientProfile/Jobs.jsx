@@ -1,5 +1,5 @@
 import portfolio1 from '../ClientProfile/assets/clientimg.jpg'
-import './jobs.css'
+import '../ClientProfile/jobs.css'
 
 
 
@@ -60,7 +60,7 @@ const About = () => {
       <div className ='jobCard'>
         {jobData.map(data=>(
            <div className="jobContent">
-            <img src={data.image} alt="" className='jobImg' />
+            <img src={data.image} alt= "" className='jobImg' />
             <div className="jobDetails">
             <h4>{data.title}</h4>
             <p>{data.location}</p>
