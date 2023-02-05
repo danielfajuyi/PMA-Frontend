@@ -1,0 +1,264 @@
+@import "../../../../scss/mixins";
+@import "../../../../scss/color";
+@import "../../../../scss/utils";
+
+#client_dashboard {
+  #pane {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: $md_padding;
+
+    @include mq($width: 540px) {
+      padding: $small_padding;
+      width: 100%;
+      grid-template-columns: 60% 40%;
+    }
+
+    @include mq($width: 1050px) {
+      padding: $md_padding;
+      width: 100%;
+      grid-template-columns: 66% 34%;
+    }
+  }
+
+  #area_one {
+    & > * {
+      margin-bottom: $md_padding;
+    }
+
+    @include mq($width: 540px) {
+      grid-column: 1/3;
+      & > * {
+        margin-bottom: $small_padding;
+      }
+    }
+
+    @include mq($width: 1050px) {
+      grid-column: 1/2;
+      display: grid;
+      grid-template-columns: 78% 22%;
+      margin-right: $md_padding;
+      margin-bottom: $md_padding;
+
+      & > * {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .visitor_stats {
+    @include visitor_stats;
+    width: 100%;
+    @include mq($width: 1050px) {
+      width: calc(100% - $md_padding);
+    }
+  }
+
+  #bookings {
+    & > div {
+      width: 31.5%;
+    }
+    @include d_flex($align: flex-start, $justify: space-between);
+
+    @include mq($width: 540px) {
+      & > div {
+        width: 32.5%;
+      }
+    }
+
+    @include mq($width: 1050px) {
+      width: 100%;
+      @include d_flex(stretch, space-between, column);
+
+      & > div {
+        width: 100%;
+        &:not(&:last-child) {
+          margin-bottom: 0.5em;
+        }
+      }
+    }
+  }
+
+  #profile_panel {
+    background-color: $white;
+    overflow: hidden;
+    border-radius: $box_radius;
+    padding-bottom: 0.5em;
+    grid-row: 1/2;
+    margin-bottom: $md_padding;
+
+    @include mq($width: 540px) {
+      grid-column: 1 / 3;
+      margin-bottom: $small_padding;
+    }
+
+    @include mq($width: 1050px) {
+      grid-column: 2 / 3;
+      margin-bottom: $md_padding;
+    }
+
+    #cover > img {
+      width: 100%;
+    }
+    #profile {
+      position: relative;
+      padding-top: 0.5em;
+      @include d_flex($align: flex-start, $justify: space-between);
+      padding-inline: 6.4em 1em;
+      min-height: 4.2em;
+    }
+
+    #profile #img_holder {
+      @include img_holder($w: 5em, $h: 5em);
+      position: absolute;
+      left: 0.8em;
+      top: -2em;
+      box-sizing: content-box;
+      display: inline-block;
+      border-radius: 50%;
+      border: 3px solid $white;
+      overflow: hidden;
+    }
+
+    #name {
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    #handle {
+      font-size: 0.7rem;
+    }
+    #profile button {
+      @include d_flex;
+      color: $white;
+      background-color: $deep_pink;
+      border-radius: 0.3em;
+      padding: 0.6em 0.5em;
+      font-weight: 600;
+      font-size: 0.7rem;
+      cursor: pointer;
+    }
+    #profile button span {
+      margin-left: 0.2em;
+    }
+    #status {
+      margin-inline: 1.3em 1em;
+      margin-bottom: 1em;
+      font-size: 0.8rem;
+    }
+    #follow {
+      @include d_flex($justify: space-between);
+      font-weight: 600;
+      margin-inline: 1.3em 1em;
+      padding-bottom: 0.3em;
+    }
+    #follow > span {
+      word-spacing: 0.8em;
+    }
+  }
+
+  #area_two {
+    display: grid;
+    grid-template-columns: 100%;
+    & > * {
+      margin-bottom: $md_padding;
+    }
+
+    @include mq($width: 540px) {
+      grid-column: 1/3;
+      grid-template-columns: 50% 50%;
+
+      & > * {
+        margin-bottom: $small_padding;
+      }
+    }
+
+    @include mq($width: 1050px) {
+      grid-column: 1/2;
+      @include d_flex($align: stretch, $justify: space-between);
+      margin-right: $md_padding;
+      & > * {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  #top_rated,
+  #newly_posted,
+  #job_posted {
+    background-color: $white;
+    border-radius: $box_radius;
+    @include box_header($y: 1em);
+
+    #body {
+      padding: $small_padding;
+    }
+
+    @include mq($width: 1050px) {
+      @include box_header($x: 0.5em);
+      width: 33%;
+    }
+  }
+
+  #newly_posted {
+    @include mq($width: 540px) {
+      margin-left: $small_padding;
+    }
+    @include mq($width: 1050px) {
+      margin-inline: $md_padding;
+    }
+  }
+
+  #job_posted {
+    @include mq($width: 540px) {
+      grid-column: 1/3;
+    }
+  }
+
+  #inbox {
+    background-color: $white;
+    border-radius: $box_radius;
+    padding-bottom: 0.5em;
+
+    header {
+      padding: $small_padding;
+      @include d_flex($justify: space-between);
+      border-bottom: 1px solid $light_gray;
+    }
+
+    header span {
+      @include d_flex($justify: flex-start);
+      font-size: 0.8rem;
+      margin-left: 0.3em;
+    }
+
+    .msg {
+      position: relative;
+    }
+
+    .msg .notification {
+      position: absolute;
+      font-size: 10px;
+      font-weight: 700;
+      color: $white;
+      background-color: $red;
+      top: -7px;
+      left: 0;
+      min-width: 20px;
+      height: 20px;
+      border-radius: 8px;
+      text-align: center;
+      padding-top: 1px;
+      padding-inline: 5px;
+      border: 2px solid;
+      transform: translateX(-50%);
+    }
+    @include mq($width: 540px) {
+      grid-column: 1/3;
+    }
+
+    @include mq($width: 1050px) {
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+  }
+}
