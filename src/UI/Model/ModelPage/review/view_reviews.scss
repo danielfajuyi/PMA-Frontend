@@ -1,0 +1,60 @@
+@import "../../../../scss/color";
+@import "../../../../scss/mixins";
+@import "../../../../scss/utils";
+
+#view_reviews {
+  min-height: calc(100vh - 61px);
+  background-color: $light_gray;
+  align-items: start;
+  padding: 2em 1em;
+
+  #container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    background-color: $white;
+    align-items: start;
+    gap: 1em 0.5em;
+    padding: 2em 1em;
+  }
+
+  #container::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    border-right: 1px solid;
+    color: darken($light_gray, 20%);
+  }
+
+  #buttons {
+    justify-self: center;
+    margin-top: 0.5em;
+  }
+
+  button {
+    display: block;
+    background-color: $black;
+    color: $white;
+    font-family: Poppins;
+    width: 80px;
+    height: 28px;
+    border-radius: $big_padding;
+    margin-bottom: 0.8em;
+    transition: background-color 0.4s ease;
+    cursor: pointer;
+    font-weight: 500;
+
+    &:hover {
+      background-color: $dim_black;
+    }
+
+    &:last-child {
+      background-color: $deep_pink;
+
+      &:hover {
+        background-color: darken($deep_pink, 5%);
+      }
+    }
+  }
+}

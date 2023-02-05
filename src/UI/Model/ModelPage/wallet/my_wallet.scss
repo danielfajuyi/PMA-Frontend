@@ -1,0 +1,10 @@
+@import "../../../../scss/mixins";
+@import "../../../../scss/color";
+
+#my_wallet {
+  @include d_flex;
+  min-height: calc(100vh - 60px);
+  font-weight: 600;
+  font-size: 2rem;
+  background-color: $white;
+}

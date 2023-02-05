@@ -1,0 +1,64 @@
+@import "../../../../scss/color";
+@import "../../../../scss/mixins";
+@import "../../../../scss/utils";
+
+#subscription_detail {
+  background-color: $white;
+  border-radius: 0.5em;
+
+  & > header {
+    background-color: $deep_pink;
+    height: 40px;
+    color: $white;
+    padding-top: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding-left: 2em;
+    border-radius: 0.4em 0.4em 0 0;
+  }
+
+  #body {
+    display: grid;
+    grid-template-columns: max-content auto;
+    border-bottom: 1px solid lighten($dark_gray, 50%);
+    font-size: 0.88rem;
+    padding: 2em 2em 1em 0.5em;
+
+    span:nth-child(odd) {
+      font-weight: 600;
+    }
+    span:nth-child(even) {
+      font-weight: 400;
+      font-size: 0.8rem;
+      margin-left: 5em;
+    }
+    #note {
+      grid-column: 2/3;
+      background-color: $dim_black;
+      color: $white;
+      border-radius: 0.2em;
+      padding: 0.4em 1em 0.4em 0.4em;
+      font-size: 0.78rem;
+      font-weight: 400;
+      margin-left: 2em;
+      margin-block: 2em;
+      justify-self: start;
+    }
+  }
+
+  button {
+    color: $white;
+    background-color: $deep_pink;
+    padding: 0.8em 1.4em;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 0.8em;
+    border-radius: 0.2em;
+    margin: 2em 0 1em 15em;
+    transition: background-color 0.4s;
+    cursor: pointer;
+    &:hover {
+      background-color: darken($deep_pink, 10%);
+    }
+  }
+}

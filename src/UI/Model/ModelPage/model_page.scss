@@ -1,0 +1,42 @@
+@import "../../../scss/mixins";
+@import "../../../scss/color";
+@import "../../../scss/utils";
+
+#model_page {
+  background-color: $dark_gray;
+  width: 100%;
+
+  @include mq($width: 1050px) {
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  #nav_button {
+    font-family: inherit;
+    background-color: $white;
+    color: $red;
+    border-radius: 0.3em;
+    font-weight: 600;
+    cursor: pointer;
+
+    @include mq($width: 280px) {
+      font-size: 0.7rem;
+      padding: 0.8em 0.4em;
+    }
+
+    @include mq($width: 320px) {
+      font-size: 0.8rem;
+      padding: $md_padding;
+    }
+  }
+
+  main {
+    width: 100%;
+
+    @include mq($width: 1050px) {
+      width: 85%;
+      overflow-y: auto;
+    }
+  }
+}
