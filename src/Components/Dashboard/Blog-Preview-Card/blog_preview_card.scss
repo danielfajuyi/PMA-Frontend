@@ -11,7 +11,7 @@
   border: 1px solid;
 
   @include mq($width: 1050px) {
-    min-height: unset;
+    min-height: 320px;
   }
 
   .author_img {
