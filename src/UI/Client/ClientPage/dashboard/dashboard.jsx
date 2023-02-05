@@ -181,7 +181,7 @@ const ClientDashboard = () => {
               <span>Followers {772}</span>
             </div>
           </div>
-          {/* PROFILE PANEL --> [END] */}
+          {/* PROFILE PANEL <-- [END] */}
 
           {/* Grid Area 2 --> [START]*/}
           <div id="area_two">
@@ -310,7 +310,7 @@ const ClientDashboard = () => {
               count="2"
             />
           </div>
-          {/*Inbox --> [END]  */}
+          {/*Inbox <-- [END]  */}
         </div>
         {/* [GRID <-- END] */}
       </div>

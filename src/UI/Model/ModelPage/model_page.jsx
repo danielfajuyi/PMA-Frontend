@@ -33,7 +33,7 @@ const ModelPage = ({ showNavbar, setShowNavbar }) => {
     setShowNavbar(false);
   }, [setShowNavbar]); //--> Hides The Navbar
 
-  const [sidebarVisibility, setSidebarVisibility] = useState(false); //--> Toggle Sidebar NAvigation
+  const [sidebarVisibility, setSidebarVisibility] = useState(false); //--> Toggle Sidebar Navigation
   const mQ1050px = useMediaQuery("(min-width: 1050px)");
 
   const loc = useLocation();
