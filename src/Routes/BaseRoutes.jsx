@@ -9,6 +9,8 @@ import Home from "../Pages/Home/home";
 import HowItWorks from "../Pages/HowItWorks/HowItWorks";
 import LandingPage from "../Pages/LandingPage/LandingPage";
 import NotFound from "../Pages/NotFound/notfound";
+import { AdminRoutes } from "./AdminRoutes";
+import { AgencyRoutes } from "./AgencyRoutes";
 import { ClientRoutes } from "./ClientRoutes";
 import { ModelRoutes } from "./ModelRoutes";
 
@@ -27,11 +29,11 @@ export const BaseRoutes = () => {
         <Route path="/howitworks" element={<HowItWorks />}></Route>
         <Route path="*" element={<NotFound />}></Route>
         {/* Temporary Routes */}
+        {AdminRoutes(showNavbar, setShowNavbar)}
+        {AgencyRoutes(showNavbar, setShowNavbar)}
         {ModelRoutes(showNavbar, setShowNavbar)}
         {ClientRoutes(showNavbar, setShowNavbar)}
       </Routes>
     </>
   );
 };
-
-console.log(<Routes />);
