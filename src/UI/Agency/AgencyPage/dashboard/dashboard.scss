@@ -1,39 +1,8 @@
-@import "../../../scss/mixins";
-@import "../../../scss/color";
-@import "../../../scss/utils";
+@import "../../../../scss/mixins";
+@import "../../../../scss/color";
+@import "../../../../scss/utils";
 
 #agency_dashboard {
-  background-color: $dark_gray;
-
-  @include mq($width: 1050px) {
-    display: flex;
-    overflow: hidden;
-    height: 100vh;
-  }
-
-  #nav_button {
-    background-color: $white;
-    color: $red;
-    border-radius: 0.3em;
-    font-weight: 600;
-    cursor: pointer;
-    @include mq($width: 280px) {
-      font-size: 0.6rem;
-      padding: 1em 0.5em;
-    }
-    @include mq($width: 320px) {
-      font-size: 0.9rem;
-      padding: 0.7em 1em;
-    }
-  }
-
-  main {
-    @include mq($width: 1050px) {
-      width: 85%;
-      overflow-y: scroll;
-    }
-  }
-
   #pane {
     display: grid;
     grid-template-columns: 100%;
@@ -103,6 +72,9 @@
 
       & > div {
         width: 100%;
+        &:not(:last-child) {
+          margin-bottom: 0.5em;
+        }
       }
     }
   }
@@ -291,7 +263,6 @@
       grid-row: 1/2;
       position: relative;
       margin-left: $md_padding;
-      //   align-self: start;
     }
     #body {
       display: flex;

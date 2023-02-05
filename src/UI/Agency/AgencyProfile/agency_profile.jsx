@@ -1,14 +1,12 @@
 import "./agency_profile.scss";
-import profileImg from "../../../Images/model/model3.jpg";
-import { motion } from "framer-motion";
 
+// Icons [START]
 import {
   RiErrorWarningLine,
   RiBriefcase5Line,
   RiStackLine,
   RiGlobalLine,
 } from "react-icons/ri";
-
 import {
   FaEnvelope,
   FaFacebook,
@@ -16,13 +14,24 @@ import {
   FaInstagram,
   FaTwitter,
 } from "react-icons/fa";
-
 import { IoPersonAddOutline } from "react-icons/io5";
-import { IconContext } from "react-icons/lib";
-import { useState } from "react";
+// [END]
+
+// Components --> [START]
 import SeeModels from "../../../Components/SeeModels/see_models";
 import PreviousJobs from "../../../Components/PreviousJobs/previous_jobs";
+// [END]
 
+// Temporary Image
+import profileImg from "../../../Images/model/model3.jpg";
+
+// Other External NPM Packages --> [START]
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { IconContext } from "react-icons/lib";
+//[END];
+
+// About Section (Gets rendered when 'page state' is 'about')
 const ABOUT = (
   <section id="about">
     <div>
@@ -40,8 +49,15 @@ const ABOUT = (
   </section>
 );
 
-const AgencyProfile = () => {
+const AgencyProfile = ({ showNavbar, setShowNavbar }) => {
+  // Using Hooks
+  useEffect(() => {
+    setShowNavbar(false);
+  }, [setShowNavbar]);
+
   const [page, setPage] = useState("about");
+  //   [END]
+
   return (
     <IconContext.Provider value={{ size: 24 }}>
       <div id="agency_profile">
