@@ -20,6 +20,8 @@ import coverImg from "../../../../Images/model/model-large.jpg";
 
 // Other External NPM Packages --> [START]
 import _ from "lodash";
+import { Chart } from "chart.js/auto"; //Registering Charts ("Do not remove this import")
+
 // [END]
 
 const ClientDashboard = () => {

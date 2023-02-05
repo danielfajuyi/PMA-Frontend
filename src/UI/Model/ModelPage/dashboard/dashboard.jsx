@@ -18,7 +18,7 @@ import VisitorStats from "../../../../Components/Dashboard/Visitor-Stats/visitor
 import profileImg from "../../../../Images/model-profile/model.png";
 
 // Other External NPM Packages --> [START]
-import { Chart } from "chart.js/auto";
+import { Chart } from "chart.js/auto"; //Registering Charts ("Do not remove this import")
 import _ from "lodash";
 import FadeIn from "../../../../Components/FadeIn/fade_in";
 //[END]
