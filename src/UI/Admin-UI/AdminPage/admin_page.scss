@@ -1,0 +1,25 @@
+@import "../../../scss/mixins";
+@import "../../../scss/color";
+@import "../../../scss/utils";
+
+#admin_page {
+  background-color: $dark_gray;
+  width: 100%;
+
+  @include mq($width: 1050px) {
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+  }
+  .profile_image {
+    @include img_holder;
+  }
+  main {
+    width: 100%;
+
+    @include mq($width: 1050px) {
+      width: 85%;
+      overflow-y: auto;
+    }
+  }
+}
