@@ -1,0 +1,322 @@
+@import "../../../../scss/mixins";
+@import "../../../../scss/color";
+@import "../../../../scss/utils";
+
+#agency_dashboard {
+  #pane {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: $md_padding;
+
+    @include mq($width: 540px) {
+      padding: $big_padding;
+      width: 100%;
+      grid-template-columns: 60% 40%;
+    }
+
+    @include mq($width: 1050px) {
+      padding: $md_padding;
+      width: 100%;
+      grid-template-columns: 66% 34%;
+    }
+  }
+
+  #area_one {
+    & > * {
+      margin-bottom: $md_padding;
+    }
+
+    @include mq($width: 540px) {
+      grid-column: 1/3;
+      & > * {
+        margin-bottom: $big_padding;
+      }
+    }
+
+    @include mq($width: 1050px) {
+      grid-column: 1/2;
+      display: grid;
+      grid-template-columns: 78% 22%;
+      margin-right: $md_padding;
+      margin-bottom: $md_padding;
+
+      & > * {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .visitor_stats {
+    @include visitor_stats;
+    width: 100%;
+    @include mq($width: 1050px) {
+      width: calc(100% - $md_padding);
+    }
+  }
+
+  #bookings {
+    & > div {
+      width: 31.5%;
+    }
+    @include d_flex($align: flex-start, $justify: space-between);
+
+    @include mq($width: 540px) {
+      & > div {
+        width: calc(33% - $big_padding);
+      }
+    }
+
+    @include mq($width: 1050px) {
+      width: 100%;
+      @include d_flex(stretch, space-between, column);
+
+      & > div {
+        width: 100%;
+        &:not(:last-child) {
+          margin-bottom: 0.5em;
+        }
+      }
+    }
+  }
+
+  #profile_panel {
+    background-color: $white;
+    overflow: hidden;
+    border-radius: $box_radius;
+    padding-bottom: 0.5em;
+    grid-row: 1/2;
+    margin-bottom: $md_padding;
+
+    @include mq($width: 540px) {
+      grid-column: 1 / 3;
+      margin-bottom: $big_padding;
+    }
+
+    @include mq($width: 1050px) {
+      grid-column: 2 / 3;
+      margin-bottom: $md_padding;
+    }
+
+    #cover > img {
+      width: 100%;
+    }
+    #profile {
+      position: relative;
+      @include d_flex($align: flex-start, $justify: space-between);
+      min-height: 5em;
+
+      @include mq($width: 280px) {
+        padding-inline: 4em 0.4em;
+        padding-top: 0.1em;
+      }
+
+      @include mq($width: 320px) {
+        padding-inline: 6.4em 1em;
+        padding-top: 0.5em;
+      }
+    }
+
+    #profile #img_holder {
+      position: absolute;
+      top: -2em;
+
+      box-sizing: content-box;
+      display: inline-block;
+      border-radius: 50%;
+      border: 3px solid $white;
+      overflow: hidden;
+
+      @include mq($width: 280px) {
+        left: 0.2em;
+        @include img_holder($w: 3.2em, $h: 3.2em);
+      }
+
+      @include mq($width: 320px) {
+        left: 0.8em;
+        @include img_holder($w: 5em, $h: 5em);
+      }
+    }
+
+    #name {
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    #handle {
+      font-size: 0.7rem;
+    }
+    #profile button {
+      @include d_flex;
+      color: $white;
+      background-color: $deep_pink;
+      border-radius: 0.3em;
+      padding: 0.6em 0.5em;
+      font-weight: 600;
+      font-size: 0.7rem;
+      cursor: pointer;
+    }
+    #profile button span {
+      margin-left: 0.2em;
+    }
+    #follow {
+      @include d_flex($justify: space-between);
+      font-weight: 600;
+      margin-inline: 1.3em 1em;
+      padding-bottom: 0.3em;
+      border-bottom: 1px solid;
+    }
+    #follow > span {
+      @include mq($width: 280px) {
+        font-size: 0.8rem;
+        word-spacing: 0.5em;
+      }
+      @include mq($width: 320px) {
+        word-spacing: 0.8em;
+        font-size: 1rem;
+      }
+    }
+
+    @include mq($width: 1050px) {
+      grid-column: 2 / 3;
+    }
+  }
+
+  #area_two {
+    display: grid;
+    grid-template-columns: 100%;
+    & > * {
+      margin-bottom: $md_padding;
+    }
+
+    @include mq($width: 540px) {
+      grid-column: 1/3;
+
+      & > * {
+        margin-bottom: $big_padding;
+      }
+    }
+    @include mq($width: 1050px) {
+      grid-column: 1/2;
+      grid-template-columns: 28% 72%;
+      margin-right: $md_padding;
+      & > * {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  #latest_offers {
+    background-color: $white;
+    border-radius: $box_radius;
+    @include box_header;
+
+    #body {
+      padding: $small_padding;
+    }
+
+    @include mq($width: 540px) {
+      grid-column: 1/3;
+    }
+
+    @include mq($width: 1050px) {
+      grid-column: 1/2;
+      //   grid-row: 1/3;
+      @include box_header($y: 1em, $fs: 0.64rem);
+      font-size: 0.84rem;
+    }
+  }
+
+  #our_models {
+    background-color: $white;
+    border-radius: $box_radius;
+    overflow: hidden;
+    @include box_header;
+    margin-top: $md_padding;
+
+    @include mq($width: 540px) {
+      grid-column: 1/3;
+    }
+
+    @include mq($width: 1050px) {
+      margin-top: $big_padding;
+      margin-bottom: $small_padding;
+    }
+
+    #body {
+      display: flex;
+      gap: $small_padding;
+      overflow-x: scroll;
+      padding: $small_padding;
+    }
+  }
+
+  #latest_blogs {
+    background-color: $white;
+    border-radius: $box_radius;
+    @include box_header;
+    overflow: hidden;
+
+    @include mq($width: 540px) {
+      grid-row: 3/4;
+    }
+    @include mq($width: 1050px) {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      position: relative;
+      margin-left: $md_padding;
+    }
+    #body {
+      display: flex;
+      gap: $small_padding;
+      overflow-x: scroll;
+      padding: $small_padding;
+    }
+  }
+
+  #inbox {
+    background-color: $white;
+    border-radius: $box_radius;
+    padding-bottom: 0.5em;
+
+    header {
+      padding: $small_padding;
+      @include d_flex($justify: space-between);
+      border-bottom: 1px solid $light_gray;
+    }
+
+    header span {
+      @include d_flex($justify: flex-start);
+      font-size: 0.8rem;
+      margin-left: 0.3em;
+    }
+
+    .msg {
+      position: relative;
+    }
+
+    .msg .notification {
+      position: absolute;
+      font-size: 10px;
+      font-weight: 700;
+      color: $white;
+      background-color: $red;
+      top: -7px;
+      left: 0;
+      min-width: 20px;
+      height: 20px;
+      border-radius: 8px;
+      text-align: center;
+      padding-top: 1px;
+      padding-inline: 5px;
+      border: 2px solid;
+      transform: translateX(-50%);
+    }
+    @include mq($width: 540px) {
+      grid-column: 1/3;
+    }
+
+    @include mq($width: 1050px) {
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+  }
+}

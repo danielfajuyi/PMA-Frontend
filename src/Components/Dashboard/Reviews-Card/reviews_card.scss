@@ -1,0 +1,43 @@
+@import "../../../scss/mixins";
+@import "../../../scss/color";
+@import "../../../scss/utils";
+
+#reviews_card {
+  background-color: $dim_black;
+  color: $white;
+  padding: $big_padding;
+  border-radius: $small_padding;
+  margin-right: 3vw;
+  header {
+    @include d_flex($justify: flex-start);
+  }
+
+  #img_holder {
+    box-sizing: content-box;
+    @include img_holder($w: 3em, $h: 3em);
+    margin-right: 1.2em;
+    border: 2px solid white;
+  }
+
+  #name {
+    font-weight: 600;
+    font-size: 0.94rem;
+  }
+  #date {
+    font-style: italic;
+    font-size: 0.7rem;
+    color: darken($light_gray, 20%);
+  }
+
+  #title {
+    font-size: 0.96rem;
+    font-weight: 500;
+    margin-block: 0.6em 1em;
+  }
+
+  #note {
+    font-size: 0.8rem;
+    color: $light_gray;
+    font-weight: 200;
+  }
+}

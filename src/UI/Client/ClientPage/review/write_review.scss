@@ -1,0 +1,79 @@
+@import "../../../../scss/color";
+@import "../../../../scss/mixins";
+@import "../../../../scss/utils";
+
+#write_review {
+  background-color: $light_gray;
+  height: calc(100vh - 61px);
+  @include d_flex($align: flex-start);
+  form {
+    @include d_flex($align: flex-start, $dir: column);
+    width: 90%;
+    background-color: $white;
+    margin-top: 2em;
+    padding: 1em;
+  }
+
+  label {
+    font-weight: 700;
+    margin-bottom: 0.2em;
+  }
+
+  input,
+  textarea {
+    background-color: $light_gray;
+    padding-inline: 0.5em;
+    font-family: Poppins;
+    margin-bottom: 1em;
+    border-radius: 0.3em;
+    font-size: 0.76rem;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    font-style: italic;
+    color: darken($light_gray, 60%);
+  }
+
+  input {
+    height: 30px;
+    width: 260px;
+  }
+
+  textarea {
+    display: block;
+    resize: none;
+    width: calc(100% - 1em);
+    min-height: 50vh;
+    padding-top: 0.5em;
+  }
+
+  #buttons {
+    width: calc(100% - 1em);
+    @include d_flex($justify: space-between);
+  }
+
+  button {
+    height: 30px;
+    color: $white;
+    background-color: $black;
+    font-weight: 500;
+    font-family: Poppins;
+    padding: 0.5em 0.8em;
+    border-radius: 0.2em;
+    transition: background-color 0.4s ease;
+
+    &:hover {
+      background-color: $dim_black;
+      cursor: pointer;
+    }
+
+    &:last-child {
+      background-color: $deep_pink;
+      font-weight: 600;
+      &:hover {
+        background-color: darken($deep_pink, 10%);
+      }
+    }
+  }
+}

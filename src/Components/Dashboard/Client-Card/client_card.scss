@@ -1,0 +1,35 @@
+@import "../../../scss/mixins";
+@import "../../../scss/utils";
+
+.client_card {
+  @include d_flex($justify: flex-start);
+  padding: $small_padding;
+  background-color: $light_gray;
+  border-radius: $box_radius;
+  margin-bottom: 0.5em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .profile_img {
+    @include img_holder;
+  }
+
+  .details {
+    margin-left: 1em;
+  }
+  .post {
+    font-weight: 500;
+    font-size: 0.8rem;
+  }
+
+  .name {
+    font-weight: 700;
+    color: lighten($black, 15%);
+  }
+
+  .location {
+    font-size: 0.7rem;
+  }
+}

@@ -42,7 +42,7 @@ function ModelsKycForm1({
   //setting error messages
   useEffect(() => {
     function handleError() {
-      let errorText = "Please Fill out this field";
+      let errorText = "This detail is required.!";
 
       data.profilePic === ""
         ? setError((prev) => ({ ...prev, profilePic: errorText }))
@@ -73,7 +73,10 @@ function ModelsKycForm1({
         : setError((prev) => ({ ...prev, country: "" }));
 
       data.bio === ""
-        ? setError((prev) => ({ ...prev, bio: errorText }))
+        ? setError((prev) => ({
+            ...prev,
+            bio: "The Bio section is required.!",
+          }))
         : setError((prev) => ({ ...prev, bio: "" }));
     }
 
@@ -159,10 +162,19 @@ function ModelsKycForm1({
 
                 <ul className="info-section">
                   {info.map((item) => {
+                    let name = [item.id];
                     return (
                       <li className="kyc1-input-container" key={item.id}>
                         <label className="kyc1-input-label" htmlFor={item.id}>
-                          {item.label}
+                          <span className="required-icon_rapper">
+                            {item.label}
+                            {error[name] === "" ? (
+                              <i className="fa-solid fa-circle-check valid-icon"></i>
+                            ) : (
+                              <i className="fa-solid fa-star required-icon"></i>
+                            )}
+                          </span>
+
                           <input
                             onChange={handleChange}
                             className="kyc1-input-field"
@@ -170,39 +182,11 @@ function ModelsKycForm1({
                             id={item.id}
                             name={item.id}
                             placeholder={item.placeholder}
-                            value={
-                              item.id === "firstName"
-                                ? data.firstName
-                                : item.id === "lastName"
-                                ? data.lastName
-                                : item.id === "userName"
-                                ? data.userName
-                                : item.id === "gender"
-                                ? data.gender
-                                : item.id === "country"
-                                ? data.country
-                                : item.id === "state"
-                                ? data.state
-                                : null
-                            }
+                            value={data[item.id]}
                             required
                           />
                           {showError && (
-                            <p className="sign-up-error-text">
-                              {item.id === "firstName"
-                                ? error.firstName
-                                : item.id === "lastName"
-                                ? error.lastName
-                                : item.id === "userName"
-                                ? error.userName
-                                : item.id === "gender"
-                                ? error.gender
-                                : item.id === "country"
-                                ? error.country
-                                : item.id === "state"
-                                ? error.state
-                                : null}
-                            </p>
+                            <p className="error-text">{error[item.id]}</p>
                           )}
                         </label>
                       </li>
@@ -239,7 +223,7 @@ function ModelsKycForm1({
               ></textarea>
             </div>
 
-            {showError && <p className="sign-up-error-text">{error.bio}</p>}
+            {showError && <p className="error-text">{error.bio}</p>}
           </div>
           <div className="kyc-btn-container">
             <FormNavBtn

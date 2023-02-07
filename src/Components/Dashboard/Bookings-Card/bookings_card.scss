@@ -1,0 +1,49 @@
+@import "../../../scss/mixins";
+@import "../../../scss/color";
+@import "../../../scss/utils";
+
+.booking_card {
+  border-radius: 0.4em;
+  background-color: $white;
+}
+
+.booking_card header {
+  @include d_flex($justify: space-between);
+  padding: 0.4em;
+}
+
+.booking_card header span {
+  @include d_flex;
+  padding: 0.1em;
+  border-radius: 50%;
+  border: 1px solid;
+  background-color: #e6e6fa;
+  cursor: pointer;
+  color: $royal_blue;
+}
+
+.booking_chart {
+  overflow: hidden;
+  border-radius: 0.9em;
+  margin-inline: 0.4em;
+  height: max(60px, 7vh);
+  max-width: 100%;
+
+  @include mq($width: 740px) {
+    height: max(80px, 7vh);
+  }
+  @include mq($width: 1050px) {
+    margin-inline: 0.5em;
+  }
+}
+.booking_info {
+  @include d_flex($justify: space-between);
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin: 0.2em 0.5em;
+
+  @include mq($width: 1050px) {
+    margin: 0.2em 1em;
+    font-size: 0.9rem;
+  }
+}

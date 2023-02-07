@@ -6,6 +6,7 @@ import NewsList from "../NewsList/NewsList";
 import { LatestNews } from "../NewsApI";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Adverts from "../../Adverts/Adverts";
 
 const News = () => {
   const [news, setNews] = useState(LatestNews);
@@ -53,6 +54,8 @@ const News = () => {
         <Link to="/magazine" className="featured-model-btn news-btn btn_shadow">
           Visit Blog
         </Link>
+
+        <Adverts />
       </section>
     </>
   );

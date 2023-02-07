@@ -8,7 +8,7 @@ function CategoryItem({ img, text }) {
         width="200"
         height="250"
       />
-      <p>{text}</p>
+      <h3>{text}</h3>
     </li>
   );
 }

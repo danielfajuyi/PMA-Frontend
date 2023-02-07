@@ -1,0 +1,45 @@
+@import "../../../scss/color";
+@import "../../../scss/mixins";
+@import "../../../scss/utils";
+
+.job_card {
+  padding: 0.2em 0.5em;
+  min-height: 60px;
+  background-color: $light_gray;
+  border-radius: 0.3em;
+  margin-bottom: 0.5em;
+  @include d_flex(flex-start, space-between, column);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .note {
+    color: $dark_gray;
+    font-weight: 500;
+    line-height: 1.2em;
+    font-size: 0.8rem;
+  }
+
+  .involved {
+    width: 100%;
+    font-size: 0.8rem;
+    @include d_flex($justify: space-between);
+    span:first-child {
+      display: flex;
+    }
+
+    @include mq($width: 1050px) {
+      font-size: 0.6rem;
+    }
+  }
+
+  .time {
+    color: $dim_black;
+    font-size: 0.8rem;
+
+    @include mq($width: 1050px) {
+      font-size: 0.6rem;
+    }
+  }
+}

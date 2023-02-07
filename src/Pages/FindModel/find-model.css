@@ -1,7 +1,7 @@
 :root {
-  --Dark-color: #1e202c;
+  --Dark-color: var(--dim-black);
   --Light-color: #ffff;
-  --Colored-color: #ff007a;
+  --Colored-color: var(--pink);
 }
 .on-hover:hover {
   cursor: pointer;

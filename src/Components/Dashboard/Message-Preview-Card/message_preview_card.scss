@@ -1,0 +1,77 @@
+@import "../../../scss/color";
+@import "../../../scss/mixins";
+
+.msg_box .sender_profile_img {
+  position: relative;
+  display: inline-block;
+  align-self: flex-start;
+}
+
+.sender_img {
+  display: inline-block;
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 0.6em;
+  overflow: hidden;
+}
+.status {
+  box-sizing: content-box;
+  position: absolute;
+  width: 0.6em;
+  height: 0.6em;
+  right: -0.2em;
+  bottom: 0.1em;
+  border-radius: 50%;
+  border: 3px solid var(--white);
+}
+.sender_img > img {
+  width: 100%;
+}
+
+.msg_box {
+  padding: 0.5em;
+  margin: 0.5em;
+  background-color: #dedada;
+  border-radius: 0.3em;
+  @include d_flex($justify: flex-start);
+  line-height: 1em;
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.msg_info {
+  margin-left: 1em;
+}
+.sender {
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.msg {
+  font-weight: 500;
+  font-size: 0.7rem;
+}
+
+.title {
+  font-size: 0.65rem;
+  color: var(--dim-black);
+}
+
+.msg_box .notification {
+  box-sizing: border-box;
+  position: absolute;
+  content: attr(data-count);
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+  top: calc(50% - 10px);
+  right: 1.6em;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 8px;
+  text-align: center;
+  padding-top: 2px;
+  padding-inline: 5px;
+}

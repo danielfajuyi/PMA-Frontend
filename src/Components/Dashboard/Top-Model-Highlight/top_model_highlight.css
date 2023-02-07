@@ -1,0 +1,32 @@
+#agency_dashboard .models_highlight {
+  display: flex;
+  padding-inline: 1em;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 0.5em;
+}
+
+#agency_dashboard .model_img_holder {
+  width: 2.8em;
+  height: 2.8em;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.model_img_holder > img {
+  width: 100%;
+}
+.model_name,
+.views {
+  font-size: 0.9rem;
+}
+
+.model_name {
+  font-weight: 600;
+}
+
+#agency_dashboard .models_highlight span {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5em;
+}

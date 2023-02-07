@@ -29,12 +29,47 @@ const Hero = () => {
               alt="hero-img"></img>
           </div>
 
-          <div className="hero-text-container">
-            <div className="hero-text">
-              <article>
-                <div className="heading">
-                  <span>Looking For Models?</span>
+          <div className="hero-text">
+            <article>
+              <div className="heading">
+                <span>Looking For Models?</span>
+              </div>
+
+              <div className="paragraph">
+                <span className="paragraph-head">
+                  Find The right Model Now!
+                </span>
+
+                <span>
+                  <img
+                    src="./assets/main-assets/hero-checkmark.png"
+                    alt="check-markicon"
+                    className="circle-icon"
+                  />
+                  <p>Quick & Easy Model Search</p>
+                </span>
+
+                <span>
+                  <img
+                    src="./assets/main-assets/hero-checkmark.png"
+                    alt="check-markicon"
+                    className="circle-icon"
+                  />
+                  <p>Efficient Messaging Services</p>
+                </span>
+
+                <span>
+                  <img
+                    src="./assets/main-assets/hero-checkmark.png"
+                    alt="check-markicon"
+                    className="circle-icon"
+                  />
+                  <p>Fast Model responses</p>
+                </span>
+                <div className="hero-btn">
+                  <button className="btn btn2">Signup</button>
                 </div>
+<<<<<<< HEAD
 
                 <div className="paragraph">
                   <span className="paragraph-head">Find The right Model Now!</span>
@@ -205,6 +240,10 @@ const Hero = () => {
                 </div>
               </article>
             </div>
+=======
+              </div>
+            </article>
+>>>>>>> 6ea03fe000d1eedfa50b166429967aae92c6d848
           </div>
         </section>
       </div>

@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import { FaRegStar, FaStar } from "react-icons/fa";
+import { BsPatchCheckFill } from "react-icons/bs";
+import { MdLocationPin } from "react-icons/md";
 
 function ListItem({
   img,
@@ -12,41 +15,65 @@ function ListItem({
   handleProfile,
 }) {
   return (
-    <li className="main__item shadow-fit">
-      <img className="item__img" src={img} alt="" width="250" height="300" />
+    <li className=" modelportfolio__wrapper">
+      <div className=" modelportfolio__imgwrapper ">
+        <img className="model__imgs" src={img} alt="./model-img" />
+      </div>
 
-      <div className="item__text-content">
-        <span className="test-text">{agency}</span>
-        <div className="text-container">
-          <h3 className="item__name">
+      <div className="modelportfolio__textwrapper">
+        <div className="text1 model__namewrap">
+          <span className="model__names">
             {firstName} {secondName}
-          </h3>
-          <i className="fa-solid fa-circle-check check-icon"></i>
+          </span>
+          <BsPatchCheckFill />
         </div>
-        <span>
-          <i className="fa-solid fa-star star-icon"></i>
-          <i className="fa-solid fa-star star-icon"></i>
-          <i className="fa-solid fa-star star-icon"></i>
-          <i className="fa-regular fa-star star-icon"></i>
-          <i className="fa-regular fa-star star-icon"></i>
+
+        <div className="text2 model__ratings">
+          <span>
+            <FaStar />
+            <FaStar />
+            <FaStar />
+          </span>
+
+          <span>
+            <FaRegStar />
+            <FaRegStar />
+          </span>
+
           <span>(3.0)</span>
-        </span>
-        {secondCategory ? (
-          <p className="item__category">
-            {firstCategory} and {secondCategory} Model.
-          </p>
-        ) : (
-          <p className="item__category">{firstCategory}</p>
-        )}
-        <div className="test-contain">
-          <div className="text-container">
-            <i className="fa-solid fa-location-dot location-icon"></i>
-            <p className="location">
-              {state}, {country}
-            </p>
+        </div>
+
+        <div className="text3 model__categorys">
+          <div id="agencylable">
+            <span className="lable">Agency :</span>
+            <span className="value">{agency}</span>
           </div>
-          <button onClick={handleProfile} type="button" className="item__btn shadow-fit">
-            <Link to="/find-model/profile">View</Link>
+          {secondCategory ? (
+            <div id="categorylable">
+              <span className="lable">Category</span>
+              <span className="value">
+                {firstCategory}, {secondCategory} Model
+              </span>
+            </div>
+          ) : (
+            <div id="categorylable"> Category: {firstCategory}</div>
+          )}
+        </div>
+
+        <div className="text4 model__locations">
+          <MdLocationPin />
+          <span>
+            {state}, {country}
+          </span>
+        </div>
+
+        <div className="text5 model__viewprofiles">
+          <button
+            onClick={handleProfile}
+            type="button"
+            className="viewprofile__btn shadow-fit"
+          >
+            <Link to="/find-model/profile">View Portfolio</Link>
           </button>
         </div>
       </div>

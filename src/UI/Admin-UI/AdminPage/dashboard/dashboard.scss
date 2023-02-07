@@ -1,0 +1,433 @@
+@import "../../../../scss/mixins";
+@import "../../../../scss/color";
+@import "../../../../scss/utils";
+
+#admin_dashboard {
+  .profile {
+    @include d_flex($justify: flex-start);
+    padding-top: 10px;
+    height: 57px;
+    font-weight: 500;
+  }
+
+  .profile_image {
+    @include img_holder;
+  }
+
+  .profile_name {
+    text-align: left;
+    margin-left: 0.8em;
+    font-weight: 500;
+  }
+
+  .pane {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: $md_padding;
+
+    @include mq($width: 1050px) {
+      padding: $md_padding;
+      width: 100%;
+      grid-template-columns: 60% 40%;
+    }
+  }
+
+  #area_one {
+    & > * {
+      margin-bottom: $md_padding;
+      box-shadow: $box_shadow;
+      background-color: $white;
+    }
+    @include mq($width: 1050px) {
+      margin-right: $md_padding;
+    }
+  }
+
+  .holder {
+    overflow-x: scroll;
+    @include mq($width: 600px) {
+      overflow-x: auto;
+    }
+  }
+
+  #daily_stats {
+    overflow-x: scroll;
+    @include mq($width: 600px) {
+      overflow-x: auto;
+    }
+    table {
+      @include table_base;
+
+      thead {
+        border-bottom: 1px solid;
+      }
+
+      tbody tr:nth-child(odd) {
+        background-color: $off_white;
+      }
+
+      tr {
+        text-align: center;
+        height: 50px;
+      }
+
+      span {
+        color: $deep_pink;
+        @include d_flex;
+        font-size: small;
+        cursor: pointer;
+        font-weight: bold;
+        padding-block: 0.25em;
+      }
+
+      tfoot tr {
+        height: auto;
+      }
+    }
+  }
+  .visitor_stats {
+    background-color: $white;
+    min-width: 500px;
+
+    @include mq($width: 1050px) {
+      background-color: $white;
+      box-shadow: $box_shadow;
+    }
+
+    header {
+      @include d_flex($justify: space-between);
+      font-weight: 700;
+      padding: 1em;
+    }
+
+    #key_holder {
+      font-size: 0.76rem;
+      @include d_flex;
+    }
+    .key {
+      @include d_flex;
+      width: 1.2em;
+      height: 1.2em;
+      margin-inline: 0.4em;
+    }
+    .key:nth-child(1) {
+      background-color: $blue;
+    }
+    .key:nth-child(2) {
+      background-color: $light_gray;
+    }
+    .key:nth-child(3) {
+      background-color: $hot_pink;
+    }
+
+    select {
+      @include input_select;
+    }
+
+    #visitors_bar_chart {
+      padding-inline: 1em;
+      min-height: 300px;
+    }
+
+    footer {
+      @include d_flex($justify: flex-end);
+      font-size: 0.94rem;
+      padding-top: 0.3em;
+    }
+
+    footer span {
+      @include d_flex;
+      color: $deep_pink;
+      font-weight: bold;
+      margin-right: 2rem;
+      font-size: small;
+      padding-block: 0.25em 0.5em;
+    }
+  }
+
+  #recent_members {
+    overflow-x: scroll;
+    @include mq($width: 600px) {
+      overflow-x: auto;
+    }
+    table {
+      @include table_base;
+      box-shadow: none;
+
+      caption {
+        font-size: 1rem;
+        padding-block: 10px;
+        padding-left: 2em;
+        text-align: left;
+        background-color: $white;
+      }
+
+      thead {
+        border-bottom: 1px solid;
+      }
+
+      tr {
+        text-align: left;
+        height: 50px;
+        border-bottom: 1px solid $light_blue;
+      }
+
+      th,
+      td {
+        padding-left: 2rem;
+      }
+
+      span {
+        cursor: pointer;
+        @include d_flex($justify: flex-end);
+      }
+
+      tfoot td {
+        color: $deep_pink;
+        font-size: small;
+        font-weight: bold;
+        padding-block: 0.5em;
+        padding-right: 2rem;
+      }
+      tfoot tr {
+        height: auto;
+      }
+    }
+    @include mq($width: 1050px) {
+      grid-column: 1/2;
+      grid-row: 9/13;
+      align-self: start;
+    }
+  }
+
+  #area_two {
+    & > * {
+      margin-bottom: $md_padding;
+    }
+    & > *:not(#group_stats, #wallet_buttons) {
+      background-color: $white;
+      box-shadow: $box_shadow;
+    }
+  }
+
+  #group_stats {
+    @include d_flex($justify: space-between);
+    font-size: 0.6rem;
+
+    @include mq($width: 320px) {
+      font-size: 0.8rem;
+    }
+    @include mq($width: 500px) {
+      font-size: 1rem;
+    }
+
+    .group_stats_box {
+      @include d_flex($justify: space-between);
+      width: 31%;
+      box-shadow: $box_shadow;
+      border-radius: $box_radius;
+      background-color: $white;
+      padding: 0.3em;
+      min-height: 4em;
+
+      div:nth-child(1) {
+        width: 50%;
+      }
+      div:nth-child(2) {
+        width: 40%;
+      }
+      div div:nth-child(1) {
+        color: #00000082;
+        font-weight: 500;
+      }
+      div div:nth-child(2) {
+        font-weight: 700;
+      }
+    }
+  }
+
+  #wallet_buttons {
+    @include d_flex($justify: space-between);
+
+    #active {
+      background-color: $royal_blue;
+      color: $white;
+    }
+
+    button {
+      @include d_flex;
+      color: $royal_blue;
+      font-weight: 700;
+      min-height: 40px;
+      width: 46%;
+      background-color: transparent;
+      border: 2px solid $royal_blue;
+      letter-spacing: 1px;
+      padding: $md_padding;
+
+      span {
+        margin-left: 0.8em;
+      }
+    }
+
+    @include mq($width: 1050px) {
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+  }
+
+  #donught_chart_holder {
+    background-color: $white;
+    min-width: 320px;
+
+    select {
+      @include input_select;
+    }
+
+    header {
+      @include d_flex($justify: space-between);
+      border-bottom: 1px solid $light_gray;
+      padding: $big_padding;
+      font-weight: 500;
+      font-size: 0.92rem;
+    }
+
+    #donught_chart {
+      display: flex;
+      padding: 1em 0.5em;
+
+      & > div:nth-child(1) {
+        width: 65%;
+      }
+
+      & > div:nth-child(2) {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      & > div:nth-child(2) > div {
+        display: flex;
+        align-items: center;
+      }
+
+      span:nth-child(1) {
+        display: inline-block;
+        width: 0.7rem;
+        height: 0.7rem;
+      }
+      span {
+        margin-right: 0.5em;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+      .name {
+        color: #00000099;
+      }
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.25rem 1rem;
+    }
+
+    footer span {
+      @include d_flex($justify: space-between);
+      color: $deep_pink;
+      font-size: small;
+      font-weight: bold;
+      padding-block: 0.25em;
+    }
+
+    #clients_key {
+      background-color: $black;
+      min-width: 10px;
+      min-height: 10px;
+    }
+    #agencies_key {
+      background-color: $hot_pink;
+      min-width: 10px;
+      min-height: 10px;
+    }
+    #models_key {
+      background-color: $royal_blue;
+      min-width: 10px;
+      min-height: 10px;
+    }
+
+    #clients_size {
+      color: $black;
+    }
+
+    #agencies_size {
+      color: $hot_pink;
+    }
+
+    #models_size {
+      color: $royal_blue;
+    }
+
+    @include mq($width: 1050px) {
+      grid-column: 2/3;
+      grid-row: 3/8;
+    }
+  }
+
+  #activity {
+    overflow-x: scroll;
+    @include mq($width: 600px) {
+      overflow-x: auto;
+    }
+    table {
+      @include table_base;
+      box-shadow: none;
+
+      caption {
+        padding-block: 10px;
+        padding-left: 2rem;
+        text-align: left;
+        background-color: $white;
+        font-size: 0.8rem;
+      }
+
+      thead {
+        background-color: $off_white;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: $off_white;
+      }
+
+      th,
+      td {
+        padding-inline: 2rem;
+      }
+
+      tr {
+        height: 40px;
+        text-align: left;
+      }
+
+      span {
+        cursor: pointer;
+        @include d_flex($justify: flex-end);
+      }
+
+      tfoot td {
+        color: $deep_pink;
+        font-size: small;
+        font-weight: bold;
+        padding-block: 0.5em;
+      }
+
+      tfoot tr {
+        height: auto;
+      }
+    }
+    @include mq($width: 1050px) {
+      box-shadow: 0px 4px 4px $box_shadow_color;
+    }
+  }
+}

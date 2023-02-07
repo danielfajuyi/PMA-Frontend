@@ -47,7 +47,7 @@ const Main = () => {
           </div>
 
           <Link
-            to="/community"
+            to="/login"
             className="featured-model-btn join-model-btn btn_shadow"
           >
             Join community

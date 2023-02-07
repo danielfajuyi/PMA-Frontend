@@ -9,6 +9,7 @@ function Stats({
   activeEdit,
   userData,
   handleModal,
+  resetDiscard,
 }) {
   const { statsInput, categoryInput, jobsInput, SocialMedia } = DomItems[0];
   const [newStats, setNewStats] = useState([]);
@@ -39,7 +40,7 @@ function Stats({
     ethnicity: "",
     skinColor: "",
     language: "",
-    travel: "",
+    availableForTravel: "",
     facebook: "",
     twitter: "",
     instagram: "",
@@ -91,7 +92,8 @@ function Stats({
   //setting Error messages
   useEffect(() => {
     function handleError() {
-      let errorText = "Please Fill out this field";
+      let errorText = "This detail is required.!";
+      let SocialErr = "Your social link is required.!";
 
       stat.height === ""
         ? setError((prev) => ({ ...prev, height: errorText }))
@@ -141,20 +143,20 @@ function Stats({
         ? setError((prev) => ({ ...prev, language: errorText }))
         : setError((prev) => ({ ...prev, language: "" }));
 
-      stat.travel === ""
-        ? setError((prev) => ({ ...prev, travel: errorText }))
-        : setError((prev) => ({ ...prev, travel: "" }));
+      stat.availableForTravel === ""
+        ? setError((prev) => ({ ...prev, availableForTravel: errorText }))
+        : setError((prev) => ({ ...prev, availableForTravel: "" }));
 
       social.facebook === ""
-        ? setError((prev) => ({ ...prev, facebook: errorText }))
+        ? setError((prev) => ({ ...prev, facebook: SocialErr }))
         : setError((prev) => ({ ...prev, facebook: "" }));
 
       social.twitter === ""
-        ? setError((prev) => ({ ...prev, twitter: errorText }))
+        ? setError((prev) => ({ ...prev, twitter: SocialErr }))
         : setError((prev) => ({ ...prev, twitter: "" }));
 
       social.instagram === ""
-        ? setError((prev) => ({ ...prev, instagram: errorText }))
+        ? setError((prev) => ({ ...prev, instagram: SocialErr }))
         : setError((prev) => ({ ...prev, instagram: "" }));
 
       if (gender === "female") {
@@ -242,6 +244,7 @@ function Stats({
     };
     if (btn === "save") {
       console.log((userData[0].profile = x));
+      handleModal("save");
     } else {
       setStat(stats);
       setCate(category);
@@ -295,82 +298,10 @@ function Stats({
                       name={item.id}
                       placeholder={item.placeholder}
                       spellCheck={false}
-                      value={
-                        item.id === "height"
-                          ? stat.height
-                          : item.id === "waist"
-                          ? stat.waist
-                          : item.id === "bust"
-                          ? stat.bust
-                          : item.id === "chest"
-                          ? stat.chest
-                          : item.id === "hip"
-                          ? stat.hip
-                          : item.id === "shoulder"
-                          ? stat.shoulder
-                          : item.id === "eyes"
-                          ? stat.eyes
-                          : item.id === "size"
-                          ? stat.size
-                          : item.id === "shoe"
-                          ? stat.shoe
-                          : item.id === "tattoos"
-                          ? stat.tattoos
-                          : item.id === "agency"
-                          ? stat.agency
-                          : item.id === "hairColor"
-                          ? stat.hairColor
-                          : item.id === "hairLength"
-                          ? stat.hairLength
-                          : item.id === "ethnicity"
-                          ? stat.ethnicity
-                          : item.id === "skinColor"
-                          ? stat.skinColor
-                          : item.id === "language"
-                          ? stat.language
-                          : item.id === "availableForTravel"
-                          ? stat.availableForTravel
-                          : null
-                      }
+                      value={stat[item.id]}
                       required
                     />
-                    <p className="sign-up-error-text">
-                      {item.id === "height"
-                        ? error.height
-                        : item.id === "waist"
-                        ? error.waist
-                        : item.id === "bust"
-                        ? error.bust
-                        : item.id === "chest"
-                        ? error.chest
-                        : item.id === "hip"
-                        ? error.hip
-                        : item.id === "shoulder"
-                        ? error.shoulder
-                        : item.id === "eyes"
-                        ? error.eyes
-                        : item.id === "size"
-                        ? error.size
-                        : item.id === "shoe"
-                        ? error.shoe
-                        : item.id === "tattoos"
-                        ? error.tattoos
-                        : item.id === "agency"
-                        ? error.agency
-                        : item.id === "hairColor"
-                        ? error.hairColor
-                        : item.id === "hairLength"
-                        ? error.hairLength
-                        : item.id === "ethnicity"
-                        ? error.ethnicity
-                        : item.id === "skinColor"
-                        ? error.skinColor
-                        : item.id === "language"
-                        ? error.language
-                        : item.id === "availableForTravel"
-                        ? error.travel
-                        : null}
-                    </p>
+                    <p className="error-text">{error[item.id]}</p>
                   </label>
                 </li>
               );
@@ -500,7 +431,10 @@ function Stats({
             {categoryInput.map((item) => {
               return (
                 <li className="setting_input-container" key={item.id}>
-                  <label className="setting_check-box-label" htmlFor={item.id}>
+                  <label
+                    className="setting_check-box-label colored-hover"
+                    htmlFor={item.id}
+                  >
                     {item.label}
                     <input
                       onChange={handleCheck}
@@ -547,7 +481,10 @@ function Stats({
             {jobsInput.map((item) => {
               return (
                 <li className="setting_input-container" key={item.id}>
-                  <label className="setting_check-box-label" htmlFor={item.id}>
+                  <label
+                    className="setting_check-box-label colored-hover"
+                    htmlFor={item.id}
+                  >
                     {item.label}
                     <input
                       onChange={handleCheck}
@@ -600,26 +537,10 @@ function Stats({
                       name={item.id}
                       placeholder={item.placeholder}
                       spellCheck={false}
-                      value={
-                        item.id === "facebook"
-                          ? social.facebook
-                          : item.id === "twitter"
-                          ? social.twitter
-                          : item.id === "instagram"
-                          ? social.instagram
-                          : null
-                      }
+                      value={social[item.id]}
                       required
                     />
-                    <p className="sign-up-error-text">
-                      {item.id === "facebook"
-                        ? error.facebook
-                        : item.id === "twitter"
-                        ? error.twitter
-                        : item.id === "instagram"
-                        ? error.instagram
-                        : null}
-                    </p>
+                    <p className="error-text">{error[item.id]}</p>
                   </label>
                 </li>
               );
@@ -631,19 +552,18 @@ function Stats({
 
         <section className="setting_btn-container">
           <button
-            onClick={() => handleSave("discard")}
-            className="discard-btn dark--btn bold-text on-hover"
+            onClick={() => resetDiscard(() => handleSave)}
+            className="discard-btn  bold-text cancel-btn"
           >
             Discard
           </button>
           <button
             style={{
-              backgroundColor: activeEdit === "Done" && "#ff007a",
-              color: "#fff",
+              backgroundColor: activeEdit !== "Done" && "#bbbb",
             }}
             disabled={activeEdit !== "Done" && true}
             onClick={() => handleSave("save")}
-            className="save-btn  bold-text on-hover"
+            className="save-btn  bold-text yes-btn"
           >
             Save
           </button>

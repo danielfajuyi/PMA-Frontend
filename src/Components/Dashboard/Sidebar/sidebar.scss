@@ -1,0 +1,92 @@
+@import "../../../scss/mixins";
+@import "../../../scss/color";
+@import "../../../scss/utils";
+
+#dashboard_sidebar {
+  position: fixed;
+  left: 0;
+  width: 13em;
+  height: 100vh;
+  background-color: $black;
+  color: $white;
+  z-index: 2;
+
+  @include mq($width: 1050px) {
+    position: relative;
+    width: 17%;
+  }
+
+  #logo_holder {
+    @include d_flex;
+    padding-block: 0.8em;
+    border-bottom: 1px solid;
+    img {
+      width: 60px;
+    }
+  }
+
+  #nav_list {
+    font-weight: 600;
+    padding-block: 0.8em;
+    height: calc(100vh - 81px);
+    overflow: auto scroll;
+  }
+
+  .nav_link {
+    @include d_flex($justify: flex-start);
+    height: 57px;
+    width: 86%;
+    margin-inline: auto;
+    padding-left: 7%;
+    font-size: 1.2rem;
+  }
+
+  .nav_link__li {
+    overflow: hidden;
+    height: 57px;
+
+    &:last-child {
+      color: $deep_pink;
+    }
+  }
+
+  .show_children {
+    height: auto;
+  }
+
+  .sublink_list {
+    background-color: $dim_black;
+    width: 78%;
+    margin-inline: auto;
+    border-left: 3px solid $deep_pink;
+    overflow: hidden;
+    border-radius: 0 0 2px 2px;
+  }
+
+  .sublink {
+    font-size: 0.76rem;
+    padding-left: 7%;
+    height: 26px;
+    padding-top: 5px;
+  }
+
+  #nav_list span {
+    margin-left: 0.7em;
+    font-size: 0.92rem;
+  }
+
+  .nav_link.active {
+    background-color: $white;
+    color: $black;
+    box-shadow: inset 3px 0px 0px $deep_pink;
+    border-radius: $small_padding;
+  }
+
+  .sublink > .active {
+    color: $deep_pink;
+  }
+
+  #bottom {
+    margin-top: 4em;
+  }
+}

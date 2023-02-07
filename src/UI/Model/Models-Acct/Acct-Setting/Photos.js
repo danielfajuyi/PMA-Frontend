@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Photos.css";
 
-function Photos({ userData, handleModal }) {
+function Photos({ userData, handleModal, resetDiscard }) {
   const { photos, polaroids, compCard } = userData[0].profile;
 
   const [photo, setPhoto] = useState(photos);
@@ -30,7 +30,7 @@ function Photos({ userData, handleModal }) {
       } else if (action === "trash") {
         //checking if photo delete limit has been exceeded
         if (photo.length <= 6) {
-          handleModal("photo");
+          handleModal("trash-photo");
         } else {
           setActiveModal("alert");
 
@@ -54,7 +54,7 @@ function Photos({ userData, handleModal }) {
       } else if (action === "trash") {
         //checking if delete limit has been exceeded
         if (polaroid.length <= 3) {
-          handleModal("photo");
+          handleModal("trash-polaroid");
         } else {
           setActiveModal("alert");
 
@@ -111,6 +111,7 @@ function Photos({ userData, handleModal }) {
 
     if (btn === "save") {
       console.log((userData[0].profile = x));
+      handleModal("save");
     } else {
       setPhoto(photos);
       setPolaroid(polaroids);
@@ -162,6 +163,7 @@ function Photos({ userData, handleModal }) {
           </div>
         ) : null}
       </section>
+      {/* content section */}
       <section className="content-container">
         <div className="set_sections-container">
           <h2 className="set_sections-title">Portfolio Photos</h2>
@@ -170,8 +172,15 @@ function Photos({ userData, handleModal }) {
             We recommend using a variety of high resolution photos that best
             show off your work!
           </p>
+          <p className="set_description">
+            <i className="fa-solid fa-angles-right note"></i>
+            Try to include a headShot, a side/profile shot,and a full body shot.
+          </p>
           <div className="add-photo_container">
-            <label className="add-photo dark--btn on-hover" htmlFor="add-photo">
+            <label
+              className="add-photo dark--btn cancel-btn"
+              htmlFor="add-photo"
+            >
               <i className="fa-solid fa-circle-plus add-icon"></i> Add photo
             </label>
 
@@ -224,7 +233,7 @@ function Photos({ userData, handleModal }) {
             onClick={() =>
               setViewAll((prev) => ({ ...prev, photo: !viewAll.photo }))
             }
-            className="utility-btn on-hover"
+            className="utility-btn cancel-btn"
           >
             {viewAll.photo ? " View Less" : "View All"}
           </span>
@@ -247,7 +256,7 @@ function Photos({ userData, handleModal }) {
 
           <div className="add-polaroid_container">
             <label
-              className="add-polaroid dark--btn on-hover"
+              className="add-polaroid dark--btn cancel-btn"
               htmlFor="add-polaroid"
             >
               <i className="fa-solid fa-circle-plus add-icon"></i> Add polaroid
@@ -265,44 +274,49 @@ function Photos({ userData, handleModal }) {
           </div>
           <ul className="set_polaroid-list">
             {polaroid.map((item, index) =>
-              viewAll.polaroid ? (
-                <li className="set_polaroid-item on-hover" key={index}>
-                  <img src={item} alt="" />
-                  <div className="photo-icons">
-                    <i
-                      onClick={() => handleClick("view", index, "polaroid")}
-                      className="fa-solid fa-arrow-up-right-from-square view-icon"
-                    ></i>
-                    <i
-                      onClick={() => handleClick("trash", index, "polaroid")}
-                      className="fa-regular fa-trash-can trash-icon"
-                    ></i>
-                  </div>
-                </li>
-              ) : (
-                index <= 5 && (
-                  <li className="set_polaroid-item on-hover" key={index}>
-                    <img src={item} alt="" />
-                    <div className="photo-icons">
-                      <i
-                        onClick={() => handleClick("view", index, "polaroid")}
-                        className="fa-solid fa-arrow-up-right-from-square view-icon"
-                      ></i>
-                      <i
-                        onClick={() => handleClick("trash", index, "polaroid")}
-                        className="fa-regular fa-trash-can trash-icon"
-                      ></i>
-                    </div>
-                  </li>
-                )
-              )
+              viewAll.polaroid
+                ? item && (
+                    <li className="set_polaroid-item on-hover" key={index}>
+                      <img src={item} alt="" />
+                      <div className="photo-icons">
+                        <i
+                          onClick={() => handleClick("view", index, "polaroid")}
+                          className="fa-solid fa-arrow-up-right-from-square view-icon"
+                        ></i>
+                        <i
+                          onClick={() =>
+                            handleClick("trash", index, "polaroid")
+                          }
+                          className="fa-regular fa-trash-can trash-icon"
+                        ></i>
+                      </div>
+                    </li>
+                  )
+                : item &&
+                  index <= 5 && (
+                    <li className="set_polaroid-item on-hover" key={index}>
+                      <img src={item} alt="" />
+                      <div className="photo-icons">
+                        <i
+                          onClick={() => handleClick("view", index, "polaroid")}
+                          className="fa-solid fa-arrow-up-right-from-square view-icon"
+                        ></i>
+                        <i
+                          onClick={() =>
+                            handleClick("trash", index, "polaroid")
+                          }
+                          className="fa-regular fa-trash-can trash-icon"
+                        ></i>
+                      </div>
+                    </li>
+                  )
             )}
           </ul>
           <span
             onClick={() =>
               setViewAll((prev) => ({ ...prev, polaroid: !viewAll.polaroid }))
             }
-            className="utility-btn on-hover"
+            className="utility-btn cancel-btn"
           >
             {viewAll.polaroid ? " View Less" : "View All"}
           </span>
@@ -323,15 +337,14 @@ function Photos({ userData, handleModal }) {
 
         <section className="setting_btn-container">
           <button
-            onClick={() => handleSave("discard")}
-            className="discard-btn dark--btn bold-text on-hover"
+            onClick={() => resetDiscard(() => handleSave)}
+            className="discard-btn dark--btn bold-text cancel-btn"
           >
             Discard
           </button>
           <button
-            style={{ backgroundColor: "#ff007a", color: "#fff" }}
             onClick={() => handleSave("save")}
-            className="save-btn  bold-text on-hover"
+            className="save-btn  bold-text yes-btn"
           >
             Save
           </button>
