@@ -18,10 +18,7 @@
     color: $dark_gray;
     font-weight: 500;
     line-height: 1.2em;
-
-    @include mq($width: 1050px) {
-      font-size: 0.8rem;
-    }
+    font-size: 0.8rem;
   }
 
   .involved {

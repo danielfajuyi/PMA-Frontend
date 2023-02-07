@@ -32,17 +32,42 @@
     overflow: auto scroll;
   }
 
-  #nav_list li {
+  .nav_link {
     @include d_flex($justify: flex-start);
     height: 57px;
     width: 86%;
     margin-inline: auto;
     padding-left: 7%;
     font-size: 1.2rem;
+  }
+
+  .nav_link__li {
+    overflow: hidden;
+    height: 57px;
 
     &:last-child {
       color: $deep_pink;
     }
+  }
+
+  .show_children {
+    height: auto;
+  }
+
+  .sublink_list {
+    background-color: $dim_black;
+    width: 78%;
+    margin-inline: auto;
+    border-left: 3px solid $deep_pink;
+    overflow: hidden;
+    border-radius: 0 0 2px 2px;
+  }
+
+  .sublink {
+    font-size: 0.76rem;
+    padding-left: 7%;
+    height: 26px;
+    padding-top: 5px;
   }
 
   #nav_list span {
@@ -50,11 +75,15 @@
     font-size: 0.92rem;
   }
 
-  #active_li {
+  .nav_link.active {
     background-color: $white;
     color: $black;
     box-shadow: inset 3px 0px 0px $deep_pink;
     border-radius: $small_padding;
+  }
+
+  .sublink > .active {
+    color: $deep_pink;
   }
 
   #bottom {

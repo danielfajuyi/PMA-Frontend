@@ -5,6 +5,10 @@ import { BsSuitHeartFill, BsPeople } from "react-icons/bs";
 import { FiEye } from "react-icons/fi";
 
 import { Bar } from "react-chartjs-2";
+import { useContext } from "react";
+import { GlobalContext } from "../../../contexts/GlobalContext";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const VisitorStats = (props) => {
   return (
@@ -26,14 +30,14 @@ const VisitorStats = (props) => {
           <span id="key"></span>
         </span>
       </div>
-      <div>
+      <div id="bar_chart_holder">
         <Bar
           id="visitors_bar_chart"
           data={props.data}
           options={props.options}
         />
       </div>
-      <div id="footer">
+      <div id="bottom">
         <BsSuitHeartFill color="red" size={18} />
         <span>1,895</span>
         <BsPeople size={18} />

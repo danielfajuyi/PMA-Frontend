@@ -1,8 +1,10 @@
 import "./image_card.scss";
+import img from "../../Images/model-profile/model.png";
+
 const ImageCard = () => {
   return (
     <div id="img_card">
-      <img src="./images/jobs/job2.jpg" alt="profileimage" />
+      <img src={img} alt="profileimage" />
     </div>
   );
 };

@@ -1,0 +1,33 @@
+@import "../../../scss/mixins";
+@import "../../../scss/color";
+@import "../../../scss/utils";
+
+#client_page {
+  background-color: $dark_gray;
+  width: 100%;
+
+  @include mq($width: 1050px) {
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  #nav_button {
+    background-color: $white;
+    color: $red;
+    border-radius: 0.3em;
+    padding: 0.7em 1.3em;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+
+  main {
+    width: 100%;
+
+    @include mq($width: 1050px) {
+      width: 85%;
+      overflow-y: auto;
+    }
+  }
+}

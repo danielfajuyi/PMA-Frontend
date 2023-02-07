@@ -9,6 +9,7 @@
   background-color: $deep_pink;
   position: sticky;
   top: 0;
+  font-family: "Open Sans", Poppins, Helvetica, Arial, sans-serif;
   z-index: 10;
 
   @include mq($width: 280px) {

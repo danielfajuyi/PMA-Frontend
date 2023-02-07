@@ -10,21 +10,6 @@
 .booking_card header {
   @include d_flex($justify: space-between);
   padding: 0.4em;
-
-  @include mq($width: 280px) {
-    font-size: 0.6rem;
-  }
-  @include mq($width: 540px) {
-    font-size: 0.8rem;
-  }
-  @include mq($width: 600px) {
-    font-size: 1rem;
-    padding: $small_padding;
-  }
-
-  @include mq($width: 1050px) {
-    padding: 0.5em;
-  }
 }
 
 .booking_card header span {
@@ -39,11 +24,16 @@
 
 .booking_chart {
   overflow: hidden;
-  border-radius: 0.5em;
+  border-radius: 0.9em;
   margin-inline: 0.4em;
+  height: max(60px, 7vh);
+  max-width: 100%;
 
+  @include mq($width: 740px) {
+    height: max(80px, 7vh);
+  }
   @include mq($width: 1050px) {
-    margin-inline: 1em;
+    margin-inline: 0.5em;
   }
 }
 .booking_info {
