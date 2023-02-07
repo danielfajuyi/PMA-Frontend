@@ -181,11 +181,11 @@ input:focus {
 }
 .check-icon {
   font-size: 20px;
-  color: blue;
+  color: rgb(94, 223, 114);
 }
 .star-icon {
   color: var(--Colored-color);
-  font-size: 14px;
+  font-size: 13px;
 }
 .location-icon {
   font-size: 23px;
@@ -202,7 +202,8 @@ input:focus {
 }
 .test-text {
   color: var(--Colored-color);
-  text-transform: uppercase;
+  text-transform: capitalize;
+  font-size: 14px;
 }
 .item__btn {
   width: 80px;
@@ -328,7 +329,7 @@ input:focus {
     margin-top: 4rem;
   }
   .category-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     padding-bottom: 0.5rem;
   }
   .category {

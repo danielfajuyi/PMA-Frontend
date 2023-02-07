@@ -668,7 +668,7 @@ input[type="date"],
   }
 
   .imgList {
-    gap: 2rem;
+    gap: 1.7rem;
     row-gap: 2rem;
   }
   .imgItem {

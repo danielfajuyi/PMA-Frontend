@@ -12,6 +12,9 @@ import LandingPage from "./Pages/LandingPage/LandingPage";
 import NotFound from "./Pages/NotFound/notfound";
 import HowItWorks from "./Pages/HowItWorks/HowItWorks";
 import Blog from "./UI/Admin-UI/Blog/Blog";
+import SignUp from "./Pages/LoginSignup/Sign-Up/Sign-up";
+import LoginForm from "./Pages/LoginSignup/Login/Login-Form";
+import { DataProvider } from "./Context/Sign-up-context";
 // import { AgencySignupOne } from "./Pages/LoginSignup/AgencySignup/AgencySignupOne";
 // import { AgencySignupTwo } from "./Pages/LoginSignup/AgencySignup/AgencySignupTwo";
 // import { AgencySignupThree } from "./Pages/LoginSignup/AgencySignup/AgencySignupThree";
@@ -30,27 +33,28 @@ function App() {
 
   return (
     <>
-      {showNav && <Navbar />}
-      <Routes>
-        <Route path="/" element={<LandingPage />}></Route>
-        <Route path="/home" element={<Home />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/jobpost" element={<JobPost />}></Route>
-        <Route path="/find-model/*" element={<FindModel />}></Route>
-        <Route
-          path="/community"
-          element={<Community displayNav={setShowNav} />}
-        ></Route>
+      <DataProvider>
+        {showNav && <Navbar />}
+        <Routes>
+          <Route path="/" element={<LandingPage />}></Route>
+          <Route path="/home" element={<Home />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/jobpost" element={<JobPost />}></Route>
+          <Route path="/find-model/*" element={<FindModel />}></Route>
+          <Route path="/community" element={<Community displayNav={setShowNav} />}></Route>
 
-        <Route path="/magazine/" element={<Blog />}></Route>
+          <Route path="/magazine/" element={<Blog />}></Route>
 
-        {/* Other pages */}
-        <Route path="/faqs" element={<FAQS />}></Route>
-        <Route path="/howitworks" element={<HowItWorks />}></Route>
-        {/* Component */}
-        <Route path="*" element={<NotFound />}></Route>
-        {/* <Route
+          {/* Other pages */}
+          <Route path="/faqs" element={<FAQS />}></Route>
+          <Route path="/howitworks" element={<HowItWorks />}></Route>
+          {/* Component */}
+          <Route path="*" element={<NotFound />}></Route>
+
+          <Route path="/sign-up" element={<SignUp />}></Route>
+          <Route path="/login" element={<LoginForm />}></Route>
+          {/* <Route
           path="agency/signup"
           element={<AgencySignupOne displayNav={setShowNav} />}
         ></Route>
@@ -62,7 +66,8 @@ function App() {
           path="agency/signup/three"
           element={<AgencySignupThree displayNav={setShowNav} />}
         ></Route> */}
-      </Routes>
+        </Routes>
+      </DataProvider>
     </>
   );
 }

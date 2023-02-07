@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Line from "../../../../../Components/Line/line";
 
 import "./hero.scss";
@@ -13,23 +14,19 @@ const Hero = () => {
             <img
               src="./images/home/hero/hero-img1new.jpg"
               className="hero-img "
-              alt="hero-img"
-            ></img>
+              alt="hero-img"></img>
             <img
               src="./images/home/hero/hero-img2new.jpg"
               className="hero-img"
-              alt="hero-img"
-            ></img>
+              alt="hero-img"></img>
             <img
               src="./images/home/hero/hero-img3new.jpg"
               className="hero-img"
-              alt="hero-img"
-            ></img>
+              alt="hero-img"></img>
             <img
               src="./images/home/hero/hero-img1new.jpg"
               className="hero-img "
-              alt="hero-img"
-            ></img>
+              alt="hero-img"></img>
           </div>
 
           <div className="hero-text-container">
@@ -40,9 +37,7 @@ const Hero = () => {
                 </div>
 
                 <div className="paragraph">
-                  <span className="paragraph-head">
-                    Find The right Model Now!
-                  </span>
+                  <span className="paragraph-head">Find The right Model Now!</span>
 
                   <span>
                     <img
@@ -71,7 +66,9 @@ const Hero = () => {
                     <p>Fast Model responses</p>
                   </span>
                   <div className="hero-btn">
-                    <button className="btn btn2">Signup</button>
+                    <Link to="/sign-up" className="btn btn2">
+                      Signup
+                    </Link>
                   </div>
                 </div>
               </article>
@@ -84,9 +81,7 @@ const Hero = () => {
                 </div>
 
                 <div className="paragraph">
-                  <span className="paragraph-head">
-                    Find The right Model Now!
-                  </span>
+                  <span className="paragraph-head">Find The right Model Now!</span>
 
                   <span>
                     <img
@@ -115,7 +110,9 @@ const Hero = () => {
                     <p>Fast Model responses</p>
                   </span>
                   <div className="hero-btn">
-                    <button className="btn btn2">Signup</button>
+                    <Link to="/sign-up" className="btn btn2">
+                      Signup
+                    </Link>
                   </div>
                 </div>
               </article>
@@ -128,9 +125,7 @@ const Hero = () => {
                 </div>
 
                 <div className="paragraph">
-                  <span className="paragraph-head">
-                    Find The right Model Now!
-                  </span>
+                  <span className="paragraph-head">Find The right Model Now!</span>
 
                   <span>
                     <img
@@ -159,7 +154,9 @@ const Hero = () => {
                     <p>Fast Model responses</p>
                   </span>
                   <div className="hero-btn">
-                    <button className="btn btn2">Signup</button>
+                    <Link to="/sign-up" className="btn btn2">
+                      Signup
+                    </Link>
                   </div>
                 </div>
               </article>
@@ -172,9 +169,7 @@ const Hero = () => {
                 </div>
 
                 <div className="paragraph">
-                  <span className="paragraph-head">
-                    Find The right Model Now!
-                  </span>
+                  <span className="paragraph-head">Find The right Model Now!</span>
 
                   <span>
                     <img
@@ -203,7 +198,9 @@ const Hero = () => {
                     <p>Fast Model responses</p>
                   </span>
                   <div className="hero-btn">
-                    <button className="btn btn2">Signup</button>
+                    <Link to="/sign-up" className="btn btn2">
+                      Signup
+                    </Link>
                   </div>
                 </div>
               </article>

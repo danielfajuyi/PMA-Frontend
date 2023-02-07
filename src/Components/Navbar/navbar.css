@@ -1,8 +1,7 @@
 /* ................ NAVBAR ........... */
 .nav {
   position: relative;
-  box-shadow: 0px 10px 20px 5px rgba(40, 40, 46, 0.1),
-    0px 6px 4px rgba(92, 78, 78, 0.25);
+  box-shadow: 0px 10px 20px 5px rgba(40, 40, 46, 0.1), 0px 6px 4px rgba(92, 78, 78, 0.25);
   padding-top: 1rem;
   padding-bottom: 0.6rem;
 }
@@ -45,11 +44,14 @@ a {
   transition: all 0.3s ease-out;
 }
 .mobile-nav__list {
-  padding: 4rem 2rem;
+  padding: 0 2rem;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
 }
 .mobile-nav__item {
-  padding: 0.5rem 0;
+  padding: 1rem 0;
   text-align: left;
+  font-size: 1.2rem;
 }
 .mobile-nav__btn {
   display: flex;
@@ -110,6 +112,13 @@ a {
   display: none;
 }
 @media screen and (max-width: 320px) {
+  .mobile-nav__list {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+  }
+  .mobile-nav__item {
+    font-size: 1rem;
+  }
   .btn1 {
     padding: 12px 25px;
   }

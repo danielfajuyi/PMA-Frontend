@@ -65,10 +65,12 @@ const Navbar = () => {
           </div>
 
           <div className="desktop-nav__btn">
-            <Link to="/" className="btn btn1">
+            <Link to="/login" className="btn btn1">
               Login
             </Link>
-            <button className="btn btn2">Signup</button>
+            <Link to="/sign-up" className="btn btn2">
+              Signup
+            </Link>
           </div>
 
           <FaBars
@@ -98,10 +100,12 @@ const Navbar = () => {
             })}
           </ul>
           <div className="mobile-nav__btn">
-            <Link to="/" className="btn btn1">
+            <Link to="/login" onClick={handleMenu} className="btn btn1">
               Login
             </Link>
-            <button className="btn btn2">Sign-up</button>
+            <Link to="/sign-up" onClick={handleMenu} className="btn btn2">
+              Sign-up
+            </Link>
           </div>
         </div>
       </nav>
