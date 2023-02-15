@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Navbar from "./Components/Navbar/navbar";
@@ -14,6 +13,7 @@ import NotFound from "./Pages/NotFound/notfound";
 import HowItWorks from "./Pages/HowItWorks/HowItWorks";
 import Blog from "./UI/Admin-UI/Blog/Blog";
 import SignUp from "./Pages/LoginSignup/Sign-Up/Sign-up";
+
 import LoginForm from "./Pages/LoginSignup/Login/Login-Form";
 import { DataProvider } from "./Context/Sign-up-context";
 // import { AgencySignupOne } from "./Pages/LoginSignup/AgencySignup/AgencySignupOne";
@@ -28,14 +28,10 @@ import { DataProvider } from "./Context/Sign-up-context";
 //     <Navbar />
 //   );
 // }
-=======
-import GlobalContextProvider, { GlobalContext } from "./contexts/GlobalContext";
-import { BaseRoutes } from "./Routes/BaseRoutes";
->>>>>>> 6ea03fe000d1eedfa50b166429967aae92c6d848
 
 function App() {
+  const [showNav, setShowNav] = useState(true);
   return (
-<<<<<<< HEAD
     <>
       <DataProvider>
         {showNav && <Navbar />}
@@ -73,11 +69,6 @@ function App() {
         </Routes>
       </DataProvider>
     </>
-=======
-    <GlobalContextProvider>
-      <BaseRoutes />
-    </GlobalContextProvider>
->>>>>>> 6ea03fe000d1eedfa50b166429967aae92c6d848
   );
 }
 

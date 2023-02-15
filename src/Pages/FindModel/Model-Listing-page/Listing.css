@@ -24,9 +24,8 @@
 .categories-slide {
   cursor: grab;
   position: relative;
-  box-shadow: inset 5px 5px 5px rgb(0 0 0 / 5%),
-    inset -5px -5px 5px rgb(225 225 225 / 50%), 5px 5px 5px rgb(0 0 0 / 5%),
-    -5px -5px 5px rgb(255 255 255 / 50%);
+  box-shadow: inset 5px 5px 5px rgb(0 0 0 / 5%), inset -5px -5px 5px rgb(225 225 225 / 50%),
+    5px 5px 5px rgb(0 0 0 / 5%), -5px -5px 5px rgb(255 255 255 / 50%);
   border-radius: 15px;
   margin: auto;
 }
@@ -326,7 +325,6 @@ input:focus {
 .model__categorys #agencylable > .value {
   text-transform: capitalize;
 }
-<<<<<<< HEAD
 .check-icon {
   font-size: 20px;
   color: rgb(94, 223, 114);
@@ -334,8 +332,7 @@ input:focus {
 .star-icon {
   color: var(--Colored-color);
   font-size: 13px;
-=======
-
+}
 .model__categorys #categorylable > .value {
   width: 220.67px;
   height: 25px;
@@ -348,7 +345,6 @@ input:focus {
   align-items: center;
   gap: 4px;
   margin-top: 0.5rem;
->>>>>>> 6ea03fe000d1eedfa50b166429967aae92c6d848
 }
 
 .model__locations svg {
@@ -372,7 +368,6 @@ input:focus {
 .model__viewprofiles {
   margin-top: 1rem;
 }
-<<<<<<< HEAD
 .test-text {
   color: var(--Colored-color);
   text-transform: capitalize;
@@ -381,10 +376,8 @@ input:focus {
 .item__btn {
   width: 80px;
   height: 45px;
-=======
-
+}
 .viewprofile__btn {
->>>>>>> 6ea03fe000d1eedfa50b166429967aae92c6d848
   font-weight: 600;
   font-size: 16px;
   padding: 10px;
