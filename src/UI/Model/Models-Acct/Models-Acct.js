@@ -1,6 +1,5 @@
 import AcctSetting from "./Acct-Setting/Models-Acct-Setting";
 import ModelForms from "./Kyc-Section/Models-Kyc-Forms";
-import ModelSignUpForm from "./Sign-up-Form/Models-Sign-up-Form";
 import ModelsDashBoard from "./Dash-Board/Models-Dash-Board";
 import "./Models-Acct.css";
 import DomItems from "./InputItems.json";
@@ -20,10 +19,7 @@ function ModelsAcct() {
   function AlertModal() {
     /* modal section */
     return (
-      <section
-        style={{ transform: toggleModal && `translateX(${0}%)` }}
-        className="alert-section"
-      >
+      <section style={{ transform: toggleModal && `translateX(${0}%)` }} className="alert-section">
         {/* sign up */}
 
         {activeModel === "sign-up-Err" && (
@@ -160,9 +156,7 @@ function ModelsAcct() {
   return (
     <>
       {AlertModal()}
-      {activeSection === "dash-board" && (
-        <ModelsDashBoard userData={userData} />
-      )}
+      {activeSection === "dash-board" && <ModelsDashBoard userData={userData} />}
       {activeSection === "kyc" && (
         <ModelForms
           DomItems={DomItems}
@@ -172,17 +166,7 @@ function ModelsAcct() {
         />
       )}
       {activeSection === "setting" && (
-        <AcctSetting
-          DomItems={DomItems}
-          userData={userData}
-          handleModal={handleModal}
-        />
-      )}
-      {activeSection === "sign-up" && (
-        <ModelSignUpForm
-          createAccount={createAccount}
-          handleModal={handleModal}
-        />
+        <AcctSetting DomItems={DomItems} userData={userData} handleModal={handleModal} />
       )}
     </>
   );

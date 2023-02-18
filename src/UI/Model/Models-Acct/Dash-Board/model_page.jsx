@@ -14,12 +14,12 @@ import { BiLogOut, BiWallet } from "react-icons/bi";
 import { CgUserList } from "react-icons/cg"; //[END]
 
 // Components (The Sidebar, Topbar and Background)  --> [START]
-import DashboardSidebar from "../../../Components/Dashboard/Sidebar/sidebar";
-import DashboardTopbar from "../../../Components/Dashboard/Topbar/topbar";
-import Background from "../../../Components/Dashboard/Background/background"; //[END]
+import DashboardSidebar from "../../../../Components/Dashboard/Sidebar/sidebar";
+import DashboardTopbar from "../../../../Components/Dashboard/Topbar/topbar";
+import Background from "../../../../Components/Dashboard/Background/background"; //[END]
 
 // Custom Hooks  --> [START]
-import useMediaQuery from "../../../custom_hooks/useMediaQuery"; //[END]
+import useMediaQuery from "../../../../custom_hooks/useMediaQuery"; //[END]
 
 // Other External NPM Packages --> [START]
 import { motion } from "framer-motion";

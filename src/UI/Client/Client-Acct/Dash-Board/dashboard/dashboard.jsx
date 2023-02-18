@@ -6,12 +6,12 @@ import { RiMessage2Fill } from "react-icons/ri";
 // [END]
 
 // Components --> [START]
-import BookingsCard from "../../../../Components/Dashboard/Bookings-Card/bookings_card";
-import MessagePreviewCard from "../../../../Components/Dashboard/Message-Preview-Card/message_preview_card";
-import JobCard from "../../../../Components/Dashboard/Job-Card/job_card";
-import ClientCard from "../../../../Components/Dashboard/Client-Card/client_card";
-import VisitorStats from "../../../../Components/Dashboard/Visitor-Stats/visitor_stats";
-import FadeIn from "../../../../Components/FadeIn/fade_in";
+import BookingsCard from "../../../../../Components/Dashboard/Bookings-Card/bookings_card";
+import MessagePreviewCard from "../../../../../Components/Dashboard/Message-Preview-Card/message_preview_card";
+import JobCard from "../../../../../Components/Dashboard/Job-Card/job_card";
+import ClientCard from "../../../../../Components/Dashboard/Client-Card/client_card";
+import VisitorStats from "../../../../../Components/Dashboard/Visitor-Stats/visitor_stats";
+import FadeIn from "../../../../../Components/FadeIn/fade_in";
 // [END]
 
 // Temporary  Images
@@ -169,12 +169,11 @@ const ClientDashboard = () => {
               </button>
             </div>
             <div id="status">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Dignissimos doloremque velit nobis et qui, deserunt soluta
-              delectus quas officia inventore odio sequi porro alias ullam ipsam
-              eaque nam dolores dicta hic impedit libero atque quaerat. Id iusto
-              quae ipsum, at qui, commodi, molestias maiores est in dolor
-              ratione ipsa alias soluta sit. Accusantium culpa.
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos doloremque velit
+              nobis et qui, deserunt soluta delectus quas officia inventore odio sequi porro alias
+              ullam ipsam eaque nam dolores dicta hic impedit libero atque quaerat. Id iusto quae
+              ipsum, at qui, commodi, molestias maiores est in dolor ratione ipsa alias soluta sit.
+              Accusantium culpa.
             </div>
             <div id="follow">
               <span>Following {772}</span>
@@ -192,26 +191,10 @@ const ClientDashboard = () => {
                 <a href="./seeall"> See all</a>
               </header>
               <div id="body">
-                <ClientCard
-                  img={profileImg}
-                  name="Eke Kara"
-                  location="Lagos, Nigeria"
-                />
-                <ClientCard
-                  img={profileImg}
-                  name="Eke Kara"
-                  location="Lagos, Nigeria"
-                />
-                <ClientCard
-                  img={profileImg}
-                  name="Eke Kara"
-                  location="Lagos, Nigeria"
-                />
-                <ClientCard
-                  img={profileImg}
-                  name="Eke Kara"
-                  location="Lagos, Nigeria"
-                />
+                <ClientCard img={profileImg} name="Eke Kara" location="Lagos, Nigeria" />
+                <ClientCard img={profileImg} name="Eke Kara" location="Lagos, Nigeria" />
+                <ClientCard img={profileImg} name="Eke Kara" location="Lagos, Nigeria" />
+                <ClientCard img={profileImg} name="Eke Kara" location="Lagos, Nigeria" />
               </div>
             </div>
 
@@ -221,26 +204,10 @@ const ClientDashboard = () => {
                 <a href="./seeall"> See all</a>
               </header>
               <div id="body">
-                <ClientCard
-                  img={profileImg}
-                  name="Eke Kara"
-                  location="Lagos, Nigeria"
-                />
-                <ClientCard
-                  img={profileImg}
-                  name="Eke Kara"
-                  location="Lagos, Nigeria"
-                />
-                <ClientCard
-                  img={profileImg}
-                  name="Eke Kara"
-                  location="Lagos, Nigeria"
-                />
-                <ClientCard
-                  img={profileImg}
-                  name="Eke Kara"
-                  location="Lagos, Nigeria"
-                />
+                <ClientCard img={profileImg} name="Eke Kara" location="Lagos, Nigeria" />
+                <ClientCard img={profileImg} name="Eke Kara" location="Lagos, Nigeria" />
+                <ClientCard img={profileImg} name="Eke Kara" location="Lagos, Nigeria" />
+                <ClientCard img={profileImg} name="Eke Kara" location="Lagos, Nigeria" />
               </div>
             </div>
 
@@ -250,26 +217,10 @@ const ClientDashboard = () => {
                 <a href="./seeall">See all</a>
               </header>
               <div id="body">
-                <JobCard
-                  note="Female model needed for shoot"
-                  views="12.6k"
-                  applied="26"
-                />
-                <JobCard
-                  note="Female model needed for shoot"
-                  views="12.6k"
-                  applied="26"
-                />
-                <JobCard
-                  note="Female model needed for shoot"
-                  views="12.6k"
-                  applied="26"
-                />
-                <JobCard
-                  note="Female model needed for shoot"
-                  views="12.6k"
-                  applied="26"
-                />
+                <JobCard note="Female model needed for shoot" views="12.6k" applied="26" />
+                <JobCard note="Female model needed for shoot" views="12.6k" applied="26" />
+                <JobCard note="Female model needed for shoot" views="12.6k" applied="26" />
+                <JobCard note="Female model needed for shoot" views="12.6k" applied="26" />
               </div>
             </div>
           </div>

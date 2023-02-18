@@ -6,8 +6,9 @@ import ModelStats from "./Model-Stats";
 import ModelBio from "./Model-Bio";
 import ModelVideo from "./Model-Video";
 import ModelPolaroid from "./Model-Polaroid";
-import BookingForm from "./BookingForm";
+import BookingForm from "../BookModelForm/BookingForm";
 import { useState, useEffect } from "react";
+import ModelPage from "../Models-Acct/Dash-Board/model_page";
 
 function ProfilePage({ item, postMsg }) {
   const [activeSection, setActiveSection] = useState("Photos");
@@ -16,6 +17,9 @@ function ProfilePage({ item, postMsg }) {
   const [deviceSize, setDeviceSize] = useState(window.innerWidth);
   const [activeDisplay, setActiveDisplay] = useState("");
   const [viewAll, setViewAll] = useState(false);
+
+  //this is just to clear error on the dashboard.
+  const [showNavbar, setShowNavbar] = useState(true);
 
   // setting device size
   function handleResize() {
@@ -87,6 +91,11 @@ function ProfilePage({ item, postMsg }) {
         profileId={item.id}
         postMsg={postMsg}
       />
+
+      {/* dashboard */}
+
+      <ModelPage setShowNavbar={setShowNavbar} />
+
       <div className="profile-footer">
         <small>Copyright &copy; 2022 PREMIUM MODEL</small>
         <span>{`(${deviceSize})`}</span>

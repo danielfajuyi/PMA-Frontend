@@ -1,6 +1,5 @@
 import AcctSetting from "./Acct-Setting/Client-Acct-Setting";
 import ClientForms from "./Kyc-Section/Client-Kyc-Forms";
-import ClientSignUpForm from "./Sign-up-Form/Client-Sign-up-Form";
 import ClientsDashBoard from "./Dash-Board/Client-Dash-Board";
 import "./Client-Acct.css";
 import DomItems from "./InputItems.json";
@@ -22,8 +21,7 @@ function ClientsAcct() {
     return (
       <section
         style={{ transform: toggleModal && `translateX(${0}%)` }}
-        className="--alert-section"
-      >
+        className="--alert-section">
         {/* sign up */}
 
         {activeClient === "sign-up-Err" && (
@@ -105,9 +103,7 @@ function ClientsAcct() {
   return (
     <>
       {AlertModal()}
-      {activeSection === "dash-board" && (
-        <ClientsDashBoard userData={userData} />
-      )}
+      {activeSection === "dash-board" && <ClientsDashBoard userData={userData} />}
       {activeSection === "kyc" && (
         <ClientForms
           DomItems={DomItems}
@@ -117,17 +113,7 @@ function ClientsAcct() {
         />
       )}
       {activeSection === "setting" && (
-        <AcctSetting
-          DomItems={DomItems}
-          userData={userData}
-          handleModal={handleModal}
-        />
-      )}
-      {activeSection === "sign-up" && (
-        <ClientSignUpForm
-          createAccount={createAccount}
-          handleModal={handleModal}
-        />
+        <AcctSetting DomItems={DomItems} userData={userData} handleModal={handleModal} />
       )}
     </>
   );

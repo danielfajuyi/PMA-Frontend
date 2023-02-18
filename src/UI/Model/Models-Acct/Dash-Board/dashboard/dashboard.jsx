@@ -6,21 +6,21 @@ import { RiMessage2Fill } from "react-icons/ri";
 //[END]
 
 // Components --> [START]
-import BookingsCard from "../../../../Components/Dashboard/Bookings-Card/bookings_card";
-import MessagePreviewCard from "../../../../Components/Dashboard/Message-Preview-Card/message_preview_card";
-import JobCard from "../../../../Components/Dashboard/Job-Card/job_card";
-import ClientCard from "../../../../Components/Dashboard/Client-Card/client_card";
-import EarningCard from "../../../../Components/Dashboard/Earning-Card/earning_card";
-import VisitorStats from "../../../../Components/Dashboard/Visitor-Stats/visitor_stats";
+import BookingsCard from "../../../../../Components/Dashboard/Bookings-Card/bookings_card";
+import MessagePreviewCard from "../../../../../Components/Dashboard/Message-Preview-Card/message_preview_card";
+import JobCard from "../../../../../Components/Dashboard/Job-Card/job_card";
+import ClientCard from "../../../../../Components/Dashboard/Client-Card/client_card";
+import EarningCard from "../../../../../Components/Dashboard/Earning-Card/earning_card";
+import VisitorStats from "../../../../../Components/Dashboard/Visitor-Stats/visitor_stats";
 //[END]
 
 // Temporary Profile Image
-import profileImg from "../../../../Images/model-profile/model.png";
+import profileImg from "../../../../../Images/model-profile/model.png";
 
 // Other External NPM Packages --> [START]
 import { Chart } from "chart.js/auto"; //Registering Charts ("Do not remove this import")
 import _ from "lodash";
-import FadeIn from "../../../../Components/FadeIn/fade_in";
+import FadeIn from "../../../../../Components/FadeIn/fade_in";
 //[END]
 
 const ModelDashboard = () => {
@@ -361,22 +361,10 @@ const ModelDashboard = () => {
                 <a href="./seeall">See all</a>
               </header>
               <div id="body">
-                <JobCard
-                  note="Female model needed for shoot"
-                  time="Aug 19, 2022 - 09:53"
-                />
-                <JobCard
-                  note="Female model needed for shoot"
-                  time="Aug 19, 2022 - 09:53"
-                />
-                <JobCard
-                  note="Female model needed for shoot"
-                  time="Aug 19, 2022 - 09:53"
-                />
-                <JobCard
-                  note="Female model needed for shoot"
-                  time="Aug 19, 2022 - 09:53"
-                />
+                <JobCard note="Female model needed for shoot" time="Aug 19, 2022 - 09:53" />
+                <JobCard note="Female model needed for shoot" time="Aug 19, 2022 - 09:53" />
+                <JobCard note="Female model needed for shoot" time="Aug 19, 2022 - 09:53" />
+                <JobCard note="Female model needed for shoot" time="Aug 19, 2022 - 09:53" />
               </div>
             </div>
             <div id="inbox">

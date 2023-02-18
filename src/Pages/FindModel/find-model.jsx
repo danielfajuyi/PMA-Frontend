@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./find-model.css";
-import ListingPage from "./Model-Listing-page/Listing-Page";
-import ProfilePage from "./Models-Profile-page/Profile-Page";
+import ListingPage from "../../UI/Model/Model-Listing-Page/Listing-Page";
+import ProfilePage from "../../UI/Model/Models-Portfolio/Profile-Page";
 import Data from "../../db.json";
 
 function FindModel() {

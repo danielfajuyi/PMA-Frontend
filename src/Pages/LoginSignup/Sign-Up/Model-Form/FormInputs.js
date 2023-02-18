@@ -28,30 +28,3 @@ function SignUpInput({ type, id, value, placeholder, handleChange, label, error 
 }
 
 export default SignUpInput;
-
-// const handler = PaystackPop.setup({
-//   key: "pk_test_2738ea7b83386afd8897e7092bbe084d785adc92",
-
-//   email: userData.email,
-
-//   amount: 1500 * 100,
-
-//   metadata: {
-//     name: userData.firstName,
-//     mobile: userData.mobileNo,
-//   },
-
-//   channels: ["card", "bank", "ussd", "qr", "mobile_money", "bank_transfer"],
-
-//   onClose: function () {
-//     alert("Window closed.");
-//   },
-
-//   callback: function (response) {
-//     let message = "Payment complete! Reference: " + response.reference;
-//     alert(message);
-//     sendForm();
-//   },
-// });
-
-// handler.openIframe();

@@ -6,13 +6,13 @@ import { RiMessage2Fill } from "react-icons/ri";
 // [END]
 
 // Components --> [START]
-import TopModelHighlight from "../../../../Components/Dashboard/Top-Model-Highlight/top_model_highlight";
-import MessagePreviewCard from "../../../../Components/Dashboard/Message-Preview-Card/message_preview_card";
-import JobCard from "../../../../Components/Dashboard/Job-Card/job_card";
-import ModelCard from "../../../../Components/ModelCard/model_card.jsx";
-import BlogPreviewCard from "../../../../Components/Dashboard/Blog-Preview-Card/blog_preview_card";
-import BookingsCard from "../../../../Components/Dashboard/Bookings-Card/bookings_card";
-import VisitorStats from "../../../../Components/Dashboard/Visitor-Stats/visitor_stats";
+import TopModelHighlight from "../../../../../Components/Dashboard/Top-Model-Highlight/top_model_highlight";
+import MessagePreviewCard from "../../../../../Components/Dashboard/Message-Preview-Card/message_preview_card";
+import JobCard from "../../../../../Components/Dashboard/Job-Card/job_card";
+import ModelCard from "../../../../../Components/ModelCard/model_card.jsx";
+import BlogPreviewCard from "../../../../../Components/Dashboard/Blog-Preview-Card/blog_preview_card";
+import BookingsCard from "../../../../../Components/Dashboard/Bookings-Card/bookings_card";
+import VisitorStats from "../../../../../Components/Dashboard/Visitor-Stats/visitor_stats";
 // [END]
 
 // Temporary  Images
@@ -22,7 +22,7 @@ import coverImg from "../../../../Images/model/model-large.jpg";
 // Other External NPM Packages --> [START]
 import _ from "lodash";
 import { Chart } from "chart.js/auto"; //Registering Charts ("Do not remove this import")
-import FadeIn from "../../../../Components/FadeIn/fade_in";
+import FadeIn from "../../../../../Components/FadeIn/fade_in";
 // [END]
 
 const AgencyDashboard = () => {
@@ -174,16 +174,8 @@ const AgencyDashboard = () => {
               <span>Followers {772}</span>
             </div>
             <div id="top_models">
-              <TopModelHighlight
-                img={profileImg}
-                name="Emilly Okoro"
-                views="13.6k"
-              />
-              <TopModelHighlight
-                img={profileImg}
-                name="Ikegwuru Ndiuwa"
-                views="12.4k"
-              />
+              <TopModelHighlight img={profileImg} name="Emilly Okoro" views="13.6k" />
+              <TopModelHighlight img={profileImg} name="Ikegwuru Ndiuwa" views="12.4k" />
             </div>
           </div>
           {/* PROFILE PANEL <-- [END] */}
@@ -196,26 +188,11 @@ const AgencyDashboard = () => {
                 <a href="./seeall">See all</a>
               </header>
               <div id="body">
-                <JobCard
-                  note="Female model needed for shoot"
-                  time="Aug 19, 2022 - 09:53"
-                />
-                <JobCard
-                  note="Female model needed for shoot"
-                  time="Aug 19, 2022 - 09:53"
-                />
-                <JobCard
-                  note="Female model needed for shoot"
-                  time="Aug 19, 2022 - 09:53"
-                />
-                <JobCard
-                  note="Female model needed for shoot"
-                  time="Aug 19, 2022 - 09:53"
-                />
-                <JobCard
-                  note="Female model needed for shoot"
-                  time="Aug 19, 2022 - 09:53"
-                />
+                <JobCard note="Female model needed for shoot" time="Aug 19, 2022 - 09:53" />
+                <JobCard note="Female model needed for shoot" time="Aug 19, 2022 - 09:53" />
+                <JobCard note="Female model needed for shoot" time="Aug 19, 2022 - 09:53" />
+                <JobCard note="Female model needed for shoot" time="Aug 19, 2022 - 09:53" />
+                <JobCard note="Female model needed for shoot" time="Aug 19, 2022 - 09:53" />
               </div>
             </div>
 

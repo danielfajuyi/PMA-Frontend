@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./BookingForm.css";
 
 function BookingForm({ toggleForm, handleForm, profileId, postMsg }) {
   const [name, setName] = useState("");

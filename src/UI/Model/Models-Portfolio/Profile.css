@@ -300,96 +300,6 @@
   color: var(--Light-color);
 }
 
-/* booking section */
-.booking-section {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 6rem 0;
-  overflow: auto;
-  display: block;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease-out;
-}
-.book-form {
-  position: relative;
-  width: 90%;
-  margin: auto;
-  border-radius: 10px;
-  padding: 4rem 2rem;
-  font-size: 20px;
-  font-weight: 600;
-  background: var(--Light-color);
-  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
-  gap: 2rem;
-}
-
-.bookform-text {
-  height: 45px;
-  font-size: 18px;
-  font-weight: 500;
-  text-indent: 10px;
-  border: 2px solid var(--Dark-color);
-  border-radius: 5px;
-}
-input:focus {
-  outline: none;
-}
-.form__top-input {
-  display: flex;
-  flex-direction: column;
-}
-.input__list {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  gap: 2rem;
-}
-.input-rapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-.bookform-textarea {
-  width: 100%;
-  font-size: 18px;
-  font-weight: 500;
-  border: 2px solid var(--Dark-color);
-  border-radius: 5px;
-  text-indent: 10px;
-  resize: none;
-  outline: none;
-}
-.send-btn {
-  width: 150px;
-  height: 50px;
-  font-size: 20px;
-  font-weight: 600;
-  border-radius: 5px;
-}
-input[type="date"],
-.send-btn:hover {
-  opacity: 0.7;
-  cursor: pointer;
-}
-.close-icon {
-  font-size: 2rem;
-  position: absolute;
-  top: 25px;
-  right: 10%;
-}
-.close-icon:hover {
-  color: var(--Colored-color);
-  cursor: pointer;
-}
 .compCard-btn {
   width: 90%;
   height: 50px;
@@ -605,23 +515,6 @@ input[type="date"],
     padding: 18px 25px;
     font-size: 1.2rem;
   }
-
-  /* booking-section */
-  .book-form {
-    width: 70%;
-    padding: 3rem;
-  }
-  .input__list {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-  }
-  .input-rapper {
-    width: 40%;
-  }
 }
 @media screen and (min-width: 920px) {
   .bio-section,
@@ -698,12 +591,6 @@ input[type="date"],
     height: 140px;
   }
 
-  /* booking-section */
-  .book-form {
-    width: 55%;
-    margin-top: 2rem;
-  }
-
   .compCard-btn {
     width: 30%;
     height: 50px;
@@ -761,10 +648,5 @@ input[type="date"],
   }
   .interactive-icon {
     font-size: 18px;
-  }
-
-  /* booking-section */
-  .book-form {
-    width: 45%;
   }
 }

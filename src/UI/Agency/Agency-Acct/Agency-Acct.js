@@ -1,6 +1,5 @@
 import AcctSetting from "./Acct-Setting/Agency-Acct-Setting";
 import AgencyForms from "./Kyc-Section/Agency-Kyc-Forms";
-import AgencySignUpForm from "./Sign-up-Form/Agency-Sign-up-Form";
 import AgencyDashBoard from "./Dash-Board/Agency-Dash-Board";
 import "./Agency-Acct.css";
 import DomItems from "./InputItems.json";
@@ -20,10 +19,7 @@ function AgencyAcct() {
   function AlertModal() {
     /* modal section */
     return (
-      <section
-        style={{ transform: toggleModal && `translateX(${0}%)` }}
-        className="alert--section"
-      >
+      <section style={{ transform: toggleModal && `translateX(${0}%)` }} className="alert--section">
         {/* sign up */}
 
         {activeAgency === "sign-up-Err" && (
@@ -123,9 +119,7 @@ function AgencyAcct() {
   return (
     <>
       {AlertModal()}
-      {activeSection === "dash-board" && (
-        <AgencyDashBoard userData={userData} />
-      )}
+      {activeSection === "dash-board" && <AgencyDashBoard userData={userData} />}
       {activeSection === "kyc" && (
         <AgencyForms
           DomItems={DomItems}
@@ -135,17 +129,7 @@ function AgencyAcct() {
         />
       )}
       {activeSection === "setting" && (
-        <AcctSetting
-          DomItems={DomItems}
-          userData={userData}
-          handleModal={handleModal}
-        />
-      )}
-      {activeSection === "sign-up" && (
-        <AgencySignUpForm
-          createAccount={createAccount}
-          handleModal={handleModal}
-        />
+        <AcctSetting DomItems={DomItems} userData={userData} handleModal={handleModal} />
       )}
     </>
   );
