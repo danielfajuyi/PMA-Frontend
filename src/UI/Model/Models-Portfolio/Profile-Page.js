@@ -9,6 +9,7 @@ import ModelPolaroid from "./Model-Polaroid";
 import BookingForm from "../BookModelForm/BookingForm";
 import { useState, useEffect } from "react";
 import ModelPage from "../Models-Acct/Dash-Board/model_page";
+import Inbox from "../Models-Acct/Dash-Board/Inbox/Inbox";
 
 function ProfilePage({ item, postMsg }) {
   const [activeSection, setActiveSection] = useState("Photos");
@@ -54,7 +55,7 @@ function ProfilePage({ item, postMsg }) {
 
   return (
     <>
-      <ModelInfo item={item} handleForm={handleForm} />
+      {/* <ModelInfo item={item} handleForm={handleForm} />
       <Links handleSection={handleSection} activeSection={activeSection} />
       {activeSection === "Photos" && (
         <ModelPhoto
@@ -90,11 +91,12 @@ function ProfilePage({ item, postMsg }) {
         toggleForm={toggleForm}
         profileId={item.id}
         postMsg={postMsg}
-      />
+      /> */}
 
       {/* dashboard */}
 
       <ModelPage setShowNavbar={setShowNavbar} />
+      {/* <Inbox /> */}
 
       <div className="profile-footer">
         <small>Copyright &copy; 2022 PREMIUM MODEL</small>

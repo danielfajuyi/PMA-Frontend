@@ -13,6 +13,9 @@ import { HiOutlineUserGroup } from "react-icons/hi";
 import { BiLogOut, BiWallet } from "react-icons/bi";
 import { CgUserList } from "react-icons/cg"; //[END]
 
+import ModelDashboard from "./dashboard/dashboard";
+import Notification from "./Notification/Notification";
+
 // Components (The Sidebar, Topbar and Background)  --> [START]
 import DashboardSidebar from "../../../../Components/Dashboard/Sidebar/sidebar";
 import DashboardTopbar from "../../../../Components/Dashboard/Topbar/topbar";
@@ -26,8 +29,20 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router"; //[END]
 
+import Notice from "../../../../Data/Notice-db.json"; //importing notification data
+
 const ModelPage = ({ showNavbar, setShowNavbar }) => {
   // Using Hooks  --> [START]
+
+  const [notice, setNotice] = useState(Notice); //--> notification data state
+  const [toggleNotice, setToggleNotice] = useState(false); //--> toggle Notification open or close
+
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:3500/models")
+  //     .then((res) => console.log(res))
+  //     .catch((err) => console.log(err));
+  // }, [notice]);
 
   useEffect(() => {
     setShowNavbar(false);
@@ -106,12 +121,22 @@ const ModelPage = ({ showNavbar, setShowNavbar }) => {
             lastItem={button}
             sidebarVisibility={sidebarVisibility}
             setSidebarVisibility={setSidebarVisibility}
+            setToggleNotice={setToggleNotice}
+            notice={notice}
           />
           {/* [END] */}
 
           {/* Render The Current Sidebar Navigation Link --> [START] */}
           <Outlet />
           {/* [END] */}
+
+          <Notification
+            toggleNotice={toggleNotice}
+            setToggleNotice={setToggleNotice}
+            notice={notice}
+            setNotice={setNotice}
+          />
+          <ModelDashboard />
         </main>
       </div>
     )

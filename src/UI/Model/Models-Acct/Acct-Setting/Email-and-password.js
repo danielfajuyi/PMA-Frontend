@@ -3,18 +3,11 @@ import EditBtn from "./Edit-btn";
 import SwitchBtn from "./Switch-Btn";
 import { useState, useEffect } from "react";
 
-function EmailAndPassword({
-  handleActiveEdit,
-  activeEdit,
-  userData,
-  resetDiscard,
-  handleModal,
-}) {
+function EmailAndPassword({ handleActiveEdit, activeEdit, userData, resetDiscard, handleModal }) {
   const [pwdDescription, setPwdDescription] = useState("");
   const [emailDescription, setEmailDescription] = useState("");
 
-  const { email, password, deactivateAccount, displayProfile, marketPhotos } =
-    userData[0].account;
+  const { email, password, deactivateAccount, displayProfile, marketPhotos } = userData[0].account;
 
   const [deactivation, setDeactivation] = useState(deactivateAccount);
   const [displayProfiles, setDisplayProfile] = useState(displayProfile);
@@ -34,8 +27,6 @@ function EmailAndPassword({
   });
 
   const [activateSave, setActivateSave] = useState(false);
-
-  useEffect(() => {}, []);
 
   // validating email inputs
 
@@ -307,8 +298,7 @@ function EmailAndPassword({
         </p>
         <p className="set_description">
           <i className="fa-solid fa-angles-right note"></i>
-          You will automatically be removed from any public listings and any
-          open jobs.
+          You will automatically be removed from any public listings and any open jobs.
         </p>
 
         {/* switch */}
@@ -348,8 +338,7 @@ function EmailAndPassword({
         <h2 className="set_sections-title">market my Photos</h2>
         <p className="set_description">
           <i className="fa-solid fa-angles-right note"></i>
-          On occasions, premium models feature models on social media and in PM
-          ads.
+          On occasions, premium models feature models on social media and in PM ads.
         </p>
         <p className="set_description">
           <i className="fa-solid fa-angles-right note"></i>
@@ -370,8 +359,7 @@ function EmailAndPassword({
       <section className="setting_btn-container">
         <button
           onClick={() => resetDiscard(() => handleSave)}
-          className="discard-btn bold-text cancel-btn"
-        >
+          className="discard-btn bold-text cancel-btn">
           Discard
         </button>
         <button
@@ -380,8 +368,7 @@ function EmailAndPassword({
           }}
           disabled={!activateSave && true}
           onClick={() => handleSave("save")}
-          className="save-btn  bold-text yes-btn"
-        >
+          className="save-btn  bold-text yes-btn">
           Save
         </button>
       </section>

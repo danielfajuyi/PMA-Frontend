@@ -37,6 +37,139 @@
           "./images/model (12).jpg",
           "./images/model (14).jpg",
           "./images/model (20).jpg"
+        ],
+        "message": [],
+        "notification": [
+          {
+            "id": 1,
+            "avatar": "/images/model (2).jpg",
+            "link": "",
+            "type": "job-request",
+            "status": "pending",
+            "details": {
+              "name": "bala-blue",
+              "state": "rivers",
+              "country": "nigeria",
+              "price": 10000,
+              "dateFrom": "01/04/2023",
+              "dateTo": "07/04/2023",
+              "jobDescription": "its going to be a seven days of cat walking, dog walking, walking and smiling and fashion parade"
+            }
+          },
+          {
+            "id": 2,
+            "avatar": "/images/model (4).jpg",
+            "link": "",
+            "type": "follow",
+            "status": "not-read",
+            "details": { "name": "bala-blue" }
+          },
+          {
+            "id": 3,
+            "avatar": "/images/model (7).jpg",
+            "link": "",
+            "type": "like",
+            "status": "not-read",
+            "details": { "name": "bala-blue" }
+          },
+          {
+            "id": 4,
+            "avatar": "/images/model (5).jpg",
+            "link": "",
+            "type": "job-request",
+            "status": "pending",
+            "details": {
+              "name": "premium models",
+              "state": "rivers",
+              "country": "nigeria",
+              "dateFrom": "01/04/2023",
+              "dateTo": "07/04/2023",
+              "price": 20000,
+              "jobDescription": "its going to be a seven days of cat walking, dog walking, walking and smiling and fashion parade"
+            }
+          },
+          {
+            "id": 5,
+            "avatar": "/images/model (14).jpg",
+            "link": "",
+            "type": "update",
+            "status": "not-read",
+            "details": { "name": "premium models" }
+          },
+          {
+            "id": 6,
+            "avatar": "/images/model (20).jpg",
+            "link": "",
+            "type": "comment",
+            "status": "not-read",
+            "details": { "name": "premium models" }
+          },
+          {
+            "id": 7,
+            "avatar": "/images/model (5).jpg",
+            "link": "",
+            "type": "job-request",
+            "status": "pending",
+            "details": {
+              "name": "four-wall magazine",
+              "state": "anambara",
+              "country": "abuja",
+              "dateFrom": "01/04/2023",
+              "dateTo": "07/04/2023",
+              "price": 30000,
+              "jobDescription": "its going to be a seven days of cat walking, dog walking, walking and smiling and fashion parade"
+            }
+          },
+
+          {
+            "id": 8,
+            "avatar": "/images/model (1).jpg",
+            "link": "",
+            "type": "like",
+            "status": "not-read",
+            "details": { "name": "four-wall magazine" }
+          },
+          {
+            "id": 9,
+            "avatar": "/images/model (9).jpg",
+            "link": "",
+            "type": "post",
+            "status": "not-read",
+            "details": { "name": "four-wall magazine" }
+          },
+
+          {
+            "id": 10,
+            "avatar": "/images/model (12).jpg",
+            "link": "",
+            "type": "job-request",
+            "status": "pending",
+            "details": {
+              "name": "orange-world",
+              "state": "cross-river",
+              "country": "nigeria",
+              "dateFrom": "01/04/2023",
+              "dateTo": "07/04/2023",
+              "price": 40000,
+              "jobDescription": "its going to be a seven days of cat walking, dog walking, walking and smiling and fashion parade"
+            }
+          },
+          {
+            "id": 11,
+            "avatar": "/images/model (14).jpg",
+            "link": "",
+            "type": "share",
+            "status": "not-read",
+            "details": { "name": "orange-world" }
+          },
+          {
+            "id": 12,
+            "avatar": "/images/model (9).jpg",
+            "link": "",
+            "type": "favorite",
+            "status": "not-read",
+            "details": { "name": "orange-world" }
+          }
         ]
       }
     }
@@ -80,6 +213,140 @@
           "./images/model (12).jpg",
           "./images/model (14).jpg",
           "./images/model (20).jpg"
+        ],
+
+        "message": [],
+        "notification": [
+          {
+            "id": 1,
+            "avatar": "/images/model (2).jpg",
+            "link": "",
+            "type": "job-request",
+            "status": "pending",
+            "details": {
+              "name": "bala-blue",
+              "state": "rivers",
+              "country": "nigeria",
+              "price": 10000,
+              "dateFrom": "01/04/2023",
+              "dateTo": "07/04/2023",
+              "jobDescription": "its going to be a seven days of cat walking, dog walking, walking and smiling and fashion parade"
+            }
+          },
+          {
+            "id": 2,
+            "avatar": "/images/model (4).jpg",
+            "link": "",
+            "type": "follow",
+            "status": "not-read",
+            "details": { "name": "bala-blue" }
+          },
+          {
+            "id": 3,
+            "avatar": "/images/model (7).jpg",
+            "link": "",
+            "type": "like",
+            "status": "not-read",
+            "details": { "name": "bala-blue" }
+          },
+          {
+            "id": 4,
+            "avatar": "/images/model (5).jpg",
+            "link": "",
+            "type": "job-request",
+            "status": "pending",
+            "details": {
+              "name": "premium models",
+              "state": "rivers",
+              "country": "nigeria",
+              "dateFrom": "01/04/2023",
+              "dateTo": "07/04/2023",
+              "price": 20000,
+              "jobDescription": "its going to be a seven days of cat walking, dog walking, walking and smiling and fashion parade"
+            }
+          },
+          {
+            "id": 5,
+            "avatar": "/images/model (14).jpg",
+            "link": "",
+            "type": "update",
+            "status": "not-read",
+            "details": { "name": "premium models" }
+          },
+          {
+            "id": 6,
+            "avatar": "/images/model (20).jpg",
+            "link": "",
+            "type": "comment",
+            "status": "not-read",
+            "details": { "name": "premium models" }
+          },
+          {
+            "id": 7,
+            "avatar": "/images/model (5).jpg",
+            "link": "",
+            "type": "job-request",
+            "status": "pending",
+            "details": {
+              "name": "four-wall magazine",
+              "state": "anambara",
+              "country": "abuja",
+              "dateFrom": "01/04/2023",
+              "dateTo": "07/04/2023",
+              "price": 30000,
+              "jobDescription": "its going to be a seven days of cat walking, dog walking, walking and smiling and fashion parade"
+            }
+          },
+
+          {
+            "id": 8,
+            "avatar": "/images/model (1).jpg",
+            "link": "",
+            "type": "like",
+            "status": "not-read",
+            "details": { "name": "four-wall magazine" }
+          },
+          {
+            "id": 9,
+            "avatar": "/images/model (9).jpg",
+            "link": "",
+            "type": "post",
+            "status": "not-read",
+            "details": { "name": "four-wall magazine" }
+          },
+
+          {
+            "id": 10,
+            "avatar": "/images/model (12).jpg",
+            "link": "",
+            "type": "job-request",
+            "status": "pending",
+            "details": {
+              "name": "orange-world",
+              "state": "cross-river",
+              "country": "nigeria",
+              "dateFrom": "01/04/2023",
+              "dateTo": "07/04/2023",
+              "price": 40000,
+              "jobDescription": "its going to be a seven days of cat walking, dog walking, walking and smiling and fashion parade"
+            }
+          },
+          {
+            "id": 11,
+            "avatar": "/images/model (14).jpg",
+            "link": "",
+            "type": "share",
+            "status": "not-read",
+            "details": { "name": "orange-world" }
+          },
+          {
+            "id": 12,
+            "avatar": "/images/model (9).jpg",
+            "link": "",
+            "type": "favorite",
+            "status": "not-read",
+            "details": { "name": "orange-world" }
+          }
         ]
       }
     }
@@ -176,7 +443,139 @@
           "./videos/video (4).mp4"
         ],
         "compCard": "./images/model (4).jpg",
-        "contractMessage": []
+        "message": [],
+        "notification": [
+          {
+            "id": 1,
+            "avatar": "/images/model (2).jpg",
+            "link": "",
+            "type": "job-request",
+            "status": "pending",
+            "details": {
+              "name": "bala-blue",
+              "state": "rivers",
+              "country": "nigeria",
+              "price": 10000,
+              "dateFrom": "01/04/2023",
+              "dateTo": "07/04/2023",
+              "jobDescription": "its going to be a seven days of cat walking, dog walking, walking and smiling and fashion parade"
+            }
+          },
+          {
+            "id": 2,
+            "avatar": "/images/model (4).jpg",
+            "link": "",
+            "type": "follow",
+            "status": "not-read",
+            "details": { "name": "bala-blue" }
+          },
+          {
+            "id": 3,
+            "avatar": "/images/model (7).jpg",
+            "link": "",
+            "type": "like",
+            "status": "not-read",
+            "details": { "name": "bala-blue" }
+          },
+          {
+            "id": 4,
+            "avatar": "/images/model (5).jpg",
+            "link": "",
+            "type": "job-request",
+            "status": "pending",
+            "details": {
+              "name": "premium models",
+              "state": "rivers",
+              "country": "nigeria",
+              "dateFrom": "01/04/2023",
+              "dateTo": "07/04/2023",
+              "price": 20000,
+              "jobDescription": "its going to be a seven days of cat walking, dog walking, walking and smiling and fashion parade"
+            }
+          },
+          {
+            "id": 5,
+            "avatar": "/images/model (14).jpg",
+            "link": "",
+            "type": "update",
+            "status": "not-read",
+            "details": { "name": "premium models" }
+          },
+          {
+            "id": 6,
+            "avatar": "/images/model (20).jpg",
+            "link": "",
+            "type": "comment",
+            "status": "not-read",
+            "details": { "name": "premium models" }
+          },
+          {
+            "id": 7,
+            "avatar": "/images/model (5).jpg",
+            "link": "",
+            "type": "job-request",
+            "status": "pending",
+            "details": {
+              "name": "four-wall magazine",
+              "state": "anambara",
+              "country": "abuja",
+              "dateFrom": "01/04/2023",
+              "dateTo": "07/04/2023",
+              "price": 30000,
+              "jobDescription": "its going to be a seven days of cat walking, dog walking, walking and smiling and fashion parade"
+            }
+          },
+
+          {
+            "id": 8,
+            "avatar": "/images/model (1).jpg",
+            "link": "",
+            "type": "like",
+            "status": "not-read",
+            "details": { "name": "four-wall magazine" }
+          },
+          {
+            "id": 9,
+            "avatar": "/images/model (9).jpg",
+            "link": "",
+            "type": "post",
+            "status": "not-read",
+            "details": { "name": "four-wall magazine" }
+          },
+
+          {
+            "id": 10,
+            "avatar": "/images/model (12).jpg",
+            "link": "",
+            "type": "job-request",
+            "status": "pending",
+            "details": {
+              "name": "orange-world",
+              "state": "cross-river",
+              "country": "nigeria",
+              "dateFrom": "01/04/2023",
+              "dateTo": "07/04/2023",
+              "price": 40000,
+              "jobDescription": "its going to be a seven days of cat walking, dog walking, walking and smiling and fashion parade"
+            }
+          },
+          {
+            "id": 11,
+            "avatar": "/images/model (14).jpg",
+            "link": "",
+            "type": "share",
+            "status": "not-read",
+            "details": { "name": "orange-world" }
+          },
+          {
+            "id": 12,
+            "avatar": "/images/model (9).jpg",
+            "link": "",
+            "type": "favorite",
+            "status": "not-read",
+            "details": { "name": "orange-world" }
+          }
+        ]
       }
     }
   ]

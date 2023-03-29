@@ -1,0 +1,133 @@
+.chat-container {
+  padding: 1.5rem 1rem;
+  min-height: 100vh;
+}
+
+.chat-nav {
+  align-self: stretch;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.5rem;
+  margin: 1.5rem auto;
+}
+.chat-set {
+  margin: 0 1.2rem;
+}
+.chat-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.user-chat {
+  display: flex;
+  justify-content: right;
+  gap: 1rem;
+}
+
+.partner-chat {
+  display: flex;
+  justify-content: left;
+  gap: 1rem;
+}
+.partner-name {
+  text-transform: uppercase;
+  margin-right: auto;
+}
+.chat-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.chat-text {
+  padding: 1rem;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  max-width: 85%;
+}
+
+.user-text {
+  align-self: flex-end;
+  background-color: rgba(248, 182, 204, 0.584);
+  color: var(--Colored-color);
+}
+
+.partner-text {
+  align-self: flex-start;
+  background-color: rgba(214, 213, 213, 0.573);
+  color: #333;
+}
+
+.chat-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
+.current-day {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: gray;
+}
+.chat-time {
+  align-self: flex-end;
+  font-size: 14px;
+  color: gray;
+}
+.partner-time {
+  align-self: flex-start;
+}
+.chat-area {
+  font-size: 1.3rem;
+  width: 85%;
+  background: transparent;
+  overflow: hidden;
+  resize: none;
+}
+.chat-text-area {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgb(214, 213, 213);
+  color: #333;
+  padding: 1rem;
+}
+.chat-sent-icon {
+  font-size: 1.8rem;
+  color: var(--Colored-color);
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .chat-container {
+    padding: 2rem;
+    padding-bottom: 3.5rem;
+  }
+  .chat-nav {
+    font-size: 3rem;
+    margin: 3rem auto;
+  }
+  .chat-text {
+    padding: 1.5rem;
+    font-size: 2rem;
+  }
+  .chat-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+  }
+  .current-day {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+  }
+  .chat-area {
+    font-size: 2rem;
+  }
+  .chat-sent-icon {
+    font-size: 3rem;
+  }
+}

@@ -75,7 +75,8 @@
       "editorial",
       "body part"
     ],
-    "contractMessage": []
+    "message": [],
+    "notification": []
   },
   {
     "id": 2,
@@ -773,7 +774,7 @@
     "contractMessage": []
   },
 
-   {
+  {
     "id": 13,
     "image": "/images/img-18.png",
     "firstName": "Keziah ",
@@ -838,7 +839,7 @@
     "contractMessage": []
   },
 
-   {
+  {
     "id": 14,
     "image": "/images/img-18.png",
     "firstName": "Keziah ",
@@ -903,7 +904,7 @@
     "contractMessage": []
   },
 
-   {
+  {
     "id": 15,
     "image": "/images/img-18.png",
     "firstName": "Keziah ",
@@ -968,7 +969,7 @@
     "contractMessage": []
   },
 
-   {
+  {
     "id": 16,
     "image": "/images/img-18.png",
     "firstName": "Keziah ",
@@ -1032,5 +1033,4 @@
     ],
     "contractMessage": []
   }
-
 ]

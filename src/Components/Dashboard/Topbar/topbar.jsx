@@ -7,25 +7,22 @@ import useMediaQuery from "../../../custom_hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import { IconContext } from "react-icons";
 
-const DashboardTopbar = (props) => {
+const DashboardTopbar = ({
+  setSidebarVisibility,
+  sidebarVisibility,
+  lastItem,
+  setToggleNotice,
+  notice,
+}) => {
   let mQ = useMediaQuery("(min-width: 540px)");
 
   return (
     <nav id="topbar">
       <div id="left">
-        <FaBars
-          id="bars"
-          size={26}
-          onClick={() => props.setSidebarVisibility(!props.sidebarVisibility)}
-        />
+        <FaBars id="bars" size={26} onClick={() => setSidebarVisibility(!sidebarVisibility)} />
         <div id="search_bar">
           <BiSearch id="search_icon" size={18} />
-          <input
-            type="text"
-            name="topbar_search"
-            id="topbar_search"
-            placeholder="Search"
-          />
+          <input type="text" name="topbar_search" id="topbar_search" placeholder="Search" />
         </div>
       </div>
 
@@ -37,11 +34,18 @@ const DashboardTopbar = (props) => {
           <motion.div whileTap={{ scale: 0.8 }}>
             <BiEnvelope color="white" />
           </motion.div>
-          <motion.div id="notification" whileTap={{ scale: 0.8 }}>
-            <IoNotifications id="icon" color="white" />
-            <span id="data">{24}</span>
+          <motion.div
+            id="notification"
+            whileTap={{ scale: 0.8 }}
+            onClick={() => setToggleNotice((prev) => !prev)}>
+            <IoNotifications
+              id="icon"
+              color="white"
+              onClick={() => setToggleNotice((prev) => !prev)}
+            />
+            <span id="data">{notice.length}</span>
           </motion.div>
-          {props.lastItem}
+          {lastItem}
         </div>
       </IconContext.Provider>
     </nav>
